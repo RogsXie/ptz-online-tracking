@@ -1,0 +1,70 @@
+{
+  "name": "stationary_author_core_pdqn_20261101",
+  "scope": "One fixed camera, one stationary target; active centering and zoom only",
+  "algorithm": "Directly loaded pinned HAS-CAM PDQNAgent, Q_Actor, ParamNet, ReplayBuffer",
+  "author_commit": "9173676fb636140ffa4145e101631d3f30634267",
+  "device": "cuda",
+  "networks": ["actor_net", "actor_target", "param_net", "param_net_target"],
+  "learning": {
+    "seed": 20261101, "gamma": 0.9, "q_lr": 0.001, "parameter_lr": 0.0001,
+    "batch_size": 512, "replay_capacity": 100000, "target_hard_copy_updates": 100,
+    "initial_update_interval": 32,
+    "update_cadence": "episode step indices 0,32,64,...; any later change requires a separate configuration",
+    "epsilon": "original epsilon(episode), .9 to .1 over first 300 episodes",
+    "action_parameter_box": [0.3, 5.0],
+    "execution": "clip selected parameter to Box and divide by 5; preserve raw parameters in Q and replay",
+    "initial_training_block_episodes": 320,
+    "maximum_training_episodes": 4060,
+    "development_interval_episodes": 80
+  },
+  "input": {
+    "dimension": 8,
+    "profile": "author state semantics retained: x,y,area*100,confidence,delayed action/6,original history-index duration,x trend,y trend",
+    "forbidden": ["GT bbox", "world coordinates", "identity", "camera FOV", "camera pose"],
+    "detection": "frozen overhead v1 weights, threshold .15, imgsz960, FP32, existing full-and-half confidence NMS preprocessing",
+    "reid": "frozen real VeRi SBS R50 IBN, 2048 dimensions"
+  },
+  "physics": {
+    "location_cm": [-2200,0,4500], "initial_rotation_deg": [-60,0,0],
+    "pan_deg_s": 4, "tilt_deg_s": 2, "zoom_fov_deg_s": 5,
+    "yaw_limits_deg": [-65,65], "pitch_limits_deg": [-80,-40], "fov_limits_deg": [14,66],
+    "duration_s": [0.06,1.0],
+    "difference": "UE calibration; slower angular rates than author Table2, unchanged raw/5 duration mapping; perspective FOV rather than optical lens"
+  },
+  "task": {
+    "target_area": 0.04,
+    "difference_from_source": "source reward targets .05 and stops after ten confidence>.9; this explicitly named engineering task uses geometric reward and 5 simulation seconds of stable closed-loop hold",
+    "horizon_s": 50, "settling_limit_s": 45, "max_decisions": 512,
+    "hold_s": 5, "center_mean_max": 0.025, "center_p95_max": 0.05,
+    "area_range": [0.025,0.055], "scale_abs_log_mean_max": 0.25,
+    "hold_movement_actions_max": 0,
+    "selected_availability_min": 0.99,
+    "reward": "20*(previous_image_cost-next_image_cost) -2*next_image_cost +.75*inner_quality -.02*nonStay; image_cost=center_norm+.3*abs(log(area/.04)); lost cost=3; inner_quality=center<=.02 and logscale<=.18; completion bonus +10, timeout -10",
+    "source_protocol_success_reported_separately": true,
+    "no_GT_action_reward_or_termination": true
+  },
+  "coverage": {
+    "cells": 80, "quadrants": 4, "offset_layers": 5, "initial_FOV_groups": 4,
+    "axes": "Independent secondary offset and randomized dominant axis, no diagonal coupling",
+    "small_target_max_axis_offset": 0.38,
+    "large_target_max_axis_offset": 0.20,
+    "note": "Full visibility margins limit permissible center offset for large boxes; actual initial boxes and image border gaps are reported",
+    "train_seed_base": 32000000, "development_seed_base": 33000000,
+    "validation_seed_base": 34000000, "final_test_seed_base": 35000000,
+    "validation_count": 160, "final_test_count": 160,
+    "validation_and_test_FOV": "intermediate ranges disjoint from training FOV ranges",
+    "validation_success_min": 0.95,
+    "each_quadrant_success_min": 0.95,
+    "each_layer_success_min": 0.90,
+    "each_scale_success_min": 0.95,
+    "each_cell_min_pass_of_two": 1,
+    "test": "Materialize once only after validation qualification; no tuning on final test"
+  },
+  "comparisons": [
+    "Preserve historical source-math consistency evidence and frozen source checkpoint",
+    "Live source baseline on current overhead scene with calibrated mechanics",
+    "Same checkpoint and cases with confidence termination disabled only",
+    "Engineering reward/hold contract explicitly differs; original state and all four networks stay unchanged",
+    "Any cadence or representation experiment is separate, never overwritten or relabeled author-equivalent"
+  ]
+}

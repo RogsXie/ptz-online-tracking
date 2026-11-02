@@ -1,0 +1,18 @@
+{
+  "repository": "RogsXie/ptz-online-tracking",
+  "tag": "v2026.11.02-startup-zoom",
+  "assets": [
+    {
+      "name": "veri_sbs_R50-ibn.pth",
+      "path": "paper_reproduction/hascam/weights/veri_sbs_R50-ibn.pth",
+      "bytes": 198261759,
+      "sha256": "57fb9c17d88911ea64390bf5427f43511435e7f88f6eed9dbc969d4b611e53cd"
+    },
+    {
+      "name": "ffmpeg-win-x86_64-v7.1.exe",
+      "path": "paper_reproduction/verification/value-redesign-v10-20261031/video-tools/imageio_ffmpeg/binaries/ffmpeg-win-x86_64-v7.1.exe",
+      "bytes": 87638016,
+      "sha256": "2ce797a0f88d7f067180338fb227f7b1928ea727bd9a4d7a1d022f7c52af71a3"
+    }
+  ]
+}

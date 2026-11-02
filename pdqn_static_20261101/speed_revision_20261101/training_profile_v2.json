@@ -1,0 +1,17 @@
+{
+ "profile":"paper25_precision_stable_adaptation_v2",
+ "declared_before_v2_updates":true,
+ "evidence":"v1checkpoint40:39failuresamong43completed developmentcases; cannot meet95percentof80. All data and failure traces retained.",
+ "unchanged_from_v1":"25/25/5rates, angular rawBox.01..5, other rawBox.3..5, raw/5seconds, image state/reward, quality gates, original P-DQN update methods",
+ "v2_changes":{
+   "q_learning_rate":0.0001,"parameter_learning_rate":0.00001,
+   "warmup":"512originalupdates on3401real new-dynamics v1transitions, Qlr.0001 and ParamAdam lr0; compute original gradients but keep online parameter weights fixed while critic adapts; then fresh parameter Adam at.00001",
+   "reason":"Inverse parameter-unit scaling increases critic duration derivatives; full-domain random exploration produces inputs beyond the previous critic domain. Stabilize value adaptation before moving the duration policy.",
+   "status":"Explicit training/hyperparameter engineering change, not original default learning rates or exact original-protocol restoration"
+ },
+ "new_replay":"Reuse v1's3401real25deg/s transitions only; no released4/2dynamics transitions. Add80fresh real training episodes at seeds38020000 onward.",
+ "new_training_episodes":80,"update_interval":4,"evaluation_at":[20,40,80],
+ "epsilon":"Original epsilon(480+n),.1; source uniform exploration branch unchanged",
+ "development_futility":"Stop a development evaluation once failures exceed full count's5percent allowance; mark incomplete/unqualified. Never drop failures or use this shortcut for final tests.",
+ "qualification":"Same preregistered quality and speed criteria; nonzero post-warmup parameter updates required before promotion. Development80+32corners, then fresh160validation and160final."
+}

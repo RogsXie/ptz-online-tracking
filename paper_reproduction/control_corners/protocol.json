@@ -1,0 +1,165 @@
+{
+  "name": "rgb_four_corner_static_v7",
+  "preregistered_date": "2026-10-31",
+  "status": "declared_before_corner_policy_training",
+  "purpose": "Large-offset four-corner recovery and edge/near-center holding, static fixedFOV only",
+  "not_paper_equivalent": true,
+  "control_execution": {
+    "profile": "corner_static_pdqn_v7",
+    "duration_unit": "physical seconds",
+    "duration_bounds_s": [
+      0.04,
+      0.25
+    ],
+    "pan_deg_s": 8.0,
+    "tilt_deg_s": 8.0,
+    "zoom_fov_deg_s": 8.0,
+    "maximum_single_axis_step_deg": 2.0,
+    "note": "P-DQN author core retained in a separate profile; these calibrated bounds/rates are explicit changes",
+    "yaw_limits_deg": [
+      -65.0,
+      65.0
+    ],
+    "pitch_limits_deg": [
+      -80.0,
+      -40.0
+    ]
+  },
+  "frozen_frontend": {
+    "detector": "weights/yolo26s_ue_gpu30.pt",
+    "detector_sha256": "d65507fd25433c1d48c3e2af7259c39fa32d657b31f9af7b4b03850e8091ec0b",
+    "threshold": 0.15,
+    "imgsz": 960,
+    "half": false,
+    "reid": "existing verified FastReID VeRi SBS R50-IBN 2048-dim",
+    "reid_sha256": "57fb9c17d88911ea64390bf5427f43511435e7f88f6eed9dbc969d4b611e53cd"
+  },
+  "seed_policy": {
+    "stage_offset": "stage_number*10000",
+    "train_base": 700000,
+    "train_capacity_per_stage": 10000,
+    "validation_base": 800000,
+    "validation_count_per_stage": 40,
+    "reserved_final_test_base": 1000000,
+    "reserved_final_test_count_per_stage": 40,
+    "final_test_materialization": "blocked by default; only explicit final release after all current gates pass",
+    "old_cases": "Prior training, validation and diagnosed40000-series tests are not new held-out tests",
+    "validation_use": "Fixed held-out seeds for declared stage gating/model selection, never gradients",
+    "test_use": "Single frozen release after all gates; failures become diagnostic and require a new future test partition"
+  },
+  "progression": {
+    "advance_only_if": "current stage validation gate passes and all earlier-stage regression gates pass",
+    "checkpoint_selection": "validation gate evidence, never final-test results",
+    "new_stage_initialization": "continue best validation-qualified learned policy; record any optimizer/replay/reset explicitly",
+    "failed_stage": "remain at current difficulty, diagnose before rerun; do not mark later stages started",
+    "regression": "stop and restore last qualified checkpoint, preserve failed attempt",
+    "training_validation_interval_episodes": 8,
+    "maximum_episodes_per_attempt": 32,
+    "maximum_failed_attempts_before_design_review": 1,
+    "note": "Budget exhaustion is not a passing gate; these are stop/review budgets, not automatic promotion points"
+  },
+  "metric_contract": {
+    "center_error": "sqrt((2*cx-1)^2+(2*cy-1)^2), computed from the selected RGB detection",
+    "scale_log_error": "abs(log(area_ratio/0.04)); unavailable detections do not become zeros",
+    "availability": "time-weighted valid selected detections and separate offline correct-GT matching coverage",
+    "offline_gt": "identity/false-positive and visibility diagnostics only; cannot influence state/action/reward or reset aiming",
+    "stable_hold": "entire required hold window after settling, not only one terminal frame; every action-end RGB observation logged",
+    "loss_run_seconds": "sum of action durations during consecutive unavailable selected detections",
+    "rapid_unwarranted_reversal": "opposite same-axis commands <=0.5s apart while preceding observed axis error<=0.03, followed by error worsening>=0.02",
+    "total_direction_reversals": "sum of opposite nonzero commands on the same pan/tilt/zoom axis; Stay and other-axis commands do not erase the preceding command; normalized per10 actual simulation seconds",
+    "settling_time": "first time after which the complete required stable-hold window meets center/scale bounds",
+    "oscillation_note": "Necessary direction changes during actual motion are not automatically counted as unstable reversals",
+    "confidence": "confidence alone is never a task-success criterion; detector threshold remains frozen",
+    "sampling_limit": "metrics summarize actual closed-loop action-end RGB samples; no claim of continuous pixel truth between samples"
+  },
+  "default_episode_gate": {
+    "stable_hold_seconds": 5.0,
+    "stable_center_mean_max": 0.025,
+    "stable_center_p95_max": 0.05,
+    "stable_center_fraction_within_0_05_min": 0.95,
+    "selected_availability_min": 0.99,
+    "offline_matched_availability_min": 0.98,
+    "unintended_loss_run_seconds_max": 0.25,
+    "rapid_unwarranted_reversals_max": 2,
+    "false_target_completion_max": 0
+  },
+  "stages": [
+    {
+      "number": 1,
+      "id": "static_center",
+      "category": "static_centering_foundation",
+      "prerequisite": null,
+      "allowed_actions": [
+        0,
+        1,
+        2,
+        3,
+        4
+      ],
+      "horizon_seconds": 20.0,
+      "max_decisions": 512,
+      "settling_seconds_max": 12.0,
+      "scale_required": false,
+      "fov_change_deg_max": 0.0001,
+      "direction_reversals_per_10s_max": 4.0,
+      "validation_success_rate_min": 0.95,
+      "validation_min_episodes": 40,
+      "validation_quadrants_min_pass_each": 9,
+      "gate_note": "At least38/40 pass and each offset quadrant at least9/10; no validation seeds omitted"
+    }
+  ],
+  "corner_initialization": {
+    "frame_coordinates": "0..1 RGB box center",
+    "zones": {
+      "left": [
+        0.06,
+        0.2
+      ],
+      "right": [
+        0.8,
+        0.94
+      ],
+      "top": [
+        0.06,
+        0.2
+      ],
+      "bottom": [
+        0.8,
+        0.94
+      ]
+    },
+    "full_bbox_margin": 0.005,
+    "nominal_camera_pitch_deg": -60.0,
+    "physical_time_budget_basis": "Fixed downward installation; worst declared corner layout needs about55deg pan plus15deg tilt, under8.75s at8deg/s.12s settling and20s horizon declared before corner results; original accuracy and stability unchanged.",
+    "camera_location_cm": [
+      -2200.0,
+      0.0,
+      4500.0
+    ],
+    "nominal_image_offset": 0.36,
+    "layout_reference_height_cm": 90.0,
+    "fixed_camera_installation": true,
+    "sky_exclusion": "All frustum rays across mechanical limits intersect the existing ground board; verified before training.",
+    "vehicle_scale": 1.0,
+    "asset_note": "Native4m vehicle at scale1.0; replaces1.8 oversized vehicle for full-visibility corner layouts under fixed downward installation. Frozen detector unchanged."
+  },
+  "split_contract": {
+    "train": [
+      711000,
+      711031
+    ],
+    "probe": [
+      719100,
+      719111
+    ],
+    "validation": "40corners balanced10each, unseen until frozen; no result-driven selection",
+    "calibration": [
+      718950,
+      718953
+    ],
+    "training_mix": "12-case cycles: four corners, four edge midpoints, four near-center cases",
+    "probe_gate": "all12 including fourcorners fouredges fournearcenter",
+    "prior_small_offset_results": "Not corner evidence",
+    "final_test": "Original final-test partition remains reserved; inaccessible in corner experiment"
+  }
+}

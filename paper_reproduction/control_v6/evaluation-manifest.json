@@ -1,0 +1,14 @@
+{
+  "profile": "temporal_static_pdqn_v6",
+  "stage": "static_center",
+  "declared_before_training": true,
+  "training_seeds": [211000, 211031],
+  "training_probe_seeds": [219100, 219107],
+  "validation_seeds": [510040, 510079],
+  "prior_validation_consumed_for_diagnosis": [510000, 510039],
+  "validation_distribution": "Same seeded static scene generator, new contiguous balanced block; no scene inspection or outcome selection before declaration",
+  "quality_protocol_sha256": "c7ad22074859972a15e7dcdef1978d4c78b023e94a450d80e0104d8420923ede",
+  "gate": "Unchanged per-case criteria, at least38/40 and each quadrant at least9/10",
+  "final_test": "reserved and never materialized",
+  "attempt_limit": "one new32-round maximum attempt after explicit user continuation; no automatic new configuration"
+}

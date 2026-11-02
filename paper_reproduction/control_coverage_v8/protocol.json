@@ -1,0 +1,231 @@
+{
+  "name": "rgb_2d_multiscale_static_v8",
+  "preregistered_date": "2026-10-31",
+  "status": "declared_before_coverage_calibration_and_training",
+  "purpose": "Four quadrants with2D offsets at5distances and3initial FOV/scale groups; initial scale diversity, not active zoom",
+  "not_paper_equivalent": true,
+  "control_execution": {
+    "profile": "coverage_static_pdqn_v8",
+    "duration_unit": "physical seconds",
+    "duration_bounds_s": [
+      0.04,
+      0.25
+    ],
+    "pan_deg_s": 8.0,
+    "tilt_deg_s": 8.0,
+    "zoom_fov_deg_s": 8.0,
+    "maximum_single_axis_step_deg": 2.0,
+    "note": "P-DQN author core retained in a separate profile; these calibrated bounds/rates are explicit changes",
+    "yaw_limits_deg": [
+      -65.0,
+      65.0
+    ],
+    "pitch_limits_deg": [
+      -80.0,
+      -40.0
+    ]
+  },
+  "frozen_frontend": {
+    "detector": "weights/yolo26s_ue_overhead_v1.pt",
+    "detector_sha256": "1dd0de55c1791dce289cc7dc1d8eb6c50e488b26d38941f4c20845a6cadb5ae2",
+    "threshold": 0.15,
+    "imgsz": 960,
+    "half": false,
+    "reid": "existing verified FastReID VeRi SBS R50-IBN 2048-dim",
+    "reid_sha256": "57fb9c17d88911ea64390bf5427f43511435e7f88f6eed9dbc969d4b611e53cd",
+    "authorization": "User requested detector fine-tuning;12epochs plus independent image and44live development-start gates passed; freeze this new checkpoint during RL"
+  },
+  "seed_policy": {
+    "train": [
+      2100000,
+      2101199
+    ],
+    "probe": [
+      2200000,
+      2200059
+    ],
+    "validation": [
+      2300000,
+      2300119
+    ],
+    "calibration": [
+      2500000,
+      2500125
+    ],
+    "reserved_final_test": [
+      2400000,
+      2400239
+    ],
+    "final_test_materialization": "blocked",
+    "validation_use": "New positions and disjoint intermediate initial FOV ranges; never gradients; materialize only after full60-case frozen development probe passes"
+  },
+  "progression": {
+    "advance_only_if": "current stage validation gate passes and all earlier-stage regression gates pass",
+    "checkpoint_selection": "validation gate evidence, never final-test results",
+    "new_stage_initialization": "continue best validation-qualified learned policy; record any optimizer/replay/reset explicitly",
+    "failed_stage": "remain at current difficulty, diagnose before rerun; do not mark later stages started",
+    "regression": "stop and restore last qualified checkpoint, preserve failed attempt",
+    "training_validation_interval_episodes": 20,
+    "maximum_episodes_per_attempt": 60,
+    "maximum_failed_attempts_before_design_review": 1,
+    "note": "Budget exhaustion is not a passing gate; these are stop/review budgets, not automatic promotion points"
+  },
+  "metric_contract": {
+    "center_error": "sqrt((2*cx-1)^2+(2*cy-1)^2), computed from the selected RGB detection",
+    "scale_log_error": "abs(log(area_ratio/0.04)); unavailable detections do not become zeros",
+    "availability": "time-weighted valid selected detections and separate offline correct-GT matching coverage",
+    "offline_gt": "identity/false-positive and visibility diagnostics only; cannot influence state/action/reward or reset aiming",
+    "stable_hold": "entire required hold window after settling, not only one terminal frame; every action-end RGB observation logged",
+    "loss_run_seconds": "sum of action durations during consecutive unavailable selected detections",
+    "rapid_unwarranted_reversal": "opposite same-axis commands <=0.5s apart while preceding observed axis error<=0.03, followed by error worsening>=0.02",
+    "total_direction_reversals": "sum of opposite nonzero commands on the same pan/tilt/zoom axis; Stay and other-axis commands do not erase the preceding command; normalized per10 actual simulation seconds",
+    "settling_time": "first time after which the complete required stable-hold window meets center/scale bounds",
+    "oscillation_note": "Necessary direction changes during actual motion are not automatically counted as unstable reversals",
+    "confidence": "confidence alone is never a task-success criterion; detector threshold remains frozen",
+    "sampling_limit": "metrics summarize actual closed-loop action-end RGB samples; no claim of continuous pixel truth between samples"
+  },
+  "default_episode_gate": {
+    "stable_hold_seconds": 5.0,
+    "stable_center_mean_max": 0.025,
+    "stable_center_p95_max": 0.05,
+    "stable_center_fraction_within_0_05_min": 0.95,
+    "selected_availability_min": 0.99,
+    "offline_matched_availability_min": 0.98,
+    "unintended_loss_run_seconds_max": 0.25,
+    "rapid_unwarranted_reversals_max": 2,
+    "false_target_completion_max": 0
+  },
+  "stages": [
+    {
+      "number": 1,
+      "id": "static_center",
+      "category": "static_centering_foundation",
+      "prerequisite": null,
+      "allowed_actions": [
+        0,
+        1,
+        2,
+        3,
+        4
+      ],
+      "horizon_seconds": 20.0,
+      "max_decisions": 512,
+      "settling_seconds_max": 12.0,
+      "scale_required": false,
+      "fov_change_deg_max": 0.0001,
+      "direction_reversals_per_10s_max": 4.0,
+      "validation_success_rate_min": 0.95,
+      "validation_min_episodes": 120,
+      "validation_quadrants_min_pass_each": 28,
+      "gate_note": "At least114/120;each quadrant>=28/30;each distance>=23/24;each scale>=38/40;each60-cell>=1/2;near-center24/24"
+    }
+  ],
+  "corner_initialization": {
+    "frame_coordinates": "0..1 RGB box center",
+    "full_bbox_margin": 0.005,
+    "nominal_camera_pitch_deg": -60.0,
+    "physical_time_budget_basis": "Offline geometry over all1200train candidates and126calibration layouts must need<12s ideal serial pan/tilt; original20s horizon and precision/stability retained",
+    "camera_location_cm": [
+      -2200.0,
+      0.0,
+      4500.0
+    ],
+    "layout_reference_height_cm": 90.0,
+    "fixed_camera_installation": true,
+    "sky_exclusion": "All frustum rays across mechanical limits intersect the existing ground board; verified before training.",
+    "vehicle_scale": 1.0,
+    "asset_note": "Native1.0vehicle; frozen overhead-adapted detector; fixed location and initial orientation"
+  },
+  "split_contract": {
+    "train": "First60of1200predefined candidates for this bounded attempt",
+    "probe": "60development groups,20subsets early and all60final",
+    "validation": "120newinitial conditions;all60groups twice",
+    "final_test": "240newreservedcases,inaccessible",
+    "prior_results": "Old40-case and narrow44-start results do not qualify the new distribution"
+  },
+  "coverage": {
+    "offset_measure": "max(abs(cx-.5),abs(cy-.5)) in normalized RGB; secondary offset independently sampled, axis orientation randomized",
+    "offset_layers": [
+      {
+        "name": "already_centered",
+        "max_axis_offset": [
+          0.001,
+          0.006
+        ]
+      },
+      {
+        "name": "near",
+        "max_axis_offset": [
+          0.02,
+          0.065
+        ]
+      },
+      {
+        "name": "inner",
+        "max_axis_offset": [
+          0.075,
+          0.15
+        ]
+      },
+      {
+        "name": "middle",
+        "max_axis_offset": [
+          0.16,
+          0.25
+        ]
+      },
+      {
+        "name": "outer",
+        "max_axis_offset": [
+          0.26,
+          0.34
+        ]
+      }
+    ],
+    "train_fov_ranges_deg": [
+      [
+        41.25,
+        42.75
+      ],
+      [
+        51.25,
+        52.75
+      ],
+      [
+        61.25,
+        62.75
+      ]
+    ],
+    "validation_fov_ranges_deg": [
+      [
+        45.25,
+        46.75
+      ],
+      [
+        55.25,
+        56.75
+      ],
+      [
+        65.0,
+        66.0
+      ]
+    ],
+    "scale_interpretation": "Initial optical FOV changes target image size at native vehicle scale; FOV is fixed within every episode. No active zoom policy in this stage.",
+    "training_pool": 1200,
+    "groups": 60,
+    "initial_attempt_rounds": 60,
+    "attempt_sampling": "One shuffled balanced60-cell cycle, genuine fresh online UE rollout per case; no precomputed/expert actions",
+    "initial_center_layout_tolerance": 0.025,
+    "development_probe": "20-case balanced subset at rounds20/40; complete60cases at round60; subset cannot qualify",
+    "independent_validation": "120newcases,two per cell,all intermediate FOV ranges outside gradient-training ranges; same simulator/asset domain,not real-world generalization",
+    "calibration": "126development initial conditions:60train-style+60intermediate-scale+6exact centers;1200candidate positions are generated on demand, not all prerendered",
+    "minimum_separation_note": "Position diversity measured in2D and actual RGB area, not justified by seed count alone; validation changes initial FOV ranges as well as positions"
+  },
+  "validation_group_gates": {
+    "quadrant_min": 28,
+    "layer_min": 23,
+    "scale_min": 38,
+    "cell_min": 1,
+    "near_center_min": 24
+  }
+}

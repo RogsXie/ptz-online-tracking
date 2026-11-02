@@ -1,0 +1,38 @@
+{
+  "status": "stopped_by_user",
+  "time_utc": "2026-10-31T12:16:27.554305+00:00",
+  "terminal_audit_passed": true,
+  "complete_training_rounds": 60,
+  "partial_training_rounds": 0,
+  "training_updates": 7452,
+  "mean_q_loss_per_update": 0.0003198952932323457,
+  "last_round_q_loss": 0.00019801781932723576,
+  "parameter_objective": "not_updated",
+  "parameter_lr": null,
+  "action_counts": {
+    "training": 30060,
+    "preflight": 320,
+    "probe-0020": 10020,
+    "probe-0040": 10020,
+    "probe-0060": 30060,
+    "validation-0060": 36400,
+    "preflight_fixed_actions": 4,
+    "preflight_pulse04_actions": 5
+  },
+  "all_real_actions": 116889,
+  "validation_complete_cases": 72,
+  "validation_passed_complete_cases": 72,
+  "validation_partial_seed": 2300072,
+  "validation_partial_actions": 328,
+  "validation_complete": false,
+  "qualification_claim": false,
+  "actual_freeze_receipts_match_reports": {
+    "probe-0020": true,
+    "probe-0040": true,
+    "probe-0060": true,
+    "validation-0060": true
+  },
+  "heartbeat_deleted": true,
+  "training_restart": false,
+  "video_task": "separate frozen re-recordings of already completed cases, excluded from original validation"
+}

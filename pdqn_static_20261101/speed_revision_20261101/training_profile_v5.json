@@ -1,0 +1,63 @@
+{
+  "profile": "paper25_preserved_raw_box_conservative_transfer_v5",
+  "declared_before_v5_data_or_updates": true,
+  "rates_deg_s": [
+    25,
+    25,
+    5
+  ],
+  "raw_lows": [
+    0.3,
+    0.3,
+    0.3,
+    0.3,
+    0.3,
+    0.3,
+    0.3
+  ],
+  "raw_highs": [
+    5.0,
+    5.0,
+    5.0,
+    5.0,
+    5.0,
+    5.0,
+    5.0
+  ],
+  "seconds_per_raw": [
+    0.1,
+    0.016,
+    0.016,
+    0.032,
+    0.032,
+    0.2,
+    0.2
+  ],
+  "learning": {
+    "q_lr": 1e-06,
+    "parameter_lr": 1e-07,
+    "batch": 512,
+    "gamma": 0.9,
+    "target_copy": 100,
+    "uniform_replay": 100000,
+    "update_interval": 4
+  },
+  "initialization": "Released four networks bitwise unchanged; empty replay and new Adam. No v1/v2/v3/v4 replay reused.",
+  "motivation": "Restore original raw parameter Box.3..5, preserving released neural numerical units and angular displacement for each selected raw duration. Conservative actual new-dynamics fine-tuning; avoid unnecessary broad angular exploration or large parameter shifts.",
+  "scope": "Explicit engineering per-action duration calibration; original uniformraw/5 not restored. Stay pulse half duration; tilt/pan actual25deg/s and identical per-raw old angular displacements. No teacher or forced zoom order.",
+  "reward": "Released geometric reward and terminal5sStay unchanged; no V4 stricter-margin or reversal penalty.",
+  "data": {
+    "fragments": 64,
+    "steps_each": 8,
+    "fragment_seeds": "38300000..38300063",
+    "fragment_behavior": "Exact source epsilon1, originalBox.3..5; no updates duringcollection; fragments are not complete episodes",
+    "new_training_episodes": 40,
+    "training_seed_offset": 80000
+  },
+  "development_at": [
+    10,
+    20,
+    40
+  ],
+  "gates": "Same complete80development,32corners,independent160validation+160final and paired speed gates. Failed branches preserved; no heldout used for adjustment."
+}

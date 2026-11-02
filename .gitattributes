@@ -1,0 +1,11 @@
+* text=auto
+*.py text eol=lf
+*.json text eol=lf
+*.jsonl text eol=lf
+*.md text eol=lf
+*.pt binary
+*.pth binary
+*.mp4 binary
+*.uasset binary
+*.umap binary
+paper_reproduction/reference/HAS-CAM/** -text

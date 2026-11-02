@@ -1,0 +1,19 @@
+{
+ "profile":"paper25_calibrated_parameter_units_v3",
+ "declared_before_v3_training":true,
+ "motivation":"v1andv2duration-unit weight reparameterization failed frozen development. Preserve neural parameter numerical units instead; calibrate constant per-action conversion to actual seconds.",
+ "rates_deg_s":[25,25,5],
+ "raw_lows":[0.3,0.1,0.1,0.1,0.1,0.3,0.3],
+ "raw_highs":[5,10,10,10,10,5,5],
+ "seconds_per_raw":[0.2,0.016,0.016,0.032,0.032,0.2,0.2],
+ "executed_duration_ranges_s":{"stay_zoom":[0.06,1],"tilt":[0.0016,0.16],"pan":[0.0032,0.32]},
+ "initialization":"Load the released four network tensors without modifying any tensor. Fresh original Adam and empty replay; no v1/v2data in different parameter units reused.",
+ "boundaries":"This per-action pulse calibration, lower angular rawbound.1 and upper10 are explicit engineering changes from originalBox.3..5 and universalraw/5seconds. Max angular increments are4degtilt and8degpan; the physical active slew speed is25deg/s. Do not call this exact original-protocol reproduction.",
+ "learning":{"q_lr":0.001,"parameter_lr":0.00005,"batch":512,"gamma":0.9,"uniform_replay":100000,"target_copy":100,"update_interval":4},
+ "parameter_lr_note":"Half originalparameterLR; original source update function and four-network architecture unchanged",
+ "reward":"Unchanged released engineering geometry/scale reward and5secondStay; no addedtimepenalty, no earlyzoomteacher",
+ "new_training_episodes":160,"training_seed_offset":40000,"development_at":[20,40,80,160],
+ "selection":"Require real post-initialization GPUupdates, full80development quality and pairedspeedgates,32knowncorners, new160validation then untouched160final. Failed priorbranches retained.",
+ "quality":"All preregistered geometry/loss/oscillation/5secondStay gates unchanged; decision visibility>=.99 retained",
+ "speed_gate_note":"Use all pairedcases including failurespenalized50s; timingranges are declarednewvalidclockdomain, not relaxed image quality"
+}

@@ -1,0 +1,41 @@
+{
+  "passed": true,
+  "checked_utc": "2026-10-31T10:55:51.655247+00:00",
+  "scope": "completed development probe40 and fixed checkpoint40 only; runner remains active",
+  "probe_passed": 19,
+  "probe_total": 20,
+  "centered_passed": 4,
+  "centered_total": 4,
+  "reversal_mean": 0.1,
+  "actual_freeze_receipt_matches_report": true,
+  "actual_checkpoint_network_hashes_match": true,
+  "four_network_freeze_flags": {
+    "four_networks_eval": true,
+    "four_networks_requires_grad_false": true,
+    "networks_unchanged": true,
+    "counters_unchanged": true,
+    "sampling_rng_unchanged": true
+  },
+  "parameter_networks_unchanged_from_initial": true,
+  "parameter_optimizer_no_steps": true,
+  "training_replay_rows_exact": 20040,
+  "q_updates": 4947,
+  "actual_truncated_endings": 40,
+  "actual_final_observation_bootstrap": true,
+  "frontend_hashes_match": true,
+  "source_snapshot_current_match": true,
+  "improved_seeds": [
+    2200004,
+    2200008,
+    2200014,
+    2200016
+  ],
+  "regressed_seeds": [
+    2200001
+  ],
+  "review": {
+    "stop_for_review": false,
+    "reasons": []
+  },
+  "independent_validation": "not_executed"
+}

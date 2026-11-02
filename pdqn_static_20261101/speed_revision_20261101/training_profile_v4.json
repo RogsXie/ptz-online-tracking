@@ -1,0 +1,16 @@
+{
+ "profile":"paper25_calibrated_units_stability_margin_v4",
+ "declared_before_v4_data_or_updates":true,
+ "v3_evidence":"All4development snapshots failed full80quality allowance; recurring reversal-frequency and center-boundary failures. New independent validation/final not executed.",
+ "execution":"Exactlyv3: physical25/25/5; rawlows[.3,.1,.1,.1,.1,.3,.3],rawhighs[5,10,10,10,10,5,5];seconds_per_raw[.2,.016,.016,.032,.032,.2,.2]",
+ "new_reward_changes":{"inner_center_max":0.012,"inner_logscale_max":0.18,"axis_reversal_penalty":0.5,"training_hold_mean_center_max":0.015,"training_hold_p95_center_max":0.03},
+ "unchanged_reward_parts":"20cost-improvement-2cost+.75inner-.02nonStay;cost=center+.3abslog(area/.04);+10trainingcompletion,-10timeout. No added elapsed-time reward.",
+ "scope":"Explicit engineered stability/robustness objective, NOT originalpaper reward restoration. Independent acceptance remains mean.025/P95.05/allStay5s and all previous loss/oscillation gates.",
+ "data":"Relabel only recordedrealv3RGB-derived transitions using newimage/historyreward and strictertrainingdone; originalrecordsuntouched. Original loose-completion truncations bootstrap if strictergoalnotmet. No v1/v2transitions in differentunits.",
+ "fine_support":{"fragments":128,"steps_each":8,"seeds":"38200000..38200127","center_offsets":"independent .004..065 eachaxis, fourquadrantsbalanced","fov":[20,30],"behavior":"Exactsource choose_action epsilon1; uniform7actions; temporaryangular explorationBox.1..1, Stay/zoom.3..5. Learnerbounds restoredbeforeupdates.","learning_during_collection":false,"completed_control_episodes_claimed":0},
+ "initialization":"Released four network weights unmodified; new Adam and empty replay, then actual v3transitions relabeled+actualfine fragments",
+ "learning":{"q_lr":0.001,"parameter_lr":0.00005,"critic_warmup_original_updates":512,"parameter_lr_during_critic_warmup":0,"new_real_training_episodes":80,"episode_seed_offset":60000,"update_interval":4,"gamma":0.9,"batch":512,"target_copy":100,"uniform_replay":100000},
+ "development_at":[20,40,80],
+ "no_teacher":"No state-to-direction rule, GTreward/control, PID/MPC or forcedzoomorder. Reversalpenalty depends only on previously issuedactions.",
+ "gates":"Same full80development+32corners qualityandpairedspeed, then untouchednew160validationand160final. Previousfailurespreserved."
+}

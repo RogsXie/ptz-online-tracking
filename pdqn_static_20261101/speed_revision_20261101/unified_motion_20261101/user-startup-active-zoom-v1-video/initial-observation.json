@@ -1,0 +1,197 @@
+{
+  "state": [
+    -0.7060781121253967,
+    -0.1262587308883667,
+    0.292757123708725,
+    0.8629003167152405,
+    0.0,
+    0.0,
+    0.0,
+    0.0,
+    0.0,
+    0.0,
+    1.0,
+    0.0,
+    0.0,
+    0.0,
+    0.0
+  ],
+  "visible": true,
+  "x": -0.7060780843098958,
+  "y": -0.12625873706958912,
+  "area": 0.0014637855620983629,
+  "confidence": 0.8629003167152405,
+  "center_error": 0.7172778609640339,
+  "bbox": [
+    0.1287023385365804,
+    0.41682824028862847,
+    0.16521957715352376,
+    0.4569130226417824
+  ],
+  "action": 0,
+  "duration": 0.0,
+  "sim_time": 0.0,
+  "detector_s": 0.5651865999680012,
+  "reid_s": 0.14997439994476736,
+  "image_motion_bearing_rate_deg_s": [
+    0.0,
+    0.0
+  ],
+  "dynamic_extras": [
+    0.0,
+    0.0,
+    1.0,
+    0.0,
+    0.0,
+    0.0,
+    0.0
+  ],
+  "observation_extension": "RGBbbox ray plus own cameraorientation/FOV/time; never targetGT or scenevelocity",
+  "rgb_association": {
+    "raw_candidates": 5,
+    "association_candidates": 5,
+    "lost": 0,
+    "selection_reason": "initial_highest_confidence",
+    "target_generation": 1,
+    "locked_track_id": 1,
+    "memory_state": "tracking",
+    "missing_for_s": 0.0,
+    "forget_after_s": 3.0,
+    "forgotten_track_id": null,
+    "forgotten_count": 0,
+    "reacquisitions": 0,
+    "reacquired": true,
+    "selected_label": "car",
+    "selected_class_id": 0,
+    "reid_similarity": null,
+    "highest_candidate_confidence": 0.8629003167152405,
+    "candidate_tracks": [
+      {
+        "track_id": 1,
+        "label": "car",
+        "confidence": 0.8629003167152405,
+        "bbox": [
+          0.1287023385365804,
+          0.41682824028862847,
+          0.16521957715352376,
+          0.4569130226417824
+        ]
+      },
+      {
+        "track_id": 2,
+        "label": "car",
+        "confidence": 0.8523203730583191,
+        "bbox": [
+          0.06355233987172444,
+          0.4282842000325521,
+          0.1017275889714559,
+          0.46895893238208913
+        ]
+      },
+      {
+        "track_id": 3,
+        "label": "car",
+        "confidence": 0.8275808691978455,
+        "bbox": [
+          0.0,
+          0.44007913094979745,
+          0.037950332959493,
+          0.4802270394784433
+        ]
+      },
+      {
+        "track_id": 4,
+        "label": "car",
+        "confidence": 0.20605731010437012,
+        "bbox": [
+          0.9211581548055013,
+          0.2667156078197338,
+          0.9523533503214519,
+          0.3363304985894097
+        ]
+      },
+      {
+        "track_id": 5,
+        "label": "car",
+        "confidence": 0.16834641993045807,
+        "bbox": [
+          0.9181194941202799,
+          0.2312475698965567,
+          0.9967111587524414,
+          0.35912950303819446
+        ]
+      }
+    ],
+    "scope": "RGB detections+fresh ReID+own-camera compensated multi-object trajectories; one locked identity, no other box until3scontinuousmissing. No GT/colorfilter/scene IDs.",
+    "observation_source": "detector_full",
+    "visual_bridge_reason": "unseeded",
+    "visual_bridge_quality": null,
+    "active_candidate_debug": [],
+    "tracker_revision": "AngularKalman+high/lowconfidenceassociation+fragment-safe recovery+verifiedLK<=.35s"
+  },
+  "observed_state": [
+    -0.7060781121253967,
+    -0.1262587308883667,
+    0.1463785618543625,
+    0.8629003167152405,
+    0.0,
+    0.0,
+    0.0,
+    0.0,
+    0.0,
+    0.0,
+    1.0,
+    0.0,
+    0.0,
+    0.0,
+    0.0
+  ],
+  "latency_compensated_state": [
+    -0.7060781121253967,
+    -0.1262587308883667,
+    0.1463785618543625,
+    0.8629003167152405,
+    0.0,
+    0.0,
+    0.0,
+    0.0,
+    0.0,
+    0.0,
+    1.0,
+    0.0,
+    0.0,
+    0.0,
+    0.0
+  ],
+  "measured_perception_age_s": 0.2,
+  "requested_area_fraction": 0.02,
+  "policy_area_feature": 0.292757123708725,
+  "area_mapping": "Actual RGB box area *100 *(.04/.02); other state inputs and frozen model unchanged.",
+  "target_label": "car",
+  "target_class_id": 0,
+  "whole_vehicle_box": true,
+  "area_guard_candidates": [
+    {
+      "area": 0.0014637855620983629,
+      "confidence": 0.8629003167152405,
+      "label": "car",
+      "bbox": [
+        0.1287023385365804,
+        0.41682824028862847,
+        0.16521957715352376,
+        0.4569130226417824
+      ]
+    },
+    {
+      "area": 0.0015527680395084824,
+      "confidence": 0.8523203730583191,
+      "label": "car",
+      "bbox": [
+        0.06355233987172444,
+        0.4282842000325521,
+        0.1017275889714559,
+        0.46895893238208913
+      ]
+    }
+  ]
+}

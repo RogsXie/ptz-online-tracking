@@ -1,0 +1,130 @@
+{
+  "previous": {
+    "first_zoom_native_start_s": 1.8006928972899914,
+    "first_reached_1p44_percent_area_s": 11.02686569839716,
+    "startup_zoom_pulses": 0,
+    "maximum_startup_zoom_duration_s": 0.0,
+    "startup_zoom_steps": [],
+    "max_visible_area_first6s": 0.0024592750304792458
+  },
+  "updated": {
+    "first_zoom_native_start_s": 0.9951825030148029,
+    "first_reached_1p44_percent_area_s": 2.4217523001134396,
+    "startup_zoom_pulses": 8,
+    "maximum_startup_zoom_duration_s": 0.06,
+    "startup_zoom_steps": [
+      {
+        "native_start_s": 0.9951825030148029,
+        "duration_s": 0.06,
+        "input_area": 0.0012529403580939054,
+        "input_fov_deg": 66.0,
+        "input_error_px": [
+          -33.394471406936646,
+          -22.260589376091957
+        ]
+      },
+      {
+        "native_start_s": 1.1954517997801304,
+        "duration_s": 0.06,
+        "input_area": 0.001625882596967536,
+        "input_fov_deg": 59.999996185302734,
+        "input_error_px": [
+          -31.922607421875,
+          -24.372330084443092
+        ]
+      },
+      {
+        "native_start_s": 1.3625777997076511,
+        "duration_s": 0.06,
+        "input_area": 0.0022022746715487707,
+        "input_fov_deg": 53.99999237060547,
+        "input_error_px": [
+          -29.062530398368835,
+          -26.2531728297472
+        ]
+      },
+      {
+        "native_start_s": 1.561241302639246,
+        "duration_s": 0.06,
+        "input_area": 0.002900708039071308,
+        "input_fov_deg": 47.99999237060547,
+        "input_error_px": [
+          -24.250397086143494,
+          -28.57003815472126
+        ]
+      },
+      {
+        "native_start_s": 1.729457300156355,
+        "duration_s": 0.06,
+        "input_area": 0.0038931832700553884,
+        "input_fov_deg": 42.0,
+        "input_error_px": [
+          -22.20465123653412,
+          -32.31912262737751
+        ]
+      },
+      {
+        "native_start_s": 1.9216765016317368,
+        "duration_s": 0.06,
+        "input_area": 0.005252013798683801,
+        "input_fov_deg": 36.0,
+        "input_error_px": [
+          -14.198730289936066,
+          -35.9786219894886
+        ]
+      },
+      {
+        "native_start_s": 2.220819301903248,
+        "duration_s": 0.06,
+        "input_area": 0.007500005576789762,
+        "input_fov_deg": 29.999998092651367,
+        "input_error_px": [
+          4.268066436052322,
+          -4.991691391915083
+        ]
+      },
+      {
+        "native_start_s": 2.3877320028841496,
+        "duration_s": 0.02753128893194436,
+        "input_area": 0.012459190316098736,
+        "input_fov_deg": 23.999998092651367,
+        "input_error_px": [
+          20.451720356941223,
+          -3.459045309573412
+        ]
+      }
+    ],
+    "max_visible_area_first6s": 0.017339970295627918
+  },
+  "quality_and_online_proof": {
+    "folder": "D:\\EI\\ptz_ue\\pdqn_static_20261101\\speed_revision_20261101\\unified_motion_20261101\\user-startup-active-zoom-v1-video",
+    "duration_s": 30.017996500013396,
+    "online_updates": 710,
+    "actual_online_output_fps": 23.652477939348255,
+    "source_to_draw_median_ms": 95.40180070325732,
+    "source_to_published_median_ms": 101.3952522771433,
+    "control_decisions": 221,
+    "control_decisions_per_s": 7.362250175487274,
+    "visible_identity_matches": {
+      "car_0": 699
+    },
+    "unmatched_visible": [],
+    "missing_outputs": 11,
+    "turn_9_to_12s_missing_outputs": 0,
+    "maximum_target_generation": 1,
+    "moving_center_distance_median_p95_px": [
+      19.346945091500576,
+      49.685075308812166
+    ],
+    "actual_result_handoff_and_completed_action_gates_verified": true,
+    "strictly_increasing_unique_source_frames": true,
+    "saved_jpeg_hashes_verified": true,
+    "all_pixels_painted_before_live_stopped": true,
+    "all_learning_state_frozen": true,
+    "checkpoint_sha256": "db8043ec93f916c35b7ab31b4ccf298489ceca94a4ec7290075d2e7e6c5b2434",
+    "no_postrun_inference_or_repainting": true,
+    "GT_usage": "Post-run diagnostic scoring only"
+  },
+  "change": "Active per-target first-lock scale acquisition toward1.6%;40px rough-centre gate;6deg max exclusive zoom step; stop at>=1.44%. Existing2% upper guard, detector/ReID and frozen policy weights unchanged.",
+  "scope": "One 30s live scene. No offline detection, reassociation or box redrawing. GT read only after the run for scoring."
+}

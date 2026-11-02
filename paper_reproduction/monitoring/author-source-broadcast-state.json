@@ -1,0 +1,21 @@
+{
+  "profile": "author_source_ue_v1",
+  "source_commit": "9173676fb636140ffa4145e101631d3f30634267",
+  "completed_first_block": "D:/EI/ptz_ue/paper_reproduction/runs/author-source-ue-static-v1",
+  "active_run": "D:/EI/ptz_ue/paper_reproduction/runs/author-source-ue-static-v1-to300",
+  "last_broadcast_round": 242,
+  "planned_stop_episode": 300,
+  "first_block_validation": {
+    "source_success": 40,
+    "quality_success": 0,
+    "count": 40
+  },
+  "continuation_reason": "Preserve source recipe through its 300-episode exploration decay; then frozen validation. No difficulty advancement or formula changes.",
+  "final_status_reported": true,
+  "notification_intent": "Report every newly completed episode with real loss and parameters; no repeated unchanged status.",
+  "execution_mapping_authorization": "Human approved execution-only Box[.3,5] clipping followed by raw/5; preserve unmodified raw learning parameters.",
+  "automation_id": "automation-3",
+  "stopped_by_user": true,
+  "automation_deleted": true,
+  "stopped_at_completed_episode": 276
+}

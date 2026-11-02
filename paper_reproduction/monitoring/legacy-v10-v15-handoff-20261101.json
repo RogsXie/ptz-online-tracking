@@ -1,0 +1,174 @@
+{
+  "checked_utc": "2026-10-31T16:48:27.915779+00:00",
+  "coordination_source_thread_id": "01a18fc3-c0f9-79f3-b324-fa7bcecc2e99",
+  "scope": "legacy implementation preserved as historical baseline; successor implementation owned by the new chat",
+  "legacy_runner_entries_checked": [
+    "continue_precision_zoom_50mamba.py",
+    "train_center_repair_50mamba.py",
+    "train_factored_control_50mamba.py",
+    "train_joint_precision_zoom_50mamba.py",
+    "train_model_zoom_50mamba.py",
+    "train_precision_zoom_50mamba.py",
+    "train_zoom_control_50mamba.py"
+  ],
+  "matching_legacy_processes": [],
+  "unreal_editor_process_inventory_read_only": [],
+  "legacy_automations_present": {
+    "ptz-v10": false,
+    "ptz-v11": false,
+    "ptz-v12": false
+  },
+  "launched_process_receipts": [
+    {
+      "file": "D:\\EI\\ptz_ue\\paper_reproduction\\verification\\zoom-model-v13-20261031\\attempt1-launch.json",
+      "pid": 78508,
+      "args": [
+        "C:/Users/12879/.conda/envs/50mamba/python.exe",
+        "-u",
+        "D:\\EI\\ptz_ue\\scripts\\train_model_zoom_50mamba.py",
+        "--output",
+        "D:\\EI\\ptz_ue\\paper_reproduction\\runs\\model-zoom-v13-attempt1",
+        "--headless"
+      ]
+    },
+    {
+      "file": "D:\\EI\\ptz_ue\\paper_reproduction\\verification\\precision-band-v14-20261031\\attempt1-launch.json",
+      "pid": 74728,
+      "args": [
+        "C:\\Users\\12879\\.conda\\envs\\50mamba\\python.exe",
+        "-u",
+        "D:\\EI\\ptz_ue\\scripts\\train_precision_zoom_50mamba.py",
+        "--output",
+        "D:\\EI\\ptz_ue\\paper_reproduction\\runs\\precision-band-zoom-v14-attempt1",
+        "--headless"
+      ]
+    },
+    {
+      "file": "D:\\EI\\ptz_ue\\paper_reproduction\\verification\\joint-precision-v15-20261031\\attempt1-launch.json",
+      "pid": 20544,
+      "args": [
+        "C:\\Users\\12879\\.conda\\envs\\50mamba\\python.exe",
+        "-u",
+        "D:\\EI\\ptz_ue\\scripts\\train_joint_precision_zoom_50mamba.py",
+        "--output",
+        "D:\\EI\\ptz_ue\\paper_reproduction\\runs\\joint-precision-zoom-v15-attempt1",
+        "--headless"
+      ]
+    }
+  ],
+  "historical_runs": [
+    {
+      "path": "D:\\EI\\ptz_ue\\paper_reproduction\\runs\\potential-factored-v10-attempt1",
+      "exists": true,
+      "status": {
+        "state": "stopped_by_user",
+        "error": "InterruptedError('STOP_REQUEST received at an action boundary')",
+        "passed": false,
+        "completed_rounds": 60,
+        "later_stages_started": false
+      }
+    },
+    {
+      "path": "D:\\EI\\ptz_ue\\paper_reproduction\\runs\\active-zoom-v11-attempt1",
+      "exists": true,
+      "status": {
+        "state": "review_required",
+        "completed_rounds": 20,
+        "steps": 10020,
+        "updates": 2442,
+        "qualified": false,
+        "reasons": [
+          "At least half the planned development cases lost or stalled"
+        ]
+      },
+      "terminal_audit": {
+        "path": "D:\\EI\\ptz_ue\\paper_reproduction\\runs\\active-zoom-v11-attempt1\\terminal-audit.json",
+        "sha256": "3c6d081bbe1025ada7291138637211fe601657b9598ca54d8e72d25f65b1ec61",
+        "passed": true,
+        "joint_development_success": null
+      }
+    },
+    {
+      "path": "D:\\EI\\ptz_ue\\paper_reproduction\\runs\\center-repair-v12a-attempt1",
+      "exists": true,
+      "status": {
+        "state": "anomaly",
+        "phase": "A",
+        "completed_rounds": 9,
+        "steps": 4509,
+        "updates": 1064,
+        "error": "RuntimeError('Real RGB initial zone or full-visibility contract failed')",
+        "qualified": false,
+        "later_stages_started": false
+      },
+      "terminal_audit": {
+        "path": "D:\\EI\\ptz_ue\\paper_reproduction\\runs\\center-repair-v12a-attempt1\\terminal-audit.json",
+        "sha256": "7e58ae2a9e9dce1a7a9cc0bbe9f7727b85ebe4f9e1e21c0eb44f13321d2dd608",
+        "passed": true,
+        "joint_development_success": null
+      }
+    },
+    {
+      "path": "D:\\EI\\ptz_ue\\paper_reproduction\\runs\\model-zoom-v13-attempt1",
+      "exists": true,
+      "status": {
+        "state": "review_required",
+        "error": "ReviewRequired('Mean reversals above12 without prior common-seed improvement')",
+        "completed_rounds": 20,
+        "steps": 10020,
+        "model_updates": 2442
+      },
+      "terminal_audit": {
+        "path": "D:\\EI\\ptz_ue\\paper_reproduction\\runs\\model-zoom-v13-attempt1\\terminal-audit.json",
+        "sha256": "df6ba16f4428cf06cfcc7c7b7cb5b33f99a58b6c4d7907431488dc584167073d",
+        "passed": true,
+        "joint_development_success": null
+      }
+    },
+    {
+      "path": "D:\\EI\\ptz_ue\\paper_reproduction\\runs\\precision-band-zoom-v14-attempt1",
+      "exists": true,
+      "status": {
+        "state": "review_required",
+        "error": "ReviewRequired('probe-0020 did not pass every case')"
+      },
+      "terminal_audit": {
+        "path": "D:\\EI\\ptz_ue\\paper_reproduction\\runs\\precision-band-zoom-v14-attempt1\\terminal-audit.json",
+        "sha256": "23e53b7771e625558efd4165bdd9a8eea430901c8461a6b75812b786d5fdcc65",
+        "passed": true,
+        "joint_development_success": false
+      }
+    },
+    {
+      "path": "D:\\EI\\ptz_ue\\paper_reproduction\\runs\\joint-precision-zoom-v15-attempt1",
+      "exists": true,
+      "status": {
+        "state": "review_required",
+        "error": "ReviewRequired('probe-0020 did not pass every case')"
+      },
+      "terminal_audit": {
+        "path": "D:\\EI\\ptz_ue\\paper_reproduction\\runs\\joint-precision-zoom-v15-attempt1\\terminal-audit.json",
+        "sha256": "53b3527819b1dca016801d5159810c2e094f38ad5027b0c204e0b3cfa3390807",
+        "passed": true,
+        "joint_development_success": false
+      }
+    }
+  ],
+  "runtime_source_or_model_modified": false,
+  "processes_signaled_or_terminated_this_handoff": [],
+  "historical_outputs_deleted": [],
+  "automatic_restart_allowed": false,
+  "new_trial_launched": false,
+  "gpu_global_availability_not_asserted": true,
+  "successor_requirement": "Recheck GPU, UE, ports and current process ownership immediately before starting; use an independent subdirectory; no implicit restart of legacy runs.",
+  "v15_result": {
+    "complete": 20,
+    "passed": 19,
+    "remaining_not_executed": 40,
+    "audit_passed": true,
+    "goal_complete": false,
+    "independent_validation": "not_executed"
+  },
+  "final_report": "D:\\EI\\ptz_ue\\paper_reproduction\\verification\\joint-precision-v15-20261031\\STOPPED20_REPORT.md",
+  "video_index": "D:\\EI\\ptz_ue\\paper_reproduction\\videos\\joint-precision-zoom-v15-attempt1\\README.md"
+}

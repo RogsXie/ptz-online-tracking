@@ -1,0 +1,70 @@
+{
+  "active_run": "D:/EI/ptz_ue/paper_reproduction/runs/continuing-static-v5-attempt1",
+  "profile": "continuing_static_pdqn_v5",
+  "last_broadcast_round": 24,
+  "last_reported_probe": 24,
+  "final_status_reported": true,
+  "user_authorized_improvements": true,
+  "user_requested_anomaly_check_and_repair": true,
+  "automation_id": "automation-3",
+  "previous_runs": [
+    {
+      "run": "D:/EI/ptz_ue/paper_reproduction/runs/improved-static-center-v3-attempt1",
+      "completed_rounds": 32,
+      "steps": 2635,
+      "updates": 4760,
+      "final_probe_passed": 4,
+      "final_probe_total": 8,
+      "independent_validation": "not_run",
+      "final_status_reported": true,
+      "repair": "static_observation_v4"
+    },
+    {
+      "run": "D:/EI/ptz_ue/paper_reproduction/runs/static-observation-v4-attempt1",
+      "completed_rounds": 32,
+      "steps": 2588,
+      "updates": 4666,
+      "last_q_loss": 0.005866158648132114,
+      "last_parameter_objective": 13.377070382237434,
+      "final_probe_passed": 0,
+      "final_probe_total": 8,
+      "independent_validation": "not_run",
+      "final_status_reported": true,
+      "repair": "continuing_task_v5"
+    }
+  ],
+  "pending_behavior_review": {
+    "round": 16,
+    "reason": "v4 first frozen probe0/8 with mean37.125reversals; not established repair success",
+    "stop_if": "next complete greedy probe still has mean direction reversals above12, even if success count slightly increases",
+    "do_not_change": "frontend, reward, quality gates or learned action selection while run is active",
+    "resolved": true,
+    "resolved_round": 16,
+    "mean_direction_reversals": 0.375,
+    "stop_condition_triggered": false,
+    "remaining_failure": "residual center error0.0262-0.0359 above0.025; all8fail strict stability gate"
+  },
+  "pending_terminal_review": {
+    "round": 32,
+    "evidence": "All4failed probe24 cases have late reversals near9.7-10.0s; seed219103 also cycles early. Remaining-time observation and hard done at10s may be optimizing a finite task instead of continuous holding.",
+    "action": "Inspect complete final probe and terminal/replay semantics before any new training; no blind extension.",
+    "unconfirmed": "Causality and repair efficacy not yet established.",
+    "resolved": true,
+    "total_reversals": 87,
+    "reversals_after9s": 81,
+    "repair": "v5 collection truncation with actual-final-observation bootstrap and no countdown"
+  },
+  "configuration_attempt": 3,
+  "maximum_configurations_before_design_review": 3,
+  "last_reported_validation": 24,
+  "final_outcome": "independent_static_center_validation_failed",
+  "final_completed_rounds": 24,
+  "final_training_transitions": 1803,
+  "final_updates": 3096,
+  "final_validation_passed": 35,
+  "final_validation_total": 40,
+  "automatic_attempt_finished": true,
+  "design_review_completed": true,
+  "final_report": "D:\\EI\\ptz_ue\\paper_reproduction\\verification\\continuing-static-v5-20261031\\STOPPED24_REPORT.md",
+  "final_reported_at_utc": "2026-10-31T05:30:52.880053+00:00"
+}

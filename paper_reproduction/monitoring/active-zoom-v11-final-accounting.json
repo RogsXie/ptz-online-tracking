@@ -1,0 +1,39 @@
+{
+  "complete_rounds": 20,
+  "partial_rounds": [],
+  "train_actions": 10020,
+  "updates": 2442,
+  "mean_q_loss": 0.01129283982625329,
+  "last_round_mean_q_loss": 0.0009572580098710392,
+  "probe_actions": 6012,
+  "probe_passed": 1,
+  "probe_completed": 12,
+  "probe_planned": 20,
+  "probe_stalled": 10,
+  "probe_lost": 0,
+  "probe_action_counts": {
+    "2": 77,
+    "0": 5623,
+    "6": 67,
+    "5": 70,
+    "3": 121,
+    "4": 46,
+    "1": 8
+  },
+  "probe_random_actions": 0,
+  "probe_q_bound_excess_gt1": 0,
+  "probe_selected_visible": 6012,
+  "probe_matched": 6012,
+  "max_actuator_error": 3.5095214911962103e-06,
+  "max_duration_error": 0.0,
+  "prior_calibration_actions": [
+    105,
+    105
+  ],
+  "preflight_this_run": 0,
+  "all_actions_including_calibration": 16242,
+  "independent_validation": "not_executed",
+  "final_tests": "not_executed",
+  "additional_video_actions": 0,
+  "additional_video_updates": 0
+}

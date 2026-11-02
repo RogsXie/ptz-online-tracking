@@ -1,0 +1,48 @@
+{
+  "passed": true,
+  "checked_utc": "2026-10-31T11:37:01.339471+00:00",
+  "scope": "completed probe0060 and stable checkpoint0060; not terminal audit",
+  "checkpoint": "D:\\EI\\ptz_ue\\paper_reproduction\\runs\\potential-factored-v10-attempt1\\checkpoint-0060.pt",
+  "training_interactions": 30060,
+  "training_updates": 7452,
+  "training_truncated_endings": 60,
+  "replay_exact": true,
+  "actual_final_observation_bootstrap": true,
+  "parameter_networks_unchanged_from_initial": true,
+  "parameter_optimizer_state_empty": true,
+  "actual_freeze_receipt_equals_report": true,
+  "actual_freeze_receipt": {
+    "before": {
+      "actor_net": "3cb041b2962f652ad26eee99dc83453ea5319191091654a65e0a6ddf90bbcdbd",
+      "actor_target": "705eacc48ebcf04646e9d339038ad2261deae5f79da8e15a9004ec6d495412e7",
+      "param_net": "8d9086c89f83a81cc12ec4a010065225e13bebd5751d30e829c60fa582242a25",
+      "param_net_target": "8d9086c89f83a81cc12ec4a010065225e13bebd5751d30e829c60fa582242a25"
+    },
+    "four_networks_eval": true,
+    "four_networks_requires_grad_false": true,
+    "after": {
+      "actor_net": "3cb041b2962f652ad26eee99dc83453ea5319191091654a65e0a6ddf90bbcdbd",
+      "actor_target": "705eacc48ebcf04646e9d339038ad2261deae5f79da8e15a9004ec6d495412e7",
+      "param_net": "8d9086c89f83a81cc12ec4a010065225e13bebd5751d30e829c60fa582242a25",
+      "param_net_target": "8d9086c89f83a81cc12ec4a010065225e13bebd5751d30e829c60fa582242a25"
+    },
+    "networks_unchanged": true,
+    "counters_unchanged": true,
+    "sampling_rng_unchanged": true
+  },
+  "checkpoint_hashes_match_receipt": true,
+  "frontend_hashes_unchanged": true,
+  "source_snapshot_current_match": true,
+  "probe_actions": 30060,
+  "probe_passed": 60,
+  "probe_total": 60,
+  "centered_passed": 12,
+  "centered_total": 12,
+  "common20_passed": 20,
+  "mean_terminal_center_error": 0.011192144548119416,
+  "mean_reversals": 0.1,
+  "validation_status": {
+    "state": "independent_validation",
+    "round": 60
+  }
+}

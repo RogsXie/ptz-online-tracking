@@ -1,0 +1,234 @@
+{
+  "name": "precision_band_rgb_planning_v14",
+  "preregistered_date": "2026-10-31",
+  "status": "declared_before_coverage_calibration_and_training",
+  "purpose": "stationary RGB centering and active zoom across four corners and five initial magnifications",
+  "not_paper_equivalent": true,
+  "control_execution": {
+    "profile": "learned_rgb_model_planning_v13",
+    "duration_unit": "physical seconds",
+    "duration_bounds_s": [
+      0.04,
+      0.04
+    ],
+    "pan_deg_s": 8.0,
+    "tilt_deg_s": 8.0,
+    "zoom_fov_deg_s": 8.0,
+    "maximum_single_axis_step_deg": 0.32,
+    "note": "Seven physical fixed pulses; action response learned from real RGB transitions; no duration or Q network",
+    "yaw_limits_deg": [
+      -65.0,
+      65.0
+    ],
+    "pitch_limits_deg": [
+      -80.0,
+      -40.0
+    ],
+    "fov_limits_deg": [
+      14.0,
+      66.0
+    ]
+  },
+  "frozen_frontend": {
+    "detector": "weights/yolo26s_ue_overhead_v1.pt",
+    "detector_sha256": "1dd0de55c1791dce289cc7dc1d8eb6c50e488b26d38941f4c20845a6cadb5ae2",
+    "threshold": 0.15,
+    "imgsz": 960,
+    "half": false,
+    "reid": "existing verified FastReID VeRi SBS R50-IBN 2048-dim",
+    "reid_sha256": "57fb9c17d88911ea64390bf5427f43511435e7f88f6eed9dbc969d4b611e53cd",
+    "authorization": "User requested detector fine-tuning;12epochs plus independent image and44live development-start gates passed; freeze this new checkpoint during RL",
+    "preprocessing_profile": "full_and_half_rgb_confidence_nms_v13"
+  },
+  "seed_policy": {
+    "train": [
+      13100000,
+      13101199
+    ],
+    "probe": [
+      13200000,
+      13200059
+    ],
+    "calibration": [
+      13300000,
+      13300059
+    ],
+    "validation": [
+      13400000,
+      13400119
+    ],
+    "reserved_final_test": [
+      [
+        2400000,
+        2400239
+      ],
+      [
+        11500000,
+        11500239
+      ]
+    ],
+    "final_test_materialization": "blocked",
+    "validation_use": "not automatic; user stopped extended v10 validation"
+  },
+  "progression": {
+    "initialization": "v13 audited response coefficients; no new training or optimizer; old training rewards retained as historical data only",
+    "checkpoint_selection": "same single frozen response model; changed RGB planning/environment reward;20+40complete development",
+    "maximum_episodes_per_attempt": 0
+  },
+  "metric_contract": {
+    "center_error": "sqrt((2*cx-1)^2+(2*cy-1)^2), computed from the selected RGB detection",
+    "scale_log_error": "abs(log(area_ratio/0.04)); unavailable detections do not become zeros",
+    "availability": "time-weighted valid selected detections and separate offline correct-GT matching coverage",
+    "offline_gt": "identity/false-positive and visibility diagnostics only; cannot influence state/action/reward or reset aiming",
+    "stable_hold": "entire required hold window after settling, not only one terminal frame; every action-end RGB observation logged",
+    "loss_run_seconds": "sum of action durations during consecutive unavailable selected detections",
+    "rapid_unwarranted_reversal": "opposite same-axis commands <=0.5s apart while preceding observed axis error<=0.03, followed by error worsening>=0.02",
+    "total_direction_reversals": "sum of opposite nonzero commands on the same pan/tilt/zoom axis; Stay and other-axis commands do not erase the preceding command; normalized per10 actual simulation seconds",
+    "settling_time": "first time after which the complete required stable-hold window meets center/scale bounds",
+    "oscillation_note": "Necessary direction changes during actual motion are not automatically counted as unstable reversals",
+    "confidence": "confidence alone is never a task-success criterion; detector threshold remains frozen",
+    "sampling_limit": "metrics summarize actual closed-loop action-end RGB samples; no claim of continuous pixel truth between samples"
+  },
+  "default_episode_gate": {
+    "stable_hold_seconds": 5.0,
+    "stable_center_mean_max": 0.025,
+    "stable_center_p95_max": 0.05,
+    "stable_center_fraction_within_0_05_min": 0.95,
+    "selected_availability_min": 0.99,
+    "offline_matched_availability_min": 0.98,
+    "unintended_loss_run_seconds_max": 0.25,
+    "rapid_unwarranted_reversals_max": 2,
+    "false_target_completion_max": 0
+  },
+  "stages": [
+    {
+      "number": 2,
+      "id": "static_zoom",
+      "category": "static_active_zoom",
+      "prerequisite": null,
+      "allowed_actions": [
+        0,
+        1,
+        2,
+        3,
+        4,
+        5,
+        6
+      ],
+      "horizon_seconds": 20.0,
+      "max_decisions": 512,
+      "settling_seconds_max": 12.0,
+      "scale_required": true,
+      "direction_reversals_per_10s_max": 4.0,
+      "validation_success_rate_min": 0.95,
+      "validation_min_episodes": 120,
+      "validation_quadrants_min_pass_each": 28,
+      "gate_note": "development60/60; independent validation requires a separate run and is not automatic",
+      "stable_area_range": [
+        0.025,
+        0.055
+      ],
+      "stable_scale_log_error_mean_max": 0.25
+    }
+  ],
+  "corner_initialization": {
+    "frame_coordinates": "0..1 RGB box center",
+    "full_bbox_margin": 0.005,
+    "nominal_camera_pitch_deg": -60.0,
+    "physical_time_budget_basis": "20-second horizon and12-second settling gate retained for joint task; actual success must be measured",
+    "camera_location_cm": [
+      -2200.0,
+      0.0,
+      4500.0
+    ],
+    "layout_reference_height_cm": 90.0,
+    "fixed_camera_installation": true,
+    "sky_exclusion": "fixed downward pitch limits[-80,-40],FOV[14,66]; no camera translation",
+    "vehicle_scale": 1.0,
+    "asset_note": "Native1.0vehicle; frozen overhead-adapted detector; fixed location and initial orientation"
+  },
+  "split_contract": {
+    "train": "no new training; source v13 training only",
+    "probe": "same20balancedcorner-scale cases early,all60finally",
+    "validation": "120reservednewpositions/intermediate magnifications; not automatic",
+    "final_test": "old/new final tests remain sealed",
+    "prior_results": "v10 was user-stopped72/120; no qualification claim or automatic promotion"
+  },
+  "coverage": {
+    "initial_magnifications": [
+      1.0,
+      1.5,
+      2.0,
+      3.0,
+      4.0
+    ],
+    "magnification_definition": "tan(62deg/2)/tan(horizontalFOV/2); geometric perspective magnification, not digital resize",
+    "offset_layers": [
+      {
+        "name": "already_centered",
+        "max_axis_offset": [
+          0.001,
+          0.006
+        ]
+      },
+      {
+        "name": "inner_corner",
+        "max_axis_offset": [
+          0.1,
+          0.16
+        ]
+      },
+      {
+        "name": "outer_corner",
+        "max_axis_offset": [
+          0.21,
+          0.23
+        ]
+      }
+    ],
+    "groups": 60,
+    "training_pool": 1200,
+    "initial_attempt_rounds": 0,
+    "initial_center_layout_tolerance": 0.025,
+    "scale_interpretation": "native vehicle scale, initial FOV changes optical-equivalent magnification, FOV actively controlled thereafter",
+    "target_area_ratio": 0.04,
+    "train_order": "not applicable: no new training",
+    "probe_schedule": {
+      "0": "same fixed v13 balanced20 then disjoint40; all development, not independent"
+    },
+    "independent_validation": "reserved120newcases; not executed automatically",
+    "calibration": "60initial RGB conditions; evidence of visibility/scale and command response, not control success"
+  },
+  "validation_group_gates": {
+    "quadrant_min": 28,
+    "layer_min": 38,
+    "scale_min": 23,
+    "cell_min": 1,
+    "near_center_min": 40
+  },
+  "algorithm": "Frozen learned RGB response planning with explicit centering inner-band cost; not DQN/P-DQN",
+  "learning": {
+    "seed": 20261131,
+    "warmup": 256,
+    "update_interval": 4,
+    "epsilon": 0.4,
+    "horizon": 4,
+    "beam_width": 32,
+    "ridge": 0.01,
+    "min_samples_per_action": 12,
+    "features": "1,x,y,z,x*x,y*y,z*z,x*y,x*z,y*z",
+    "new_data_only": false,
+    "fit": "per-action regularized least squares",
+    "rounds": 0,
+    "inherits_budget_from": "runs/center-repair-v12a-attempt1/configuration.json",
+    "data_source": "v13 verified10020 training physical transitions only; reward is not a model input",
+    "center_inner_band": 0.015
+  },
+  "reward_change_v14": {
+    "center_cost": "max(0, RGB_center_error -0.015)",
+    "scale_cost": "0.2*abs(log(RGB_area/0.04)) unchanged",
+    "reward": "v11 temporal shaping/rate/action effort with replaced joint cost",
+    "acceptance_gates": "exact v13/v11 unchanged",
+    "no_forced_action": true
+  }
+}

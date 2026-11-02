@@ -1,0 +1,4041 @@
+{
+  "snapshot": "2026-11-02 first-lock active zoom",
+  "source_root": "D:\\EI\\ptz_ue",
+  "files": [
+    {
+      "path": "pdqn_static_20261101/analyze.py",
+      "bytes": 3414,
+      "sha256": "df84d0a6afd9233ed290234980682e8bf54ab96dd1cd966555079798e277f502"
+    },
+    {
+      "path": "pdqn_static_20261101/audit_exploration_data.py",
+      "bytes": 4756,
+      "sha256": "9e27629aeda0b9799d1ff61711b92f516b8ade0d30d5b64df7a49353edfb1e27"
+    },
+    {
+      "path": "pdqn_static_20261101/audit_live.py",
+      "bytes": 4157,
+      "sha256": "a5a3c1853d8b4af1322a80fd4f50b19ce8da9cbbb845dcdb43d7831a1ec8a016"
+    },
+    {
+      "path": "pdqn_static_20261101/audit_policy_decisions.py",
+      "bytes": 5411,
+      "sha256": "5c4ac9a79a45fa78ca84b86e5d4e6dd5448ebaa4460a712501b90c0ba02e50d9"
+    },
+    {
+      "path": "pdqn_static_20261101/audit_release_live.py",
+      "bytes": 6242,
+      "sha256": "2085b7372a857b8a670bedbbbfe774845862843080a2c20d017d9397f2cd117a"
+    },
+    {
+      "path": "pdqn_static_20261101/baseline.py",
+      "bytes": 4616,
+      "sha256": "ac02f5d71233f3c15d8db745938adf7d6435066546903de049d80945740e5733"
+    },
+    {
+      "path": "pdqn_static_20261101/bootstrap.py",
+      "bytes": 377,
+      "sha256": "3f572b1d8152cc3a5d1d20ecdec4067ee91c4da4a4d8b2c32fd7dab41ab3c1ae"
+    },
+    {
+      "path": "pdqn_static_20261101/build_release_report.py",
+      "bytes": 15968,
+      "sha256": "89c6c1b8e079baf153059d33eac96ac274de110bf5580d395cde96b6480bb406"
+    },
+    {
+      "path": "pdqn_static_20261101/calibrate.py",
+      "bytes": 5715,
+      "sha256": "bcf04ca60461b383c76b36a0dce9d6f484824b217aafd9d9b4cf4116ba4a5a97"
+    },
+    {
+      "path": "pdqn_static_20261101/calibrate_corners.py",
+      "bytes": 2930,
+      "sha256": "0fe05464a8d5c9e8c8f0d79e5db7612684915419c148845d4b3f2352d2460f20"
+    },
+    {
+      "path": "pdqn_static_20261101/capture_after_qualification.py",
+      "bytes": 5059,
+      "sha256": "7f3e2d67fa8251a277fe207d7320aaa9ac8c95451999f639f9013099989ed6ba"
+    },
+    {
+      "path": "pdqn_static_20261101/check_acceptance.py",
+      "bytes": 1917,
+      "sha256": "239f4f1fe5a168fcfec3eb4ecd5bb99d06b122c2a70d3082007a763163e56456"
+    },
+    {
+      "path": "pdqn_static_20261101/collect_exploration_support.py",
+      "bytes": 8010,
+      "sha256": "0a366fc3f463978b2adc4e245131aafbfa9778bb2ae82799eb99fc398da9334a"
+    },
+    {
+      "path": "pdqn_static_20261101/compare_development.py",
+      "bytes": 3036,
+      "sha256": "f5f49911ac276b690f7902a628e235b878b169cc672d0133a87e590d04ef78e2"
+    },
+    {
+      "path": "pdqn_static_20261101/environment.py",
+      "bytes": 5303,
+      "sha256": "57ac2f07765d5efafd1d1d26549866e5ed6d26aae5de96240343f155c713266d"
+    },
+    {
+      "path": "pdqn_static_20261101/evaluate_audited.py",
+      "bytes": 5921,
+      "sha256": "36dea42599cd7cf4cd7e556c1d18ab11275907658c3782d5eb37987947090fd4"
+    },
+    {
+      "path": "pdqn_static_20261101/evaluate_corner_development.py",
+      "bytes": 977,
+      "sha256": "22431e0888ea11d2b55fef4e85ba96d911354f1324aa012866b83ab55270a3e5"
+    },
+    {
+      "path": "pdqn_static_20261101/evaluation_scenes.py",
+      "bytes": 1538,
+      "sha256": "9bd28244442024aef7a89c0c193945e339b9653c285a388b47d5fa91dd58bdc0"
+    },
+    {
+      "path": "pdqn_static_20261101/finish_block_queue.ps1",
+      "bytes": 1161,
+      "sha256": "dbfe40f33344431e71dd0b55da3e0409b012937012616517288c360e564f5e3e"
+    },
+    {
+      "path": "pdqn_static_20261101/frontend_check.py",
+      "bytes": 994,
+      "sha256": "84ac510b862d91f0ba25402cd6827659361b1274cfa3503908de1f87500eaa74"
+    },
+    {
+      "path": "pdqn_static_20261101/independent_validation.py",
+      "bytes": 6789,
+      "sha256": "a30e570c9efecdc5d44525229f961f0994aaa8de0cbefd51a7692698e4e6795d"
+    },
+    {
+      "path": "pdqn_static_20261101/inspect_checkpoint.py",
+      "bytes": 1929,
+      "sha256": "99db37bef9ba9689a88b4c3694005235bf56aa6c064dc3919cae0339aeeecf99"
+    },
+    {
+      "path": "pdqn_static_20261101/inspect_duration_gradients.py",
+      "bytes": 3009,
+      "sha256": "f2df0fff0f1cab18f782bac6d38fb5b14e5b42ee3e017e4a817e562ea9c00859"
+    },
+    {
+      "path": "pdqn_static_20261101/live_demo.py",
+      "bytes": 6617,
+      "sha256": "33321ef22383e6fd820bb32c98730d5017588a91a1a00ecfc3dd765e5c26133e"
+    },
+    {
+      "path": "pdqn_static_20261101/live_demo_visible.py",
+      "bytes": 2106,
+      "sha256": "28235b4f2cdfa216a8d3da2f44384ca513717de6b0a75f87cf75390cfff0e8b4"
+    },
+    {
+      "path": "pdqn_static_20261101/live_summary_figure.py",
+      "bytes": 2450,
+      "sha256": "69aa4f1c9f4a54069c510fd0a9ecdee15276de98814c9e061bbb2c134578bb90"
+    },
+    {
+      "path": "pdqn_static_20261101/plot_corner_progress.py",
+      "bytes": 2953,
+      "sha256": "9c2f8a1487a2508829633ab50b7d68519dd1bfd1a8e8f93b86cf67bbe25f524e"
+    },
+    {
+      "path": "pdqn_static_20261101/plot_coverage.py",
+      "bytes": 2495,
+      "sha256": "962eedfa5cdb3a25a37fc78c21a083b670245c7ce09a2c8c6d7671120277f088"
+    },
+    {
+      "path": "pdqn_static_20261101/plot_heldout_coverage.py",
+      "bytes": 2209,
+      "sha256": "9a029a4276785a1e27ff940c3a58068e41c1acad1dcd674f29733696edb040fa"
+    },
+    {
+      "path": "pdqn_static_20261101/plot_policy_diagnostic.py",
+      "bytes": 3247,
+      "sha256": "2c31dec8789c8764360ef2a24b47332e181e8c800562ce6c85c55a55aa323cc4"
+    },
+    {
+      "path": "pdqn_static_20261101/plot_release_live.py",
+      "bytes": 3137,
+      "sha256": "a639a0c281038263574e80e6ca79bc306855085986600df7b1ac56efed5ecdc9"
+    },
+    {
+      "path": "pdqn_static_20261101/qualify_after_coverage.ps1",
+      "bytes": 6828,
+      "sha256": "1a4032b8dd291e167fbe0d495290772b04cfeda1e569e93152b091970475a561"
+    },
+    {
+      "path": "pdqn_static_20261101/qualify_after_exploration.py",
+      "bytes": 7017,
+      "sha256": "f0631b9747bdb318a6471f18a2622bb90c84037aa4d05556a7031d44f8e11de6"
+    },
+    {
+      "path": "pdqn_static_20261101/render_detection_video.py",
+      "bytes": 6697,
+      "sha256": "c4b8105889590a811f4a692c27fd401f0d34db7704ad3f7cd4d534e22ccd9e64"
+    },
+    {
+      "path": "pdqn_static_20261101/replay_update.py",
+      "bytes": 2761,
+      "sha256": "9fd89df3265f0f9caa0c20d9c7980dd4e96c6f61d66d1667c8cdc135aa890d38"
+    },
+    {
+      "path": "pdqn_static_20261101/run_in_pycharm.py",
+      "bytes": 3576,
+      "sha256": "c37368cb298ede5a9130c0c7be7127f76c220527d4675b61c2c9765b8ab8e4e2"
+    },
+    {
+      "path": "pdqn_static_20261101/scenes.py",
+      "bytes": 2859,
+      "sha256": "9263cf690819c59d9b8041a54a28bceac40db67d5067546e33f0bffd3dd2ee79"
+    },
+    {
+      "path": "pdqn_static_20261101/train.py",
+      "bytes": 13113,
+      "sha256": "aa8b3b31b4513f53b9a5ac7a04e348d33af34c2cee7ef3c79c9c5426dc4553da"
+    },
+    {
+      "path": "pdqn_static_20261101/train_coverage_support.py",
+      "bytes": 1799,
+      "sha256": "9d7add47728cdaa2a6519338cac81975b0f71a631d0c140fabee34770be842e2"
+    },
+    {
+      "path": "pdqn_static_20261101/speed_revision_20261101/analyze_control_latency.py",
+      "bytes": 6465,
+      "sha256": "99d608d221775b0e5d1fb3bf36959197cd0ef8275051cb3509180335158a33e8"
+    },
+    {
+      "path": "pdqn_static_20261101/speed_revision_20261101/async_frame_runtime.py",
+      "bytes": 6546,
+      "sha256": "48386f9b7225a7ebed589439db3448201e97a488bd3eed478b1c19162b884583"
+    },
+    {
+      "path": "pdqn_static_20261101/speed_revision_20261101/audit_continuous_online.py",
+      "bytes": 5295,
+      "sha256": "91ace3b4b242145be57972b4b78b3cf29c04bde5ee07297c66518cd5b83f99a9"
+    },
+    {
+      "path": "pdqn_static_20261101/speed_revision_20261101/audit_speed_decisions.py",
+      "bytes": 5750,
+      "sha256": "ec5937debbacc4241b9b4a64ecfa3c3edc4e5f73895f6afa6953328963884b01"
+    },
+    {
+      "path": "pdqn_static_20261101/speed_revision_20261101/audit_speed_decisions_v5.py",
+      "bytes": 5716,
+      "sha256": "e117f65ff8ef184119c0ea49ecfafd7571081ae44a54e3fe3a4065a00c81f130"
+    },
+    {
+      "path": "pdqn_static_20261101/speed_revision_20261101/audit_speed_live.py",
+      "bytes": 7577,
+      "sha256": "a9c67a82673bca4ff5113fbc8edcd1b45cae4f9a7e51817c42d844ce95d02d2e"
+    },
+    {
+      "path": "pdqn_static_20261101/speed_revision_20261101/audit_startup_scale.py",
+      "bytes": 2074,
+      "sha256": "185cdc4ce1dbe366c17f832e06f79a2316e9c0a4b352b5da0bbee05ce6b547a4"
+    },
+    {
+      "path": "pdqn_static_20261101/speed_revision_20261101/batched_vehicle_reid.py",
+      "bytes": 1612,
+      "sha256": "42a93a34db4c76152e4f158961cf7a5774ad787e2950ecd2393cfc39430a81f2"
+    },
+    {
+      "path": "pdqn_static_20261101/speed_revision_20261101/build_speed_release.py",
+      "bytes": 10710,
+      "sha256": "092bb20906e970d12b3195cbeb7c02b0341d3bb68b47c469754549b2d95048c4"
+    },
+    {
+      "path": "pdqn_static_20261101/speed_revision_20261101/calibrate_precision.py",
+      "bytes": 3126,
+      "sha256": "ab52d9e5121f104fd5418d67611f20a057449786bcb97bd01cd10a7b7e54da00"
+    },
+    {
+      "path": "pdqn_static_20261101/speed_revision_20261101/calibrate_speed.py",
+      "bytes": 4145,
+      "sha256": "d4e28f2e0ab92bb962331e15fa96ce245dd7947f5ec40fec43b327cfd2495249"
+    },
+    {
+      "path": "pdqn_static_20261101/speed_revision_20261101/capture_speed_v5.py",
+      "bytes": 5821,
+      "sha256": "7e16cc7bd98b10f69c2499439358c8697f700406badfa4cd0d527ea11308cb85"
+    },
+    {
+      "path": "pdqn_static_20261101/speed_revision_20261101/check_continuous_online.py",
+      "bytes": 4046,
+      "sha256": "fbaeed88c0234ce1fe583a1a46a48151228c7b22d9037e51d948c695fee1b7bd"
+    },
+    {
+      "path": "pdqn_static_20261101/speed_revision_20261101/check_robust_tracker.py",
+      "bytes": 2727,
+      "sha256": "d9d4efedb4bef998c5767d4f861401b9323a21789313dbd87dbb146b2327f03b"
+    },
+    {
+      "path": "pdqn_static_20261101/speed_revision_20261101/check_startup_scale.py",
+      "bytes": 2824,
+      "sha256": "9e477160a7186f0786a54e8290ac755511af774e072cc911c5dc972a92326621"
+    },
+    {
+      "path": "pdqn_static_20261101/speed_revision_20261101/check_whole_truck_detection.py",
+      "bytes": 2669,
+      "sha256": "b106f3d97678c9f4b50ae835f4b2767c2efbb80fae6364b6fc636e7ceb5cc52e"
+    },
+    {
+      "path": "pdqn_static_20261101/speed_revision_20261101/confidence_reacquire.py",
+      "bytes": 4693,
+      "sha256": "e6fe4eece561a0a6ddcfaf2c2dbe6f262ef64867fdbaf3e10abc2d15a8eab5c9"
+    },
+    {
+      "path": "pdqn_static_20261101/speed_revision_20261101/continuous_perception_runtime.py",
+      "bytes": 6289,
+      "sha256": "3c10235a1e74aedb26730af91b1b29d9718745e2e420292442487270c0ae6737"
+    },
+    {
+      "path": "pdqn_static_20261101/speed_revision_20261101/control_latency_runtime.py",
+      "bytes": 4355,
+      "sha256": "2e80701f51a01a1c1c863a4735745a524a8dcc1a29316afd4fc637821de4b58b"
+    },
+    {
+      "path": "pdqn_static_20261101/speed_revision_20261101/control_reference_overlay.py",
+      "bytes": 5596,
+      "sha256": "997fd1dc79308795fd41f2eb4b93886d37199b5744c4eefee28af7ed90894b1f"
+    },
+    {
+      "path": "pdqn_static_20261101/speed_revision_20261101/encode_60fps_vfr.py",
+      "bytes": 2200,
+      "sha256": "a81ca52aaa26958b07bb3b4ce5fa4910e7b22b96994fc48693749ddc3e97d454"
+    },
+    {
+      "path": "pdqn_static_20261101/speed_revision_20261101/encode_precise_vfr.py",
+      "bytes": 2303,
+      "sha256": "98fffc99ab14065bd3a3c431a39e326acd28e2a04a10e3bffebaa19a93187a74"
+    },
+    {
+      "path": "pdqn_static_20261101/speed_revision_20261101/evaluate_speed.py",
+      "bytes": 2231,
+      "sha256": "7834ceb58013de19afac24478004f686de19d2c488e5049ade4e1c009cae0202"
+    },
+    {
+      "path": "pdqn_static_20261101/speed_revision_20261101/evaluate_speed_corners.py",
+      "bytes": 587,
+      "sha256": "2796ac9f9c7d3c6350544647faaee1b8b2f9efb4e41899d27070efde7f7e9851"
+    },
+    {
+      "path": "pdqn_static_20261101/speed_revision_20261101/evaluate_speed_v3.py",
+      "bytes": 2463,
+      "sha256": "9c0f27123591d7f90e7353e88c98f1f817435f172d6bbe6191d4732519ad31df"
+    },
+    {
+      "path": "pdqn_static_20261101/speed_revision_20261101/evaluate_speed_v4.py",
+      "bytes": 2503,
+      "sha256": "ba3c7c65df82841add9fe780790592b469a785293a8409a86cea036f173e6d8a"
+    },
+    {
+      "path": "pdqn_static_20261101/speed_revision_20261101/evaluate_speed_v5.py",
+      "bytes": 2503,
+      "sha256": "b6bbff8a137e8fae33acc472f0682a9db94031413accdd05fade7b47caf3d44f"
+    },
+    {
+      "path": "pdqn_static_20261101/speed_revision_20261101/fast_rgb_perception.py",
+      "bytes": 2853,
+      "sha256": "3aca8e50e526944d1d6a862d729d197948cea1c1c78db8dfae7efafaf524a233"
+    },
+    {
+      "path": "pdqn_static_20261101/speed_revision_20261101/gpu_stream_runtime.py",
+      "bytes": 6961,
+      "sha256": "0b8c772a38762b5d49ac99a19bbd059bb5de8d7ecbae3e7016ec02ce27657ec2"
+    },
+    {
+      "path": "pdqn_static_20261101/speed_revision_20261101/image_area_constraint.py",
+      "bytes": 3403,
+      "sha256": "bb6ce5e86847bbbc7155d324ee0954d7f1fd73ae3d187bfbeb2ad3806d2caa4b"
+    },
+    {
+      "path": "pdqn_static_20261101/speed_revision_20261101/live_async_variable_speed.py",
+      "bytes": 6074,
+      "sha256": "a2789b1587f57916b301cde68b057145a0c1688713d4eb5e302427dd54d16212"
+    },
+    {
+      "path": "pdqn_static_20261101/speed_revision_20261101/live_control_latency.py",
+      "bytes": 8848,
+      "sha256": "5e89ab9367331c61997b045d7b5d37c93349ccdadec115cf723b5cdbbf58c11e"
+    },
+    {
+      "path": "pdqn_static_20261101/speed_revision_20261101/live_crossroad_area_cap.py",
+      "bytes": 2455,
+      "sha256": "b4d8b8f8689d7a8cfe9c0b9ad93a72211992f9e943a05c5b794289ff04bfbf74"
+    },
+    {
+      "path": "pdqn_static_20261101/speed_revision_20261101/live_crossroad_blue_traffic.py",
+      "bytes": 1799,
+      "sha256": "c9d124159ea08960e1a6dc557c66eb8bd536dd78b6a577e5292d8ade1f5e3141"
+    },
+    {
+      "path": "pdqn_static_20261101/speed_revision_20261101/live_crossroad_identity_memory.py",
+      "bytes": 4444,
+      "sha256": "eade8dc564b72463d530f6c01f13ce940a815d8e0e9800070184642ec7572266"
+    },
+    {
+      "path": "pdqn_static_20261101/speed_revision_20261101/live_crossroad_purple_following.py",
+      "bytes": 2330,
+      "sha256": "d4c555713e512fb5ad60521e2668b50c77d7098c5b6c8f4b1b85ce0edfda9d9c"
+    },
+    {
+      "path": "pdqn_static_20261101/speed_revision_20261101/live_crossroad_reacquire_area2.py",
+      "bytes": 2585,
+      "sha256": "0bf469e4af8a4a896221ba6b0a5e807feeb46d281fc72a58920d350a2cc44ea5"
+    },
+    {
+      "path": "pdqn_static_20261101/speed_revision_20261101/live_crossroad_robust_tracker.py",
+      "bytes": 2798,
+      "sha256": "ff1e56f697adcdf9561c8f59477be67ce3ad1d6c972f94a5ced03318d9193077"
+    },
+    {
+      "path": "pdqn_static_20261101/speed_revision_20261101/live_crossroad_stable_identity.py",
+      "bytes": 2522,
+      "sha256": "dfdae6c4e59097ee306a3022b6fcfd7c1b068fc539ae525171b4cd00686a984a"
+    },
+    {
+      "path": "pdqn_static_20261101/speed_revision_20261101/live_crossroad_truck_occlusion.py",
+      "bytes": 1810,
+      "sha256": "2890fb2ba0296e791487b72e7286c2cf60a72d0b0ef3e0e1f77ce574bbb8a5b9"
+    },
+    {
+      "path": "pdqn_static_20261101/speed_revision_20261101/live_crossroad_turn.py",
+      "bytes": 4164,
+      "sha256": "dd9c38736b6e8be3f8580d622a255d1f292df8008a009278532a0900331ba02a"
+    },
+    {
+      "path": "pdqn_static_20261101/speed_revision_20261101/live_crossroad_whole_vehicle.py",
+      "bytes": 2344,
+      "sha256": "bae7d55b4fa55909c1be7dc469ccbe0bde2717e873ef52f2877d82a0f256db70"
+    },
+    {
+      "path": "pdqn_static_20261101/speed_revision_20261101/live_fast_online_results.py",
+      "bytes": 8943,
+      "sha256": "5f5fd95cecd528ef7a86da8c1cc03c4f1be06d1c2b622ecf29fe11814c1c59c5"
+    },
+    {
+      "path": "pdqn_static_20261101/speed_revision_20261101/live_fast_tiny_corner.py",
+      "bytes": 3068,
+      "sha256": "7680b650de109fcd16e1f32c8552021a60d2cb179325c822c9db2782af983279"
+    },
+    {
+      "path": "pdqn_static_20261101/speed_revision_20261101/live_fast_tiny_corner_preserved.py",
+      "bytes": 1121,
+      "sha256": "0d7e63034e8f9beee1f5531f70c9b70551d58d45e27020f2e97f8e1660a6ff39"
+    },
+    {
+      "path": "pdqn_static_20261101/speed_revision_20261101/live_genuine_online_results.py",
+      "bytes": 2259,
+      "sha256": "b2721c9ef106aa651fafcc84bc3f1dda3f22a92f259acc9cb03117096a62e75e"
+    },
+    {
+      "path": "pdqn_static_20261101/speed_revision_20261101/live_motion15.py",
+      "bytes": 1587,
+      "sha256": "36d5ef0d79701ce4749173c16522a500edfdfebb9205a752b9c027f606588097"
+    },
+    {
+      "path": "pdqn_static_20261101/speed_revision_20261101/live_motion15_adapter.py",
+      "bytes": 1530,
+      "sha256": "52cdd018995e05f902278bb991d83a3b8271842f335f260c1d23cea511c66c7b"
+    },
+    {
+      "path": "pdqn_static_20261101/speed_revision_20261101/live_motion_tracking15.py",
+      "bytes": 5049,
+      "sha256": "52076dd3ab257ae9bfb4793d18253f49a3e6b672d22820071edb17c8f7e499a1"
+    },
+    {
+      "path": "pdqn_static_20261101/speed_revision_20261101/live_motion_tracking_9ms.py",
+      "bytes": 2467,
+      "sha256": "59f09cb9751a086860230cf6809132dcd09fc2e8a0709ec51b4b831f2f7a4991"
+    },
+    {
+      "path": "pdqn_static_20261101/speed_revision_20261101/live_motion_tracking_9ms_association.py",
+      "bytes": 3176,
+      "sha256": "e2f632e95ec73da12cc28be04972f2839dc47af02dcb50b8a88a381a1437b854"
+    },
+    {
+      "path": "pdqn_static_20261101/speed_revision_20261101/live_motion_tracking_9ms_mask.py",
+      "bytes": 3382,
+      "sha256": "34fc7d3bd0ec5ec0a5c08400efa32aa10793fe431f23153a28206e66b6402eea"
+    },
+    {
+      "path": "pdqn_static_20261101/speed_revision_20261101/live_motion_tracking_latency.py",
+      "bytes": 2703,
+      "sha256": "4622762f4e9e4834f570cc645309b128523ec4f2dcd0bf4fff8b9ac5da06273b"
+    },
+    {
+      "path": "pdqn_static_20261101/speed_revision_20261101/live_speed.py",
+      "bytes": 6274,
+      "sha256": "aabe771f2ce1558a4491c1b45448f8123875849b18f89406658831edca506dab"
+    },
+    {
+      "path": "pdqn_static_20261101/speed_revision_20261101/live_speed_v5.py",
+      "bytes": 6361,
+      "sha256": "247174285f0adaff12db788c9eec1cacb9fa8d82706d3988e2843386ce38e90c"
+    },
+    {
+      "path": "pdqn_static_20261101/speed_revision_20261101/live_speed_zoom15.py",
+      "bytes": 1377,
+      "sha256": "13d22b59c06e057929a8c76cd01300e55f62250309b3b97ee75a42b0757533a0"
+    },
+    {
+      "path": "pdqn_static_20261101/speed_revision_20261101/live_tiny_corner_zoom15.py",
+      "bytes": 1628,
+      "sha256": "962c5a200519a9e79f76f50ca424cd25300c6c5e4c629a43263d2a3f0b0d1a9e"
+    },
+    {
+      "path": "pdqn_static_20261101/speed_revision_20261101/live_tiny_optics_precision.py",
+      "bytes": 3191,
+      "sha256": "45e1b61128fbc5a4485a721b4c621c6878c5cce48303139c6748aa4667be6b27"
+    },
+    {
+      "path": "pdqn_static_20261101/speed_revision_20261101/live_tiny_optics_precision_v2.py",
+      "bytes": 3378,
+      "sha256": "9c245f316a5ea4d362ed75db28745a8d8127b4b464ea13fec60747708a715db6"
+    },
+    {
+      "path": "pdqn_static_20261101/speed_revision_20261101/live_unified_motion.py",
+      "bytes": 5502,
+      "sha256": "84e2afd0b9bbe4dab622f16b13df6861e400fcabad3a091374755dd1e5c9eb45"
+    },
+    {
+      "path": "pdqn_static_20261101/speed_revision_20261101/live_uniform_motion_stop.py",
+      "bytes": 3932,
+      "sha256": "08bae4a4475734bd5cd77f6c4c57508f2fa2143a4616e2256ee6cbbe5f298cc8"
+    },
+    {
+      "path": "pdqn_static_20261101/speed_revision_20261101/live_uniform_motion_stop_v2.py",
+      "bytes": 1460,
+      "sha256": "a0c7462f488c19117cdcd04c24c24b171fe46190c7e91bded6524f66204009cd"
+    },
+    {
+      "path": "pdqn_static_20261101/speed_revision_20261101/live_variable_speed_requested.py",
+      "bytes": 1549,
+      "sha256": "f5e7108064ba4c4470e4e97c4773a0a0beae94bf3d9aaddb2b70a0be2be13f66"
+    },
+    {
+      "path": "pdqn_static_20261101/speed_revision_20261101/locked_target_selector.py",
+      "bytes": 8083,
+      "sha256": "3b6c18fab5d9f8f91121a27eed034df9d6477f503205674d1d41113ac7e9f9ee"
+    },
+    {
+      "path": "pdqn_static_20261101/speed_revision_20261101/motion_adapter15.py",
+      "bytes": 2229,
+      "sha256": "38f685c9219c07b13335b052aa64f834650842f32ade1b66b3a42e9885dafac0"
+    },
+    {
+      "path": "pdqn_static_20261101/speed_revision_20261101/motion_learning15.py",
+      "bytes": 7066,
+      "sha256": "f739df9e38a1977f9025fa157f22cf3ee4456cd46e1c7be34b780d1d2388ef6c"
+    },
+    {
+      "path": "pdqn_static_20261101/speed_revision_20261101/motion_precision_v2.py",
+      "bytes": 3383,
+      "sha256": "c3c8008b010dacb46846deb4498e48936c9f3645f859e1ff136ef68dd6d3b74d"
+    },
+    {
+      "path": "pdqn_static_20261101/speed_revision_20261101/motion_tracking15.py",
+      "bytes": 2794,
+      "sha256": "0d6db93b4d3c2b0d3fe4a6093dc2f3da69ea8856813bd1a23de97b9d9e6f7d5d"
+    },
+    {
+      "path": "pdqn_static_20261101/speed_revision_20261101/online_result_recorder.py",
+      "bytes": 10319,
+      "sha256": "e6b22c3a5e37cfeb230848d4b2c2ab2b3ce66e310685e5ca27033252dd8946f3"
+    },
+    {
+      "path": "pdqn_static_20261101/speed_revision_20261101/prove_unified_training.py",
+      "bytes": 2859,
+      "sha256": "e2d965e41df5b73d53bff2df5c30b33e6e5546a7c6812b99a60562d6d041dd93"
+    },
+    {
+      "path": "pdqn_static_20261101/speed_revision_20261101/qualify_after_training.py",
+      "bytes": 6753,
+      "sha256": "9877e62d0c7eb858d2f54c355dc63ecd183ad69f695ed11bf2f00a68edc79263"
+    },
+    {
+      "path": "pdqn_static_20261101/speed_revision_20261101/qualify_v3.py",
+      "bytes": 5954,
+      "sha256": "badf177ee8aa8396e9c744addf4e601e1a67c32cf4756b4746c608baf66aba0a"
+    },
+    {
+      "path": "pdqn_static_20261101/speed_revision_20261101/qualify_v4.py",
+      "bytes": 4676,
+      "sha256": "e663359383de434800f7efa632eee06a382b65b0927a8c2c88a11638d691934e"
+    },
+    {
+      "path": "pdqn_static_20261101/speed_revision_20261101/qualify_v5.py",
+      "bytes": 4732,
+      "sha256": "456711392cf452ee409c0e0adb8a7160650383360a15876e184ce3e9168c3d7d"
+    },
+    {
+      "path": "pdqn_static_20261101/speed_revision_20261101/refine_motion_tracking_precision.py",
+      "bytes": 2477,
+      "sha256": "e308576bfe7e88992a7496ce2b3d46d5103db883141a9195ea61916dbb565fcf"
+    },
+    {
+      "path": "pdqn_static_20261101/speed_revision_20261101/refine_unified_precision.py",
+      "bytes": 2320,
+      "sha256": "fbccdc6902375a1b2481cf87c4231c6743c81b823e9b3ba1ee45b3251d82ed80"
+    },
+    {
+      "path": "pdqn_static_20261101/speed_revision_20261101/render_60fps_video.py",
+      "bytes": 249,
+      "sha256": "8b93164415b43c31be39814390d519b97bb56c7212b48dcab92cc064042c8b30"
+    },
+    {
+      "path": "pdqn_static_20261101/speed_revision_20261101/render_async_video.py",
+      "bytes": 250,
+      "sha256": "335557a8619472c87487a8eea98a834ec2f29d645d8dcce748312a0a6be8d12e"
+    },
+    {
+      "path": "pdqn_static_20261101/speed_revision_20261101/render_centered_detection_video.py",
+      "bytes": 7423,
+      "sha256": "595f71e58213ce8e088a66e55255fcde16eb23f36af4b243078aadfe3b5bad2f"
+    },
+    {
+      "path": "pdqn_static_20261101/speed_revision_20261101/render_motion_centered_video.py",
+      "bytes": 7764,
+      "sha256": "8010f188c51af4d72b6f725f41f1810cbb41d46ee341f86e9e148e84849705f6"
+    },
+    {
+      "path": "pdqn_static_20261101/speed_revision_20261101/render_unified_video.py",
+      "bytes": 8960,
+      "sha256": "10bb5e1b70f87c0ea1559d2922cb00c75810cfd626fbd15b63fff9199fd63be4"
+    },
+    {
+      "path": "pdqn_static_20261101/speed_revision_20261101/replay_robust_tracker.py",
+      "bytes": 4918,
+      "sha256": "b43428c0efc50c7862fd1119467ae7bfcb33d2199e36219a239f95663666967d"
+    },
+    {
+      "path": "pdqn_static_20261101/speed_revision_20261101/robust_locked_tracker.py",
+      "bytes": 7813,
+      "sha256": "a0aa165591395c6491c6e9f480ffe5fd083ced2cd0f8c257b7f2807723ce2eb8"
+    },
+    {
+      "path": "pdqn_static_20261101/speed_revision_20261101/run_speed_in_pycharm.py",
+      "bytes": 2428,
+      "sha256": "545eba0bb07982c2cbc550174c4704fab12321c3e754359440d59fd57e931c89"
+    },
+    {
+      "path": "pdqn_static_20261101/speed_revision_20261101/run_unified_focused.ps1",
+      "bytes": 1494,
+      "sha256": "2997624ec1d357ebfbc5aae984ca568c4eebbc28edc9ca84d037d9585844ff8f"
+    },
+    {
+      "path": "pdqn_static_20261101/speed_revision_20261101/short_motion_features.py",
+      "bytes": 532,
+      "sha256": "096461af96b3733a74d1cf8f693da2025ca6d5436655ceda14391b1ecb194bc8"
+    },
+    {
+      "path": "pdqn_static_20261101/speed_revision_20261101/source_protocol_contrast.py",
+      "bytes": 2180,
+      "sha256": "162cdfee95e92e8dceb20b5d07f6d36832283dfae8ec1d4be8e40458ec4229b1"
+    },
+    {
+      "path": "pdqn_static_20261101/speed_revision_20261101/speed_agent.py",
+      "bytes": 1830,
+      "sha256": "c23a002e360c9c1c2ffa8cce23c7df108a67ce29f883e23fc95eb850bb72676e"
+    },
+    {
+      "path": "pdqn_static_20261101/speed_revision_20261101/speed_agent_v3.py",
+      "bytes": 1632,
+      "sha256": "b91c2066bd59986f341f05a7a350582f6f45ca842c71503396bb0e0b7a159e7b"
+    },
+    {
+      "path": "pdqn_static_20261101/speed_revision_20261101/speed_agent_v5.py",
+      "bytes": 1663,
+      "sha256": "4aefe23fbf592a9c02f89ef3457efe31d00efa6f4134711e4315e64874a74efc"
+    },
+    {
+      "path": "pdqn_static_20261101/speed_revision_20261101/speed_bootstrap.py",
+      "bytes": 724,
+      "sha256": "86c24066d19cc3bf538ce4f365b6fbd4c564a9169a57c3111bb39253eb182b5b"
+    },
+    {
+      "path": "pdqn_static_20261101/speed_revision_20261101/speed_environment.py",
+      "bytes": 5448,
+      "sha256": "a8e31334140e96252c6f2ab7d58a8c81ef6adf97a2dfe1d0242fbee7a3f267f8"
+    },
+    {
+      "path": "pdqn_static_20261101/speed_revision_20261101/speed_environment_v3.py",
+      "bytes": 5552,
+      "sha256": "9ebf351ed32db2df3e7e436c8474449b1840bd3161d96658e92a5cbcdf48be08"
+    },
+    {
+      "path": "pdqn_static_20261101/speed_revision_20261101/speed_environment_v5.py",
+      "bytes": 5518,
+      "sha256": "3258d07ed469a1aed03dd7e2374efa0b8433bd58c4e2c0e79863aaa23def8113"
+    },
+    {
+      "path": "pdqn_static_20261101/speed_revision_20261101/speed_independent_validation.py",
+      "bytes": 7074,
+      "sha256": "711134638938d5d5ebe2725de0103798a303afef1b4028802c9cbc98190512f0"
+    },
+    {
+      "path": "pdqn_static_20261101/speed_revision_20261101/speed_independent_validation_v3.py",
+      "bytes": 7221,
+      "sha256": "2cbeda01ea52f476b97ffac28825fe9fa3a9bb7831ff670c5d438d0e423b82ec"
+    },
+    {
+      "path": "pdqn_static_20261101/speed_revision_20261101/speed_independent_validation_v5.py",
+      "bytes": 7278,
+      "sha256": "c514832e9d2a848b1cc7503ac6ed0f8d37fe20209d0e2bd10d296751b90354b8"
+    },
+    {
+      "path": "pdqn_static_20261101/speed_revision_20261101/speed_runner.py",
+      "bytes": 5226,
+      "sha256": "97fb82248126d40e052225252cba4d9efa6c3cab79dc20597846bfad267081db"
+    },
+    {
+      "path": "pdqn_static_20261101/speed_revision_20261101/speed_runner_v2.py",
+      "bytes": 3614,
+      "sha256": "89a1b2636ac8b7fcb9eaa0d3cda3fa492ede2d1f87e1983259ae40ff42816df5"
+    },
+    {
+      "path": "pdqn_static_20261101/speed_revision_20261101/speed_runner_v3.py",
+      "bytes": 3529,
+      "sha256": "d0cdc7405f45c2e734f17121ae38096cff8472ff6287313cdbb60956a6ab51f8"
+    },
+    {
+      "path": "pdqn_static_20261101/speed_revision_20261101/speed_runner_v4.py",
+      "bytes": 3603,
+      "sha256": "df470278024bd999056fabcb1b2970dea8e504bac21b91a5c2f201ee689fa5de"
+    },
+    {
+      "path": "pdqn_static_20261101/speed_revision_20261101/speed_runner_v5.py",
+      "bytes": 3529,
+      "sha256": "b5936e88cfa63637f99949a325d41625d333cdf89ad9c8838e54916ea408bc92"
+    },
+    {
+      "path": "pdqn_static_20261101/speed_revision_20261101/speed_scenes.py",
+      "bytes": 884,
+      "sha256": "d28225c4b22126ff3b6b960e1837e423c6412e0fa13c9a536e1e63ae9083f12c"
+    },
+    {
+      "path": "pdqn_static_20261101/speed_revision_20261101/stability_objective.py",
+      "bytes": 1560,
+      "sha256": "99f3d0380ecbd3029b3176e570a1851564447abdb2033129ddccc9c03f16b45c"
+    },
+    {
+      "path": "pdqn_static_20261101/speed_revision_20261101/stable_locked_control.py",
+      "bytes": 7187,
+      "sha256": "ec211cb0c3f7b05e62cb450778edb3ee7c6503d6cb5bccad4d319363b7c7e190"
+    },
+    {
+      "path": "pdqn_static_20261101/speed_revision_20261101/stream_arena.py",
+      "bytes": 1127,
+      "sha256": "4d905f4d9d020550575d3651eacc6bba040b3b9a72fb19e444c38d7825ab3fa3"
+    },
+    {
+      "path": "pdqn_static_20261101/speed_revision_20261101/summarize_unified_experiment.py",
+      "bytes": 3955,
+      "sha256": "2514c701dbf5603a8db1b36c16bd0539cbcebd86b0268ab9777ec6e25ed12599"
+    },
+    {
+      "path": "pdqn_static_20261101/speed_revision_20261101/target_roi_detector.py",
+      "bytes": 2773,
+      "sha256": "43c58957a698d95fcc8f27e9ef3bccaffa129e269911f8da57a8f776f9982468"
+    },
+    {
+      "path": "pdqn_static_20261101/speed_revision_20261101/train_longroad_detector.py",
+      "bytes": 3801,
+      "sha256": "18c32aeedaf22592d8d876dfc4f1fd6ae2a653acfbe35d9909854232f052610d"
+    },
+    {
+      "path": "pdqn_static_20261101/speed_revision_20261101/train_motion15.py",
+      "bytes": 5546,
+      "sha256": "6a41aa951c4fe1fa5ed135156788b58e2cf936e20613d59f96319a1e7d197eb8"
+    },
+    {
+      "path": "pdqn_static_20261101/speed_revision_20261101/train_motion_adapter15.py",
+      "bytes": 3529,
+      "sha256": "85e4e42af7eee5c1b38d538c3ff0fa7ed35d1cc29a89083534f2dd268a8fa174"
+    },
+    {
+      "path": "pdqn_static_20261101/speed_revision_20261101/train_motion_tracking15.py",
+      "bytes": 4924,
+      "sha256": "a31cafd79cbe34c909173cabe69eab2464d699d59f057cb0cf173bba22795761"
+    },
+    {
+      "path": "pdqn_static_20261101/speed_revision_20261101/train_speed.py",
+      "bytes": 3244,
+      "sha256": "0dcaebcefc16b19cf067a33475f56bb3f020ee988005e53ceadc373d82110bf9"
+    },
+    {
+      "path": "pdqn_static_20261101/speed_revision_20261101/train_speed_v2.py",
+      "bytes": 4313,
+      "sha256": "f802fcbdbf5f699413168e0d119bcaba9f2f08c344667655196b6494dd1da49a"
+    },
+    {
+      "path": "pdqn_static_20261101/speed_revision_20261101/train_speed_v3.py",
+      "bytes": 3307,
+      "sha256": "f7675d5b7c861faaeee51864802e8202e682f6d8deb10bfacadc75095e4181f6"
+    },
+    {
+      "path": "pdqn_static_20261101/speed_revision_20261101/train_speed_v4.py",
+      "bytes": 7680,
+      "sha256": "be43d90b5681f0b0525a56b68f16c73b4936913a60e79e152e111ee5383d70dc"
+    },
+    {
+      "path": "pdqn_static_20261101/speed_revision_20261101/train_speed_v5.py",
+      "bytes": 5354,
+      "sha256": "ce874db768e260c02afd3b3f85a9de240b02d9db6075d7aa13868071d1f76171"
+    },
+    {
+      "path": "pdqn_static_20261101/speed_revision_20261101/train_unified_motion.py",
+      "bytes": 5711,
+      "sha256": "2195617e8b06b172fdbc1611cbc502323e0364a809c910b2b9d8acf6f1033f8c"
+    },
+    {
+      "path": "pdqn_static_20261101/speed_revision_20261101/train_whole_vehicle_detector.py",
+      "bytes": 4915,
+      "sha256": "751959f7b061dda936302236090908956971f64a3576421b78178d0552040d98"
+    },
+    {
+      "path": "pdqn_static_20261101/speed_revision_20261101/unified_core.py",
+      "bytes": 4677,
+      "sha256": "6bf8deb0b483a4edb962cf7790da7400f777e6d46a735c4c84c60e955f95d846"
+    },
+    {
+      "path": "pdqn_static_20261101/speed_revision_20261101/unified_perception.py",
+      "bytes": 5239,
+      "sha256": "42f786777c4a759fff90765855b1b1f08a3e0c38ddd03904c50cfd94a0408f04"
+    },
+    {
+      "path": "pdqn_static_20261101/speed_revision_20261101/unified_scenes.py",
+      "bytes": 2943,
+      "sha256": "32f0706e68466af2d19a4c0c9f2abfdcc136dbdc01ebc9872d78ca6175128e52"
+    },
+    {
+      "path": "pdqn_static_20261101/speed_revision_20261101/verified_visual_bridge.py",
+      "bytes": 4007,
+      "sha256": "c561d759b2b56dd32924d8eab87b866594a54d31b9109b397032e547f92d0e5b"
+    },
+    {
+      "path": "pdqn_static_20261101/speed_revision_20261101/whole_vehicle_frontend.py",
+      "bytes": 2906,
+      "sha256": "8c642787dc5a6edbd6f5e9f05a5ce7df2b2c3d94bba52ce1bb7386766e91b3de"
+    },
+    {
+      "path": "scripts/annotate_saved_demo.py",
+      "bytes": 1809,
+      "sha256": "262168acd8c07d54eafa2781728c30119cd2c9afefaf6532d1d8053c3131f24f"
+    },
+    {
+      "path": "scripts/continue_precision_zoom_50mamba.py",
+      "bytes": 309,
+      "sha256": "c0300fc31d0d081488ce131a1ebf84028d15f933b578b7876a175136f44b5257"
+    },
+    {
+      "path": "scripts/demo_tracking.py",
+      "bytes": 4297,
+      "sha256": "4c94dbda1d1d2c6507fd7024655841e03e3296d8eefe8959e1cc568a45387d5f"
+    },
+    {
+      "path": "scripts/ptz_env.py",
+      "bytes": 6975,
+      "sha256": "642603ba427767202ac3b25c291bc153866003b717ec0829d98de6c52f4137f7"
+    },
+    {
+      "path": "scripts/ptz_overlay.py",
+      "bytes": 1733,
+      "sha256": "e7f36e8fe5344c04de14786c4cfe79ad7171e6bd8e49e5c6769eb3615d47933b"
+    },
+    {
+      "path": "scripts/run_focused_gpu_50mamba.py",
+      "bytes": 1480,
+      "sha256": "344b317cd424137a057f4e550f01e3578d377e14d5f0a1ea705a58b20aae4a22"
+    },
+    {
+      "path": "scripts/run_focused_ppo_gpu_50mamba.py",
+      "bytes": 1233,
+      "sha256": "5661cfe1f68b57a6751c5a408dde7c3db9f18d4a10a4406c75bd4787072fe696"
+    },
+    {
+      "path": "scripts/run_in_pycharm.py",
+      "bytes": 6061,
+      "sha256": "65b5f2772a358f47788a048f86a9d7d853ffea3f196ab4c3cd633a7f26203650"
+    },
+    {
+      "path": "scripts/run_paper_gpu_50mamba.py",
+      "bytes": 1192,
+      "sha256": "7bc6d03dc7e591a5abf6083f09f9aff15629cdea607e48f53304c52faf4c0ef5"
+    },
+    {
+      "path": "scripts/run_paper_in_pycharm.py",
+      "bytes": 595,
+      "sha256": "c9b566e6fb846c4f4452e4d057b1683ca7215d5064a181daf99440c2963bb753"
+    },
+    {
+      "path": "scripts/train_author_source_50mamba.py",
+      "bytes": 589,
+      "sha256": "36b6bf0782ea38552e613ed6f627f4e87d39323fc2bc5eb71fa4f88dc0b84ac6"
+    },
+    {
+      "path": "scripts/train_center_repair_50mamba.py",
+      "bytes": 429,
+      "sha256": "790cc7746a0dbab3ceba660e634e8374c97219bb841479515d94576a3e10b0cf"
+    },
+    {
+      "path": "scripts/train_continuing_control_50mamba.py",
+      "bytes": 574,
+      "sha256": "5c0e9cd9a079decdfc89a18803351a17ad916c38bcd5c290c254225cdfdcd7ca"
+    },
+    {
+      "path": "scripts/train_corner_control_50mamba.py",
+      "bytes": 598,
+      "sha256": "4f0b515272e9d944842d3da1ed9f537ee1ca28f5e7380208df438908f31ff0b1"
+    },
+    {
+      "path": "scripts/train_coverage_control_50mamba.py",
+      "bytes": 631,
+      "sha256": "c624ac176a4bb1f92999f1153bbca0bdd63b46cc966bc04faea24e83bcb100c9"
+    },
+    {
+      "path": "scripts/train_factored_control_50mamba.py",
+      "bytes": 492,
+      "sha256": "58abc76b9aca2421b2574a8a733f930f9d3222db4bd228c9db3b355c633c5949"
+    },
+    {
+      "path": "scripts/train_gated_control_50mamba.py",
+      "bytes": 605,
+      "sha256": "8dfb117081be68a000e2a473a0b8b76fc3d70e8265433b128ef8e2213fd43c79"
+    },
+    {
+      "path": "scripts/train_improved_control_50mamba.py",
+      "bytes": 590,
+      "sha256": "e6d80ffa2d40670fc8c16a8ff689440ce147d2c0ad5643edd62dcea13e60bcfc"
+    },
+    {
+      "path": "scripts/train_joint_precision_zoom_50mamba.py",
+      "bytes": 267,
+      "sha256": "f0047c6ac6b796ad68356ca7161e7a7ba12b75f1366bd5a25991972bac844b9f"
+    },
+    {
+      "path": "scripts/train_model_zoom_50mamba.py",
+      "bytes": 254,
+      "sha256": "c7a8d0102f6f3633c3d9acd0896195d10248a951068e0ae2a393a128eb9055e2"
+    },
+    {
+      "path": "scripts/train_precision_zoom_50mamba.py",
+      "bytes": 261,
+      "sha256": "990ac4bfc58423ae045e83e274f7953d3afbfab8103c20347c95ea4e1f161b03"
+    },
+    {
+      "path": "scripts/train_ptz.py",
+      "bytes": 3439,
+      "sha256": "0aa5d0915c1f10e64d950fe0589210931fe59d7aeaf52237b82231e9dd4607b0"
+    },
+    {
+      "path": "scripts/train_static_repair_50mamba.py",
+      "bytes": 585,
+      "sha256": "fe6aeae6c3b4d8511c1ddec1d279bbaf936aedbe3bd2ab1100048d004b3acff0"
+    },
+    {
+      "path": "scripts/train_temporal_control_50mamba.py",
+      "bytes": 595,
+      "sha256": "13a4a7a41284a083e309a98c2885ee62a480f152cd01afce50670bbac13a4a81"
+    },
+    {
+      "path": "scripts/train_value_control_50mamba.py",
+      "bytes": 471,
+      "sha256": "ec985507ec2be4376d6ffbd2a76e9f7ef310f36c3ba2c43e7ccf8c18cb01ee01"
+    },
+    {
+      "path": "scripts/train_zoom_control_50mamba.py",
+      "bytes": 442,
+      "sha256": "89fabb08805bdaf10fb3d69dbe07f8c83f9331625fc8fe71735ab5940e4e3a57"
+    },
+    {
+      "path": "scripts/verify_tracking_scene.py",
+      "bytes": 2675,
+      "sha256": "862156587dc2c174fb63978cd6eb03e50ccf1b8787db2b5f0ccb4fabf5ba659e"
+    },
+    {
+      "path": "scripts/verify_unrealcv.py",
+      "bytes": 9105,
+      "sha256": "d70b7c4386abe05345b6cc7ca3b2d24e1f9f32509bbb77c3c5bba0cc3cf145f3"
+    },
+    {
+      "path": "scripts/watch_gated_training_50mamba.py",
+      "bytes": 791,
+      "sha256": "0d64305e82f82254f837c47c4b98c37aa409c8293c322512d231e5c396cd3210"
+    },
+    {
+      "path": "paper_reproduction/author_aligned/__init__.py",
+      "bytes": 77,
+      "sha256": "18289e98435d933c290f3c01a9917c3f350de60736a70fe9989ae535c04238fe"
+    },
+    {
+      "path": "paper_reproduction/author_aligned/environment.py",
+      "bytes": 6404,
+      "sha256": "a5325fe9121b011577cf4609e28504bb95852462b6000425ef190b19519517ec"
+    },
+    {
+      "path": "paper_reproduction/author_aligned/preflight.py",
+      "bytes": 3490,
+      "sha256": "cef9162785eaf7d6d84a537e5af82ae317c68e07a646dda6bd501167913fc62c"
+    },
+    {
+      "path": "paper_reproduction/author_aligned/README.md",
+      "bytes": 4957,
+      "sha256": "3431fcf80e6a2e018cec4451160c420b6a2d48e8e53ac888576359c9e8fc8cc4"
+    },
+    {
+      "path": "paper_reproduction/author_aligned/run.py",
+      "bytes": 18363,
+      "sha256": "0d3e8d7cc6649d0541f8dd4b5ad46b9c7fd7adb6023ff78431450c525d5b2f42"
+    },
+    {
+      "path": "paper_reproduction/author_aligned/source.py",
+      "bytes": 4904,
+      "sha256": "615ae5055ab933c9e58668f6218bffb85a1fb5dde0b08e94368fef58f6467387"
+    },
+    {
+      "path": "paper_reproduction/author_aligned/verify.py",
+      "bytes": 5597,
+      "sha256": "bbcf006c93fb214ce87eab6637fd5e1280609431a9043e43a36ddd97656e5279"
+    },
+    {
+      "path": "paper_reproduction/control_center_v12a/__init__.py",
+      "bytes": 0,
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    {
+      "path": "paper_reproduction/control_center_v12a/agent.py",
+      "bytes": 3349,
+      "sha256": "0cc06ac5c2272aaa2f69b14868c9b9bcb57fad5efe3ffcb8d88aa595dc9694fd"
+    },
+    {
+      "path": "paper_reproduction/control_center_v12a/environment.py",
+      "bytes": 893,
+      "sha256": "61c9098376de6203cc70091cd355279cbdd50c7aa39ece78f7640b8ac57b1674"
+    },
+    {
+      "path": "paper_reproduction/control_center_v12a/gates.py",
+      "bytes": 13806,
+      "sha256": "7f52dcff88ddc66f4a7c1dc235e355e208ae970ffb3e1f67b5f892b886fc198f"
+    },
+    {
+      "path": "paper_reproduction/control_center_v12a/protocol.json",
+      "bytes": 8969,
+      "sha256": "0ffc55fc776c9003b30e5790d10903ac1164ab3e3260fa202f49d2c323c49abb"
+    },
+    {
+      "path": "paper_reproduction/control_center_v12a/rollout.py",
+      "bytes": 12013,
+      "sha256": "d1ffaf4dfae33c05fb1514215c33d574a6207231cbb6c27060365a0bdaedb8c5"
+    },
+    {
+      "path": "paper_reproduction/control_center_v12a/run.py",
+      "bytes": 11951,
+      "sha256": "5dfd060150aa009fa553bddc36212249d0722ca08f1a16768a42190eed692831"
+    },
+    {
+      "path": "paper_reproduction/control_center_v12a/scenes.py",
+      "bytes": 6325,
+      "sha256": "06292e1bb77f92748ad0885e019e2c4e6f43cd64fc9a036d497320d8e1722eec"
+    },
+    {
+      "path": "paper_reproduction/control_center_v12a/verify.py",
+      "bytes": 6859,
+      "sha256": "303275c15427bcaa17f6b0d4f91ade86aefec2f04894b531e363a7def8a2c106"
+    },
+    {
+      "path": "paper_reproduction/control_center_v12a/video.py",
+      "bytes": 2771,
+      "sha256": "0af4a0a72ddad0d1b95309a1c1b7083f2a4efbf2a4221d76347d93709913492a"
+    },
+    {
+      "path": "paper_reproduction/control_corners/__init__.py",
+      "bytes": 66,
+      "sha256": "10c9478c05743aa8cd882cd33066af00d4a84da397fadf93419db3ebeb4eb72c"
+    },
+    {
+      "path": "paper_reproduction/control_corners/agent.py",
+      "bytes": 554,
+      "sha256": "b2ca6810c05e02b79ae11b6cc77df43e5b2f7b8106fe4db72ca92823c1e68430"
+    },
+    {
+      "path": "paper_reproduction/control_corners/audit_initial_perception.py",
+      "bytes": 2262,
+      "sha256": "fbcce39eec4e67fce776cbbe8aaf6bb984a04e6e61996628e9a1423a90a60b71"
+    },
+    {
+      "path": "paper_reproduction/control_corners/calibrate.py",
+      "bytes": 4192,
+      "sha256": "a1b6325bc8cf08dacc75b8bec7823c74bc986dc089ac637e9ebd2d6fc6185cb2"
+    },
+    {
+      "path": "paper_reproduction/control_corners/environment.py",
+      "bytes": 2825,
+      "sha256": "bb766cf9981e8eb5bd9691ff5a126c62d94c13a8490362b68ef494b91f2de180"
+    },
+    {
+      "path": "paper_reproduction/control_corners/gates.py",
+      "bytes": 14060,
+      "sha256": "43d7b4744d2cdf9badbc73b84a5ebd21fb40ed973f977425e2917a74b118ef4d"
+    },
+    {
+      "path": "paper_reproduction/control_corners/inspect_ground_views.py",
+      "bytes": 1681,
+      "sha256": "c2d778d658a762b3c742a013827dc24fa64634e585848a2dbeb12a3605655c16"
+    },
+    {
+      "path": "paper_reproduction/control_corners/protocol.json",
+      "bytes": 7251,
+      "sha256": "6151f8ef37c6cc6b5006739abc7ace62cc281d23781a5ef772eb906bac02509a"
+    },
+    {
+      "path": "paper_reproduction/control_corners/README.md",
+      "bytes": 3951,
+      "sha256": "adbc49722811536f8793b24fbe5fca5a2c98927e81aa478e4d1f5290c34d3260"
+    },
+    {
+      "path": "paper_reproduction/control_corners/run.py",
+      "bytes": 24309,
+      "sha256": "09a4816117cab8235ce7d8a4255ca041caede11b3cb77aadb9ef443927b48fb8"
+    },
+    {
+      "path": "paper_reproduction/control_corners/scenes.py",
+      "bytes": 5028,
+      "sha256": "4f4e4a03a2f4a2e55367ee700897707654aefbffb4f2ac8fd77fa5aa25b386e0"
+    },
+    {
+      "path": "paper_reproduction/control_corners/verify.py",
+      "bytes": 8867,
+      "sha256": "d493f9d8163fa380cc5d2dd04a6ff1d29f757a0071a8989c164d1a07c933fad0"
+    },
+    {
+      "path": "paper_reproduction/control_coverage_v8/__init__.py",
+      "bytes": 80,
+      "sha256": "f9f8f387316dde99fd93f12a2079f454523da780a9b323cf9e25f42f9d4a2b1b"
+    },
+    {
+      "path": "paper_reproduction/control_coverage_v8/agent.py",
+      "bytes": 577,
+      "sha256": "5242ec08d9ec618e617d7add6e09688fa6a091de5861c9d1ab97d1964fd19560"
+    },
+    {
+      "path": "paper_reproduction/control_coverage_v8/calibrate.py",
+      "bytes": 7868,
+      "sha256": "e85196236f169a3b5bd740ec2190a3b1fea39a8118e9a69fdaa6db5bd2ddcb2a"
+    },
+    {
+      "path": "paper_reproduction/control_coverage_v8/environment.py",
+      "bytes": 3090,
+      "sha256": "81fd6c1b979311e50c45556eb65fdc53f80a02d26d5709fe36911a07af34bbbb"
+    },
+    {
+      "path": "paper_reproduction/control_coverage_v8/gates.py",
+      "bytes": 13806,
+      "sha256": "7f52dcff88ddc66f4a7c1dc235e355e208ae970ffb3e1f67b5f892b886fc198f"
+    },
+    {
+      "path": "paper_reproduction/control_coverage_v8/protocol.json",
+      "bytes": 9090,
+      "sha256": "306d7e53eb4ae2112cebdd3c86aa04f0abe5fe208157d5de6a52c2d439bb6480"
+    },
+    {
+      "path": "paper_reproduction/control_coverage_v8/README.md",
+      "bytes": 4190,
+      "sha256": "15abd1146c7917d929267a08e13d0fc5a37c54c6a0d2226b4135512bba4f294f"
+    },
+    {
+      "path": "paper_reproduction/control_coverage_v8/run.py",
+      "bytes": 25545,
+      "sha256": "f0fe24ea80e578800075b66b4a05ba463c78c3328e13ac7c4f2a4a86d114274d"
+    },
+    {
+      "path": "paper_reproduction/control_coverage_v8/scenes.py",
+      "bytes": 6077,
+      "sha256": "3ed5c5f1909084ee0866876562497ed26bf53cb9fbef0ac9622f583628004ce0"
+    },
+    {
+      "path": "paper_reproduction/control_coverage_v8/verify.py",
+      "bytes": 6832,
+      "sha256": "9108078b75eeb1e5d75d497496760e7a18071e9acc61a3af46b5ac776de31846"
+    },
+    {
+      "path": "paper_reproduction/control_curriculum/__init__.py",
+      "bytes": 323,
+      "sha256": "37517fb3075ed25c395255ce5d3fc7fc00097b43c599cc62a4e87e86fd1c50eb"
+    },
+    {
+      "path": "paper_reproduction/control_curriculum/gates.py",
+      "bytes": 13661,
+      "sha256": "360db6410c0b43dd534a2d6541023ebcb110cec1595468240aff164a04900ad6"
+    },
+    {
+      "path": "paper_reproduction/control_curriculum/protocol.json",
+      "bytes": 10042,
+      "sha256": "c7ad22074859972a15e7dcdef1978d4c78b023e94a450d80e0104d8420923ede"
+    },
+    {
+      "path": "paper_reproduction/control_curriculum/README.md",
+      "bytes": 4237,
+      "sha256": "1a6fc0199ceeec0f0e67c415d4a1eeee1500aaffb28d84b1a3ec736179eb2de0"
+    },
+    {
+      "path": "paper_reproduction/control_curriculum/scenes.py",
+      "bytes": 8334,
+      "sha256": "9ae2bebe081b2a8d59def579e27fe498d1bf54e75aaf4396a61864b4a76d080c"
+    },
+    {
+      "path": "paper_reproduction/control_learning/__init__.py",
+      "bytes": 85,
+      "sha256": "5700cbe95553494b63c5c0f35d84a849bf193bf3c0c89ae465a26a8c04c47190"
+    },
+    {
+      "path": "paper_reproduction/control_learning/agent.py",
+      "bytes": 8461,
+      "sha256": "6915daf9a43c98eead242216f5498caf835d7af85a977d44331b9e89e5ecd0cf"
+    },
+    {
+      "path": "paper_reproduction/control_learning/environment.py",
+      "bytes": 6161,
+      "sha256": "a5e39561ea51caa5fecceed4f818fd4b7029d261822ba65ef1f0fdc578549ee5"
+    },
+    {
+      "path": "paper_reproduction/control_learning/run.py",
+      "bytes": 18487,
+      "sha256": "d093393657fc787f29093e4aa13829be9877153758b50073db2bf18a06168e8f"
+    },
+    {
+      "path": "paper_reproduction/control_model_v13/__init__.py",
+      "bytes": 0,
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    {
+      "path": "paper_reproduction/control_model_v13/agent.py",
+      "bytes": 7462,
+      "sha256": "6a2d9d750d85a767b7d712270d73086fc9fe15e63ddf107cb9efa82f4f29dc6c"
+    },
+    {
+      "path": "paper_reproduction/control_model_v13/detector.py",
+      "bytes": 1822,
+      "sha256": "0a3a9906aae2fe42bc59e928b81a1b71a6c640de887bcc8ad5a547731d47f115"
+    },
+    {
+      "path": "paper_reproduction/control_model_v13/gates.py",
+      "bytes": 13806,
+      "sha256": "7f52dcff88ddc66f4a7c1dc235e355e208ae970ffb3e1f67b5f892b886fc198f"
+    },
+    {
+      "path": "paper_reproduction/control_model_v13/protocol.json",
+      "bytes": 8787,
+      "sha256": "3ef9dbd3225e6055e657c0dd464196029a363e7ea05758ac0b3879cc39b0656c"
+    },
+    {
+      "path": "paper_reproduction/control_model_v13/run.py",
+      "bytes": 14886,
+      "sha256": "095c9a2e4e0098b6089b8c6697867e5194971a6dd160b2bad78c68216d6a48ab"
+    },
+    {
+      "path": "paper_reproduction/control_model_v13/scenes.py",
+      "bytes": 5419,
+      "sha256": "2fb5027f6415f06b86f5bac2496934951dad134ce62849545d0bd3bc9c56a29d"
+    },
+    {
+      "path": "paper_reproduction/control_model_v13/video.py",
+      "bytes": 2759,
+      "sha256": "a2fe5e648220dafc2f4e72e9ba1a03597de431d99791f0a3ca6a723766ebbc07"
+    },
+    {
+      "path": "paper_reproduction/control_precision_v14/__init__.py",
+      "bytes": 0,
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    {
+      "path": "paper_reproduction/control_precision_v14/agent.py",
+      "bytes": 7617,
+      "sha256": "c7ad0b686691a2482c7dd839a3ea38e7ce377d3bb77532988faa11058507fab6"
+    },
+    {
+      "path": "paper_reproduction/control_precision_v14/detector.py",
+      "bytes": 1853,
+      "sha256": "f2071252de8733a6d67fef1b430c7743ac2a69cefbc6d1efb5fec99403ff525f"
+    },
+    {
+      "path": "paper_reproduction/control_precision_v14/environment.py",
+      "bytes": 1559,
+      "sha256": "017a2f7819b40d0b2242061b953b541b3a8808ac10fa036c056dc329d4997044"
+    },
+    {
+      "path": "paper_reproduction/control_precision_v14/gates.py",
+      "bytes": 13806,
+      "sha256": "7f52dcff88ddc66f4a7c1dc235e355e208ae970ffb3e1f67b5f892b886fc198f"
+    },
+    {
+      "path": "paper_reproduction/control_precision_v14/protocol.json",
+      "bytes": 8792,
+      "sha256": "99c58d28f731443c46d5661246cee65e9311954bf0a0a7ecc3077b652c0e3502"
+    },
+    {
+      "path": "paper_reproduction/control_precision_v14/run.py",
+      "bytes": 13900,
+      "sha256": "cf81bc44052ffee2a0f1202027e2f8a6566c7cb32a557295c1c14176e09cd498"
+    },
+    {
+      "path": "paper_reproduction/control_precision_v14/scenes.py",
+      "bytes": 5419,
+      "sha256": "4244d6add9713f3bac48a8680c6f965ec30e8ac794e9985260b61a75afcbb215"
+    },
+    {
+      "path": "paper_reproduction/control_precision_v14/video.py",
+      "bytes": 2759,
+      "sha256": "a2fe5e648220dafc2f4e72e9ba1a03597de431d99791f0a3ca6a723766ebbc07"
+    },
+    {
+      "path": "paper_reproduction/control_precision_v15/__init__.py",
+      "bytes": 0,
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    {
+      "path": "paper_reproduction/control_precision_v15/agent.py",
+      "bytes": 7659,
+      "sha256": "9223273c2600f0196f569cc015b5906f964a8c3a793c3df1f622ff8439c77a41"
+    },
+    {
+      "path": "paper_reproduction/control_precision_v15/detector.py",
+      "bytes": 1853,
+      "sha256": "f2071252de8733a6d67fef1b430c7743ac2a69cefbc6d1efb5fec99403ff525f"
+    },
+    {
+      "path": "paper_reproduction/control_precision_v15/environment.py",
+      "bytes": 1602,
+      "sha256": "8d4df0347aa1b379d376d762d588a63cfc86fc5b70269f1b51b012e926e6df4a"
+    },
+    {
+      "path": "paper_reproduction/control_precision_v15/gates.py",
+      "bytes": 13806,
+      "sha256": "7f52dcff88ddc66f4a7c1dc235e355e208ae970ffb3e1f67b5f892b886fc198f"
+    },
+    {
+      "path": "paper_reproduction/control_precision_v15/protocol.json",
+      "bytes": 8923,
+      "sha256": "ef7454dedd1020e2a5b2afc1cb27f02e52620bdb9349fbc563abcf056811c72b"
+    },
+    {
+      "path": "paper_reproduction/control_precision_v15/run.py",
+      "bytes": 14896,
+      "sha256": "c5c88893699bf59b30e7d5db3e3a2a12135a2c9e769e37c6f65644e06e0e9a9d"
+    },
+    {
+      "path": "paper_reproduction/control_precision_v15/scenes.py",
+      "bytes": 5419,
+      "sha256": "520d10bc55c682728c79741cae31fdcf58464b0d33766a539612fa03f49640e8"
+    },
+    {
+      "path": "paper_reproduction/control_precision_v15/video.py",
+      "bytes": 2776,
+      "sha256": "e0a691264e8cb7530a8a3e36529e2256b97b6f2a0deadf401c634d05acd2ce5f"
+    },
+    {
+      "path": "paper_reproduction/control_v3/__init__.py",
+      "bytes": 83,
+      "sha256": "09082e3cc6b64b92240f2fabd1e3f1e28db82d960242c9e25c411e763a85a78e"
+    },
+    {
+      "path": "paper_reproduction/control_v3/agent.py",
+      "bytes": 8069,
+      "sha256": "d097eb39c61a6f36f1b2d4ad8156c27bf59851fbd18dde4dc940eab88639bec3"
+    },
+    {
+      "path": "paper_reproduction/control_v3/diagnose.py",
+      "bytes": 3450,
+      "sha256": "26cbce8112a2e86e6f1e3821b6a0adf9a3f7505d8e4f427bc690b9b2f8f833c1"
+    },
+    {
+      "path": "paper_reproduction/control_v3/environment.py",
+      "bytes": 1671,
+      "sha256": "f35722d4da3e94bc5560f6b13d2195c638e6a972ddf05a479389da2351f96e08"
+    },
+    {
+      "path": "paper_reproduction/control_v3/README.md",
+      "bytes": 2866,
+      "sha256": "7e896bc33f9bcd6695cc5028a8ecf194c3c5f4e5f3c75c960a17cfb3641382fe"
+    },
+    {
+      "path": "paper_reproduction/control_v3/run.py",
+      "bytes": 20885,
+      "sha256": "0bee2f98e5e647c3de8226b96323223128c70d32fa296605a404a570eb955a4d"
+    },
+    {
+      "path": "paper_reproduction/control_v3/verify.py",
+      "bytes": 5789,
+      "sha256": "03ce3ed5644428645861b7384a6cde7aae054749511c515f1479c5b4dfea2162"
+    },
+    {
+      "path": "paper_reproduction/control_v4/__init__.py",
+      "bytes": 82,
+      "sha256": "b8d545316ffa5503104ff500f6dcf9210fbc063ddda82233b19c8c70eaea707a"
+    },
+    {
+      "path": "paper_reproduction/control_v4/agent.py",
+      "bytes": 592,
+      "sha256": "a58a6c4691be750504bc3c00ecb99c826005c0704a5f68ff91d415b8595a35bc"
+    },
+    {
+      "path": "paper_reproduction/control_v4/environment.py",
+      "bytes": 1756,
+      "sha256": "53b509df296993b7a59c4ef9be3309accc22f26829a269da562fc7c04739438a"
+    },
+    {
+      "path": "paper_reproduction/control_v4/README.md",
+      "bytes": 2345,
+      "sha256": "14edd836c064b154916b1f0b9d710189734a18341b59520fa7ae29887059765e"
+    },
+    {
+      "path": "paper_reproduction/control_v4/run.py",
+      "bytes": 21578,
+      "sha256": "cca2b43c68bf3fdf5beb0fb1c6d9e827c508d23212058ed0c9c210d211958c99"
+    },
+    {
+      "path": "paper_reproduction/control_v4/verify.py",
+      "bytes": 3970,
+      "sha256": "9c62895605a90130172a73859164d985016e95af7e63166d2de3c2879f2c6e20"
+    },
+    {
+      "path": "paper_reproduction/control_v5/__init__.py",
+      "bytes": 73,
+      "sha256": "dcb6a597ae2571c3d97046b777fe0a7b66d122fc384af374c64f641f291ed3d1"
+    },
+    {
+      "path": "paper_reproduction/control_v5/agent.py",
+      "bytes": 211,
+      "sha256": "40b6e24756048790476d3c7d241746328f10e14471d96404dd2f3bc228128724"
+    },
+    {
+      "path": "paper_reproduction/control_v5/environment.py",
+      "bytes": 1585,
+      "sha256": "5ca004cc491228075a301fce17d77e62d7554ed0b6f8032c7da1e832e12c1bfe"
+    },
+    {
+      "path": "paper_reproduction/control_v5/README.md",
+      "bytes": 2669,
+      "sha256": "21881cfcb9b6f65d7fbb8ebeca6e5567136eada9a006c22ba0c56d88c0cdf249"
+    },
+    {
+      "path": "paper_reproduction/control_v5/run.py",
+      "bytes": 21890,
+      "sha256": "acb1101383dd239b8d01f33e3f5285005c8566f8101ca970f96d8cd21b0c39e5"
+    },
+    {
+      "path": "paper_reproduction/control_v5/verify.py",
+      "bytes": 4195,
+      "sha256": "7edb31fcc7343e71aa2483404869e4a089692619961f4545c7adb9592bf23c5f"
+    },
+    {
+      "path": "paper_reproduction/control_v6/__init__.py",
+      "bytes": 74,
+      "sha256": "44965dcd3ffa789df83c17696ebc93f75af7db633f4384b56a48958a1b25f7fd"
+    },
+    {
+      "path": "paper_reproduction/control_v6/agent.py",
+      "bytes": 4478,
+      "sha256": "d849995e6d556e9ceebc61074e348a074af08e21cdc73304a19efc82a10adb54"
+    },
+    {
+      "path": "paper_reproduction/control_v6/environment.py",
+      "bytes": 830,
+      "sha256": "1a9d4b2a7be1a215de8c250969684191301346656bb6b8658b958774555d47f4"
+    },
+    {
+      "path": "paper_reproduction/control_v6/evaluation-manifest.json",
+      "bytes": 805,
+      "sha256": "9db785e2d13bb29d289e2c556cd83dbda28fbb3708d320e00d837378447ebdcc"
+    },
+    {
+      "path": "paper_reproduction/control_v6/README.md",
+      "bytes": 3785,
+      "sha256": "ce9c9f9c9aebf5ecac6c683a0877030db1870bdf45b8d9cb17faff061dfaa51b"
+    },
+    {
+      "path": "paper_reproduction/control_v6/run.py",
+      "bytes": 22450,
+      "sha256": "0507a7c2be968f5113c246462be59a3b5beafba2ddfa4f21f5811f97357a0a69"
+    },
+    {
+      "path": "paper_reproduction/control_v6/scenes.py",
+      "bytes": 4585,
+      "sha256": "d22328d8cdfb7b36b124285e73f2e40ed4741a7c30508d97061d2e2b507b53da"
+    },
+    {
+      "path": "paper_reproduction/control_v6/temporal.py",
+      "bytes": 1578,
+      "sha256": "ad5d93709bd26feafb7efbf6b495fccbddb9b859022f6ddc66add856330474fe"
+    },
+    {
+      "path": "paper_reproduction/control_v6/verify.py",
+      "bytes": 7347,
+      "sha256": "e6bd27850306ccd4dfc59be20c1be52f3d3fc152d5914cdbd5d8e3b3f4badeaf"
+    },
+    {
+      "path": "paper_reproduction/control_value_v10/__init__.py",
+      "bytes": 60,
+      "sha256": "53efc5be1d75b60f55143224786e8e369ec53141988cc358e12ea2f8a8ce8eab"
+    },
+    {
+      "path": "paper_reproduction/control_value_v10/agent.py",
+      "bytes": 3836,
+      "sha256": "f741f83db45dff73a4e37ef91302553676fd02534d35c3794f32dcf44cea90b0"
+    },
+    {
+      "path": "paper_reproduction/control_value_v10/README.md",
+      "bytes": 2723,
+      "sha256": "2ac1f496520720150e0b24f956d374d6811dfb70b7da638ca41dbce7d0a40e89"
+    },
+    {
+      "path": "paper_reproduction/control_value_v10/rollout.py",
+      "bytes": 3537,
+      "sha256": "aa77bffc2e560e4b44296d2d0a6d21f516ed1ed49566e11c180d5f0bea9b94b7"
+    },
+    {
+      "path": "paper_reproduction/control_value_v10/run.py",
+      "bytes": 14910,
+      "sha256": "a17a289c34a331471bb3bdd4d14072b2afe758fc00a72b2a1f19f0a6ed58ab91"
+    },
+    {
+      "path": "paper_reproduction/control_value_v10/verify.py",
+      "bytes": 5430,
+      "sha256": "0e596afda8250c263ee106a7b1c7903362d56f979471aedba836ce833aab4972"
+    },
+    {
+      "path": "paper_reproduction/control_value_v9/__init__.py",
+      "bytes": 80,
+      "sha256": "97c02179f471bcc07312abfb5c31585d1dac4a6397eaa166712b8e1221d9b51b"
+    },
+    {
+      "path": "paper_reproduction/control_value_v9/ablation.py",
+      "bytes": 8985,
+      "sha256": "ee26fffc54e519e27c6e909cffe6ea895dca03b8f17d40739f8a44f4c6958eba"
+    },
+    {
+      "path": "paper_reproduction/control_value_v9/agent.py",
+      "bytes": 4873,
+      "sha256": "a5251da8483bafb2d87a1b1b423c5ba120341c87829c0423318c23d921b2b06b"
+    },
+    {
+      "path": "paper_reproduction/control_value_v9/README.md",
+      "bytes": 2964,
+      "sha256": "562912777a58675ffa74544c5b099c74e45575f8f048766c2b01ad5ba3b2f1cd"
+    },
+    {
+      "path": "paper_reproduction/control_value_v9/rollout.py",
+      "bytes": 8781,
+      "sha256": "fcdb118b83f705579318b2f22a4edf0457f4c13b8021dab8dd93f3822f67a72d"
+    },
+    {
+      "path": "paper_reproduction/control_value_v9/run.py",
+      "bytes": 13848,
+      "sha256": "e2e95b73c09fa0b67b89f17fd12fafa31c49a0d91a779973b0aab804abcb282e"
+    },
+    {
+      "path": "paper_reproduction/control_value_v9/verify.py",
+      "bytes": 4335,
+      "sha256": "cf8215e97629356d222b5f5b0eceb67f30b7142723346aa47524efabcc366c98"
+    },
+    {
+      "path": "paper_reproduction/control_zoom_v11/__init__.py",
+      "bytes": 77,
+      "sha256": "6afe39486a9c85516867f8b0e132fbb321c119a0fa7c9e20a723ffd7e8ed8c5b"
+    },
+    {
+      "path": "paper_reproduction/control_zoom_v11/agent.py",
+      "bytes": 5311,
+      "sha256": "767a2336aedb165c2d925bf90481a1568486b5686aa0de2b52d5949b22a11ad7"
+    },
+    {
+      "path": "paper_reproduction/control_zoom_v11/calibrate.py",
+      "bytes": 5145,
+      "sha256": "d433731bb34f1b0b4051c4f76d8e30e46417c5200a814070e925c60e4eb4ec27"
+    },
+    {
+      "path": "paper_reproduction/control_zoom_v11/detector.py",
+      "bytes": 1849,
+      "sha256": "bd5088dbc65de3dab9df2659d18a060257002e888662b70af89afa09217e630a"
+    },
+    {
+      "path": "paper_reproduction/control_zoom_v11/environment.py",
+      "bytes": 4124,
+      "sha256": "a6e76cd04531ce27f2224d827981cb4ffded36788c3544bbfbb4399c644be7b9"
+    },
+    {
+      "path": "paper_reproduction/control_zoom_v11/gates.py",
+      "bytes": 13806,
+      "sha256": "7f52dcff88ddc66f4a7c1dc235e355e208ae970ffb3e1f67b5f892b886fc198f"
+    },
+    {
+      "path": "paper_reproduction/control_zoom_v11/protocol.json",
+      "bytes": 8239,
+      "sha256": "ccc1617662ff64a33b7f8daba8330e8486a2ac09954bc75d341c2977d573ddc0"
+    },
+    {
+      "path": "paper_reproduction/control_zoom_v11/README.md",
+      "bytes": 974,
+      "sha256": "7273460e279595fee40cff7473d5088c2536e724a2ef1bbffdc2e69c876b47df"
+    },
+    {
+      "path": "paper_reproduction/control_zoom_v11/rollout.py",
+      "bytes": 11567,
+      "sha256": "f2dc3bd8b3b76ee21f0fef0272ca75993fec8357a0c72ff78bed7d59e2013e03"
+    },
+    {
+      "path": "paper_reproduction/control_zoom_v11/run.py",
+      "bytes": 14019,
+      "sha256": "b911e0c200bade67495c2aabc4dd6e5f4713fc1b729f5a9e69be955aa2eca1fd"
+    },
+    {
+      "path": "paper_reproduction/control_zoom_v11/scenes.py",
+      "bytes": 5143,
+      "sha256": "8b12d45bd8e3d4d6052e63d9d25032b0cb22f4e18f28d95cde8a9b89c25a903f"
+    },
+    {
+      "path": "paper_reproduction/control_zoom_v11/verify.py",
+      "bytes": 9868,
+      "sha256": "93ed3e6f1fd4863bf2547332d9e4303b58fbec2ae29ed3b5729a37285692774d"
+    },
+    {
+      "path": "paper_reproduction/control_zoom_v11/video.py",
+      "bytes": 2702,
+      "sha256": "113ae81d4c5c56ad22b981fbd32e725fe27f8f1bb1e6d176b90fdf8417535c6d"
+    },
+    {
+      "path": "paper_reproduction/hascam/__init__.py",
+      "bytes": 337,
+      "sha256": "c8ba1d15aa02b491ad16569ca272a2fb4be1fadcddfc4c725d9fc2a9855f6988"
+    },
+    {
+      "path": "paper_reproduction/hascam/agent.py",
+      "bytes": 14035,
+      "sha256": "01cf909a3b6d0d30795617eb9b0ad8cb7691b27426587df6f9597009a9e743ae"
+    },
+    {
+      "path": "paper_reproduction/hascam/cfff.py",
+      "bytes": 5728,
+      "sha256": "b9a292c41e560cf73b8724f54b2bcff2f8f7e381bb436e5853f3c07ac54b2019"
+    },
+    {
+      "path": "paper_reproduction/hascam/config.py",
+      "bytes": 2241,
+      "sha256": "7db0587124be077dadbb7bd9f9778e887c7bd01004c23cd0a8c5c8d8264f5f7e"
+    },
+    {
+      "path": "paper_reproduction/hascam/detection.py",
+      "bytes": 1540,
+      "sha256": "72184f87781d3ddbd0fd8a914937bcd0ca0bbc179be65b4c277500b00a88693b"
+    },
+    {
+      "path": "paper_reproduction/hascam/LICENSE_FastReID.txt",
+      "bytes": 11347,
+      "sha256": "14a8a9a670fa989f040bc7a5d964fa7a478ffd7cb44407a9061303240d9e21df"
+    },
+    {
+      "path": "paper_reproduction/hascam/README.md",
+      "bytes": 6570,
+      "sha256": "33901adb793b58a83652cb65741093eb579867f2d87b24821d5abc9b8454484e"
+    },
+    {
+      "path": "paper_reproduction/hascam/reid.py",
+      "bytes": 8676,
+      "sha256": "1f71b535b0034fe7b1b8341edfcab296fd1428d6c3981e6e599c943224ea356c"
+    },
+    {
+      "path": "paper_reproduction/hascam/state_reward.py",
+      "bytes": 4391,
+      "sha256": "1b33fb1be12f77143e7daf8c56e25638cdbdf3f5d666eaea196d403f31a8e8a6"
+    },
+    {
+      "path": "paper_reproduction/hascam/verify_math.py",
+      "bytes": 12887,
+      "sha256": "6afd8e3e7efdc66f2422e441acad30e18a958972a18f212dc5554d3778eaa140"
+    },
+    {
+      "path": "paper_reproduction/integration/__init__.py",
+      "bytes": 79,
+      "sha256": "062170b77e4833a642d7ebb69545d9e22b5208d3514997de069469668eb308e5"
+    },
+    {
+      "path": "paper_reproduction/integration/analyze_experiments.py",
+      "bytes": 9035,
+      "sha256": "7b967532ec98eaf5265f4b7b63e42b8823c0d9eba9f43b61fcdc4eb7468e1b40"
+    },
+    {
+      "path": "paper_reproduction/integration/compute.py",
+      "bytes": 1079,
+      "sha256": "158c80d3b9fd9874ebc2f93d2f1bce422875f83ecb65140e6660bcdbf8af68b2"
+    },
+    {
+      "path": "paper_reproduction/integration/create_editor_map.py",
+      "bytes": 4408,
+      "sha256": "55e014bd63b9bab2f03d72859b22255a9c1a6678d601a8f6c0a715c2a51cc0e7"
+    },
+    {
+      "path": "paper_reproduction/integration/dataset.py",
+      "bytes": 13905,
+      "sha256": "651f363026e8792e2789f5a2cf9b797eb038d1f8ec26520b9485d0c0b098cfc2"
+    },
+    {
+      "path": "paper_reproduction/integration/detector.py",
+      "bytes": 3015,
+      "sha256": "6260e575b3a882ec9afa974d2ceb052a22fb272004b81494fc9566c941c75f80"
+    },
+    {
+      "path": "paper_reproduction/integration/environment.py",
+      "bytes": 3787,
+      "sha256": "3eb9ee8762e820860e753f8ef746b3b7f3def9f2fff909465391af8e73938676"
+    },
+    {
+      "path": "paper_reproduction/integration/experiment.py",
+      "bytes": 18551,
+      "sha256": "c861f1617c005bafa58f16e0d3e7496f011909c49da8e3eef0ab7103aa527a45"
+    },
+    {
+      "path": "paper_reproduction/integration/finalize_editor_map.py",
+      "bytes": 986,
+      "sha256": "918de48da8ae56e6809def8fe86d007e685b2734cafe03600ab8f3602cc3ab4d"
+    },
+    {
+      "path": "paper_reproduction/integration/focused_contract.py",
+      "bytes": 2170,
+      "sha256": "e916ebb6ace5c437c93fd666e6e2d0dab5ede1d73d73107a8fed87bb1366cb65"
+    },
+    {
+      "path": "paper_reproduction/integration/focused_environment.py",
+      "bytes": 7698,
+      "sha256": "d758309324501b3d1363fb1af4397ed06b40a479d27d60cc93158b346b8a8752"
+    },
+    {
+      "path": "paper_reproduction/integration/focused_ppo.py",
+      "bytes": 29337,
+      "sha256": "e36eefcfbb082ad6d8df705954e63724e6fca25f96fd9297b878339420bebd32"
+    },
+    {
+      "path": "paper_reproduction/integration/focused_training.py",
+      "bytes": 22947,
+      "sha256": "1e35450a50b78a5e7af9a3d7edc342913671ba1bbaa037789649c7706d01c00c"
+    },
+    {
+      "path": "paper_reproduction/integration/metrics.py",
+      "bytes": 6055,
+      "sha256": "a6b95490d0e02ee16f61dffbda1c9b7721fa2d5a4f8d6f54d418c0818f28945b"
+    },
+    {
+      "path": "paper_reproduction/integration/position_editor_view.py",
+      "bytes": 2051,
+      "sha256": "43378768df7b5ac39d126f06c331588586f23f7a4abb133172485bc3594cb194"
+    },
+    {
+      "path": "paper_reproduction/integration/ppo_baseline.py",
+      "bytes": 4473,
+      "sha256": "32f9f18d13f9d594f2e3c882cd0f8635fe3524479b9516e9a6c997ec7919a1c2"
+    },
+    {
+      "path": "paper_reproduction/integration/prepare_ssd.py",
+      "bytes": 460,
+      "sha256": "b5752e7868aa2c5e7c803a6fd0e804f4d8ea6f47f635f468e67e997ec321e16b"
+    },
+    {
+      "path": "paper_reproduction/integration/pretrained_detector.py",
+      "bytes": 6923,
+      "sha256": "8347231c1cee47045114aaddfa2838749a9700469a2aac1883d18bc29dbe370f"
+    },
+    {
+      "path": "paper_reproduction/integration/report_focused.py",
+      "bytes": 39924,
+      "sha256": "ac1527c1b9991477c3728497a66841a454c1f6821e975c7aa4f2091daf84163c"
+    },
+    {
+      "path": "paper_reproduction/integration/runtime.py",
+      "bytes": 2734,
+      "sha256": "00aafc9b374515438f293f1e2059a18071f63578de0850e27c8cefa066f952f1"
+    },
+    {
+      "path": "paper_reproduction/integration/transport.py",
+      "bytes": 2887,
+      "sha256": "97a8b51adfba4d625b24b6d03e22005b2cac1e0e8b0c1f597010826f64c5ca3a"
+    },
+    {
+      "path": "paper_reproduction/integration/verify_checkpoint.py",
+      "bytes": 2529,
+      "sha256": "95fbaaf761326181973a6139a8d480505ddc08a6ed3a6a34639a047bf4d28ce5"
+    },
+    {
+      "path": "paper_reproduction/integration/video.py",
+      "bytes": 2237,
+      "sha256": "7158e6af2540b18fabe9198bb02e44c6796987532f296440635fb640225a73fe"
+    },
+    {
+      "path": "paper_reproduction/monitoring/__init__.py",
+      "bytes": 52,
+      "sha256": "e41dca729400d9f21f05b844fa589003c4161df0ec71b60b40779849322ed91a"
+    },
+    {
+      "path": "paper_reproduction/monitoring/active-zoom-v11-final-accounting.json",
+      "bytes": 954,
+      "sha256": "d0fad6f0751ee28cdd2fce4d6ee641d719a540c3ba5059013ff4434c20798f0d"
+    },
+    {
+      "path": "paper_reproduction/monitoring/author-source-broadcast-state.json",
+      "bytes": 1078,
+      "sha256": "14d74a29b9067f357cdb33713b7ea80bc4ee6c535d1b071927e6caf52c6933d9"
+    },
+    {
+      "path": "paper_reproduction/monitoring/center_v12a_status.py",
+      "bytes": 5432,
+      "sha256": "135fe3b52ea2e96f27b0e9d1b87b614adb07272a07ee172e6a0e9a59f613b1ec"
+    },
+    {
+      "path": "paper_reproduction/monitoring/improved-control-broadcast-state-before-v7.json",
+      "bytes": 3105,
+      "sha256": "2c825d877ad0032f18c6d2c263300f8158dae1669837093fe6f59acd21d7f7ca"
+    },
+    {
+      "path": "paper_reproduction/monitoring/improved-control-broadcast-state-v10-completed.json",
+      "bytes": 10362,
+      "sha256": "0d675f136a6e049f4aecf6662350e7b0399a3057994eaf3891c85a12095b7e86"
+    },
+    {
+      "path": "paper_reproduction/monitoring/improved-control-broadcast-state-v11-completed.json",
+      "bytes": 8225,
+      "sha256": "7794fd2eeb88c46f898d42d482dddefe9d60ef33693021049049d7a4cb128026"
+    },
+    {
+      "path": "paper_reproduction/monitoring/improved-control-broadcast-state-v12a-completed.json",
+      "bytes": 1685,
+      "sha256": "9a74f2739d957dd07a6627df072e335762351b7a256b5a422ee7f24cbba3b279"
+    },
+    {
+      "path": "paper_reproduction/monitoring/improved-control-broadcast-state-v13-completed.json",
+      "bytes": 1605,
+      "sha256": "b77c8e2392b47b415f394b27aea18676d3bf9fed6993f155afad98f91b3dca9f"
+    },
+    {
+      "path": "paper_reproduction/monitoring/improved-control-broadcast-state-v14-completed.json",
+      "bytes": 2508,
+      "sha256": "2abfa7dce259365fb4e84207c70c39c031fa7d3ec475a448d385a74d34c05c1a"
+    },
+    {
+      "path": "paper_reproduction/monitoring/improved-control-broadcast-state-v7-completed.json",
+      "bytes": 2425,
+      "sha256": "dfc94615a82100f2d05151258def0699e039205a7cb93c6ebbb4e47f8dd1c673"
+    },
+    {
+      "path": "paper_reproduction/monitoring/improved-control-broadcast-state.json",
+      "bytes": 2806,
+      "sha256": "6aa37ab02807cc3c181d531c5fd238b41b16919ef12edc8ab46980c20d229f5a"
+    },
+    {
+      "path": "paper_reproduction/monitoring/joint_precision_v15_status.py",
+      "bytes": 3453,
+      "sha256": "38f42e3c6dc1fe79c5e94f7d30c2455a45bcf75bcf9ee7f0124a262aa4e76956"
+    },
+    {
+      "path": "paper_reproduction/monitoring/legacy-v10-v15-handoff-20261101.json",
+      "bytes": 6750,
+      "sha256": "c66524cd3962a09b4527e18bf9788de4cbffe200fecfd967079a2b4c428e5744"
+    },
+    {
+      "path": "paper_reproduction/monitoring/model_v13_status.py",
+      "bytes": 3391,
+      "sha256": "85d8a794c07288761f82db102ba773e9a18b0591e4523ba8e3443a77d58a6090"
+    },
+    {
+      "path": "paper_reproduction/monitoring/potential-factored-v10-final-accounting.json",
+      "bytes": 1220,
+      "sha256": "95ad68b694ffe6800d672903e578e97bbe804b6cae194786453ff547c0d80bdc"
+    },
+    {
+      "path": "paper_reproduction/monitoring/potential-factored-v10-probe0020-audit.json",
+      "bytes": 662,
+      "sha256": "9ba4f24a0f7eb0bbdaef6c667ed2f22e8207fbab98759c8c812c6b40956b391e"
+    },
+    {
+      "path": "paper_reproduction/monitoring/potential-factored-v10-probe0040-audit.json",
+      "bytes": 1174,
+      "sha256": "84d63c2a30c384089b9f08a86d31a787be57840924de80277df5c845f6fadf88"
+    },
+    {
+      "path": "paper_reproduction/monitoring/potential-factored-v10-probe0060-audit.json",
+      "bytes": 2023,
+      "sha256": "ec92009f59c0459b0e4e3d28a55944b700ea75707d50763fa8056d5417c614a6"
+    },
+    {
+      "path": "paper_reproduction/monitoring/precision_v14_status.py",
+      "bytes": 3446,
+      "sha256": "fd335eb6d7228931436fbe3975a851244dc909c3883061dd34d2e230cb6d408d"
+    },
+    {
+      "path": "paper_reproduction/monitoring/round_reporter.py",
+      "bytes": 10046,
+      "sha256": "160bfca90fe9818da0c5a9e5fa4cf3037ade9cf9cd3ae2248732a5f3b82c8fc3"
+    },
+    {
+      "path": "paper_reproduction/monitoring/zoom_v11_status.py",
+      "bytes": 5146,
+      "sha256": "60be7f26390e019bd89b20c5132d208c5e3746c0d7db7479f659d494b7706375"
+    },
+    {
+      "path": "paper_reproduction/reference/HAS-CAM/action_log.txt",
+      "bytes": 83,
+      "sha256": "9b45a9dcba87c63063b7e2de267b3e0c6028a5e9d7861291f49976a7d64b4594"
+    },
+    {
+      "path": "paper_reproduction/reference/HAS-CAM/agent.py",
+      "bytes": 12165,
+      "sha256": "7d20cf3faaabe617648230c6535ae561a7407639902c2d794a731f167de2fb65"
+    },
+    {
+      "path": "paper_reproduction/reference/HAS-CAM/detector.py",
+      "bytes": 1855,
+      "sha256": "96dec2270ed9816647c38a04f1f6b2556520b53ec32fc2df6723f0bc2891bfb1"
+    },
+    {
+      "path": "paper_reproduction/reference/HAS-CAM/exp.py",
+      "bytes": 4712,
+      "sha256": "a4187dd10800fa6c8b6945ed780cad872b8c8a199da684b59fb7887f8ab6f910"
+    },
+    {
+      "path": "paper_reproduction/reference/HAS-CAM/fast-reid-demo/car/31.jpg",
+      "bytes": 62052,
+      "sha256": "78903986a5826a88dbae2542b5972c1016df265e14b031ed219a33ec0cedf633"
+    },
+    {
+      "path": "paper_reproduction/reference/HAS-CAM/fast-reid-demo/car/71.jpg",
+      "bytes": 6857,
+      "sha256": "b017c234054ef8f92d32f04581b0fb9c0a66a17f6eae0c12ef26bf712092091f"
+    },
+    {
+      "path": "paper_reproduction/reference/HAS-CAM/fast-reid-demo/demo.py",
+      "bytes": 2659,
+      "sha256": "ac596eb7cc30b47e118b496750e80abb02d7958e6b41008c5daddf42e43c3488"
+    },
+    {
+      "path": "paper_reproduction/reference/HAS-CAM/fast-reid-demo/plot_roc_with_pickle.py",
+      "bytes": 821,
+      "sha256": "6187fc98d068405f708a973ec7862a40df6002b2fff2a98043dd393914869fb3"
+    },
+    {
+      "path": "paper_reproduction/reference/HAS-CAM/fast-reid-demo/predictor.py",
+      "bytes": 5577,
+      "sha256": "e36fe8f7649485953a05672996b528d6848f78434e0fa5eef24d12341fb0155f"
+    },
+    {
+      "path": "paper_reproduction/reference/HAS-CAM/fast-reid-demo/README.md",
+      "bytes": 414,
+      "sha256": "f40fa3ce46945be962b35eb9b4670a92c74f599a92f0018bed0966deddc0368c"
+    },
+    {
+      "path": "paper_reproduction/reference/HAS-CAM/fast-reid-demo/similarity.py",
+      "bytes": 2633,
+      "sha256": "5d0cc7c9d91e82b723754f9ce0a87ef88c0fa676b51590fd8790f4522b493dac"
+    },
+    {
+      "path": "paper_reproduction/reference/HAS-CAM/fast-reid-demo/visualize_result.py",
+      "bytes": 4442,
+      "sha256": "1f7ecade5589cc6a08cf371c260c1c5a8e4cb3ce09228ddae4920dcc962224d9"
+    },
+    {
+      "path": "paper_reproduction/reference/HAS-CAM/fastreid/__init__.py",
+      "bytes": 112,
+      "sha256": "24f27e6c0246146ea43cbdaf05253e5dbd9f5e28ce14992fcf7b12dffc2851f4"
+    },
+    {
+      "path": "paper_reproduction/reference/HAS-CAM/fastreid/Base-SBS.yml",
+      "bytes": 975,
+      "sha256": "0a303180f0d92eb65be4aa13dfe7bae12f7349a4893e68e01d47b86ba00b3f12"
+    },
+    {
+      "path": "paper_reproduction/reference/HAS-CAM/fastreid/config/__init__.py",
+      "bytes": 281,
+      "sha256": "052f94a4d4d85102552119f50b5efcb62e6c5296e1b18f54e7dc9191b883939c"
+    },
+    {
+      "path": "paper_reproduction/reference/HAS-CAM/fastreid/config/config.py",
+      "bytes": 11854,
+      "sha256": "fd1806d5224bb3568d97cccf16f7dbd7b3b1abcd2cd2cd271759bc1a1699a94b"
+    },
+    {
+      "path": "paper_reproduction/reference/HAS-CAM/fastreid/config/defaults.py",
+      "bytes": 10973,
+      "sha256": "978fb4474c41b479eb210dced5a1f4a4874f14e084b61024f75481ac613a4a75"
+    },
+    {
+      "path": "paper_reproduction/reference/HAS-CAM/fastreid/configs/Base-AGW.yml",
+      "bytes": 304,
+      "sha256": "fb475bf6673f59ee7295523f69a72c0cef29e3d96f36424967f7da93b4ec726d"
+    },
+    {
+      "path": "paper_reproduction/reference/HAS-CAM/fastreid/configs/Base-bagtricks.yml",
+      "bytes": 1188,
+      "sha256": "e0e5e85c368307ed643c070750052f87cc34763a2058951c967c21f50151b23a"
+    },
+    {
+      "path": "paper_reproduction/reference/HAS-CAM/fastreid/configs/Base-MGN.yml",
+      "bytes": 173,
+      "sha256": "3e518494c131d4327cf3ecdb796c3f0dc6e1c0400ed4dc0d21f14abe10025c6d"
+    },
+    {
+      "path": "paper_reproduction/reference/HAS-CAM/fastreid/configs/Base-SBS.yml",
+      "bytes": 975,
+      "sha256": "0a303180f0d92eb65be4aa13dfe7bae12f7349a4893e68e01d47b86ba00b3f12"
+    },
+    {
+      "path": "paper_reproduction/reference/HAS-CAM/fastreid/configs/DukeMTMC/AGW_R101-ibn.yml",
+      "bytes": 188,
+      "sha256": "39e25dc11525595e2daac4e101d20aef0975d0f128e1e25917e39e7fcad2949b"
+    },
+    {
+      "path": "paper_reproduction/reference/HAS-CAM/fastreid/configs/DukeMTMC/AGW_R50-ibn.yml",
+      "bytes": 170,
+      "sha256": "a2e3ac823e31d502d4332e36da9f0bb1d25e4f19d3af3fa458ed6b6ab6d8a746"
+    },
+    {
+      "path": "paper_reproduction/reference/HAS-CAM/fastreid/configs/DukeMTMC/AGW_R50.yml",
+      "bytes": 123,
+      "sha256": "c62c0f62b22391f24191549e0df407c5a6f20069252189d8455f14ed22ba07af"
+    },
+    {
+      "path": "paper_reproduction/reference/HAS-CAM/fastreid/configs/DukeMTMC/AGW_S50.yml",
+      "bytes": 180,
+      "sha256": "8c2f5d563c51c162dda360d44730cdd2e1172958c6183b77111e3e47d1751ccf"
+    },
+    {
+      "path": "paper_reproduction/reference/HAS-CAM/fastreid/configs/DukeMTMC/bagtricks_R101-ibn.yml",
+      "bytes": 200,
+      "sha256": "ca819a49685e0e37633802ed12488ef5024528ad6fda2318e965addb8e82b163"
+    },
+    {
+      "path": "paper_reproduction/reference/HAS-CAM/fastreid/configs/DukeMTMC/bagtricks_R50-ibn.yml",
+      "bytes": 182,
+      "sha256": "99dbf2be6d6e3a87aa611e11ef43a71c0a553ae6110f7535291aaba4e5881a23"
+    },
+    {
+      "path": "paper_reproduction/reference/HAS-CAM/fastreid/configs/DukeMTMC/bagtricks_R50.yml",
+      "bytes": 135,
+      "sha256": "0212067065e32a328d690654b0f3e1b844b8a9caa6e7762261807b1ea8e49a88"
+    },
+    {
+      "path": "paper_reproduction/reference/HAS-CAM/fastreid/configs/DukeMTMC/bagtricks_S50.yml",
+      "bytes": 192,
+      "sha256": "2751840686e747029d37951bc1b7269a6dc4ab600d6878c351f22b4c31760bea"
+    },
+    {
+      "path": "paper_reproduction/reference/HAS-CAM/fastreid/configs/DukeMTMC/mgn_R50-ibn.yml",
+      "bytes": 170,
+      "sha256": "2a28dba1d9d90be6f8fc73709fcb63fd4e0913a16b8c239c527ea7ebf78ddc34"
+    },
+    {
+      "path": "paper_reproduction/reference/HAS-CAM/fastreid/configs/DukeMTMC/sbs_R101-ibn.yml",
+      "bytes": 188,
+      "sha256": "56291e41de01df23e7f48b359d26eae93c6f56d9e2e154061bf9357d3410aa12"
+    },
+    {
+      "path": "paper_reproduction/reference/HAS-CAM/fastreid/configs/DukeMTMC/sbs_R50-ibn.yml",
+      "bytes": 218,
+      "sha256": "8af6f5acf53a57fbbdb3fef879c049102baab4caecbe0abc1967b38d6843fe47"
+    },
+    {
+      "path": "paper_reproduction/reference/HAS-CAM/fastreid/configs/DukeMTMC/sbs_R50.yml",
+      "bytes": 123,
+      "sha256": "d9a89f16a31aa92efefc07ae3bdce6db4e0db31f31ee76bd810c76f362271012"
+    },
+    {
+      "path": "paper_reproduction/reference/HAS-CAM/fastreid/configs/DukeMTMC/sbs_S50.yml",
+      "bytes": 180,
+      "sha256": "fa20fbbe763c1a18703495db0ed74630e4fb3018281829e6c5de8588a2822761"
+    },
+    {
+      "path": "paper_reproduction/reference/HAS-CAM/fastreid/configs/Market1501/AGW_R101-ibn.yml",
+      "bytes": 194,
+      "sha256": "cdd3a3f56d70db822e280dfdcbb80b67931aed1455f51be2614ee84203bb3b09"
+    },
+    {
+      "path": "paper_reproduction/reference/HAS-CAM/fastreid/configs/Market1501/AGW_R50-ibn.yml",
+      "bytes": 176,
+      "sha256": "368bb58442b0f161bd3a221cdf0daf5d663d233bb42dd506f4c5eab231445ce2"
+    },
+    {
+      "path": "paper_reproduction/reference/HAS-CAM/fastreid/configs/Market1501/AGW_R50.yml",
+      "bytes": 129,
+      "sha256": "381358a8b4b97da1b2373e043814acb833afe96d07e2d243342485c582c89a60"
+    },
+    {
+      "path": "paper_reproduction/reference/HAS-CAM/fastreid/configs/Market1501/AGW_S50.yml",
+      "bytes": 186,
+      "sha256": "82eb04d7cd5865e2ff3d2da7d0b8177693fdf7f8b4a165f164cc144424cbaab3"
+    },
+    {
+      "path": "paper_reproduction/reference/HAS-CAM/fastreid/configs/Market1501/bagtricks_R101-ibn.yml",
+      "bytes": 206,
+      "sha256": "12a612fe365158b32f942e97c69b69b81ccc1fd9fb2ed42fbf8e48dd91107dc1"
+    },
+    {
+      "path": "paper_reproduction/reference/HAS-CAM/fastreid/configs/Market1501/bagtricks_R50-ibn.yml",
+      "bytes": 188,
+      "sha256": "aeaa9c984f2227555b27d9af1d6f19add53579bc61a7aa3c4c47d731d8c9e1cd"
+    },
+    {
+      "path": "paper_reproduction/reference/HAS-CAM/fastreid/configs/Market1501/bagtricks_R50.yml",
+      "bytes": 141,
+      "sha256": "b819475e6e3dcfc3d2a0cd30bfaf111ad836347e185e0077e6a020f32d8de6ce"
+    },
+    {
+      "path": "paper_reproduction/reference/HAS-CAM/fastreid/configs/Market1501/bagtricks_S50.yml",
+      "bytes": 198,
+      "sha256": "609ddac7c3946a7c94160cd77d521a06f71797ec6f0c83d11f2cb05ab173405c"
+    },
+    {
+      "path": "paper_reproduction/reference/HAS-CAM/fastreid/configs/Market1501/bagtricks_vit.yml",
+      "bytes": 1517,
+      "sha256": "ea8ba7a4afb40b2950e62d07827f9f29b82896386880118517cee6ed7d0265c6"
+    },
+    {
+      "path": "paper_reproduction/reference/HAS-CAM/fastreid/configs/Market1501/mgn_R50-ibn.yml",
+      "bytes": 176,
+      "sha256": "6df084e6408510ffd81e9126916db24e0872c977c5497ae7b37b8d3ad70ccdb9"
+    },
+    {
+      "path": "paper_reproduction/reference/HAS-CAM/fastreid/configs/Market1501/sbs_R101-ibn.yml",
+      "bytes": 194,
+      "sha256": "6582e08ae68db15a3fd76d8d8ee54808c1aa3da2550d6078c4d3b8ef74fd1f98"
+    },
+    {
+      "path": "paper_reproduction/reference/HAS-CAM/fastreid/configs/Market1501/sbs_R50-ibn.yml",
+      "bytes": 234,
+      "sha256": "f9801addd8837f44ab2ae7df2e154d61f804319260db5679f8dca24cfde60cf0"
+    },
+    {
+      "path": "paper_reproduction/reference/HAS-CAM/fastreid/configs/Market1501/sbs_R50.yml",
+      "bytes": 129,
+      "sha256": "f16edf2baf6d8dc4e6e2f66f1d3c77e02f14377b7b7ff19b6ae59465d0721e87"
+    },
+    {
+      "path": "paper_reproduction/reference/HAS-CAM/fastreid/configs/Market1501/sbs_S50.yml",
+      "bytes": 186,
+      "sha256": "e832e455c7ec032cc1e0dbe859a2901f85aba21eb528b355193ae270c65dff6b"
+    },
+    {
+      "path": "paper_reproduction/reference/HAS-CAM/fastreid/configs/MSMT17/AGW_R101-ibn.yml",
+      "bytes": 182,
+      "sha256": "dcfb207ab0cd35577f7adec9c7beaa83afa3ca2eb5a5c5b1c688b2219f7a42a4"
+    },
+    {
+      "path": "paper_reproduction/reference/HAS-CAM/fastreid/configs/MSMT17/AGW_R50-ibn.yml",
+      "bytes": 164,
+      "sha256": "e97f678f721da63d534285785ed6f5bdbcd49396255856122d795f79809ba7f1"
+    },
+    {
+      "path": "paper_reproduction/reference/HAS-CAM/fastreid/configs/MSMT17/AGW_R50.yml",
+      "bytes": 117,
+      "sha256": "0c6730ad408fde6659afb09c1e87f7f894bf859de0d941229b29c72eefbb5195"
+    },
+    {
+      "path": "paper_reproduction/reference/HAS-CAM/fastreid/configs/MSMT17/AGW_S50.yml",
+      "bytes": 174,
+      "sha256": "3fd258ed3e08ae37ab4897df35e1f963deefa4df54281c6833c507641aabc2f2"
+    },
+    {
+      "path": "paper_reproduction/reference/HAS-CAM/fastreid/configs/MSMT17/bagtricks_R101-ibn.yml",
+      "bytes": 196,
+      "sha256": "168950b90b4028a34e45025ad06bb299aed9a2107e68d7e549cf64db870e8948"
+    },
+    {
+      "path": "paper_reproduction/reference/HAS-CAM/fastreid/configs/MSMT17/bagtricks_R50-ibn.yml",
+      "bytes": 178,
+      "sha256": "736a5f946219021879a747e664e377f105987202728768b3835787916743fa0d"
+    },
+    {
+      "path": "paper_reproduction/reference/HAS-CAM/fastreid/configs/MSMT17/bagtricks_R50.yml",
+      "bytes": 129,
+      "sha256": "5e54377aa0d1e0a00bbbfd8e259f5df1771440b984b39b83ac7328a6e598d995"
+    },
+    {
+      "path": "paper_reproduction/reference/HAS-CAM/fastreid/configs/MSMT17/bagtricks_S50.yml",
+      "bytes": 188,
+      "sha256": "af8b2d6b61e93e6efd99531e207d326db080c1627e8995e5b039ba113c12a319"
+    },
+    {
+      "path": "paper_reproduction/reference/HAS-CAM/fastreid/configs/MSMT17/mgn_R50-ibn.yml",
+      "bytes": 164,
+      "sha256": "2368cfebeb5906809ade91a5683feb19ec90ee637699ac034d5e06f85cc40d0b"
+    },
+    {
+      "path": "paper_reproduction/reference/HAS-CAM/fastreid/configs/MSMT17/sbs_R101-ibn.yml",
+      "bytes": 182,
+      "sha256": "f127ed4fa5b4c86d1a0a83d926a18b6e97706a9a307a7c9e4caa652c8c70e2cd"
+    },
+    {
+      "path": "paper_reproduction/reference/HAS-CAM/fastreid/configs/MSMT17/sbs_R50-ibn.yml",
+      "bytes": 164,
+      "sha256": "02bf66a9431cc298d5e6b603d58c96391ea44c1cc7388379cf3eee11cb673d89"
+    },
+    {
+      "path": "paper_reproduction/reference/HAS-CAM/fastreid/configs/MSMT17/sbs_R50.yml",
+      "bytes": 117,
+      "sha256": "bc3775426b8f9ed149b0a48d5209cffcbfe85bdf394de799e10dfb64e2d65b67"
+    },
+    {
+      "path": "paper_reproduction/reference/HAS-CAM/fastreid/configs/MSMT17/sbs_S50.yml",
+      "bytes": 174,
+      "sha256": "3583bb8f1e85f5a32d433dca38299b2e48ad2b9764e548bbfecee2f457f74e76"
+    },
+    {
+      "path": "paper_reproduction/reference/HAS-CAM/fastreid/configs/VehicleID/bagtricks_R50-ibn.yml",
+      "bytes": 603,
+      "sha256": "647cac9969a052018a1b21651d130607e29cdd2cad570cba8c888ff14a83a87a"
+    },
+    {
+      "path": "paper_reproduction/reference/HAS-CAM/fastreid/configs/VeRi/sbs_R50-ibn.yml",
+      "bytes": 518,
+      "sha256": "cb1f8b01ece9c29a7bbc8deb7f6e2c6ad19d13efa6a0e8a5fcef11c1e72022f7"
+    },
+    {
+      "path": "paper_reproduction/reference/HAS-CAM/fastreid/configs/VeRi/VeRi_sbs_R50-ibn.yml",
+      "bytes": 566,
+      "sha256": "f2d9006c42a1ebd8a502281c3e739e5466077831129beff19bfcf6d7c15bcec6"
+    },
+    {
+      "path": "paper_reproduction/reference/HAS-CAM/fastreid/configs/VERIWild/bagtricks_R50-ibn.yml",
+      "bytes": 598,
+      "sha256": "7b6fdea93012a26dce5bc9a0248c2698a706640d014243c82dedb207c752662b"
+    },
+    {
+      "path": "paper_reproduction/reference/HAS-CAM/fastreid/data/__init__.py",
+      "bytes": 407,
+      "sha256": "ed00d25cad7ba673b4d8ea67c0055e50df25b760fddab3598f5f62d2c20a3c36"
+    },
+    {
+      "path": "paper_reproduction/reference/HAS-CAM/fastreid/data/build.py",
+      "bytes": 6497,
+      "sha256": "0efbc8e06eabf215d4871a3d564617c94b60dfeb89f44f0bc69e1d4875e9544c"
+    },
+    {
+      "path": "paper_reproduction/reference/HAS-CAM/fastreid/data/common.py",
+      "bytes": 1554,
+      "sha256": "f2e9cf2b348e34284de66123fa2899bff8b28e7434b7c2af1381f4ccdfb648d0"
+    },
+    {
+      "path": "paper_reproduction/reference/HAS-CAM/fastreid/data/data_utils.py",
+      "bytes": 7236,
+      "sha256": "23197dc9dd9810eff67d17c10ae54d4e6797cd91a93f30b7ab28236a30dd00ba"
+    },
+    {
+      "path": "paper_reproduction/reference/HAS-CAM/fastreid/data/datasets/__init__.py",
+      "bytes": 1244,
+      "sha256": "e39ff2eb2f76c63f6402c854d9201f743b64d1cbfea8706fb0e5b4f6ba22faa6"
+    },
+    {
+      "path": "paper_reproduction/reference/HAS-CAM/fastreid/data/datasets/AirportALERT.py",
+      "bytes": 1535,
+      "sha256": "1ee8c72cb798345261fc1eb15b65fffaa42eb46a1d0e93f68a4cfd2889ec62b0"
+    },
+    {
+      "path": "paper_reproduction/reference/HAS-CAM/fastreid/data/datasets/bases.py",
+      "bytes": 6075,
+      "sha256": "993d93dc276dd442323e23d5618c3041c5defb068dfbc4564068f9debd58a3db"
+    },
+    {
+      "path": "paper_reproduction/reference/HAS-CAM/fastreid/data/datasets/caviara.py",
+      "bytes": 1146,
+      "sha256": "bc086de56b6bce2b31f8eef34935cf5efe4601442ac4c26887404e78cc0fc30f"
+    },
+    {
+      "path": "paper_reproduction/reference/HAS-CAM/fastreid/data/datasets/cuhk03.py",
+      "bytes": 12308,
+      "sha256": "c7e2a2b755895296c3b6d7e9694b4d4d1c411820f714cee35d42398f57bb9233"
+    },
+    {
+      "path": "paper_reproduction/reference/HAS-CAM/fastreid/data/datasets/cuhk_sysu.py",
+      "bytes": 1693,
+      "sha256": "16ea1cfda64a0be558d277bab34d607abee57163b4be2643bc240689bdbee70e"
+    },
+    {
+      "path": "paper_reproduction/reference/HAS-CAM/fastreid/data/datasets/dukemtmcreid.py",
+      "bytes": 2420,
+      "sha256": "55aeaf4bdc08047c1345ea7223ca6886fac18c16ee9a35f1d601a5923af9d362"
+    },
+    {
+      "path": "paper_reproduction/reference/HAS-CAM/fastreid/data/datasets/grid.py",
+      "bytes": 1210,
+      "sha256": "06ab94cb76339a5b58340979ba5a6f7fdaad94d0e9310149fa5532db2244c686"
+    },
+    {
+      "path": "paper_reproduction/reference/HAS-CAM/fastreid/data/datasets/iLIDS.py",
+      "bytes": 1320,
+      "sha256": "d4c885b15b0d3d3e63d8aa7a8681dd182d4b5c106f223208ed085086d5b49bfd"
+    },
+    {
+      "path": "paper_reproduction/reference/HAS-CAM/fastreid/data/datasets/lpw.py",
+      "bytes": 1495,
+      "sha256": "42fde5fdddeb9016dbb88015f4c7df0b3ccc5535e72bf9db58c90068ec5a1fc8"
+    },
+    {
+      "path": "paper_reproduction/reference/HAS-CAM/fastreid/data/datasets/market1501.py",
+      "bytes": 3260,
+      "sha256": "c9262349088c1276bd78df18ec24c904d20fffad50e4f6be8fd772fdada5dfe3"
+    },
+    {
+      "path": "paper_reproduction/reference/HAS-CAM/fastreid/data/datasets/msmt17.py",
+      "bytes": 3985,
+      "sha256": "4ab233eb979c7d89386887a48ce268fa3523f98de164097a5740b6c29aa94a6a"
+    },
+    {
+      "path": "paper_reproduction/reference/HAS-CAM/fastreid/data/datasets/pes3d.py",
+      "bytes": 1183,
+      "sha256": "05aedb30baf037e827730bda546af3fb81d7ab97a4bc70037dee6534bc1377b4"
+    },
+    {
+      "path": "paper_reproduction/reference/HAS-CAM/fastreid/data/datasets/pku.py",
+      "bytes": 1193,
+      "sha256": "3cda80e7b4104a991d7f34af638d5704e82cd8bbbba3b86ac1dab12441c842ba"
+    },
+    {
+      "path": "paper_reproduction/reference/HAS-CAM/fastreid/data/datasets/prai.py",
+      "bytes": 1201,
+      "sha256": "306bf580d3a5fdec16dedfade16bf88966fe00a0fab03017417a68d31ed7480b"
+    },
+    {
+      "path": "paper_reproduction/reference/HAS-CAM/fastreid/data/datasets/prid.py",
+      "bytes": 1220,
+      "sha256": "8eff7d1984847c67f474939f29dd002401a77e8c4f9fccc5e65fb8c3eeb53fec"
+    },
+    {
+      "path": "paper_reproduction/reference/HAS-CAM/fastreid/data/datasets/saivt.py",
+      "bytes": 1332,
+      "sha256": "d71688c869cff91b860006f1d8a43c5c40bc00c890b584891349ee0d57bbba92"
+    },
+    {
+      "path": "paper_reproduction/reference/HAS-CAM/fastreid/data/datasets/sensereid.py",
+      "bytes": 1404,
+      "sha256": "0685954c71f4fd6ee85eda2f983cbe6bf7371c686d63baaaee465400cb71db73"
+    },
+    {
+      "path": "paper_reproduction/reference/HAS-CAM/fastreid/data/datasets/shinpuhkan.py",
+      "bytes": 1390,
+      "sha256": "ea849640e0a9550d724f79093151a5c0dbb3482cbfaf287e220afc5c00f533a6"
+    },
+    {
+      "path": "paper_reproduction/reference/HAS-CAM/fastreid/data/datasets/sysu_mm.py",
+      "bytes": 1363,
+      "sha256": "1e48849308933679373bb01f100ebca90ab3d294dbf608f67d97e11173b875b8"
+    },
+    {
+      "path": "paper_reproduction/reference/HAS-CAM/fastreid/data/datasets/thermalworld.py",
+      "bytes": 1221,
+      "sha256": "9bf27c301d69251bde0ef2aae5b3d7427bd5d8795ec0ec7c5919855288f6c302"
+    },
+    {
+      "path": "paper_reproduction/reference/HAS-CAM/fastreid/data/datasets/vehicleid.py",
+      "bytes": 3963,
+      "sha256": "046533d507236a66a04a4a7725fd90ade2e928e9c54c62b85efd9e6179ac3b0f"
+    },
+    {
+      "path": "paper_reproduction/reference/HAS-CAM/fastreid/data/datasets/veri.py",
+      "bytes": 2278,
+      "sha256": "8f9dc5cb2f46be475e6fd5c751c3cff43e75f891940664d4323d0ec92ea3bee1"
+    },
+    {
+      "path": "paper_reproduction/reference/HAS-CAM/fastreid/data/datasets/veriwild.py",
+      "bytes": 5024,
+      "sha256": "04c00fc20c25ef3598cccc2dd188a4b98740c33b45350f2880697c253eb04670"
+    },
+    {
+      "path": "paper_reproduction/reference/HAS-CAM/fastreid/data/datasets/viper.py",
+      "bytes": 1251,
+      "sha256": "4be4abd64526e4f8c377ec5e87aec3337bca6490cdf5136e0de12e92523a4bde"
+    },
+    {
+      "path": "paper_reproduction/reference/HAS-CAM/fastreid/data/datasets/wildtracker.py",
+      "bytes": 1903,
+      "sha256": "70c27e08d8d8fbbc7fe1be9fda0b8d6b7bed3bb2ba9bf23fe532e2c2664057b5"
+    },
+    {
+      "path": "paper_reproduction/reference/HAS-CAM/fastreid/data/samplers/__init__.py",
+      "bytes": 491,
+      "sha256": "0d9965d9a7d2a624fbccd054f1202be4b8c6d6ae0893eb43ab94dd191d2b845a"
+    },
+    {
+      "path": "paper_reproduction/reference/HAS-CAM/fastreid/data/samplers/data_sampler.py",
+      "bytes": 2992,
+      "sha256": "6779ed94632bc7a2c365f79dc9cbbf7b11edfe2695d05cc594d6cbb8469647e5"
+    },
+    {
+      "path": "paper_reproduction/reference/HAS-CAM/fastreid/data/samplers/imbalance_sampler.py",
+      "bytes": 2298,
+      "sha256": "171227cdfee552da8f72337cca0c3d4361b42b3f5b490e3516475f57efb69151"
+    },
+    {
+      "path": "paper_reproduction/reference/HAS-CAM/fastreid/data/samplers/triplet_sampler.py",
+      "bytes": 10358,
+      "sha256": "240f597c0af8acdebb206954c2a55196c4139320cb1bcfd4176a8f6e5309c05a"
+    },
+    {
+      "path": "paper_reproduction/reference/HAS-CAM/fastreid/data/transforms/__init__.py",
+      "bytes": 257,
+      "sha256": "9ff535c106b35cb9a30f966ba72f685f7b010243e12c29f62b43937aed277166"
+    },
+    {
+      "path": "paper_reproduction/reference/HAS-CAM/fastreid/data/transforms/autoaugment.py",
+      "bytes": 30319,
+      "sha256": "1b68b4dd4a81be6d54442c8862c5c25208ba6cf9e3745ef012ea696fb1a0c7c7"
+    },
+    {
+      "path": "paper_reproduction/reference/HAS-CAM/fastreid/data/transforms/build.py",
+      "bytes": 3448,
+      "sha256": "d63b3a0de5726ab604c30b1974a94ef1eb1af96f1530150f062b00b7dde3d6f5"
+    },
+    {
+      "path": "paper_reproduction/reference/HAS-CAM/fastreid/data/transforms/functional.py",
+      "bytes": 5765,
+      "sha256": "cb5a9df8302a200254a873e811bb428056872c1f5571e8293b1d528dd19b428d"
+    },
+    {
+      "path": "paper_reproduction/reference/HAS-CAM/fastreid/data/transforms/transforms.py",
+      "bytes": 5874,
+      "sha256": "f6deab2e66ccf07d4a040fcd26b69bfa2f5e573d1a3eabe0ada31b0e416e738d"
+    },
+    {
+      "path": "paper_reproduction/reference/HAS-CAM/fastreid/engine/__init__.py",
+      "bytes": 385,
+      "sha256": "33d03113f1a7770f16931f6329b3863275c166a085c076deb856a449e20d9c25"
+    },
+    {
+      "path": "paper_reproduction/reference/HAS-CAM/fastreid/engine/defaults.py",
+      "bytes": 20491,
+      "sha256": "b5444b06c59f896e4d8e8f2ce4e39d3ab2738683384751b961f03fcbadf3dd5a"
+    },
+    {
+      "path": "paper_reproduction/reference/HAS-CAM/fastreid/engine/hooks.py",
+      "bytes": 19752,
+      "sha256": "2b159d09329fcf8193e1e74284162a05ad58adef24081451d174eb8de59d5225"
+    },
+    {
+      "path": "paper_reproduction/reference/HAS-CAM/fastreid/engine/launch.py",
+      "bytes": 3861,
+      "sha256": "d59001c245db3053658fd699fc0ab4617c5a805f139d2a60660320eab51e2b72"
+    },
+    {
+      "path": "paper_reproduction/reference/HAS-CAM/fastreid/engine/train_loop.py",
+      "bytes": 12365,
+      "sha256": "905d11fd482b1314ba83c369275b1345feca56c34f5e1876e4703f8358637d9c"
+    },
+    {
+      "path": "paper_reproduction/reference/HAS-CAM/fastreid/evaluation/__init__.py",
+      "bytes": 292,
+      "sha256": "ebe14982f85ab74d4e4b58d2c5a0eb47748106f8e5aef886a7a49a0a3b46aaaa"
+    },
+    {
+      "path": "paper_reproduction/reference/HAS-CAM/fastreid/evaluation/clas_evaluator.py",
+      "bytes": 2366,
+      "sha256": "b4752e2f10e9d583d0d27c0f3df3ddc64273dfdf966d6927959b6a0526ba3e52"
+    },
+    {
+      "path": "paper_reproduction/reference/HAS-CAM/fastreid/evaluation/evaluator.py",
+      "bytes": 6816,
+      "sha256": "5ca821a4b20f80edfcc37da32d6323127290281f7b50d537a1a02c09214f7501"
+    },
+    {
+      "path": "paper_reproduction/reference/HAS-CAM/fastreid/evaluation/query_expansion.py",
+      "bytes": 1747,
+      "sha256": "a95907e6a06b470f4e37c2be6e4fd59c3be347661fabb6e0e150ac58fc9ee36a"
+    },
+    {
+      "path": "paper_reproduction/reference/HAS-CAM/fastreid/evaluation/rank.py",
+      "bytes": 7201,
+      "sha256": "0f2622558ff5229c802c1bdfca24a5ae950b7f522584963123fc8bb230396649"
+    },
+    {
+      "path": "paper_reproduction/reference/HAS-CAM/fastreid/evaluation/rank_cylib/__init__.py",
+      "bytes": 500,
+      "sha256": "c92ae1a7d1810629af0722092cea23dd43788c81313a3cf66bc9255ac08efc31"
+    },
+    {
+      "path": "paper_reproduction/reference/HAS-CAM/fastreid/evaluation/rank_cylib/Makefile",
+      "bytes": 106,
+      "sha256": "b50653432dc9ad9b6e157cc8850d51caca2fe99d070a8b40b57dc74eb43e0261"
+    },
+    {
+      "path": "paper_reproduction/reference/HAS-CAM/fastreid/evaluation/rank_cylib/rank_cy.pyx",
+      "bytes": 9931,
+      "sha256": "1a5ae09746eba39706f9fb35cd450d6c241b9ed5a1d44a7982fa10af67e23a55"
+    },
+    {
+      "path": "paper_reproduction/reference/HAS-CAM/fastreid/evaluation/rank_cylib/roc_cy.pyx",
+      "bytes": 3151,
+      "sha256": "fa2c7d7aab7ee81c645496141d01205167f5f55886f1ba192cdbdfc5b4d128f0"
+    },
+    {
+      "path": "paper_reproduction/reference/HAS-CAM/fastreid/evaluation/rank_cylib/setup.py",
+      "bytes": 658,
+      "sha256": "d260dc509b69f358b27ce7d7074bcc200cf1c6bed9d9106668b59c3ff896b843"
+    },
+    {
+      "path": "paper_reproduction/reference/HAS-CAM/fastreid/evaluation/rank_cylib/test_cython.py",
+      "bytes": 4149,
+      "sha256": "5237e2ab155f61039d1e667ee2d4abf318cc57ae1e55c33662db759d7067d930"
+    },
+    {
+      "path": "paper_reproduction/reference/HAS-CAM/fastreid/evaluation/reid_evaluation.py",
+      "bytes": 5075,
+      "sha256": "4c8d0826a3662545b4d1342e9cca15cb465ff721acc1ce817591d66e7d22ced4"
+    },
+    {
+      "path": "paper_reproduction/reference/HAS-CAM/fastreid/evaluation/rerank.py",
+      "bytes": 3453,
+      "sha256": "80e02638294f91100ea535dfd8888b552506795643e8eb95c7f2ea0590060d3f"
+    },
+    {
+      "path": "paper_reproduction/reference/HAS-CAM/fastreid/evaluation/roc.py",
+      "bytes": 2874,
+      "sha256": "2320c68bbb30dd2b9c98e4209e021cb1408f0586ca2e7b75391b1cd4ac366977"
+    },
+    {
+      "path": "paper_reproduction/reference/HAS-CAM/fastreid/evaluation/testing.py",
+      "bytes": 2511,
+      "sha256": "fdaea1c85b98be695791a7dcc640f2ea38cd6545798f1be6ef6c9f28464629b2"
+    },
+    {
+      "path": "paper_reproduction/reference/HAS-CAM/fastreid/layers/__init__.py",
+      "bytes": 639,
+      "sha256": "c09240394ea332e16f66e39af746a7889b10fec094a198c9c000de0abf91750a"
+    },
+    {
+      "path": "paper_reproduction/reference/HAS-CAM/fastreid/layers/activation.py",
+      "bytes": 1393,
+      "sha256": "621941a096d235d6b27674422d92c8a120b1d0d799283499fea40a4d73960d42"
+    },
+    {
+      "path": "paper_reproduction/reference/HAS-CAM/fastreid/layers/any_softmax.py",
+      "bytes": 2355,
+      "sha256": "6b1b1868f7d64f5479528a6a229a13920232e6694d9e77b529e928ed3f64d5ed"
+    },
+    {
+      "path": "paper_reproduction/reference/HAS-CAM/fastreid/layers/batch_norm.py",
+      "bytes": 8719,
+      "sha256": "9b4f56d62579ae43c32777d20e84bd4517d55cdbf3ef4e86f8c86cb691fc54f3"
+    },
+    {
+      "path": "paper_reproduction/reference/HAS-CAM/fastreid/layers/context_block.py",
+      "bytes": 4357,
+      "sha256": "06421c6078d72c0366b9d2b544d9d67b81178811a2edc68966c9f85e82a41799"
+    },
+    {
+      "path": "paper_reproduction/reference/HAS-CAM/fastreid/layers/drop.py",
+      "bytes": 7095,
+      "sha256": "81e86126aaf7c8c6954253335d2ce5017c6c665c258d127613259db11b072814"
+    },
+    {
+      "path": "paper_reproduction/reference/HAS-CAM/fastreid/layers/frn.py",
+      "bytes": 6698,
+      "sha256": "1ef1c6818fd7ea04823b2cd814f3bf4b4de2cad27a10a7e1f4951889018d1475"
+    },
+    {
+      "path": "paper_reproduction/reference/HAS-CAM/fastreid/layers/gather_layer.py",
+      "bytes": 846,
+      "sha256": "0ca7582ea90652cc54d202b18d4bce3c60f9e37db400fc51fb10afdc438bbcfd"
+    },
+    {
+      "path": "paper_reproduction/reference/HAS-CAM/fastreid/layers/helpers.py",
+      "bytes": 755,
+      "sha256": "1d481ca7de5f53d6ac2af665a7bc09d50d29266f5ccfc9bc76bff63dc53735d2"
+    },
+    {
+      "path": "paper_reproduction/reference/HAS-CAM/fastreid/layers/non_local.py",
+      "bytes": 1931,
+      "sha256": "543992595e35ee191f74597b3d48f27225503e32dedc1c98c14a579ded901c2e"
+    },
+    {
+      "path": "paper_reproduction/reference/HAS-CAM/fastreid/layers/pooling.py",
+      "bytes": 3773,
+      "sha256": "1d394cba5f07cf9bbfd5b6c6dc876adb5109aad6acb84adf3bcad560958a27e3"
+    },
+    {
+      "path": "paper_reproduction/reference/HAS-CAM/fastreid/layers/se_layer.py",
+      "bytes": 706,
+      "sha256": "7e0492b5a78fa00021627940232422f30f960232a2f76a304bbdc8e1ad556581"
+    },
+    {
+      "path": "paper_reproduction/reference/HAS-CAM/fastreid/layers/splat.py",
+      "bytes": 3925,
+      "sha256": "4172a833deb64336b75395341f4c4a9d5a87edc3d14c3a3190fecfccd837de94"
+    },
+    {
+      "path": "paper_reproduction/reference/HAS-CAM/fastreid/layers/weight_init.py",
+      "bytes": 4338,
+      "sha256": "26efb5b7fd49ce9fa3fcd6463d99fd4e404b676cb8503a5755a2ef86858349c1"
+    },
+    {
+      "path": "paper_reproduction/reference/HAS-CAM/fastreid/modeling/__init__.py",
+      "bytes": 438,
+      "sha256": "02aa0bc64a6f82b999b80d7c90a9a821766ba0a5caaa9dc063582eb4cea63316"
+    },
+    {
+      "path": "paper_reproduction/reference/HAS-CAM/fastreid/modeling/backbones/__init__.py",
+      "bytes": 637,
+      "sha256": "f4349f45b4bfd9a5abdb19a73aac8c1a153bd9b0426dd97aacac001fde8e1f4b"
+    },
+    {
+      "path": "paper_reproduction/reference/HAS-CAM/fastreid/modeling/backbones/build.py",
+      "bytes": 719,
+      "sha256": "d56db9188461445d39c399c417d5ccb22ecd4405233c52cc1a212563eca8dbd4"
+    },
+    {
+      "path": "paper_reproduction/reference/HAS-CAM/fastreid/modeling/backbones/mobilenet.py",
+      "bytes": 6654,
+      "sha256": "3114655314b1c748d1db8148b98609b0841a31b4f42772be25c3b02077fc17bf"
+    },
+    {
+      "path": "paper_reproduction/reference/HAS-CAM/fastreid/modeling/backbones/mobilenetv3.py",
+      "bytes": 11999,
+      "sha256": "6f8e329dce8669ed369782856e64182f8601185704d5df1a336a5569425e0d6e"
+    },
+    {
+      "path": "paper_reproduction/reference/HAS-CAM/fastreid/modeling/backbones/osnet.py",
+      "bytes": 16088,
+      "sha256": "d2ec012be4ea5d3a70cac65fb7bc1fbd5780900312140d6b83a17b5e2a77f6b2"
+    },
+    {
+      "path": "paper_reproduction/reference/HAS-CAM/fastreid/modeling/backbones/regnet/__init__.py",
+      "bytes": 90,
+      "sha256": "d30ad22fb1f50d02d5278e403586289ddcbd0082c7aed11b1c8e17dc95256eb8"
+    },
+    {
+      "path": "paper_reproduction/reference/HAS-CAM/fastreid/modeling/backbones/regnet/config.py",
+      "bytes": 11463,
+      "sha256": "93c22d82954a11071f804e5cc4f5f29f82310e44b4938fd8d985ff3e3d7dc2f5"
+    },
+    {
+      "path": "paper_reproduction/reference/HAS-CAM/fastreid/modeling/backbones/regnet/effnet/EN-B0_dds_8gpu.yaml",
+      "bytes": 512,
+      "sha256": "3c679512de581c8652ec82047326b04b845d037ed03c1f4db4349f057e3cc04e"
+    },
+    {
+      "path": "paper_reproduction/reference/HAS-CAM/fastreid/modeling/backbones/regnet/effnet/EN-B1_dds_8gpu.yaml",
+      "bytes": 512,
+      "sha256": "984a3ad565287a735a2942408bcfde13d4a804d4aaa1f3d408ae2f1517cd9310"
+    },
+    {
+      "path": "paper_reproduction/reference/HAS-CAM/fastreid/modeling/backbones/regnet/effnet/EN-B2_dds_8gpu.yaml",
+      "bytes": 512,
+      "sha256": "430a37f2ecc6f431f854d83b5c38bc06c3496b8e15dfb5915d1c1b2e1b96171e"
+    },
+    {
+      "path": "paper_reproduction/reference/HAS-CAM/fastreid/modeling/backbones/regnet/effnet/EN-B3_dds_8gpu.yaml",
+      "bytes": 512,
+      "sha256": "cb6a38b0fdd430491793805ff66d27fc01fa6251a92f39a82e888c84e283c991"
+    },
+    {
+      "path": "paper_reproduction/reference/HAS-CAM/fastreid/modeling/backbones/regnet/effnet/EN-B4_dds_8gpu.yaml",
+      "bytes": 513,
+      "sha256": "505cbab661fdb1d656c32057d071c546befccfc1e028b7f9ff96b952e8141008"
+    },
+    {
+      "path": "paper_reproduction/reference/HAS-CAM/fastreid/modeling/backbones/regnet/effnet/EN-B5_dds_8gpu.yaml",
+      "bytes": 511,
+      "sha256": "321c835af6f7fbb3cee37b35f7a82d4877e3418cbf605643811b24c2e4eb78cb"
+    },
+    {
+      "path": "paper_reproduction/reference/HAS-CAM/fastreid/modeling/backbones/regnet/effnet.py",
+      "bytes": 10174,
+      "sha256": "11175acdfb19f6e6539f0f89ce48f1d5a15879f8b4f66465f9973257ef4ce14f"
+    },
+    {
+      "path": "paper_reproduction/reference/HAS-CAM/fastreid/modeling/backbones/regnet/regnet.py",
+      "bytes": 22218,
+      "sha256": "3b3946bbb788c46dd5ea206423827b236268a6c1ae964bf02625c41ad9b3d016"
+    },
+    {
+      "path": "paper_reproduction/reference/HAS-CAM/fastreid/modeling/backbones/regnet/regnetx/RegNetX-1.6GF_dds_8gpu.yaml",
+      "bytes": 388,
+      "sha256": "8b34e5d5ad42ef813c5e40061ee14a9649a3ba922c807f2b3f1d5353eb2e33cb"
+    },
+    {
+      "path": "paper_reproduction/reference/HAS-CAM/fastreid/modeling/backbones/regnet/regnetx/RegNetX-12GF_dds_8gpu.yaml",
+      "bytes": 389,
+      "sha256": "e844a25414cd7992955fc40abb63708cdd3da48401a6657d38c94c1139fba02a"
+    },
+    {
+      "path": "paper_reproduction/reference/HAS-CAM/fastreid/modeling/backbones/regnet/regnetx/RegNetX-16GF_dds_8gpu.yaml",
+      "bytes": 388,
+      "sha256": "b4cf1ee0b761e4cd8275d68c9c16a2430a483ed279103fb5874656ec376c3773"
+    },
+    {
+      "path": "paper_reproduction/reference/HAS-CAM/fastreid/modeling/backbones/regnet/regnetx/RegNetX-200MF_dds_8gpu.yaml",
+      "bytes": 387,
+      "sha256": "6799e1143320c19060aa5285d1eefd1a99a5e45e296218b5319bc4aa66716f09"
+    },
+    {
+      "path": "paper_reproduction/reference/HAS-CAM/fastreid/modeling/backbones/regnet/regnetx/RegNetX-3.2GF_dds_8gpu.yaml",
+      "bytes": 387,
+      "sha256": "6cc8ac49d17cf91c469fa1cd485c7e037477af1841043383da89b849e57fbede"
+    },
+    {
+      "path": "paper_reproduction/reference/HAS-CAM/fastreid/modeling/backbones/regnet/regnetx/RegNetX-32GF_dds_8gpu.yaml",
+      "bytes": 388,
+      "sha256": "3f6de19e6a13056dc6abdd022c04085731b99ae03bf03c6bd21f90258560a2e5"
+    },
+    {
+      "path": "paper_reproduction/reference/HAS-CAM/fastreid/modeling/backbones/regnet/regnetx/RegNetX-4.0GF_dds_8gpu.yaml",
+      "bytes": 387,
+      "sha256": "22cde54b3157f97be0166f0e8744e2d4ff761e38ec9a73d5d489ff61307ebbc4"
+    },
+    {
+      "path": "paper_reproduction/reference/HAS-CAM/fastreid/modeling/backbones/regnet/regnetx/RegNetX-400MF_dds_8gpu.yaml",
+      "bytes": 388,
+      "sha256": "28a955c48b5a8443b62074b8125387a85d8b47ea4a50baa1c022c908b6c58668"
+    },
+    {
+      "path": "paper_reproduction/reference/HAS-CAM/fastreid/modeling/backbones/regnet/regnetx/RegNetX-6.4GF_dds_8gpu.yaml",
+      "bytes": 388,
+      "sha256": "5fb61b7c764a8d4666ed8d3919b8fb0453c8e57efc5ecd7708e81f0955225230"
+    },
+    {
+      "path": "paper_reproduction/reference/HAS-CAM/fastreid/modeling/backbones/regnet/regnetx/RegNetX-600MF_dds_8gpu.yaml",
+      "bytes": 388,
+      "sha256": "8b61ba451dbdb2997314dd20390a06521b99d123ba815929580c6d947f1adc0c"
+    },
+    {
+      "path": "paper_reproduction/reference/HAS-CAM/fastreid/modeling/backbones/regnet/regnetx/RegNetX-8.0GF_dds_8gpu.yaml",
+      "bytes": 388,
+      "sha256": "202a03df7690e2546e1ef673ef17c4813dcdd4dd9bdb7cf074727ffa1d564d1c"
+    },
+    {
+      "path": "paper_reproduction/reference/HAS-CAM/fastreid/modeling/backbones/regnet/regnetx/RegNetX-800MF_dds_8gpu.yaml",
+      "bytes": 388,
+      "sha256": "09d764f44cbe01d358f6859fc3306ee8da9cbd16f503bf1df9f4a75667dfa5a8"
+    },
+    {
+      "path": "paper_reproduction/reference/HAS-CAM/fastreid/modeling/backbones/regnet/regnety/RegNetY-1.6GF_dds_8gpu.yaml",
+      "bytes": 403,
+      "sha256": "812c1bb825abdccd4e7ebd8e442b65be9760edbe74b90cbe35e72c38f1a9d065"
+    },
+    {
+      "path": "paper_reproduction/reference/HAS-CAM/fastreid/modeling/backbones/regnet/regnety/RegNetY-12GF_dds_8gpu.yaml",
+      "bytes": 404,
+      "sha256": "b4135005278fa1a64b20b54cfdd3390bf8707a8698b3578e300325328ab883a0"
+    },
+    {
+      "path": "paper_reproduction/reference/HAS-CAM/fastreid/modeling/backbones/regnet/regnety/RegNetY-16GF_dds_8gpu.yaml",
+      "bytes": 405,
+      "sha256": "1f029085475cae8b67bf2853607fc53b0d57fc4a4d5a760fb2f7f88858e012cf"
+    },
+    {
+      "path": "paper_reproduction/reference/HAS-CAM/fastreid/modeling/backbones/regnet/regnety/RegNetY-200MF_dds_8gpu.yaml",
+      "bytes": 383,
+      "sha256": "f8718b8032c52604f50e642b79462ba09f0b192d84368369a485fe134a1353ed"
+    },
+    {
+      "path": "paper_reproduction/reference/HAS-CAM/fastreid/modeling/backbones/regnet/regnety/RegNetY-3.2GF_dds_8gpu.yaml",
+      "bytes": 402,
+      "sha256": "ad5aa4291d65a85c5a52127bc2419cda1c3f3ab495ec1df23de4cb7770449cc8"
+    },
+    {
+      "path": "paper_reproduction/reference/HAS-CAM/fastreid/modeling/backbones/regnet/regnety/RegNetY-32GF_dds_8gpu.yaml",
+      "bytes": 405,
+      "sha256": "05cf3f484b758d1bb7ebc983080dbf60a352f44e427987a8e0ff2610b7d2eb41"
+    },
+    {
+      "path": "paper_reproduction/reference/HAS-CAM/fastreid/modeling/backbones/regnet/regnety/RegNetY-4.0GF_dds_8gpu.yaml",
+      "bytes": 402,
+      "sha256": "bfe06634c156fd9117d535adb595344c1d7ebd6cccdc8ad22e36dd645ccc3d18"
+    },
+    {
+      "path": "paper_reproduction/reference/HAS-CAM/fastreid/modeling/backbones/regnet/regnety/RegNetY-400MF_dds_8gpu.yaml",
+      "bytes": 402,
+      "sha256": "44faa2e61a62bfefa4a3f55ad252e0ed9c380bae98efd9c64e16838811925334"
+    },
+    {
+      "path": "paper_reproduction/reference/HAS-CAM/fastreid/modeling/backbones/regnet/regnety/RegNetY-6.4GF_dds_8gpu.yaml",
+      "bytes": 403,
+      "sha256": "7204b61f9b41437233ca14048e2c24ad07a97e93745db1c8b8db9c360d00985d"
+    },
+    {
+      "path": "paper_reproduction/reference/HAS-CAM/fastreid/modeling/backbones/regnet/regnety/RegNetY-600MF_dds_8gpu.yaml",
+      "bytes": 403,
+      "sha256": "d7fb3854dc5eff79a9eb98a3a18b919a719cfb425ec478a51c763d3cb14abf30"
+    },
+    {
+      "path": "paper_reproduction/reference/HAS-CAM/fastreid/modeling/backbones/regnet/regnety/RegNetY-8.0GF_dds_8gpu.yaml",
+      "bytes": 403,
+      "sha256": "bdfd1864d934c63ab276f4ece94c92270e4df231b91f7721707389e69398dd1c"
+    },
+    {
+      "path": "paper_reproduction/reference/HAS-CAM/fastreid/modeling/backbones/regnet/regnety/RegNetY-800MF_dds_8gpu.yaml",
+      "bytes": 402,
+      "sha256": "058f4d745728e0c622910437cacdb51c0313f78ca2771f67eb7f51148a1a9710"
+    },
+    {
+      "path": "paper_reproduction/reference/HAS-CAM/fastreid/modeling/backbones/repvgg.py",
+      "bytes": 12011,
+      "sha256": "7f12951e85f284ac7385648a5ee5d9219aa01db7e532c8f77d418d7587333c0d"
+    },
+    {
+      "path": "paper_reproduction/reference/HAS-CAM/fastreid/modeling/backbones/resnest.py",
+      "bytes": 15651,
+      "sha256": "684698d357f212b70802aa87666abc25161cb418d5f582fe8e8940486802b330"
+    },
+    {
+      "path": "paper_reproduction/reference/HAS-CAM/fastreid/modeling/backbones/resnet.py",
+      "bytes": 12843,
+      "sha256": "a55efcfdfa69cffb6ba3d07f0515672251490f1a85445c9bf4351b9ead54b807"
+    },
+    {
+      "path": "paper_reproduction/reference/HAS-CAM/fastreid/modeling/backbones/resnext.py",
+      "bytes": 12246,
+      "sha256": "ba0f0200f40bb0cdecdf56f2001e2cebb1d15856276c15d9fdd5618e6bd0eda1"
+    },
+    {
+      "path": "paper_reproduction/reference/HAS-CAM/fastreid/modeling/backbones/shufflenet.py",
+      "bytes": 7264,
+      "sha256": "48fa7b4a0c439d3444de1e873d2b4bc4bc2b5d306ba9de8c55fd7e3ac8d1a1f2"
+    },
+    {
+      "path": "paper_reproduction/reference/HAS-CAM/fastreid/modeling/backbones/vision_transformer.py",
+      "bytes": 17015,
+      "sha256": "a1e1795e951ba2d8742ad806bccd069a2e150319ae2e943e8c82881d3cff29a1"
+    },
+    {
+      "path": "paper_reproduction/reference/HAS-CAM/fastreid/modeling/heads/__init__.py",
+      "bytes": 276,
+      "sha256": "80bc086aae8fd3df82bb01be7c488199a7f7042f1a41671aba43b3992a724124"
+    },
+    {
+      "path": "paper_reproduction/reference/HAS-CAM/fastreid/modeling/heads/build.py",
+      "bytes": 655,
+      "sha256": "fab44eb9f18b8fda45744229eb5ddca0cc22b9bbfb53423fd33925073c8cd5f2"
+    },
+    {
+      "path": "paper_reproduction/reference/HAS-CAM/fastreid/modeling/heads/clas_head.py",
+      "bytes": 1076,
+      "sha256": "48956f7bd3cb0d01835eac0ba1b50e556f75afb41e26d2ea6a71cf2cd2220dec"
+    },
+    {
+      "path": "paper_reproduction/reference/HAS-CAM/fastreid/modeling/heads/embedding_head.py",
+      "bytes": 4883,
+      "sha256": "0720f5d9e13d5e569e50611de7da7374cca0d4629179246c8c4725c5814f32d5"
+    },
+    {
+      "path": "paper_reproduction/reference/HAS-CAM/fastreid/modeling/losses/__init__.py",
+      "bytes": 324,
+      "sha256": "cba6a0e2d78c9c340bbb3d20795f064d20b902cf11ff86919f8f397bbe468f7c"
+    },
+    {
+      "path": "paper_reproduction/reference/HAS-CAM/fastreid/modeling/losses/circle_loss.py",
+      "bytes": 2218,
+      "sha256": "4a4075a0957854c35eedb81b2c41f57fdcf4971a304c844c6f13dce5ccffe7c2"
+    },
+    {
+      "path": "paper_reproduction/reference/HAS-CAM/fastreid/modeling/losses/cross_entroy_loss.py",
+      "bytes": 1654,
+      "sha256": "b65fda3662439b53014bd57c2a346cd2fe0a360e15861160159843b80cc97606"
+    },
+    {
+      "path": "paper_reproduction/reference/HAS-CAM/fastreid/modeling/losses/focal_loss.py",
+      "bytes": 3453,
+      "sha256": "b2eb164c675d937d10483ba771e3d0b676811bc7d8574775827859a51de82892"
+    },
+    {
+      "path": "paper_reproduction/reference/HAS-CAM/fastreid/modeling/losses/triplet_loss.py",
+      "bytes": 4070,
+      "sha256": "71dc493db46fff16905a8f60c06f65b72243d558c5a367ae7d4c8a7d05d2ae37"
+    },
+    {
+      "path": "paper_reproduction/reference/HAS-CAM/fastreid/modeling/losses/utils.py",
+      "bytes": 1350,
+      "sha256": "8ef7e63321191dc6e5e74be6bb58af80ecea07f20954eed4e619b08b1b6007bb"
+    },
+    {
+      "path": "paper_reproduction/reference/HAS-CAM/fastreid/modeling/meta_arch/__init__.py",
+      "bytes": 313,
+      "sha256": "a0d272089b7552ba063653488a74163453dcdc9d03c2d53ea75d913ab6c39de4"
+    },
+    {
+      "path": "paper_reproduction/reference/HAS-CAM/fastreid/modeling/meta_arch/baseline.py",
+      "bytes": 6529,
+      "sha256": "ec0046d29487599982b53584f5e6c052bece6ae11f749c9fb987fe73b2345ee2"
+    },
+    {
+      "path": "paper_reproduction/reference/HAS-CAM/fastreid/modeling/meta_arch/build.py",
+      "bytes": 763,
+      "sha256": "9ff2ee9eb6a9219b2a0993985034a3b3d118e70359ebbf492b99a9ced20e9c66"
+    },
+    {
+      "path": "paper_reproduction/reference/HAS-CAM/fastreid/modeling/meta_arch/distiller.py",
+      "bytes": 5117,
+      "sha256": "33a7f2ef1347c7230122f44a4c4608eb408ed43edc152ac507c4da38e38706c0"
+    },
+    {
+      "path": "paper_reproduction/reference/HAS-CAM/fastreid/modeling/meta_arch/mgn.py",
+      "bytes": 13739,
+      "sha256": "52d9eefeb509b30d93f1e2f052f42b89b5ce0341b346d048598aef7b968bc163"
+    },
+    {
+      "path": "paper_reproduction/reference/HAS-CAM/fastreid/modeling/meta_arch/moco.py",
+      "bytes": 4084,
+      "sha256": "d1e4b9ab423915247aef8975815e4e8b3c92c338b9ce824c9578878b03762f7e"
+    },
+    {
+      "path": "paper_reproduction/reference/HAS-CAM/fastreid/predictor.py",
+      "bytes": 5577,
+      "sha256": "e36fe8f7649485953a05672996b528d6848f78434e0fa5eef24d12341fb0155f"
+    },
+    {
+      "path": "paper_reproduction/reference/HAS-CAM/fastreid/solver/__init__.py",
+      "bytes": 145,
+      "sha256": "81fcd4c7922a6a0e41c95dcde59d7943cd6e06161ed716440298876656ff1b87"
+    },
+    {
+      "path": "paper_reproduction/reference/HAS-CAM/fastreid/solver/build.py",
+      "bytes": 13217,
+      "sha256": "88054520b6a2296735d9b27101631040bf485e7211e1868d42ddad3ff00eac41"
+    },
+    {
+      "path": "paper_reproduction/reference/HAS-CAM/fastreid/solver/lr_scheduler.py",
+      "bytes": 2133,
+      "sha256": "742878933cbc3e11c6f43ce0ac358e22ca3f5327a360f66d4cb260f28115b020"
+    },
+    {
+      "path": "paper_reproduction/reference/HAS-CAM/fastreid/solver/optim/__init__.py",
+      "bytes": 189,
+      "sha256": "cf8d85a8f5f0ec2dd2d97e0b2b7017fe9dd0a880e297b71a70df56b06a8fbe00"
+    },
+    {
+      "path": "paper_reproduction/reference/HAS-CAM/fastreid/solver/optim/lamb.py",
+      "bytes": 5188,
+      "sha256": "b9a5c7b377ba2824fd05c2bafb4dd076f910df8eab3b734dd3c57491876398e4"
+    },
+    {
+      "path": "paper_reproduction/reference/HAS-CAM/fastreid/solver/optim/radam.py",
+      "bytes": 5864,
+      "sha256": "b272e1cd0b0165a8fff688965e080b938d47fae88f6aa7202f3aa5cc48977842"
+    },
+    {
+      "path": "paper_reproduction/reference/HAS-CAM/fastreid/solver/optim/swa.py",
+      "bytes": 11336,
+      "sha256": "8f36f65fb032461c5c42556209d91d5c37dd390f8ee292c0363ec80514ebe4fc"
+    },
+    {
+      "path": "paper_reproduction/reference/HAS-CAM/fastreid/utils/__init__.py",
+      "bytes": 87,
+      "sha256": "b58ec2bdfa6c3b8e38e3c2a171ccafb2b70cfbeef9f9aa3d2cf0ece91d7e0fcc"
+    },
+    {
+      "path": "paper_reproduction/reference/HAS-CAM/fastreid/utils/checkpoint.py",
+      "bytes": 18770,
+      "sha256": "173708fc89e99490923207b9fd0b1c98e6ef41a983fd010330552d2e9c1431b1"
+    },
+    {
+      "path": "paper_reproduction/reference/HAS-CAM/fastreid/utils/collect_env.py",
+      "bytes": 4841,
+      "sha256": "33162507d34b7518c2bd2a876eabfaf3e512b9621a19f49f969fea733eaf4f5d"
+    },
+    {
+      "path": "paper_reproduction/reference/HAS-CAM/fastreid/utils/comm.py",
+      "bytes": 7931,
+      "sha256": "cb362ca21aa11f2ca5fa0e1ba5748fe307eb3a388e531cfa788f888e91034314"
+    },
+    {
+      "path": "paper_reproduction/reference/HAS-CAM/fastreid/utils/compute_dist.py",
+      "bytes": 6801,
+      "sha256": "b897056faf351b1ea1119d4020fd8b33c259ad15d17960c05eebdacbd262755a"
+    },
+    {
+      "path": "paper_reproduction/reference/HAS-CAM/fastreid/utils/env.py",
+      "bytes": 3817,
+      "sha256": "670889e395419a26102a7241da31fa552097e832d09ee6d60e3438a8df894a5f"
+    },
+    {
+      "path": "paper_reproduction/reference/HAS-CAM/fastreid/utils/events.py",
+      "bytes": 16954,
+      "sha256": "14764a8bc664f715f2b3fc81a3bbab796ace452e9337fd8f4d5074d5d486a0ef"
+    },
+    {
+      "path": "paper_reproduction/reference/HAS-CAM/fastreid/utils/faiss_utils.py",
+      "bytes": 3471,
+      "sha256": "72ce88df14e216c1c2921979af5c5e88949caaeec01b6ac690249cf76720b409"
+    },
+    {
+      "path": "paper_reproduction/reference/HAS-CAM/fastreid/utils/file_io.py",
+      "bytes": 19706,
+      "sha256": "1662083551f994b3d2d42cede2cfec61f8d1594f890f01939ee0581d71ede80a"
+    },
+    {
+      "path": "paper_reproduction/reference/HAS-CAM/fastreid/utils/history_buffer.py",
+      "bytes": 2344,
+      "sha256": "79a2b20a5a3bcc468ad4eec5e7beb5dc1b9baee589812dbe64ec5ef2d7794e08"
+    },
+    {
+      "path": "paper_reproduction/reference/HAS-CAM/fastreid/utils/logger.py",
+      "bytes": 7435,
+      "sha256": "fbb6764d8047a4b9f2b56c93ea3fb0b86b590544f721f4f10dc57e15978b3fba"
+    },
+    {
+      "path": "paper_reproduction/reference/HAS-CAM/fastreid/utils/params.py",
+      "bytes": 4484,
+      "sha256": "f540d781c56403a83e93e0496c6d0de90bbb7183f5a19a27b1a4272206fb7d28"
+    },
+    {
+      "path": "paper_reproduction/reference/HAS-CAM/fastreid/utils/precision_bn.py",
+      "bytes": 3820,
+      "sha256": "fc71ebcedfc412aaeb447c62c07520f389fee275397976732ca9330e847d80e3"
+    },
+    {
+      "path": "paper_reproduction/reference/HAS-CAM/fastreid/utils/registry.py",
+      "bytes": 2117,
+      "sha256": "a47c7ea3c00b4814c60d7dea069564fe3e77a7dc7fbc3fb920b2368bdde57acd"
+    },
+    {
+      "path": "paper_reproduction/reference/HAS-CAM/fastreid/utils/summary.py",
+      "bytes": 4574,
+      "sha256": "2869004b43daba4a70adf5f2cbf96b4ca22f968375b7ebeffa6ec6e9146d872b"
+    },
+    {
+      "path": "paper_reproduction/reference/HAS-CAM/fastreid/utils/timer.py",
+      "bytes": 1948,
+      "sha256": "c2e02f23a9b1a27311293694e328c22fb8db26b5c4e612f0948164e4523d9e9d"
+    },
+    {
+      "path": "paper_reproduction/reference/HAS-CAM/fastreid/utils/visualizer.py",
+      "bytes": 12109,
+      "sha256": "8f21d5f332ed9d971a6778124d82def9e14916991c8b906bff0ca6c00afe6cad"
+    },
+    {
+      "path": "paper_reproduction/reference/HAS-CAM/fastreid.py",
+      "bytes": 1172,
+      "sha256": "17274457ec37656cc396a93446151c54fdc4e65c108a292874f0a19a15000825"
+    },
+    {
+      "path": "paper_reproduction/reference/HAS-CAM/images/res.jpg",
+      "bytes": 157411,
+      "sha256": "180b5e8f4631356e64c98f850bb037c1ee8d40ee639ed6b435daef30000405bb"
+    },
+    {
+      "path": "paper_reproduction/reference/HAS-CAM/main.py",
+      "bytes": 4180,
+      "sha256": "ece7cd93227f7095d34aea461cb6ea395fa2f3424bdc881e47312be182ef5fd3"
+    },
+    {
+      "path": "paper_reproduction/reference/HAS-CAM/memory.py",
+      "bytes": 1336,
+      "sha256": "3f62187b5f40d4db48a5d2d604e29b9ae69155f3bb6b429af005292fe6b62db1"
+    },
+    {
+      "path": "paper_reproduction/reference/HAS-CAM/MISC/camsim.png",
+      "bytes": 642209,
+      "sha256": "8b17af5741b8039f5b1842bfd0262d7e2dc17b5f7fec163fe288237e27f82b8e"
+    },
+    {
+      "path": "paper_reproduction/reference/HAS-CAM/MISC/method.png",
+      "bytes": 2363226,
+      "sha256": "a3fc3fc3f936d774a88ab79ec245cd8708e331acb9716ed9d1624197fe700923"
+    },
+    {
+      "path": "paper_reproduction/reference/HAS-CAM/model.py",
+      "bytes": 2384,
+      "sha256": "ef8bb2ecdb08eed543b53de07beffa7ce96857bd5d5a5800027f504fe78035ca"
+    },
+    {
+      "path": "paper_reproduction/reference/HAS-CAM/Prioritized_memory.py",
+      "bytes": 2576,
+      "sha256": "f6ec3abb168b83768de1212465ffd77d4fc9dd3f132f9aaebcd888313fc9e9ec"
+    },
+    {
+      "path": "paper_reproduction/reference/HAS-CAM/README.md",
+      "bytes": 3218,
+      "sha256": "bf2d6b26581d9554c14885abcc796787e04b326ac3f71617244ee195b6c4d294"
+    },
+    {
+      "path": "paper_reproduction/reference/HAS-CAM/REID/car/error2.jpg",
+      "bytes": 205657,
+      "sha256": "a8fa7ca2bc91c94255d55f0b57448c6fb03c8394519a74cc17e5029da0bc5c06"
+    },
+    {
+      "path": "paper_reproduction/reference/HAS-CAM/REID/car/error3.jpg",
+      "bytes": 124090,
+      "sha256": "83d6e537adf25358b0b92952f4c91cdb975c619e51c893d1f8e0a519fed13677"
+    },
+    {
+      "path": "paper_reproduction/reference/HAS-CAM/REID/Extractor.py",
+      "bytes": 1630,
+      "sha256": "109af758558f230071f38dd4ed19bb437292a7443273d1ca353e5c136ad0aae5"
+    },
+    {
+      "path": "paper_reproduction/reference/HAS-CAM/REID/feature.py",
+      "bytes": 5848,
+      "sha256": "8d904c5e39452aa1546eefec2f29f43ebe43f56d4767feb861f218953f1306d4"
+    },
+    {
+      "path": "paper_reproduction/reference/HAS-CAM/REID/model.py",
+      "bytes": 4967,
+      "sha256": "7d947a097d2531f180daaf4dab32ab8c0537471b249f9fa5e510442f0ef6f513"
+    },
+    {
+      "path": "paper_reproduction/reference/HAS-CAM/REID/nn_matching.py",
+      "bytes": 5647,
+      "sha256": "4538365dec7b812989ae163b7e4835146692057cd8a47611b63fed621a24f6a1"
+    },
+    {
+      "path": "paper_reproduction/reference/HAS-CAM/rl_control/UnityCameraEnvironment_exp.py",
+      "bytes": 29349,
+      "sha256": "e8266015cc2b345ba1a41e298583e878acc20c73c3c574d8e3d1df6b5aa38870"
+    },
+    {
+      "path": "paper_reproduction/reference/HAS-CAM/SumTree.py",
+      "bytes": 1743,
+      "sha256": "d58dba5c1f0cdb06670b9bf3cf971b23050e638378134f1d68783bf88509fa37"
+    },
+    {
+      "path": "paper_reproduction/reference/HAS-CAM/term/Open Source License Terms.md",
+      "bytes": 2292,
+      "sha256": "b1d13e26bd5a724215d966ed93fd2dc86912ba3d87d3a3df84b6bb2155cda91f"
+    },
+    {
+      "path": "paper_reproduction/reference/HAS-CAM/UdpComms.py",
+      "bytes": 5681,
+      "sha256": "b97b302345f9e319432b9d8e6d757eb16f8b996099b8c6287672f839e4d639eb"
+    },
+    {
+      "path": "paper_reproduction/reference/HAS-CAM/utils.py",
+      "bytes": 573,
+      "sha256": "957b3c48b50b93feacfae62d4c1fb980a0da63988458c82a8b886ffe893f94b9"
+    },
+    {
+      "path": "paper_reproduction/docs/source_manifest.json",
+      "bytes": 1284,
+      "sha256": "8d30b1e45bd971f0e762f97b4d1ff9758a0c80febf514205a10638698b02128c"
+    },
+    {
+      "path": "pdqn_static_20261101/speed_revision_20261101/UE/PTZSim/.vsconfig",
+      "bytes": 795,
+      "sha256": "1ca278268946adb3a1d10546976444f0ec863a96eceb991f59aa6a1f9b78bab8"
+    },
+    {
+      "path": "pdqn_static_20261101/speed_revision_20261101/UE/PTZSim/Config/DefaultEditor.ini",
+      "bytes": 0,
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    {
+      "path": "pdqn_static_20261101/speed_revision_20261101/UE/PTZSim/Config/DefaultEngine.ini",
+      "bytes": 2069,
+      "sha256": "896bdcdb09df8c8259dddc5435b10e5affa21182cb0222e178315bd1f11b1fa2"
+    },
+    {
+      "path": "pdqn_static_20261101/speed_revision_20261101/UE/PTZSim/Config/DefaultGame.ini",
+      "bytes": 157,
+      "sha256": "56164197440715b3dbb97e54a52b83c61bb1335520729142c2bc200592764ef7"
+    },
+    {
+      "path": "pdqn_static_20261101/speed_revision_20261101/UE/PTZSim/Config/DefaultInput.ini",
+      "bytes": 8942,
+      "sha256": "b64f36cb4a165380dd69595e46b9c1736fcbcae6efa671f16928f1c0905c8967"
+    },
+    {
+      "path": "pdqn_static_20261101/speed_revision_20261101/UE/PTZSim/Config/unrealcv.ini",
+      "bytes": 93,
+      "sha256": "51971d8b828153cc35b3dcdcb58af66c10de9356c4388d7db4708a4a0596ec8f"
+    },
+    {
+      "path": "pdqn_static_20261101/speed_revision_20261101/UE/PTZSim/Content/PTZ/Maps/PTZResearch.umap",
+      "bytes": 154937,
+      "sha256": "25e69edd45d583e26baaafd7bc26e74a4da09ddc734b7cae07f2b8511bbdeda2"
+    },
+    {
+      "path": "pdqn_static_20261101/speed_revision_20261101/UE/PTZSim/Content/PTZ/Materials/MI_Concrete.uasset",
+      "bytes": 3134,
+      "sha256": "57062d9e3e388bdcc4dbc6df869928b8721a83aad70ddf2c17b134c23d53f684"
+    },
+    {
+      "path": "pdqn_static_20261101/speed_revision_20261101/UE/PTZSim/Content/PTZ/Materials/MI_Road.uasset",
+      "bytes": 3114,
+      "sha256": "138082563c08a5ebde8d7511e21a1b870fca906a5b8a7627da8561f1bd3cf894"
+    },
+    {
+      "path": "pdqn_static_20261101/speed_revision_20261101/UE/PTZSim/Content/PTZ/Materials/MI_RoadMark.uasset",
+      "bytes": 3134,
+      "sha256": "d602b4393a1b62e99850f5b62d8c333d93dbcf5f7d7f0ce77ad5dc139ad4cbae"
+    },
+    {
+      "path": "pdqn_static_20261101/speed_revision_20261101/UE/PTZSim/Plugins/UnrealCV/Content/AnnotationColor.uasset",
+      "bytes": 84385,
+      "sha256": "ad5ebbaf97d0cce77b89181130ee9a4554c1e149691b4953be9a2611a63a7ae4"
+    },
+    {
+      "path": "pdqn_static_20261101/speed_revision_20261101/UE/PTZSim/Plugins/UnrealCV/Content/debug.uasset",
+      "bytes": 90208,
+      "sha256": "819d42f0ccc52c63c1b7e1b2d77989e1feeb08ca31f980899b8bc2603a2ed899"
+    },
+    {
+      "path": "pdqn_static_20261101/speed_revision_20261101/UE/PTZSim/Plugins/UnrealCV/Content/OpaqueMaterial.uasset",
+      "bytes": 102232,
+      "sha256": "61fcd5f336c7d1fd85fdb97862417ae01777099ff339f237f03ee96bb1b55c63"
+    },
+    {
+      "path": "pdqn_static_20261101/speed_revision_20261101/UE/PTZSim/Plugins/UnrealCV/Content/OpticalFlowMaterial.license.txt",
+      "bytes": 253,
+      "sha256": "86150cb74bb88bc0f101a5b69183c288bc1dd76e3abaea33f01d259c0c90c009"
+    },
+    {
+      "path": "pdqn_static_20261101/speed_revision_20261101/UE/PTZSim/Plugins/UnrealCV/Content/OpticalFlowMaterial.uasset",
+      "bytes": 24760,
+      "sha256": "38255fdb3adee805794f6f8ae2e53510252e46fd81e702a283c6effe800b9a19"
+    },
+    {
+      "path": "pdqn_static_20261101/speed_revision_20261101/UE/PTZSim/Plugins/UnrealCV/Content/SceneDepth.uasset",
+      "bytes": 55535,
+      "sha256": "999c2c8a8014d903415928e0a2828ca4dcec0329e416f03e2d0462477070a906"
+    },
+    {
+      "path": "pdqn_static_20261101/speed_revision_20261101/UE/PTZSim/Plugins/UnrealCV/Content/SceneDepthWorldUnits.uasset",
+      "bytes": 72512,
+      "sha256": "16b029ae6749e147f097c452dda711f9f67a604743f145f6194e54e21486d524"
+    },
+    {
+      "path": "pdqn_static_20261101/speed_revision_20261101/UE/PTZSim/Plugins/UnrealCV/Content/ScenePlaneDepthWorldUnits.uasset",
+      "bytes": 58784,
+      "sha256": "9bafced82d9c718110054286257bbec7cddfb760572dc91caf4fd50b970a2331"
+    },
+    {
+      "path": "pdqn_static_20261101/speed_revision_20261101/UE/PTZSim/Plugins/UnrealCV/Content/StencilPPM.uasset",
+      "bytes": 84031,
+      "sha256": "571940751a7d37e9d26f3c456fedff93dde70f319b26f40c4b56fc185792bc48"
+    },
+    {
+      "path": "pdqn_static_20261101/speed_revision_20261101/UE/PTZSim/Plugins/UnrealCV/Content/VertexColorMaterial.uasset",
+      "bytes": 66301,
+      "sha256": "b1a2feff2a4a2964000afba2a99cec56a4649e2cdd8f21a917f315dffad7b5ba"
+    },
+    {
+      "path": "pdqn_static_20261101/speed_revision_20261101/UE/PTZSim/Plugins/UnrealCV/Content/WorldNormal.uasset",
+      "bytes": 74746,
+      "sha256": "6732e7bceaa27541b676fa398b3a37ab0cd184dc8d4bb43223d61be4d7d3df4a"
+    },
+    {
+      "path": "pdqn_static_20261101/speed_revision_20261101/UE/PTZSim/Plugins/UnrealCV/README.md",
+      "bytes": 4085,
+      "sha256": "9d2b0d958a694ff45ebe8f50256c959127a2a0c7932d6dca5a827e8f0183adaf"
+    },
+    {
+      "path": "pdqn_static_20261101/speed_revision_20261101/UE/PTZSim/Plugins/UnrealCV/Resources/Icon128.png",
+      "bytes": 15543,
+      "sha256": "9eb6f69963ee569b0a8a4446e21f69d0a93205caf07b30cc37b1fddb62599602"
+    },
+    {
+      "path": "pdqn_static_20261101/speed_revision_20261101/UE/PTZSim/Plugins/UnrealCV/Source/UnrealCV/Private/Actor/CamSensorActor.cpp",
+      "bytes": 503,
+      "sha256": "180d1403e0d88908a7549ba44b96ba2da87ee7eab7bcaa5f81b316378edba707"
+    },
+    {
+      "path": "pdqn_static_20261101/speed_revision_20261101/UE/PTZSim/Plugins/UnrealCV/Source/UnrealCV/Private/Actor/CubeActor.cpp",
+      "bytes": 477,
+      "sha256": "480f63267d895023b473bdc385866c5d8e2acd1384701eb4c5f08cf1419b3669"
+    },
+    {
+      "path": "pdqn_static_20261101/speed_revision_20261101/UE/PTZSim/Plugins/UnrealCV/Source/UnrealCV/Private/Actor/DataCaptureActor.cpp",
+      "bytes": 16678,
+      "sha256": "a290aed5ffa56be53c0ed32a0fbfdffe47e913a7f4d2019537745cdcb64a7ce3"
+    },
+    {
+      "path": "pdqn_static_20261101/speed_revision_20261101/UE/PTZSim/Plugins/UnrealCV/Source/UnrealCV/Private/Actor/FusionCameraActor.cpp",
+      "bytes": 480,
+      "sha256": "caef180db36de051bf8da4f0165d1c170d07a408f2f7de08a847517d09f677bf"
+    },
+    {
+      "path": "pdqn_static_20261101/speed_revision_20261101/UE/PTZSim/Plugins/UnrealCV/Source/UnrealCV/Private/Actor/Puppeteer.cpp",
+      "bytes": 1132,
+      "sha256": "d4646ecbc1bc392d4ed36bc682a298a1dffaef6b156eb301cac739253e6c8507"
+    },
+    {
+      "path": "pdqn_static_20261101/speed_revision_20261101/UE/PTZSim/Plugins/UnrealCV/Source/UnrealCV/Private/Actor/StereoCameraActor.cpp",
+      "bytes": 1689,
+      "sha256": "43165095597e9eb4cbb517668341f43199de8182ffd4586821848b7c3e9868d2"
+    },
+    {
+      "path": "pdqn_static_20261101/speed_revision_20261101/UE/PTZSim/Plugins/UnrealCV/Source/UnrealCV/Private/BPFunctionLib/AnimationBPLib.cpp",
+      "bytes": 1737,
+      "sha256": "ff5dfcafdf003bef5827a6333ae3997eca78021a4237c6c6213408ffaaea2e50"
+    },
+    {
+      "path": "pdqn_static_20261101/speed_revision_20261101/UE/PTZSim/Plugins/UnrealCV/Source/UnrealCV/Private/BPFunctionLib/JsonObjectBP.cpp",
+      "bytes": 5622,
+      "sha256": "8baa16bcced840bb9b314a8a04ee29d256e138de1e6d36b5da742ffc72d8ffd2"
+    },
+    {
+      "path": "pdqn_static_20261101/speed_revision_20261101/UE/PTZSim/Plugins/UnrealCV/Source/UnrealCV/Private/BPFunctionLib/SensorBPLib.cpp",
+      "bytes": 2178,
+      "sha256": "9f39afd63a4ce042bf4adab13701b88a3262567db8b77a9423c86a01874154ec"
+    },
+    {
+      "path": "pdqn_static_20261101/speed_revision_20261101/UE/PTZSim/Plugins/UnrealCV/Source/UnrealCV/Private/BPFunctionLib/SerializeBPLib.cpp",
+      "bytes": 2090,
+      "sha256": "d148385c3a89e647bc2d678fcd3f586edaf4b6d31dde0ea9a5c1c574e0f1b5ee"
+    },
+    {
+      "path": "pdqn_static_20261101/speed_revision_20261101/UE/PTZSim/Plugins/UnrealCV/Source/UnrealCV/Private/BPFunctionLib/VisionBPLib.cpp",
+      "bytes": 13656,
+      "sha256": "fe50611dcc935c6b217b8f9e2ecc721d5e3ea8000244b815bcba00422cf16519"
+    },
+    {
+      "path": "pdqn_static_20261101/speed_revision_20261101/UE/PTZSim/Plugins/UnrealCV/Source/UnrealCV/Private/Commands/ActionHandler.cpp",
+      "bytes": 6671,
+      "sha256": "d054aaca6ae5a70cf1a008aedf352b33adb70f072dbb4d70c964fa2359866784"
+    },
+    {
+      "path": "pdqn_static_20261101/speed_revision_20261101/UE/PTZSim/Plugins/UnrealCV/Source/UnrealCV/Private/Commands/ActionHandler.h",
+      "bytes": 1098,
+      "sha256": "f87191494fbe2e1b576fee5d4037c768b13ec0f6de1317bedf3c493bc5451904"
+    },
+    {
+      "path": "pdqn_static_20261101/speed_revision_20261101/UE/PTZSim/Plugins/UnrealCV/Source/UnrealCV/Private/Commands/AliasHandler.cpp",
+      "bytes": 23659,
+      "sha256": "233bd6bf564fedd893928e1d93a95b27968ebcca484b25d8b54dff6a4dcbeb48"
+    },
+    {
+      "path": "pdqn_static_20261101/speed_revision_20261101/UE/PTZSim/Plugins/UnrealCV/Source/UnrealCV/Private/Commands/AliasHandler.h",
+      "bytes": 806,
+      "sha256": "38073204fb79d89be826c54662b556629cb7bd9df54ccddc1058f356a5a35d6d"
+    },
+    {
+      "path": "pdqn_static_20261101/speed_revision_20261101/UE/PTZSim/Plugins/UnrealCV/Source/UnrealCV/Private/Commands/CameraHandler.cpp",
+      "bytes": 60659,
+      "sha256": "824f130bd737e11d34eda6a79aa4aad2388382e31287b6afb95aa7522641c73e"
+    },
+    {
+      "path": "pdqn_static_20261101/speed_revision_20261101/UE/PTZSim/Plugins/UnrealCV/Source/UnrealCV/Private/Commands/CameraHandler.h",
+      "bytes": 4160,
+      "sha256": "c7f1545ff1042ab240a8f7257ed57ef4f3e197246a13b74d9cb032b738929963"
+    },
+    {
+      "path": "pdqn_static_20261101/speed_revision_20261101/UE/PTZSim/Plugins/UnrealCV/Source/UnrealCV/Private/Commands/ObjectHandler.cpp",
+      "bytes": 31213,
+      "sha256": "3eb245e994a2cc09111427afb504b4513f45ba8a648326f7a080800cd54d3fff"
+    },
+    {
+      "path": "pdqn_static_20261101/speed_revision_20261101/UE/PTZSim/Plugins/UnrealCV/Source/UnrealCV/Private/Commands/ObjectHandler.h",
+      "bytes": 2096,
+      "sha256": "f0363f660296edaa28c0bf69d04339d0419cf9b7eb61970bc5957c7a33f5b086"
+    },
+    {
+      "path": "pdqn_static_20261101/speed_revision_20261101/UE/PTZSim/Plugins/UnrealCV/Source/UnrealCV/Private/Commands/PluginHandler.cpp",
+      "bytes": 4837,
+      "sha256": "6bec89acf72248c1a089bc690fccb584c5da5bed8aebc509c4a3ec1b45c25085"
+    },
+    {
+      "path": "pdqn_static_20261101/speed_revision_20261101/UE/PTZSim/Plugins/UnrealCV/Source/UnrealCV/Private/Commands/PluginHandler.h",
+      "bytes": 836,
+      "sha256": "9bac94e4bce49eefb95d5a382dd825151f5e0fd4af0cf52ac475963b22ba2f5a"
+    },
+    {
+      "path": "pdqn_static_20261101/speed_revision_20261101/UE/PTZSim/Plugins/UnrealCV/Source/UnrealCV/Private/Component/AnnotationComponent.cpp",
+      "bytes": 17055,
+      "sha256": "81c45774ff9fb8b3385010d3838b089394c860711fca492f163d2cf05f301aeb"
+    },
+    {
+      "path": "pdqn_static_20261101/speed_revision_20261101/UE/PTZSim/Plugins/UnrealCV/Source/UnrealCV/Private/Component/KeypointComponent.cpp",
+      "bytes": 8735,
+      "sha256": "6e03dd4fa1603d41964ef55ebb070be2b2d2f94a27085dc9d5f3d98e6489245c"
+    },
+    {
+      "path": "pdqn_static_20261101/speed_revision_20261101/UE/PTZSim/Plugins/UnrealCV/Source/UnrealCV/Private/Controller/ActorController.cpp",
+      "bytes": 2434,
+      "sha256": "1af79e7b704fecf2476805029879a88e00843e5907b3090871a9fe68d9822c85"
+    },
+    {
+      "path": "pdqn_static_20261101/speed_revision_20261101/UE/PTZSim/Plugins/UnrealCV/Source/UnrealCV/Private/Controller/ObjectAnnotator.cpp",
+      "bytes": 11061,
+      "sha256": "d09dcab9c7da84f1446855f619416ec80aca4305251c25a12a5cb73af7091c99"
+    },
+    {
+      "path": "pdqn_static_20261101/speed_revision_20261101/UE/PTZSim/Plugins/UnrealCV/Source/UnrealCV/Private/Controller/PlayerViewMode.cpp",
+      "bytes": 13665,
+      "sha256": "37d425efa0852aa6ac765ea59cdf6dbe2de3bbac915be01db2aeedb9f4272d24"
+    },
+    {
+      "path": "pdqn_static_20261101/speed_revision_20261101/UE/PTZSim/Plugins/UnrealCV/Source/UnrealCV/Private/Controller/WorldController.cpp",
+      "bytes": 3269,
+      "sha256": "2954019f94bb7b96852ec66d30271968d4f485f95497c595992b98d35208490d"
+    },
+    {
+      "path": "pdqn_static_20261101/speed_revision_20261101/UE/PTZSim/Plugins/UnrealCV/Source/UnrealCV/Private/libs/cnpy.cpp",
+      "bytes": 4293,
+      "sha256": "9519d44d1065118080d85afa798423a662b61763c73e9cd9e77123ff6f4a2238"
+    },
+    {
+      "path": "pdqn_static_20261101/speed_revision_20261101/UE/PTZSim/Plugins/UnrealCV/Source/UnrealCV/Private/libs/cnpy.h",
+      "bytes": 796,
+      "sha256": "dd32ac899bda6d0228edc42b8fb1c85d3809df2ee2b37b64e8291a6650295046"
+    },
+    {
+      "path": "pdqn_static_20261101/speed_revision_20261101/UE/PTZSim/Plugins/UnrealCV/Source/UnrealCV/Private/Sensor/BoneSensor.cpp",
+      "bytes": 2370,
+      "sha256": "913d4b9f3f3d2252b2af45abb07cefb9f85f29ca40f8364d9b995e536ba3e8fa"
+    },
+    {
+      "path": "pdqn_static_20261101/speed_revision_20261101/UE/PTZSim/Plugins/UnrealCV/Source/UnrealCV/Private/Sensor/CameraSensor/AnnotationCamSensor.cpp",
+      "bytes": 5310,
+      "sha256": "18058e4cef54fb0a89fe7cd338a4fd89a7f5a6ca2c7e88bc8971b7fd5fd910d9"
+    },
+    {
+      "path": "pdqn_static_20261101/speed_revision_20261101/UE/PTZSim/Plugins/UnrealCV/Source/UnrealCV/Private/Sensor/CameraSensor/BaseCameraSensor.cpp",
+      "bytes": 8917,
+      "sha256": "72087280cbba47fef6960c5e551f6480997aaa5654790c4131c71f000262a954"
+    },
+    {
+      "path": "pdqn_static_20261101/speed_revision_20261101/UE/PTZSim/Plugins/UnrealCV/Source/UnrealCV/Private/Sensor/CameraSensor/DepthCamSensor.cpp",
+      "bytes": 1972,
+      "sha256": "2cf23374854d1fd4f3c39559219e1b17e102764287642abff5029ba54cbb9a5d"
+    },
+    {
+      "path": "pdqn_static_20261101/speed_revision_20261101/UE/PTZSim/Plugins/UnrealCV/Source/UnrealCV/Private/Sensor/CameraSensor/FlowCamSensor.cpp",
+      "bytes": 3610,
+      "sha256": "f15de3fac3419dc135c108d6830851b7757a23f5493c21a665d20eb5e5df334d"
+    },
+    {
+      "path": "pdqn_static_20261101/speed_revision_20261101/UE/PTZSim/Plugins/UnrealCV/Source/UnrealCV/Private/Sensor/CameraSensor/FusionCamSensor.cpp",
+      "bytes": 22712,
+      "sha256": "ec6d5347bff4c8b49f5af27c9e71954def53d196914581b133dce64ba1c5aa0a"
+    },
+    {
+      "path": "pdqn_static_20261101/speed_revision_20261101/UE/PTZSim/Plugins/UnrealCV/Source/UnrealCV/Private/Sensor/CameraSensor/LitCamSensor.cpp",
+      "bytes": 1962,
+      "sha256": "e6ca9869d69c196da6369a1fb47bf2f04922005e7c892511533fda09652914df"
+    },
+    {
+      "path": "pdqn_static_20261101/speed_revision_20261101/UE/PTZSim/Plugins/UnrealCV/Source/UnrealCV/Private/Sensor/CameraSensor/NormalCamSensor.cpp",
+      "bytes": 1825,
+      "sha256": "f051a19c09fad8cf9d9a74459a9c14b057fbc0bb416d5e39f813d34b5b391c78"
+    },
+    {
+      "path": "pdqn_static_20261101/speed_revision_20261101/UE/PTZSim/Plugins/UnrealCV/Source/UnrealCV/Private/Sensor/CameraSensor/PawnCamSensor.cpp",
+      "bytes": 4066,
+      "sha256": "e9dc66c62521d01de8f92809d772bed86704e19a407bd0f0e3dfef9d66a0360f"
+    },
+    {
+      "path": "pdqn_static_20261101/speed_revision_20261101/UE/PTZSim/Plugins/UnrealCV/Source/UnrealCV/Private/Sensor/CameraSensor/PawnCamSensor.h",
+      "bytes": 682,
+      "sha256": "46d8c53ca12652323d7bdde2e733682d82bf10e5d2bcb503753c76de6ec1fae1"
+    },
+    {
+      "path": "pdqn_static_20261101/speed_revision_20261101/UE/PTZSim/Plugins/UnrealCV/Source/UnrealCV/Private/Sensor/ImageWorker.cpp",
+      "bytes": 1717,
+      "sha256": "36d73ffdaa18412e7744248ce35ef1ba69d1eaca35e0fc233750b2569db2a575"
+    },
+    {
+      "path": "pdqn_static_20261101/speed_revision_20261101/UE/PTZSim/Plugins/UnrealCV/Source/UnrealCV/Private/Sensor/TextureReader.cpp",
+      "bytes": 6022,
+      "sha256": "cdd6587ce1fd6a5e9a1ae10d05b3b211aca3e5ecef94ecba459dfe521d840c27"
+    },
+    {
+      "path": "pdqn_static_20261101/speed_revision_20261101/UE/PTZSim/Plugins/UnrealCV/Source/UnrealCV/Private/Sensor/VertexSensor.cpp",
+      "bytes": 1284,
+      "sha256": "c367beb8d387d07b704e64ac23a4c1cde5a08e32f8ee66095c1ca97e4a54ea6c"
+    },
+    {
+      "path": "pdqn_static_20261101/speed_revision_20261101/UE/PTZSim/Plugins/UnrealCV/Source/UnrealCV/Private/Sensor/ViewMode.cpp",
+      "bytes": 4658,
+      "sha256": "528054cb4c95652ef4804979efb086878d872923456e7bc79724889859318028"
+    },
+    {
+      "path": "pdqn_static_20261101/speed_revision_20261101/UE/PTZSim/Plugins/UnrealCV/Source/UnrealCV/Private/Server/CommandDispatcher.cpp",
+      "bytes": 7003,
+      "sha256": "f866a093ad37faca065a56d2afd2edc87a67047e0ec1cd3e84b1034f39243115"
+    },
+    {
+      "path": "pdqn_static_20261101/speed_revision_20261101/UE/PTZSim/Plugins/UnrealCV/Source/UnrealCV/Private/Server/CommandHandler.cpp",
+      "bytes": 226,
+      "sha256": "9cb660b076d67d105819e874d187273d7596dfaefc7d0c6a296da154343c9e23"
+    },
+    {
+      "path": "pdqn_static_20261101/speed_revision_20261101/UE/PTZSim/Plugins/UnrealCV/Source/UnrealCV/Private/Server/ConsoleHelper.cpp",
+      "bytes": 8070,
+      "sha256": "556b43dcee653ee6e8bfee5984cba675b83141d893ef01fa8c5f20baad1f9f44"
+    },
+    {
+      "path": "pdqn_static_20261101/speed_revision_20261101/UE/PTZSim/Plugins/UnrealCV/Source/UnrealCV/Private/Server/ExecStatus.cpp",
+      "bytes": 4435,
+      "sha256": "0e2b61dee64e4d4d9eaec7e945ac09d70d47fa56da7eec0dc61eaaed187c6540"
+    },
+    {
+      "path": "pdqn_static_20261101/speed_revision_20261101/UE/PTZSim/Plugins/UnrealCV/Source/UnrealCV/Private/Server/ServerConfig.cpp",
+      "bytes": 4264,
+      "sha256": "8e22087f9770403504809703fac3c4e650b63ade9ca84a8b24b4571ed004f92f"
+    },
+    {
+      "path": "pdqn_static_20261101/speed_revision_20261101/UE/PTZSim/Plugins/UnrealCV/Source/UnrealCV/Private/Server/SocketUtils.cpp",
+      "bytes": 2850,
+      "sha256": "5f65e4bd177666665c421c62d075f2807edf48b17db7ab47571993ad51fad9cf"
+    },
+    {
+      "path": "pdqn_static_20261101/speed_revision_20261101/UE/PTZSim/Plugins/UnrealCV/Source/UnrealCV/Private/Server/SocketUtils.h",
+      "bytes": 1196,
+      "sha256": "de628fee2614ea7b260bd4b3dded7225c273d7c0c071e02f08fda42ccf76a428"
+    },
+    {
+      "path": "pdqn_static_20261101/speed_revision_20261101/UE/PTZSim/Plugins/UnrealCV/Source/UnrealCV/Private/Server/TcpServer.cpp",
+      "bytes": 8608,
+      "sha256": "752f38b2843ab748dc6f08e337e24d4147292673087f5d91f965a5cac2cef758"
+    },
+    {
+      "path": "pdqn_static_20261101/speed_revision_20261101/UE/PTZSim/Plugins/UnrealCV/Source/UnrealCV/Private/Server/UnixTcpServer.cpp",
+      "bytes": 16157,
+      "sha256": "ad0f058a799703c37330093e3cebca4f86b2b407bb72d3e27d23c4a93e47f090"
+    },
+    {
+      "path": "pdqn_static_20261101/speed_revision_20261101/UE/PTZSim/Plugins/UnrealCV/Source/UnrealCV/Private/Server/UnrealcvServer.cpp",
+      "bytes": 9629,
+      "sha256": "2060eb4d80553707b3fa47b006b5fcde396c668577cd9c60f156360c404651a1"
+    },
+    {
+      "path": "pdqn_static_20261101/speed_revision_20261101/UE/PTZSim/Plugins/UnrealCV/Source/UnrealCV/Private/Tests/AliasMultiCommandTest.cpp",
+      "bytes": 4152,
+      "sha256": "919e0afacc7bfdd4a1a8c44e94cb734c6860c36362387c9e0eba28c98b412e30"
+    },
+    {
+      "path": "pdqn_static_20261101/speed_revision_20261101/UE/PTZSim/Plugins/UnrealCV/Source/UnrealCV/Private/Tests/CommandDispatcherRound3Test.cpp",
+      "bytes": 2935,
+      "sha256": "6feb8348dc23c86434b00dbc9bed2073678d8d8e7bcac4ec99efbd09d69a45b3"
+    },
+    {
+      "path": "pdqn_static_20261101/speed_revision_20261101/UE/PTZSim/Plugins/UnrealCV/Source/UnrealCV/Private/Tests/CommandDispatcherTest.cpp",
+      "bytes": 5390,
+      "sha256": "c3eb8c0d9922a857a3b8b0521ceb92fbcad355c49d07fd35d39b23110527a552"
+    },
+    {
+      "path": "pdqn_static_20261101/speed_revision_20261101/UE/PTZSim/Plugins/UnrealCV/Source/UnrealCV/Private/Tests/ConsoleHelperTest.cpp",
+      "bytes": 2053,
+      "sha256": "50891f0566517531d570b674703a84e41133f3554e173726131eed0f8c28d15a"
+    },
+    {
+      "path": "pdqn_static_20261101/speed_revision_20261101/UE/PTZSim/Plugins/UnrealCV/Source/UnrealCV/Private/Tests/ExecStatusRound3Test.cpp",
+      "bytes": 2774,
+      "sha256": "69558cf03bc51817e0d89f792f33ca87e0abdfa0dceee57e127709bbeaa670dc"
+    },
+    {
+      "path": "pdqn_static_20261101/speed_revision_20261101/UE/PTZSim/Plugins/UnrealCV/Source/UnrealCV/Private/Tests/ExecStatusTest.cpp",
+      "bytes": 4138,
+      "sha256": "b46bc8adeadc7b2ec6d2531569186ccdc320e1433bad33690246b7b79839cef4"
+    },
+    {
+      "path": "pdqn_static_20261101/speed_revision_20261101/UE/PTZSim/Plugins/UnrealCV/Source/UnrealCV/Private/Tests/LoggerTest.cpp",
+      "bytes": 944,
+      "sha256": "7b65ccd662019f178775ff9b46923e378b47eff61f575b717379ce1ae87218da"
+    },
+    {
+      "path": "pdqn_static_20261101/speed_revision_20261101/UE/PTZSim/Plugins/UnrealCV/Source/UnrealCV/Private/Tests/ServerConfigTest.cpp",
+      "bytes": 1587,
+      "sha256": "98d72dc3a0cde3e878ae935807753c1d4634de28e33b564de588dd83529e8ee5"
+    },
+    {
+      "path": "pdqn_static_20261101/speed_revision_20261101/UE/PTZSim/Plugins/UnrealCV/Source/UnrealCV/Private/Tests/SocketUtilsTest.cpp",
+      "bytes": 2139,
+      "sha256": "66e5e2a577f09fc4abb9186d17bc6e1511823845c1d6419c033ac85569d14cde"
+    },
+    {
+      "path": "pdqn_static_20261101/speed_revision_20261101/UE/PTZSim/Plugins/UnrealCV/Source/UnrealCV/Private/UnrealcvGameMode.cpp",
+      "bytes": 2807,
+      "sha256": "01fc0f868c396d7feb933180b175e6671b106f4db406a2715da72b8820c8a1d3"
+    },
+    {
+      "path": "pdqn_static_20261101/speed_revision_20261101/UE/PTZSim/Plugins/UnrealCV/Source/UnrealCV/Private/UnrealcvLog.cpp",
+      "bytes": 884,
+      "sha256": "5c85c7ae428082e1dcc17ca5670f447c19178dd0562aaa3008874a5048d537ab"
+    },
+    {
+      "path": "pdqn_static_20261101/speed_revision_20261101/UE/PTZSim/Plugins/UnrealCV/Source/UnrealCV/Private/UnrealcvLog.h",
+      "bytes": 1235,
+      "sha256": "baf1e5966b164c2b2206fc8eb23dd1016a093a33c169e1e15a4491a57a0fd1f8"
+    },
+    {
+      "path": "pdqn_static_20261101/speed_revision_20261101/UE/PTZSim/Plugins/UnrealCV/Source/UnrealCV/Private/UnrealcvModule.cpp",
+      "bytes": 3522,
+      "sha256": "e3015a7e59ca899ee30f8d80dacc71b45cdf7d9ca79e7bb5b96ca6b4ffa0b828"
+    },
+    {
+      "path": "pdqn_static_20261101/speed_revision_20261101/UE/PTZSim/Plugins/UnrealCV/Source/UnrealCV/Private/UnrealcvShim.h",
+      "bytes": 372,
+      "sha256": "820506b0c992250ba26dfbe682d11ca889746bd2154a264f0a8542b2815fb645"
+    },
+    {
+      "path": "pdqn_static_20261101/speed_revision_20261101/UE/PTZSim/Plugins/UnrealCV/Source/UnrealCV/Private/UnrealcvStats.h",
+      "bytes": 215,
+      "sha256": "f74c6d47b23c867d999761565c4a0fcacdf2ec082bb6cbe59e34e80fa4589825"
+    },
+    {
+      "path": "pdqn_static_20261101/speed_revision_20261101/UE/PTZSim/Plugins/UnrealCV/Source/UnrealCV/Private/Utils/ImageUtil.cpp",
+      "bytes": 4274,
+      "sha256": "c88288a014440311232821a2c549ed56713a2fd12e5b3f1f9de97d341e5578c3"
+    },
+    {
+      "path": "pdqn_static_20261101/speed_revision_20261101/UE/PTZSim/Plugins/UnrealCV/Source/UnrealCV/Private/Utils/ReflectionUtils.cpp",
+      "bytes": 29229,
+      "sha256": "0642f4a8e2deabf27fe82035125655fd744c5e0fb34a5e07d881c1235a2fd559"
+    },
+    {
+      "path": "pdqn_static_20261101/speed_revision_20261101/UE/PTZSim/Plugins/UnrealCV/Source/UnrealCV/Private/Utils/ReflectionUtils.h",
+      "bytes": 1133,
+      "sha256": "351ce04f55fab98c1ef28715317c639c9807532feede6e4e8517ddd279aea0c9"
+    },
+    {
+      "path": "pdqn_static_20261101/speed_revision_20261101/UE/PTZSim/Plugins/UnrealCV/Source/UnrealCV/Private/Utils/RuntimeConstants.h",
+      "bytes": 106,
+      "sha256": "288e5e3d7b56bc43265fee3ebd551c62cb0b1cb0e4d333498d7583bfa9dc45f4"
+    },
+    {
+      "path": "pdqn_static_20261101/speed_revision_20261101/UE/PTZSim/Plugins/UnrealCV/Source/UnrealCV/Private/Utils/Serialization.cpp",
+      "bytes": 5270,
+      "sha256": "5092a02c25473d6f8de410d2552ef6d28aeef54a0477083e8ee27dcf0be9b53c"
+    },
+    {
+      "path": "pdqn_static_20261101/speed_revision_20261101/UE/PTZSim/Plugins/UnrealCV/Source/UnrealCV/Private/Utils/SharedMemoryManager.cpp",
+      "bytes": 5565,
+      "sha256": "cdf4f356bf817ea4c02ec5f210ad0f0b97c0109f0c9d112446f3410a357a7226"
+    },
+    {
+      "path": "pdqn_static_20261101/speed_revision_20261101/UE/PTZSim/Plugins/UnrealCV/Source/UnrealCV/Private/Utils/SharedMemoryManager.h",
+      "bytes": 1046,
+      "sha256": "f8c2f70e189a4e9bb78198d96356d719e4d2214e9eedd384ab0878c037f9e22d"
+    },
+    {
+      "path": "pdqn_static_20261101/speed_revision_20261101/UE/PTZSim/Plugins/UnrealCV/Source/UnrealCV/Private/Utils/StrFormatter.h",
+      "bytes": 600,
+      "sha256": "653cdc33ca5e06ea82e33d3182856bde93d8e304af1da8dbc574cf67439f4e84"
+    },
+    {
+      "path": "pdqn_static_20261101/speed_revision_20261101/UE/PTZSim/Plugins/UnrealCV/Source/UnrealCV/Private/Utils/UObjectUtils.cpp",
+      "bytes": 1468,
+      "sha256": "d89cbf9cb982fd8471b62a51b41d1d8cca6d439c4cc73fd5ff45c198d24e79e8"
+    },
+    {
+      "path": "pdqn_static_20261101/speed_revision_20261101/UE/PTZSim/Plugins/UnrealCV/Source/UnrealCV/Private/Utils/UObjectUtils.h",
+      "bytes": 316,
+      "sha256": "b721a08322248509d86d775786e7b5633a7bb2d6ee9bfb7e64ce99b02c68c339"
+    },
+    {
+      "path": "pdqn_static_20261101/speed_revision_20261101/UE/PTZSim/Plugins/UnrealCV/Source/UnrealCV/Public/Actor/CamSensorActor.h",
+      "bytes": 695,
+      "sha256": "607f0cecfa21e4af232079a60018a6ec5230bcbdaea005081f8a34e5eda6083b"
+    },
+    {
+      "path": "pdqn_static_20261101/speed_revision_20261101/UE/PTZSim/Plugins/UnrealCV/Source/UnrealCV/Public/Actor/CubeActor.h",
+      "bytes": 363,
+      "sha256": "594a4b8ac6a129addf91bdbf091318e68746a5b2931378d5a4154dd23e0844f9"
+    },
+    {
+      "path": "pdqn_static_20261101/speed_revision_20261101/UE/PTZSim/Plugins/UnrealCV/Source/UnrealCV/Public/Actor/DataCaptureActor.h",
+      "bytes": 4960,
+      "sha256": "039e2467d2f06d7928f4fdad412a65b90ff2af8c13fe49e39eb83ee8ae467c0b"
+    },
+    {
+      "path": "pdqn_static_20261101/speed_revision_20261101/UE/PTZSim/Plugins/UnrealCV/Source/UnrealCV/Public/Actor/FusionCameraActor.h",
+      "bytes": 709,
+      "sha256": "fd2bac03ece5d90364dfd70347119d63a367f3edc790211cb17d6db78ce0e64f"
+    },
+    {
+      "path": "pdqn_static_20261101/speed_revision_20261101/UE/PTZSim/Plugins/UnrealCV/Source/UnrealCV/Public/Actor/Puppeteer.h",
+      "bytes": 868,
+      "sha256": "4568ae1187736d3fa6649bfac9871e418c90c49393b1c7e07d2000b9f644991f"
+    },
+    {
+      "path": "pdqn_static_20261101/speed_revision_20261101/UE/PTZSim/Plugins/UnrealCV/Source/UnrealCV/Public/Actor/StereoCameraActor.h",
+      "bytes": 1245,
+      "sha256": "1dcccd74de5d7177098d1dc545877895f7eefdd793754a3090f0a1dc13d60454"
+    },
+    {
+      "path": "pdqn_static_20261101/speed_revision_20261101/UE/PTZSim/Plugins/UnrealCV/Source/UnrealCV/Public/BPFunctionLib/AnimationBPLib.h",
+      "bytes": 920,
+      "sha256": "b988858516c94934699775397d4e015920fbbc505efbf89722c7885de978cff3"
+    },
+    {
+      "path": "pdqn_static_20261101/speed_revision_20261101/UE/PTZSim/Plugins/UnrealCV/Source/UnrealCV/Public/BPFunctionLib/JsonObjectBP.h",
+      "bytes": 1290,
+      "sha256": "7473d6567cd9a053a8cde7c72303b04f06714eff62c03e94b16f87926304d952"
+    },
+    {
+      "path": "pdqn_static_20261101/speed_revision_20261101/UE/PTZSim/Plugins/UnrealCV/Source/UnrealCV/Public/BPFunctionLib/SensorBPLib.h",
+      "bytes": 515,
+      "sha256": "b3374d7050d6368edfe661cfd25d2bab9d83c5bf1f284a97d68592614bd5689f"
+    },
+    {
+      "path": "pdqn_static_20261101/speed_revision_20261101/UE/PTZSim/Plugins/UnrealCV/Source/UnrealCV/Public/BPFunctionLib/SerializeBPLib.h",
+      "bytes": 2277,
+      "sha256": "eee15f696ff707f5a9e3e645578b1755750d744b63bea386783d41c26998721e"
+    },
+    {
+      "path": "pdqn_static_20261101/speed_revision_20261101/UE/PTZSim/Plugins/UnrealCV/Source/UnrealCV/Public/BPFunctionLib/VisionBPLib.h",
+      "bytes": 4555,
+      "sha256": "bccfeb9bc40c84ae9e61c2a512eb33ba50aa6f03b658dfa97de32ebfe29814e7"
+    },
+    {
+      "path": "pdqn_static_20261101/speed_revision_20261101/UE/PTZSim/Plugins/UnrealCV/Source/UnrealCV/Public/CommandInterface.h",
+      "bytes": 398,
+      "sha256": "b5952bde46f1e8750d4041cbafa57ede7608ddf93b9b868a14417262d2252df9"
+    },
+    {
+      "path": "pdqn_static_20261101/speed_revision_20261101/UE/PTZSim/Plugins/UnrealCV/Source/UnrealCV/Public/Component/AnnotationComponent.h",
+      "bytes": 1897,
+      "sha256": "ce55d328caebe2fe5700d03f671f3ba6ebf09e0c3a145b4cebe16ae568a0c0b8"
+    },
+    {
+      "path": "pdqn_static_20261101/speed_revision_20261101/UE/PTZSim/Plugins/UnrealCV/Source/UnrealCV/Public/Component/KeypointComponent.h",
+      "bytes": 2310,
+      "sha256": "6c05057ca3b57aee4bdd9e1a9bced8acf74cc5d47f05ce6a1dd8eb5b411bb6f4"
+    },
+    {
+      "path": "pdqn_static_20261101/speed_revision_20261101/UE/PTZSim/Plugins/UnrealCV/Source/UnrealCV/Public/Controller/ActorController.h",
+      "bytes": 572,
+      "sha256": "ad210a7ba905dece4884c70deda80c9d1b67dff1a6d2c0ccc1e91be056c1c5bd"
+    },
+    {
+      "path": "pdqn_static_20261101/speed_revision_20261101/UE/PTZSim/Plugins/UnrealCV/Source/UnrealCV/Public/Controller/ObjectAnnotator.h",
+      "bytes": 2399,
+      "sha256": "990fc746ad81617a461d93b701a40b96fa221c33b36f3ffd8b4cfd094c3bc0d2"
+    },
+    {
+      "path": "pdqn_static_20261101/speed_revision_20261101/UE/PTZSim/Plugins/UnrealCV/Source/UnrealCV/Public/Controller/PlayerViewMode.h",
+      "bytes": 1939,
+      "sha256": "861e9d60f2cd5ac33adae996c09933b00f67bd692f6afac16aacbbaa1fcd6d95"
+    },
+    {
+      "path": "pdqn_static_20261101/speed_revision_20261101/UE/PTZSim/Plugins/UnrealCV/Source/UnrealCV/Public/Sensor/BoneSensor.h",
+      "bytes": 1008,
+      "sha256": "74f5bca272df832acd7d6266fb3ba22519b2c54bb6e21fa0d9d71280c440df1a"
+    },
+    {
+      "path": "pdqn_static_20261101/speed_revision_20261101/UE/PTZSim/Plugins/UnrealCV/Source/UnrealCV/Public/Sensor/CameraSensor/AnnotationCamSensor.h",
+      "bytes": 754,
+      "sha256": "60f3cfa4d4a24b7e9ae72bd2d3d7a472bd6be840cd14074b285895d17656e5b1"
+    },
+    {
+      "path": "pdqn_static_20261101/speed_revision_20261101/UE/PTZSim/Plugins/UnrealCV/Source/UnrealCV/Public/Sensor/CameraSensor/BaseCameraSensor.h",
+      "bytes": 2922,
+      "sha256": "074685131d9a28f2f115ea9f2ce7fed0e5f1926ecdacaafdbc95f0f9e5294530"
+    },
+    {
+      "path": "pdqn_static_20261101/speed_revision_20261101/UE/PTZSim/Plugins/UnrealCV/Source/UnrealCV/Public/Sensor/CameraSensor/DepthCamSensor.h",
+      "bytes": 581,
+      "sha256": "268aff08950b04d738aec6839175f85dde6f8dd323aeb3b85cb605b24d33f346"
+    },
+    {
+      "path": "pdqn_static_20261101/speed_revision_20261101/UE/PTZSim/Plugins/UnrealCV/Source/UnrealCV/Public/Sensor/CameraSensor/FlowCamSensor.h",
+      "bytes": 1713,
+      "sha256": "3faf8d0c70514d4e955715c2f1f922a1e34c91ed970ecaa30b09bf7f4c29604d"
+    },
+    {
+      "path": "pdqn_static_20261101/speed_revision_20261101/UE/PTZSim/Plugins/UnrealCV/Source/UnrealCV/Public/Sensor/CameraSensor/FusionCamSensor.h",
+      "bytes": 9263,
+      "sha256": "5e77f719c37ad87847034915a4ae1d993ab15d9c6ddf96eb2ef5afe9c3b09bfc"
+    },
+    {
+      "path": "pdqn_static_20261101/speed_revision_20261101/UE/PTZSim/Plugins/UnrealCV/Source/UnrealCV/Public/Sensor/CameraSensor/LitCamSensor.h",
+      "bytes": 643,
+      "sha256": "cb91ea895b246866c040e435e66b6b4f90ad341f7852ad69223de89a32d46e4f"
+    },
+    {
+      "path": "pdqn_static_20261101/speed_revision_20261101/UE/PTZSim/Plugins/UnrealCV/Source/UnrealCV/Public/Sensor/CameraSensor/NormalCamSensor.h",
+      "bytes": 596,
+      "sha256": "ca9437afe8aad1abb951d9089db2acc5717242b5bd7eeb467a402d6195a5177c"
+    },
+    {
+      "path": "pdqn_static_20261101/speed_revision_20261101/UE/PTZSim/Plugins/UnrealCV/Source/UnrealCV/Public/Sensor/ImageWorker.h",
+      "bytes": 891,
+      "sha256": "50ce5f29d141d0af80945a7d3512cdb9e0efcfd7da7e62c49f8db9df72e4298a"
+    },
+    {
+      "path": "pdqn_static_20261101/speed_revision_20261101/UE/PTZSim/Plugins/UnrealCV/Source/UnrealCV/Public/Sensor/ScreenCapture.h",
+      "bytes": 773,
+      "sha256": "caaf92e6d54180b86f33f9fb9f174731bc1f4f6d4ce4cf55d96ebb9ee647514a"
+    },
+    {
+      "path": "pdqn_static_20261101/speed_revision_20261101/UE/PTZSim/Plugins/UnrealCV/Source/UnrealCV/Public/Sensor/TextureReader.h",
+      "bytes": 1029,
+      "sha256": "7a58f319aaa2b6224b43e0a7649ab60762d3fe7c84ac01482310e17dec8e0b79"
+    },
+    {
+      "path": "pdqn_static_20261101/speed_revision_20261101/UE/PTZSim/Plugins/UnrealCV/Source/UnrealCV/Public/Sensor/VertexSensor.h",
+      "bytes": 266,
+      "sha256": "92960703e4430bc34c88550e6e5e5c82550b100bf9de7ca9513865810f3a87c0"
+    },
+    {
+      "path": "pdqn_static_20261101/speed_revision_20261101/UE/PTZSim/Plugins/UnrealCV/Source/UnrealCV/Public/Sensor/ViewMode.h",
+      "bytes": 947,
+      "sha256": "50c3f2b17efe9ec4f903edfb7df55dfd8c67300c494aa581b2c960547cd730a6"
+    },
+    {
+      "path": "pdqn_static_20261101/speed_revision_20261101/UE/PTZSim/Plugins/UnrealCV/Source/UnrealCV/Public/Server/CommandDispatcher.h",
+      "bytes": 2113,
+      "sha256": "1d556c106b7c6a9bcfa038a298c99c390af4797e41232158330a9d637b4cc6eb"
+    },
+    {
+      "path": "pdqn_static_20261101/speed_revision_20261101/UE/PTZSim/Plugins/UnrealCV/Source/UnrealCV/Public/Server/CommandHandler.h",
+      "bytes": 662,
+      "sha256": "f149b3df27a92743f69b48bd9f51e845571c0e0e18641025e54340179a430613"
+    },
+    {
+      "path": "pdqn_static_20261101/speed_revision_20261101/UE/PTZSim/Plugins/UnrealCV/Source/UnrealCV/Public/Server/ConsoleHelper.h",
+      "bytes": 1732,
+      "sha256": "0827580a8b0313f2864371c0df6a72b113d93e422bc1df30f016a21748860424"
+    },
+    {
+      "path": "pdqn_static_20261101/speed_revision_20261101/UE/PTZSim/Plugins/UnrealCV/Source/UnrealCV/Public/Server/ExecStatus.h",
+      "bytes": 2915,
+      "sha256": "2f1a9e3e82fbf4739959ac7da484f70b0e6b3ba8e00c1e9334c205d985610c6d"
+    },
+    {
+      "path": "pdqn_static_20261101/speed_revision_20261101/UE/PTZSim/Plugins/UnrealCV/Source/UnrealCV/Public/Server/ServerConfig.h",
+      "bytes": 1462,
+      "sha256": "75c6f97de005a275d96ad096650e4db673ef43a041d483800c78bafd164f1b29"
+    },
+    {
+      "path": "pdqn_static_20261101/speed_revision_20261101/UE/PTZSim/Plugins/UnrealCV/Source/UnrealCV/Public/Server/TcpServer.h",
+      "bytes": 2412,
+      "sha256": "69a59bd488342e2d933f758e86d7f0718e09efad5ffba1e6684fc55f83cf312d"
+    },
+    {
+      "path": "pdqn_static_20261101/speed_revision_20261101/UE/PTZSim/Plugins/UnrealCV/Source/UnrealCV/Public/Server/UnixTcpServer.h",
+      "bytes": 3320,
+      "sha256": "f5e502bc45d00698ad94b789711c059f86792a4a97427269a4ed141493cf0172"
+    },
+    {
+      "path": "pdqn_static_20261101/speed_revision_20261101/UE/PTZSim/Plugins/UnrealCV/Source/UnrealCV/Public/Server/UnrealcvServer.h",
+      "bytes": 3861,
+      "sha256": "2606971431cb772afed2cfaad01597d87375ca40b3ecea94f60cad74bbf31271"
+    },
+    {
+      "path": "pdqn_static_20261101/speed_revision_20261101/UE/PTZSim/Plugins/UnrealCV/Source/UnrealCV/Public/UnrealcvGameMode.h",
+      "bytes": 1263,
+      "sha256": "507b5b2dafc56059f39d1eec4d24ca79676d9b52f7f37269d765fa8f06db6d93"
+    },
+    {
+      "path": "pdqn_static_20261101/speed_revision_20261101/UE/PTZSim/Plugins/UnrealCV/Source/UnrealCV/Public/Utils/BenchmarkMeter.h",
+      "bytes": 928,
+      "sha256": "a72e62b4f119bc7323deb57c4a73c6ed29ce1ce785a80599508d42353bb219c7"
+    },
+    {
+      "path": "pdqn_static_20261101/speed_revision_20261101/UE/PTZSim/Plugins/UnrealCV/Source/UnrealCV/Public/Utils/ImageUtil.h",
+      "bytes": 1906,
+      "sha256": "d3a5dbf94ca18e3d82967c07e80955f83ee87d767a6c54d5a1c19b897e5954ca"
+    },
+    {
+      "path": "pdqn_static_20261101/speed_revision_20261101/UE/PTZSim/Plugins/UnrealCV/Source/UnrealCV/Public/Utils/Serialization.h",
+      "bytes": 716,
+      "sha256": "1706f0ca57ac2d3629d82b677235d1e487b2699e294ca475c3062f0ca5223c57"
+    },
+    {
+      "path": "pdqn_static_20261101/speed_revision_20261101/UE/PTZSim/Plugins/UnrealCV/Source/UnrealCV/Public/WorldController.h",
+      "bytes": 728,
+      "sha256": "1a29726df20f17fada70c076c4e9863ea2ca675a92e7d5df2a0288676aa12f08"
+    },
+    {
+      "path": "pdqn_static_20261101/speed_revision_20261101/UE/PTZSim/Plugins/UnrealCV/Source/UnrealCV/UnrealCV.Build.cs",
+      "bytes": 2317,
+      "sha256": "d1c69faba9f9e5e99d7377a04adaff92e3ba3bee9e538db04357ee9129b2891c"
+    },
+    {
+      "path": "pdqn_static_20261101/speed_revision_20261101/UE/PTZSim/Plugins/UnrealCV/UnrealCV.uplugin",
+      "bytes": 605,
+      "sha256": "d94ffd8e8ad7d3d629925656ac96760d25e56592714f2c446ac60fd74e8cdc84"
+    },
+    {
+      "path": "pdqn_static_20261101/speed_revision_20261101/UE/PTZSim/PTZSim.uproject",
+      "bytes": 746,
+      "sha256": "e51cdf037a8fc295432432db5c08b7ca5d140d7bcdbda8e6d9970d0b4c464025"
+    },
+    {
+      "path": "pdqn_static_20261101/speed_revision_20261101/UE/PTZSim/Source/PTZSim/PTZArena.cpp",
+      "bytes": 63640,
+      "sha256": "137f5b627c8444890a1d47e558d91a3d5d485cbf1e11ac4885abb48b7581b5a7"
+    },
+    {
+      "path": "pdqn_static_20261101/speed_revision_20261101/UE/PTZSim/Source/PTZSim/PTZArena.h",
+      "bytes": 5721,
+      "sha256": "92220c794da4e9e31b04742c73d0e63cacdeedd5f4c6286afdec58661f78f005"
+    },
+    {
+      "path": "pdqn_static_20261101/speed_revision_20261101/UE/PTZSim/Source/PTZSim/PTZSim.Build.cs",
+      "bytes": 1058,
+      "sha256": "523d24ef719dc3f2c265a73e96c21b95defff0802ec0e5f29ed762df9f2fedcc"
+    },
+    {
+      "path": "pdqn_static_20261101/speed_revision_20261101/UE/PTZSim/Source/PTZSim/PTZSim.cpp",
+      "bytes": 183,
+      "sha256": "e7ba2f87bf8fa6ea1ed500207e1bd6f3d9467c19ce8c48056bea5cdd76045b60"
+    },
+    {
+      "path": "pdqn_static_20261101/speed_revision_20261101/UE/PTZSim/Source/PTZSim/PTZSim.h",
+      "bytes": 92,
+      "sha256": "0d37e860b0dc4e7437e8d630be91adc963451d81a1ebfa926862d20f79a294e5"
+    },
+    {
+      "path": "pdqn_static_20261101/speed_revision_20261101/UE/PTZSim/Source/PTZSim.Target.cs",
+      "bytes": 386,
+      "sha256": "2f4f90d7875d579fdf59f8069e9b97da3b8cb2644f67a2ab6cb74a9dcb2c16b5"
+    },
+    {
+      "path": "pdqn_static_20261101/speed_revision_20261101/UE/PTZSim/Source/PTZSimEditor.Target.cs",
+      "bytes": 401,
+      "sha256": "4e3d4449ad6fb77ddf5cd7d24f3733bcee3ba68a65aeb219bb64b9042630729e"
+    },
+    {
+      "path": "paper_reproduction/verification/value-redesign-v10-20261031/video-tools/imageio_ffmpeg/__init__.py",
+      "bytes": 225,
+      "sha256": "ba9d7d5506c18e2d57305a2d11df7aa1acd3deed7b0eaf863331d81db16a3852"
+    },
+    {
+      "path": "paper_reproduction/verification/value-redesign-v10-20261031/video-tools/imageio_ffmpeg/_definitions.py",
+      "bytes": 2040,
+      "sha256": "19d13abae915122a8a788ad7f630bf5c960bc81e003955eb03251eb4f53040e0"
+    },
+    {
+      "path": "paper_reproduction/verification/value-redesign-v10-20261031/video-tools/imageio_ffmpeg/_io.py",
+      "bytes": 27290,
+      "sha256": "5dda83a848e7313fa42628d1b75759e7e4e41454bfba1d9e0fdcec13adb7f3e3"
+    },
+    {
+      "path": "paper_reproduction/verification/value-redesign-v10-20261031/video-tools/imageio_ffmpeg/_parsing.py",
+      "bytes": 6840,
+      "sha256": "514b583f26f3bfdbd0e2c28fc189514f268ffe4f64a0a5df97ecc8e919b8429a"
+    },
+    {
+      "path": "paper_reproduction/verification/value-redesign-v10-20261031/video-tools/imageio_ffmpeg/_utils.py",
+      "bytes": 3833,
+      "sha256": "7951789f2f733f78cf7de608c25e957d5f53d6fdf84bac944560bf462194345f"
+    },
+    {
+      "path": "paper_reproduction/verification/value-redesign-v10-20261031/video-tools/imageio_ffmpeg/binaries/__init__.py",
+      "bytes": 45,
+      "sha256": "ce39d166833a6d050160e237d07a73229e1c934edb3b2e28c5707e6f0377356f"
+    },
+    {
+      "path": "paper_reproduction/verification/value-redesign-v10-20261031/video-tools/imageio_ffmpeg/binaries/README.md",
+      "bytes": 45,
+      "sha256": "b0d36dfb1ba1ea5ca873a6f6dbcc2295b7a7944aea875071d91a6aad1870e77d"
+    },
+    {
+      "path": "paper_reproduction/verification/value-redesign-v10-20261031/video-tools/imageio_ffmpeg-0.7.0.dist-info/INSTALLER",
+      "bytes": 4,
+      "sha256": "ceebae7b8927a3227e5303cf5e0f1f7b34bb542ad7250ac03fbcde36ec2f1508"
+    },
+    {
+      "path": "paper_reproduction/verification/value-redesign-v10-20261031/video-tools/imageio_ffmpeg-0.7.0.dist-info/licenses/LICENSE",
+      "bytes": 1317,
+      "sha256": "eca73421d0c905a92e952a553d4d58919c5a507c2c2c76e3c0cf9ba408c299e4"
+    },
+    {
+      "path": "paper_reproduction/verification/value-redesign-v10-20261031/video-tools/imageio_ffmpeg-0.7.0.dist-info/METADATA",
+      "bytes": 1530,
+      "sha256": "4075fdc8d801fd272685fc779a3881a01c343e48db371b79c061a8c4062df096"
+    },
+    {
+      "path": "paper_reproduction/verification/value-redesign-v10-20261031/video-tools/imageio_ffmpeg-0.7.0.dist-info/RECORD",
+      "bytes": 1670,
+      "sha256": "b56b792cf957db9421b48ed7cb781fd128577d4961af2c31bfc81c3ed97826f0"
+    },
+    {
+      "path": "paper_reproduction/verification/value-redesign-v10-20261031/video-tools/imageio_ffmpeg-0.7.0.dist-info/REQUESTED",
+      "bytes": 0,
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    {
+      "path": "paper_reproduction/verification/value-redesign-v10-20261031/video-tools/imageio_ffmpeg-0.7.0.dist-info/top_level.txt",
+      "bytes": 15,
+      "sha256": "38341851861bb63f48d528c0484318ee1f10f2168bae630d5114829f4144075f"
+    },
+    {
+      "path": "paper_reproduction/verification/value-redesign-v10-20261031/video-tools/imageio_ffmpeg-0.7.0.dist-info/WHEEL",
+      "bytes": 96,
+      "sha256": "908bb0cc6270b854d3e61d322ba2f472b61f1643261a02bc61e6fcd0f89d5221"
+    },
+    {
+      "path": "pdqn_static_20261101/speed_revision_20261101/unified_motion_20261101/pdqn_training_v1/last.pt",
+      "bytes": 4613663,
+      "sha256": "db8043ec93f916c35b7ab31b4ccf298489ceca94a4ec7290075d2e7e6c5b2434"
+    },
+    {
+      "path": "pdqn_static_20261101/speed_revision_20261101/unified_motion_20261101/whole_vehicle_detector_v1/whole_vehicle.pt",
+      "bytes": 20322437,
+      "sha256": "6aa5225b582861bde9db554a486a8f708e03d24f4aebd1b26090357347bcca34"
+    },
+    {
+      "path": "pdqn_static_20261101/speed_revision_20261101/unified_motion_20261101/user-startup-active-zoom-v1-video/configuration.json",
+      "bytes": 14005,
+      "sha256": "69be1c9a5cdeff53ef66b2a4e62d5d96bd5c607fe880b9d671034adcc360461b"
+    },
+    {
+      "path": "pdqn_static_20261101/speed_revision_20261101/unified_motion_20261101/user-startup-active-zoom-v1-video/scene.json",
+      "bytes": 44251,
+      "sha256": "549b177fd5f99fbcb760c8edaef282e09e5bc626cf05823bb39577a4260607bf"
+    },
+    {
+      "path": "pdqn_static_20261101/speed_revision_20261101/unified_motion_20261101/user-startup-active-zoom-v1-video/startup-scale-result.json",
+      "bytes": 4476,
+      "sha256": "e5fec6356109eff442ad828cacab93e9ae7befb8f53108f7bb920de27d9752c1"
+    },
+    {
+      "path": "pdqn_static_20261101/speed_revision_20261101/unified_motion_20261101/user-startup-active-zoom-v1-video/online-output/online-recording-audit.json",
+      "bytes": 1352,
+      "sha256": "b56d523727bc11d637a5ed3e55f74a5d3b45140535e9ac7368afffe1d88b1fd7"
+    },
+    {
+      "path": "pdqn_static_20261101/speed_revision_20261101/unified_motion_20261101/user-startup-active-zoom-v1-video/online-output/true-online-output.mp4",
+      "bytes": 3920912,
+      "sha256": "b8b453501aa2d7104bbfaa89a12f411cc209720431c631185b41e4d6f82848a6"
+    },
+    {
+      "path": "pdqn_static_20261101/speed_revision_20261101/unified_motion_20261101/user-startup-active-zoom-v1-video/decisions.jsonl",
+      "bytes": 1498177,
+      "sha256": "0d2a6d13666aecf711f69837e5fdd6c5fbb7652a6b1ff6d898b739268aa3b56e"
+    },
+    {
+      "path": "pdqn_static_20261101/speed_revision_20261101/unified_motion_20261101/user-startup-active-zoom-v1-video/perception-online.jsonl",
+      "bytes": 2124795,
+      "sha256": "ab04047d9321d8db6b6db7ad6fbb0ed023484a154bd4547f91464174e94bbaca"
+    },
+    {
+      "path": "pdqn_static_20261101/speed_revision_20261101/unified_motion_20261101/user-startup-active-zoom-v1-video/native-command-events.json",
+      "bytes": 93620,
+      "sha256": "bda1306c55d73f88b024d95ba8660edd193ce6c22426f022a52d65228543c3c7"
+    },
+    {
+      "path": "pdqn_static_20261101/speed_revision_20261101/unified_motion_20261101/user-startup-active-zoom-v1-video/initial-observation.json",
+      "bytes": 4652,
+      "sha256": "91388385b344564cc1ecf05baf78534551fedcbf580e618ce2788a3a62a9e3b4"
+    },
+    {
+      "path": "pdqn_static_20261101/protocol.json",
+      "bytes": 4289,
+      "sha256": "a129d6c14ba6a959bdf5fbc81994bb655f5c54248a3c99ca8f28ca67b1188449"
+    },
+    {
+      "path": "paper_reproduction/scenarios/splits.json",
+      "bytes": 15549,
+      "sha256": "465a8774872f853cc0e80994bc5b7c60da1c5f2913c1e7b7d20da2ecdd08a102"
+    },
+    {
+      "path": "pdqn_static_20261101/speed_revision_20261101/training_profile.json",
+      "bytes": 2277,
+      "sha256": "0e35fff68fd294eea6c180348019cd0520cf616c58119815cd2976d759f248a5"
+    },
+    {
+      "path": "pdqn_static_20261101/speed_revision_20261101/training_profile_v2.json",
+      "bytes": 1776,
+      "sha256": "a23dc7f0e7f4ec7b575f898d331ab7cd029564baa11805811cd8ce98d7e86a3a"
+    },
+    {
+      "path": "pdqn_static_20261101/speed_revision_20261101/training_profile_v3.json",
+      "bytes": 1979,
+      "sha256": "7a27eb9c63f79767ae19479168e878cb2c4a4d5a292679fb7801ffc42e45afcd"
+    },
+    {
+      "path": "pdqn_static_20261101/speed_revision_20261101/training_profile_v4.json",
+      "bytes": 2369,
+      "sha256": "663c9933fb77df8dfc7bb2714962b399f4a4b49c5a5aec3c12a6cbfd5fb60939"
+    },
+    {
+      "path": "pdqn_static_20261101/speed_revision_20261101/training_profile_v5.json",
+      "bytes": 1940,
+      "sha256": "e512f04072f068ec65c0efa10d099f2e25cdb5ed8961efc5391688c64c572d91"
+    }
+  ]
+}

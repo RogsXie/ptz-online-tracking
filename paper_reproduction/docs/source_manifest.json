@@ -1,0 +1,18 @@
+{
+  "retrieved_local_date": "2026-10-30",
+  "repository": "https://github.com/Vampon/HAS-CAM",
+  "commit": "9173676fb636140ffa4145e101631d3f30634267",
+  "files": {
+    "agent.py": "7d20cf3faaabe617648230c6535ae561a7407639902c2d794a731f167de2fb65",
+    "model.py": "ef8bb2ecdb08eed543b53de07beffa7ce96857bd5d5a5800027f504fe78035ca",
+    "main.py": "ece7cd93227f7095d34aea461cb6ea395fa2f3424bdc881e47312be182ef5fd3",
+    "memory.py": "3f62187b5f40d4db48a5d2d604e29b9ae69155f3bb6b429af005292fe6b62db1",
+    "rl_control/UnityCameraEnvironment_exp.py": "e8266015cc2b345ba1a41e298583e878acc20c73c3c574d8e3d1df6b5aa38870",
+    "fastreid/configs/VeRi/VeRi_sbs_R50-ibn.yml": "f2d9006c42a1ebd8a502281c3e739e5466077831129beff19bfcf6d7c15bcec6",
+    "fastreid/configs/Base-SBS.yml": "0a303180f0d92eb65be4aa13dfe7bae12f7349a4893e68e01d47b86ba00b3f12",
+    "fastreid/configs/Base-bagtricks.yml": "e0e5e85c368307ed643c070750052f87cc34763a2058951c967c21f50151b23a",
+    "fastreid/modeling/heads/embedding_head.py": "0720f5d9e13d5e569e50611de7da7374cca0d4629179246c8c4725c5814f32d5",
+    "README.md": "bf2d6b26581d9554c14885abcc796787e04b326ac3f71617244ee195b6c4d294",
+    "term/Open Source License Terms.md": "b1d13e26bd5a724215d966ed93fd2dc86912ba3d87d3a3df84b6bb2155cda91f"
+  }
+}

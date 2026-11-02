@@ -1,0 +1,18 @@
+{
+  "checked_utc": "2026-10-31T10:33:56.073750+00:00",
+  "scope": "completed development probe20 and fixed checkpoint20 only; runner remains active",
+  "passed": true,
+  "round": 20,
+  "probe_passed": 16,
+  "probe_total": 20,
+  "four_network_runtime_freeze_receipt_verified": true,
+  "checkpoint_hashes_match_receipt": true,
+  "parameter_networks_equal_initial": true,
+  "parameter_optimizer_unused": true,
+  "training_replay_exact_transitions": 10020,
+  "q_updates": 2442,
+  "training_truncated_endings": 20,
+  "actual_final_observation_bootstrap": true,
+  "source_snapshot_matches_current": true,
+  "independent_validation": "not_executed"
+}
