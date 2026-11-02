@@ -1,0 +1,78 @@
+{
+  "folder": "unified_motion_20261101\\front-centering-fix-20261103\\fast-turn-regression",
+  "target": "car_0",
+  "evaluation_only_GT": true,
+  "physical_camera_target_out_of_view_frames": 0,
+  "undefined_projected_target_frames": 0,
+  "camera_segments": {
+    "motion_2_to_end": {
+      "source_frames": 300,
+      "pixel_median_p95": [
+        16.308719198564987,
+        45.64896673235966
+      ],
+      "angular_deg_median_p95": [
+        0.6343802708753519,
+        1.7910654628779037
+      ],
+      "image_x_y_std_px": [
+        16.95868914573949,
+        7.360943489601052
+      ],
+      "median_fov_deg": 32.937705993652344,
+      "median_geometric_area_percent": 0.19672041675307533
+    },
+    "turn_9_to_12": {
+      "source_frames": 90,
+      "pixel_median_p95": [
+        13.725200502881048,
+        39.66579538637533
+      ],
+      "angular_deg_median_p95": [
+        0.432998495857451,
+        0.9745085850426862
+      ],
+      "image_x_y_std_px": [
+        12.472016311809737,
+        5.446643010558106
+      ],
+      "median_fov_deg": 30.9647216796875,
+      "median_geometric_area_percent": 0.17060005778721504
+    },
+    "fast_12_to_end": {
+      "source_frames": 0,
+      "pixel_median_p95": null,
+      "angular_deg_median_p95": null
+    },
+    "parallel_24_to_end": {
+      "source_frames": 0,
+      "pixel_median_p95": null,
+      "angular_deg_median_p95": null
+    }
+  },
+  "no_box_outputs": 2,
+  "no_box_target_still_in_view": 2,
+  "no_box_physically_occluded": 0,
+  "no_box_out_of_view": 0,
+  "no_box_events": [
+    {
+      "sim_time": 1.5832865047850646,
+      "target_in_view": true,
+      "physically_occluded": false,
+      "occluder": ""
+    },
+    {
+      "sim_time": 4.052104784641415,
+      "target_in_view": true,
+      "physically_occluded": false,
+      "occluder": ""
+    }
+  ],
+  "rapid_opposite_axis_commands_within_point35_s": 0,
+  "normal_tracking_raw_action_agreement": [
+    0,
+    0
+  ],
+  "executed_action_parameter_mean_absolute_correction_ms": null,
+  "qualification": "Native geometric target center scored over ALL source frames after2s, including occlusion/no-box. GT is post-run scoring only, never policy or reward. One focused scene, not general qualification."
+}

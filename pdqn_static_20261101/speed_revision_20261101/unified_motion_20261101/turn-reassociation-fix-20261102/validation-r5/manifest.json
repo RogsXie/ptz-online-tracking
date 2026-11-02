@@ -1,0 +1,17 @@
+{
+  "source_sha256": {
+    "robust_locked_tracker.py": "5c03976f41b7647c0e7b93ed930a79a99bbabd58882054ef0c8c383a581ba475",
+    "locked_target_selector.py": "c6aaa538195d92ce485656e4ecf2aaaad850f8b0e8f51d21886d9f83a366041b",
+    "check_turn_reassociation.py": "1e507e19b53f633c494cfd3d994f3be4ffbec4c0520c7ffab431a8d5befa2b50",
+    "live_fast_online_results.py": "eda0dd45d54996ff9831cb805b524c0a276f56125d87100c197e1daca4721377",
+    "stable_locked_control.py": "5baa461f9005fa8b3fd0c158bf459ffd83fd73fc7264e2dd589c4fe025ec82d4",
+    "camera_control_v3.py": "31be73a3e2b462bc543a82b71d47c5dde03ffddfa61db9be0d5ab0c7926fabf4",
+    "precision_policy_v2.py": "97961a5b915fd7055eff31d72724a7d567597bf970552c6283dce39dd4323467",
+    "evaluate_precision_policy.py": "f0c0f2fc749381202e88ce4234bc198d8b34490fcff33e526dc7cca5eb37e997",
+    "validate_turn_reassociation_fix.py": "dd4e2e0c7d2b2320c491e7cd5f9658d1cb12f79ea721bce94286b8794d000345"
+  },
+  "checkpoint": "D:\\EI\\ptz_ue\\pdqn_static_20261101\\speed_revision_20261101\\unified_motion_20261101\\control-v3-turn-training-20261102\\deploy.pt",
+  "checkpoint_sha256": "def9007ca61419e2ebaf1f3bb18f09faded2d468d4be0d35558703b84cbefa0a",
+  "detector_reid_camera_weights_unchanged": true,
+  "scope": "Association fix; true live RGB outputs; all GT scoring after controls end."
+}

@@ -1,0 +1,44 @@
+{
+  "status": "complete",
+  "completed_scenes": 96,
+  "real_steps": 10240,
+  "updates": 4608,
+  "group_steps": {
+    "fine_static": 1280,
+    "slow_motion": 1280,
+    "fast_motion": 1280,
+    "acceleration": 1280,
+    "turns": 1280,
+    "inclines": 1280,
+    "occlusion": 1280,
+    "tiny_acquisition": 1280
+  },
+  "network_proof": {
+    "actor_net": {
+      "changed_tensors": 10,
+      "parameter_device": [
+        "cuda:0"
+      ]
+    },
+    "actor_target": {
+      "changed_tensors": 10,
+      "parameter_device": [
+        "cuda:0"
+      ]
+    },
+    "param_net": {
+      "changed_tensors": 10,
+      "parameter_device": [
+        "cuda:0"
+      ]
+    },
+    "param_net_target": {
+      "changed_tensors": 10,
+      "parameter_device": [
+        "cuda:0"
+      ]
+    }
+  },
+  "wall_s": 3495.6742159998976,
+  "qualified": false
+}

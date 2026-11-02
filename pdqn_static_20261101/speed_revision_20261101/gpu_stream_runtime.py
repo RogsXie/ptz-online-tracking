@@ -29,7 +29,8 @@ class StreamRaw(SharedTimedRaw):
         slots=struct.unpack_from('<I',self.stream_map,32)[0]
         assert slots==4 and slot<slots and 16<size<=capacity==4*1024*1024
         self.native_latest_sequence=sequence
-        wanted=max(1,sequence-slots+1,self.last_sequence+1) if self.last_sequence>=0 else max(1,sequence-slots+1)
+        if getattr(self,'latest_only',False):wanted=sequence
+        else:wanted=max(1,sequence-slots+1,self.last_sequence+1) if self.last_sequence>=0 else max(1,sequence-slots+1)
         location=64+(wanted%slots)*capacity
         magic,length,width,height=struct.unpack('<4I',self.stream_map[location:location+16]);size=16+length+width*height*4
         assert magic==0x315A5450 and (width,height)==(960,540) and 16<size<=capacity

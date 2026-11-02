@@ -1,0 +1,141 @@
+{
+  "motion_profile": "precision15_fresh_rgb_kalman_duration_v2",
+  "state_fields": [
+    "predicted_x",
+    "predicted_y",
+    "actual_area_percent",
+    "confidence",
+    "last_executed_action_div6",
+    "last_executed_seconds_div_point1",
+    "observed_delta_x",
+    "observed_delta_y",
+    "rgb_kf_yaw_rate_div10",
+    "rgb_kf_pitch_rate_div10",
+    "own_fov_div66",
+    "image_age_div_point1",
+    "own_yaw_delta_div10",
+    "own_pitch_delta_div10",
+    "own_fov_delta_div10"
+  ],
+  "seed": 20261102,
+  "from_scratch": true,
+  "parent_checkpoint": null,
+  "reused_replay_transitions": 0,
+  "source_sha256": {
+    "agent.py": "7d20cf3faaabe617648230c6535ae561a7407639902c2d794a731f167de2fb65",
+    "model.py": "ef8bb2ecdb08eed543b53de07beffa7ce96857bd5d5a5800027f504fe78035ca",
+    "main.py": "ece7cd93227f7095d34aea461cb6ea395fa2f3424bdc881e47312be182ef5fd3",
+    "memory.py": "3f62187b5f40d4db48a5d2d604e29b9ae69155f3bb6b429af005292fe6b62db1",
+    "rl_control/UnityCameraEnvironment_exp.py": "e8266015cc2b345ba1a41e298583e878acc20c73c3c574d8e3d1df6b5aa38870",
+    "fastreid/configs/VeRi/VeRi_sbs_R50-ibn.yml": "f2d9006c42a1ebd8a502281c3e739e5466077831129beff19bfcf6d7c15bcec6",
+    "fastreid/configs/Base-SBS.yml": "0a303180f0d92eb65be4aa13dfe7bae12f7349a4893e68e01d47b86ba00b3f12",
+    "fastreid/configs/Base-bagtricks.yml": "e0e5e85c368307ed643c070750052f87cc34763a2058951c967c21f50151b23a",
+    "fastreid/modeling/heads/embedding_head.py": "0720f5d9e13d5e569e50611de7da7374cca0d4629179246c8c4725c5814f32d5",
+    "README.md": "bf2d6b26581d9554c14885abcc796787e04b326ac3f71617244ee195b6c4d294",
+    "term/Open Source License Terms.md": "b1d13e26bd5a724215d966ed93fd2dc86912ba3d87d3a3df84b6bb2155cda91f",
+    "utils.py": "957b3c48b50b93feacfae62d4c1fb980a0da63988458c82a8b886ffe893f94b9"
+  },
+  "initialization": "Fresh random four-network construction, target copies, declared short-duration output biases, empty replay and both fresh Adam optimizers. No old PTZ checkpoint read.",
+  "training": "One persistent native UE arena; fresh RGB transitions, intermediate actual RGB tracker observations at <=33.3ms slices during pulses and holds. 16x64 random-support steps and 96x96 balanced eight-family training steps. Original source P-DQN update equations.",
+  "observation": "Correct actual action/duration; real RGB angular-Kalman velocity; measured own optics; image-age prediction. No target GT, IDs, speeds, paths or family labels.",
+  "reward": "12*image_position_progress + cycle/.12*(-4*pixel_position/480 -.2*min(4,abslog(area/.016)) +.25*8px_jointinner) ; >2%area and >6px crossing penalties; missing -3.",
+  "execution": "RGB engineering action mask/duration bounds retained and logged; replay stores actual executed discrete action and selected duration, not rejected proposal.",
+  "delay": "World advances explicitly 40/80/120ms while last image remains pinned; cycles120/160/200/240ms. Synchronous collection is not online FPS evidence.",
+  "families": [
+    "fine_static",
+    "slow_motion",
+    "fast_motion",
+    "acceleration",
+    "turns",
+    "inclines",
+    "occlusion",
+    "tiny_acquisition"
+  ],
+  "detector": {
+    "model": "whole_vehicle",
+    "backend": "ultralytics",
+    "ultralytics": "8.4.193",
+    "checkpoint": "D:\\EI\\ptz_ue\\pdqn_static_20261101\\speed_revision_20261101\\unified_motion_20261101\\whole_vehicle_detector_v1\\whole_vehicle.pt",
+    "sha256": "6aa5225b582861bde9db554a486a8f708e03d24f4aebd1b26090357347bcca34",
+    "weight_source": {
+      "adapted_to_UE": true,
+      "parent": "D:\\EI\\ptz_ue\\pdqn_static_20261101\\speed_revision_20261101\\unified_motion_20261101\\detector_longroad_v2.pt",
+      "sha256": "6aa5225b582861bde9db554a486a8f708e03d24f4aebd1b26090357347bcca34",
+      "supervision": "Whole car/truck boxes in separate supervised RGB detector training only; no control GT.",
+      "dataset": "D:\\EI\\ptz_ue\\pdqn_static_20261101\\speed_revision_20261101\\unified_motion_20261101\\whole_vehicle_detector_v1\\data\\provenance.json",
+      "counts": {
+        "train": 1188,
+        "val": 165
+      },
+      "truck_instances": {
+        "train": 60,
+        "val": 20
+      },
+      "epochs": 5,
+      "utc": 1793553349.145927
+    },
+    "adapted_to_UE": true,
+    "device": "cuda",
+    "python": "C:\\Users\\12879\\.conda\\envs\\50mamba\\python.exe",
+    "torch": "2.8.0.dev20250620+cu128",
+    "cuda_build": "12.8",
+    "target_class_ids": [
+      0,
+      1
+    ],
+    "target_labels": [
+      "car",
+      "truck"
+    ],
+    "threshold": 0.15,
+    "imgsz": 960,
+    "half": false,
+    "inference_inputs": "rendered RGB only; no GT or HSV",
+    "timing_scope": "synchronized CUDA wall time including preprocessing, forward, postprocessing and Detection conversion",
+    "difference_from_paper": "Ultralytics model with UE GPU domain adaptation, not author MMDetection detector",
+    "gpu": "NVIDIA GeForce RTX 5080",
+    "capability": [
+      12,
+      0
+    ],
+    "preprocessing_profile": "single_full_with_multiscale_recovery_v1",
+    "scales": [
+      1.0,
+      0.5
+    ],
+    "selection": "confidence descending cross-scale NMS IoU>.5",
+    "no_gt_or_fov_input": true,
+    "whole_vehicle": true,
+    "truck_box_definition": "Learned full cab+cargo+chassis RGB detection; no GT expansion",
+    "truck_duplicate_rule": "Suppress lower-support truck parts covered>=70% by a >=1.35xarea truck box atconf>=max(.5,.8*partconfidence). Applied to raw fast path and multiscale fusion. Never enlarges or merges coordinates.",
+    "fovea": "RGB/camera predictedROI, coldquadrants, no GT or scenevelocity",
+    "fast_path": "FullRGB each observation; crop recovery when lockedtarget lacks nearby>=.55confidence detection, independent of othervehicleconfidence. RGB/owncamera prediction only.",
+    "target_aware_recovery": true
+  },
+  "reid": {
+    "name": "FastReID_SBS_R50_IBN_VeRi_official_release",
+    "weights": "D:\\EI\\ptz_ue\\paper_reproduction\\hascam\\weights\\veri_sbs_R50-ibn.pth",
+    "weights_sha256": "57fb9c17d88911ea64390bf5427f43511435e7f88f6eed9dbc969d4b611e53cd",
+    "weights_source": "https://github.com/JDAI-CV/fast-reid/releases/download/v0.1.1/veri_sbs_R50-ibn.pth",
+    "pretrained": true,
+    "training_data": "VeRi-776 (FastReID public checkpoint)",
+    "feature_dim_actual": 2048,
+    "feature_dim_paper_prose": 4096,
+    "dimension_conflict": true,
+    "input_size": [
+      256,
+      256
+    ],
+    "input_color": "RGB",
+    "device": "cuda",
+    "unused_training_tensors": [
+      "heads.classifier.weight"
+    ],
+    "compatibility_tensor_remaps": {
+      "heads.bnneck.num_batches_tracked": "heads.bottleneck.0.num_batches_tracked"
+    },
+    "architecture": "ResNet50 + IBN + 5 nonlocal blocks + GeM + BN neck",
+    "inference_load": "strict_all_inference_tensors"
+  },
+  "gpu": "NVIDIA GeForce RTX 5080"
+}

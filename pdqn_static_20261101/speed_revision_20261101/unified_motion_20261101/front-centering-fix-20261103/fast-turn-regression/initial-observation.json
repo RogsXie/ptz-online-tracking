@@ -1,0 +1,169 @@
+{
+  "state": [
+    -0.10748951882123947,
+    -0.09249527752399445,
+    0.36665675044059753,
+    0.8021429181098938,
+    0.0,
+    0.0,
+    0.0,
+    0.0,
+    0.0,
+    0.0,
+    0.771783709526062,
+    0.0,
+    0.0,
+    0.0,
+    0.0
+  ],
+  "visible": true,
+  "x": -0.1074895222981771,
+  "y": -0.09249527542679403,
+  "area": 0.0036665676173719564,
+  "confidence": 0.8021429181098938,
+  "center_error": 0.14180752229754529,
+  "bbox": [
+    0.42493756612141925,
+    0.4107532077365451,
+    0.46757291158040365,
+    0.49675151683666086
+  ],
+  "action": 0,
+  "duration": 0.0,
+  "sim_time": 0.0,
+  "detector_s": 0.5018440000003466,
+  "reid_s": 0.14010130000133358,
+  "image_motion_bearing_rate_deg_s": [
+    0.0,
+    0.0
+  ],
+  "dynamic_extras": [
+    0.0,
+    0.0,
+    0.771783709526062,
+    0.0,
+    0.0,
+    0.0,
+    0.0
+  ],
+  "observation_extension": "RGBbbox ray plus own cameraorientation/FOV/time; never targetGT or scenevelocity",
+  "rgb_association": {
+    "raw_candidates": 1,
+    "association_candidates": 1,
+    "lost": 0,
+    "selection_reason": "initial_highest_confidence",
+    "target_generation": 1,
+    "locked_track_id": 1,
+    "memory_state": "tracking",
+    "missing_for_s": 0.0,
+    "forget_after_s": 3.0,
+    "forgotten_track_id": null,
+    "forgotten_count": 0,
+    "reacquisitions": 0,
+    "reacquired": true,
+    "selected_label": "car",
+    "selected_class_id": 0,
+    "reid_similarity": null,
+    "highest_candidate_confidence": 0.8021429181098938,
+    "candidate_tracks": [
+      {
+        "track_id": 1,
+        "label": "car",
+        "confidence": 0.8021429181098938,
+        "bbox": [
+          0.42493756612141925,
+          0.4107532077365451,
+          0.46757291158040365,
+          0.49675151683666086
+        ]
+      }
+    ],
+    "ownership_rejections": [],
+    "scope": "RGB detections+fresh ReID+own-camera compensated multi-object trajectories; one locked identity, no other box until3scontinuousmissing. No GT/colorfilter/scene IDs.",
+    "observation_source": "detector_full",
+    "visual_bridge_reason": "unseeded",
+    "locked_bearing_velocity_deg_s": [
+      0.0,
+      0.0
+    ],
+    "visual_bridge_quality": null,
+    "active_candidate_debug": [],
+    "merged_candidate_rejections": [],
+    "angular_ownership_rejections": [],
+    "spatial_assignment_rejections": [],
+    "turn_reassociation": {},
+    "tracker_revision": "Joint high/low assignment+angular ownership+lockedReID>=.70+trusted gallery+merged rejection+multi-frame local turn recovery+duplicate fragment protection"
+  },
+  "observed_state": [
+    -0.10748951882123947,
+    -0.09249527752399445,
+    0.36665675044059753,
+    0.8021429181098938,
+    0.0,
+    0.0,
+    0.0,
+    0.0,
+    0.0,
+    0.0,
+    0.771783709526062,
+    0.0,
+    0.0,
+    0.0,
+    0.0
+  ],
+  "latency_compensated_state": [
+    -0.10748951882123947,
+    -0.09249527752399445,
+    0.36665675044059753,
+    0.8021429181098938,
+    0.0,
+    0.0,
+    0.0,
+    0.0,
+    0.0,
+    0.0,
+    0.771783709526062,
+    0.0,
+    0.0,
+    0.0,
+    0.0
+  ],
+  "measured_perception_age_s": 0.0,
+  "requested_area_fraction": 0.02,
+  "policy_area_feature": 0.36665675044059753,
+  "area_mapping": "Actual RGB whole-box area *100; precision profile has no legacy 4%-to-2% remap.",
+  "target_label": "car",
+  "target_class_id": 0,
+  "whole_vehicle_box": true,
+  "area_guard_candidates": [
+    {
+      "area": 0.0036665676173719564,
+      "confidence": 0.8021429181098938,
+      "label": "car",
+      "bbox": [
+        0.42493756612141925,
+        0.4107532077365451,
+        0.46757291158040365,
+        0.49675151683666086
+      ]
+    }
+  ],
+  "precision_observation_profile": "precision15_fresh_rgb_kalman_duration_v2",
+  "precision_state": [
+    -0.10748951882123947,
+    -0.09249527752399445,
+    0.36665675044059753,
+    0.8021429181098938,
+    0.0,
+    0.0,
+    0.0,
+    0.0,
+    0.0,
+    0.0,
+    0.771783709526062,
+    0.0,
+    0.0,
+    0.0,
+    0.0
+  ]
+}

@@ -18,26 +18,53 @@ from integration.transport import ACTION_RATES
 from train import exclusive,snapshot,finish_evaluation
 from calibrate import write
 
+DEFAULT_CENTERING_V4=True
+
 def main():
     p=argparse.ArgumentParser();p.add_argument('--output',type=Path,required=True)
     p.add_argument('--seconds',type=float,default=30.);p.add_argument('--fps',type=float,default=30.)
     p.add_argument('--perception-fps',type=float,default=30.)
-    p.add_argument('--scene',choices=['crossroad','viaduct20','viaduct30'],default='crossroad')
-    p.add_argument('--checkpoint',type=Path,default=core.ROOT/'pdqn_training_v1/last.pt');args=p.parse_args()
+    p.add_argument('--latest-frame',action='store_true',help='Skip unread older source frames; report sequence gaps.')
+    p.add_argument('--control-v3',action='store_true',help='Camera-only zoom lookahead and edge-axis priority.')
+    p.add_argument('--centering-v4',action=argparse.BooleanOptionalAction,default=DEFAULT_CENTERING_V4,
+        help='Balanced RGB-error axis scheduling and tighter acquisition centering.')
+    p.add_argument('--scene',choices=['crossroad','viaduct20','viaduct30','precision-turn'],default='crossroad')
+    p.add_argument('--checkpoint',type=Path,default=core.ROOT/'control-v3-turn-training-20261102/deploy.pt');args=p.parse_args()
     exclusive();configure_precision_project();warnings.filterwarnings('ignore')
     torch.set_num_threads(4);cv2.setNumThreads(1)
     root=args.output.resolve();root.mkdir(exist_ok=False);(root/'frames').mkdir();(root/'frozen-sources').mkdir()
-    for n in ['live_fast_online_results.py','continuous_perception_runtime.py','online_result_recorder.py','encode_60fps_vfr.py','gpu_stream_runtime.py','async_frame_runtime.py','control_latency_runtime.py','fast_rgb_perception.py','stream_arena.py']:
+    for n in ['live_fast_online_results.py','continuous_perception_runtime.py','online_result_recorder.py','encode_60fps_vfr.py','gpu_stream_runtime.py','async_frame_runtime.py','control_latency_runtime.py','fast_rgb_perception.py','stream_arena.py','batched_vehicle_reid.py','robust_locked_tracker.py','verified_visual_bridge.py','stable_locked_control.py','camera_control_v3.py','camera_centering_v4.py']:
         shutil.copy2(REV/n,root/'frozen-sources'/n)
     for n in ['PTZArena.cpp','PTZArena.h','PTZSim.Build.cs']:shutil.copy2(REV/'UE/PTZSim/Source/PTZSim'/n,root/'frozen-sources'/n)
     frontend=scenario.previous.previous.previous.previous.frontend
     detector,extractor=frontend();detector=Detector(detector.base);extractor=PeriodicReID(extractor)
-    agent=demo.create_agent();core.resume(agent,args.checkpoint);frozen=snapshot(agent);agent.epsilon=0.
+    saved_profile=torch.load(args.checkpoint,map_location='cpu',weights_only=False)['metadata']['motion_profile']
+    precision=saved_profile!='unified15_mixed_motion_v1'
+    observation_type=scenario.Observation
+    if precision:
+        import precision_policy_v2 as precision_policy
+        agent=precision_policy.load_for_evaluation(args.checkpoint)
+        core.LOW,core.HIGH=precision_policy.LOW,precision_policy.HIGH
+        observation_type=precision_policy.observation_class(observation_type)
+        shutil.copy2(REV/'precision_policy_v2.py',root/'frozen-sources/precision_policy_v2.py')
+    else:
+        agent=demo.create_agent();core.resume(agent,args.checkpoint)
+    if args.control_v3:
+        if not precision:raise ValueError('Control-v3 requires precision observation contract')
+        agent.precision_control_v3=True
+    if args.centering_v4 and precision and getattr(agent,'precision_control_v3',False):
+        agent.precision_centering_v4=True
+    frozen=snapshot(agent);agent.epsilon=0.
     demo.CASE='known9';item=demo.layout('development',7)
     materialize=scenario.materialize
     if args.scene in {'viaduct20','viaduct30'}:
         from live_viaduct20_scene import materialize
-    scene=materialize(root,item)
+    if args.scene=='precision-turn':
+        from precision_training_scenes import scene as procedural_scene
+        scene,item=procedural_scene(root,4,'development')
+        demo.MOTION=dict(scenario='precision_heldout_fast_turn',requested_speed_m_s=item['speed_m_s'],
+            usage='Scene metadata only, never supplied to control.')
+    else:scene=materialize(root,item)
     config=dict(checkpoint=str(args.checkpoint),checkpoint_sha256=hashlib.sha256(args.checkpoint.read_bytes()).hexdigest(),
         case=item,scene=args.scene,detector=detector.provenance,reid=extractor.metadata(),motion=demo.MOTION,
         architecture='Same frozen P-DQN; continuous single-owner RGBperception independent ofexclusive motorwaiting. Per-command15statehistory retained by cachehandoff.',
@@ -49,18 +76,31 @@ def main():
         action_semantics='Every motorpulse fullycompletes; nextcommand consumes an actual perception result withsource time>=nativeactionend andremaining=0. Perception alsoprocesses midpulse frames.',
         threads=dict(torch=4,opencv=1,blas=1),all_learning_state_frozen=False,no_GT_control=True)
     config.update(startup_scale_target_area=.016,startup_center_tolerance_px=40.,
+        motion_profile=saved_profile,latest_source_frame_only=args.latest_frame,
+        perception_profile='Original FP32 full detection each processed frame, fresh FP32 ReID every candidate; multi-frame local turn reassociation with angular ownership and duplicate-fragment protection.',
+        camera_control_profile='precision_v3_zoom_lookahead_edge_priority' if getattr(agent,'precision_control_v3',False) else 'precision_v2',
         startup_zoom_max_fov_step_deg=6.,startup_scale='First lock of each target generation: roughly centre, then actively zoom toward1.6% area. Finish at>=1.44%;2% upper guard unchanged. Fresh RGB feedback between exclusive pulses.',
         native_stream_metadata='Dynamic same-frame state only; full immutable configuration saved in initial-native-state.json and scene.json.',
-        identity_association='Joint assignment; always-on established-track ownership; locked ReID>=.70; trusted-only template updates; ambiguous merged boxes cannot update locked identity.',
+        identity_association='Joint assignment; angular/established ownership; nominal locked ReID>=.70; unique local turn recovery: 2 strong-gallery frames or 3 high-confidence adjacent-crop confirmations; gallery>=.60 plus adjacent-crop ReID>=.90 for view change, tight geometry and age<=.15s for normal short-term links; age<=.35s for turn confirmation; short-term-only/recovery links cannot update appearance bank; merged/duplicate-fragment protection.',
         motion_gain='Declared engineering bound: per-frame RGB/Kalman bearing speed>.8deg/s permits minimum pan/tilt opticsgain.18;>.35 permits.10. Neural15state/per-command history unchanged. Remaining-image-error duration cap still applies.',
         search_scale='Last visible angular size limits widening to keep predicted box area>=.0015; no predicted boxes are drawn.')
+    config['reid'].update(runtime_refresh_period_s=0.,fresh_batch_every_candidate=True,
+        feature_cache_enabled=False,encoding_dtype='float32',
+        normalized_feature_dtype='float32')
+    if getattr(agent,'precision_centering_v4',False):
+        config.update(camera_control_profile='precision_v4_balanced_centering',startup_center_tolerance_px=12.,
+            zoom_feedback_tolerance_px=20.,centering_governor='Balance axes; prioritize significant axes waiting >=.28s; bounded half-feedback motion lead; acquire large-error duration floor <=100ms; mechanical/area/exclusive-pulse limits retained.')
+    if precision:
+        config.update(architecture='Freshly trained precision15 P-DQN, explicit RGB engineering mask/duration/scale bounds, continuous single-owner perception.',
+            observation_contract=precision_policy.STATE_FIELDS)
     write(root/'configuration.json',config)
     runtime=worker=recorder=None;ok=False
     try:
         with StreamArena(root,headless=True) as arena:
             transport=StreamTransport(arena.port);extractor.transport=transport
             try:
-                env=scenario.Observation(transport,detector,extractor);extractor.association=env.cfff;extractor.detector=detector
+                transport.raw.latest_only=args.latest_frame
+                env=observation_type(transport,detector,extractor);extractor.association=env.cfff;extractor.detector=detector
                 state,initial=env.reset(scene,item['seed']);write(root/'initial-observation.json',dict(state=state.tolist(),**initial))
                 write(root/'initial-native-state.json',transport.diagnostics)
                 from short_motion_features import ShortFeatures

@@ -1,0 +1,2083 @@
+{
+  "selected_checkpoint": "D:\\EI\\ptz_ue\\pdqn_static_20261101\\speed_revision_20261101\\unified_motion_20261101\\control-v3-turn-training-20261102\\deploy.pt",
+  "checkpoint_sha256": "def9007ca61419e2ebaf1f3bb18f09faded2d468d4be0d35558703b84cbefa0a",
+  "source_training_status": {
+    "status": "complete",
+    "completed_segments": 8,
+    "new_real_steps": 768,
+    "total_real_steps": 11008,
+    "new_source_updates": 384,
+    "total_source_updates": 4992,
+    "four_network_proof": {
+      "actor_net": {
+        "changed_tensors": 10,
+        "all_finite": true
+      },
+      "actor_target": {
+        "changed_tensors": 10,
+        "all_finite": true
+      },
+      "param_net": {
+        "changed_tensors": 10,
+        "all_finite": true
+      },
+      "param_net_target": {
+        "changed_tensors": 10,
+        "all_finite": true
+      }
+    },
+    "wall_s": 305.41720380005427,
+    "perception_fixed": true,
+    "qualified": false
+  },
+  "development_camera_checks": {
+    "case-00": {
+      "target": "car_0",
+      "source_frames": 64,
+      "target_out_of_view": 0,
+      "target_center_out_of_view": 0,
+      "undefined_projection": 0,
+      "center_median_p95_px": [
+        1.5833297789074703,
+        1.5833297789074703
+      ],
+      "scoring": "All completed-command native source images, including no-box/occlusion. GT post-run only."
+    },
+    "case-01": {
+      "target": "car_0",
+      "source_frames": 64,
+      "target_out_of_view": 0,
+      "target_center_out_of_view": 0,
+      "undefined_projection": 0,
+      "center_median_p95_px": [
+        3.906129957985267,
+        7.6988014373473
+      ],
+      "scoring": "All completed-command native source images, including no-box/occlusion. GT post-run only."
+    },
+    "case-02": {
+      "target": "car_0",
+      "source_frames": 64,
+      "target_out_of_view": 0,
+      "target_center_out_of_view": 0,
+      "undefined_projection": 0,
+      "center_median_p95_px": [
+        23.351272821881484,
+        226.14000539486867
+      ],
+      "scoring": "All completed-command native source images, including no-box/occlusion. GT post-run only."
+    },
+    "case-03": {
+      "target": "car_0",
+      "source_frames": 64,
+      "target_out_of_view": 0,
+      "target_center_out_of_view": 0,
+      "undefined_projection": 0,
+      "center_median_p95_px": [
+        18.026477035044497,
+        57.13306573754101
+      ],
+      "scoring": "All completed-command native source images, including no-box/occlusion. GT post-run only."
+    },
+    "case-06": {
+      "target": "car_0",
+      "source_frames": 64,
+      "target_out_of_view": 0,
+      "target_center_out_of_view": 0,
+      "undefined_projection": 0,
+      "center_median_p95_px": [
+        42.46445148311737,
+        91.63401528255777
+      ],
+      "scoring": "All completed-command native source images, including no-box/occlusion. GT post-run only."
+    },
+    "case-07": {
+      "target": "car_0",
+      "source_frames": 64,
+      "target_out_of_view": 0,
+      "target_center_out_of_view": 0,
+      "undefined_projection": 0,
+      "center_median_p95_px": [
+        46.0273722624651,
+        59.423727739154664
+      ],
+      "scoring": "All completed-command native source images, including no-box/occlusion. GT post-run only."
+    },
+    "case-04": {
+      "target": "car_0",
+      "source_frames": 64,
+      "target_out_of_view": 0,
+      "target_center_out_of_view": 0,
+      "undefined_projection": 0,
+      "center_median_p95_px": [
+        35.91916852499158,
+        143.2627723784916
+      ],
+      "scoring": "All completed-command native source images, including no-box/occlusion. GT post-run only."
+    },
+    "case-05": {
+      "target": "car_0",
+      "source_frames": 64,
+      "target_out_of_view": 0,
+      "target_center_out_of_view": 0,
+      "undefined_projection": 0,
+      "center_median_p95_px": [
+        17.5297696200318,
+        147.2454340245826
+      ],
+      "scoring": "All completed-command native source images, including no-box/occlusion. GT post-run only."
+    }
+  },
+  "unseen_check": {
+    "target": "car_0",
+    "source_frames": 64,
+    "target_out_of_view": 0,
+    "target_center_out_of_view": 0,
+    "undefined_projection": 0,
+    "center_median_p95_px": [
+      34.68058026559261,
+      169.0565043307762
+    ],
+    "scoring": "All completed-command native source images, including no-box/occlusion. GT post-run only."
+  },
+  "online_runs": {
+    "online-fast-turn": {
+      "camera": {
+        "folder": "unified_motion_20261101\\control-v3-validation-20261102\\online-fast-turn",
+        "target": "car_0",
+        "evaluation_only_GT": true,
+        "physical_camera_target_out_of_view_frames": 0,
+        "undefined_projected_target_frames": 0,
+        "camera_segments": {
+          "motion_2_to_end": {
+            "source_frames": 300,
+            "pixel_median_p95": [
+              58.74695823275587,
+              397.76047488110845
+            ],
+            "angular_deg_median_p95": [
+              1.8554451424755216,
+              28.28592634212383
+            ],
+            "image_x_y_std_px": [
+              138.69241368394125,
+              64.58759923833412
+            ],
+            "median_fov_deg": 48.0000114440918,
+            "median_geometric_area_percent": 0.07139504736402075
+          },
+          "turn_9_to_12": {
+            "source_frames": 90,
+            "pixel_median_p95": [
+              18.33350518264585,
+              26.85023202143705
+            ],
+            "angular_deg_median_p95": [
+              0.9119301568099276,
+              1.337060319293895
+            ],
+            "image_x_y_std_px": [
+              4.3026989163702964,
+              6.497247892103347
+            ],
+            "median_fov_deg": 48.0000114440918,
+            "median_geometric_area_percent": 0.06403832560681175
+          },
+          "fast_12_to_end": {
+            "source_frames": 0,
+            "pixel_median_p95": null,
+            "angular_deg_median_p95": null
+          },
+          "parallel_24_to_end": {
+            "source_frames": 0,
+            "pixel_median_p95": null,
+            "angular_deg_median_p95": null
+          }
+        },
+        "no_box_outputs": 75,
+        "no_box_target_still_in_view": 75,
+        "no_box_physically_occluded": 0,
+        "no_box_out_of_view": 0,
+        "no_box_events": [
+          {
+            "sim_time": 3.9819068948854692,
+            "target_in_view": true,
+            "physically_occluded": false,
+            "occluder": ""
+          },
+          {
+            "sim_time": 4.015143797092605,
+            "target_in_view": true,
+            "physically_occluded": false,
+            "occluder": ""
+          },
+          {
+            "sim_time": 4.048650395416189,
+            "target_in_view": true,
+            "physically_occluded": false,
+            "occluder": ""
+          },
+          {
+            "sim_time": 4.0818835946847685,
+            "target_in_view": true,
+            "physically_occluded": false,
+            "occluder": ""
+          },
+          {
+            "sim_time": 4.148540795140434,
+            "target_in_view": true,
+            "physically_occluded": false,
+            "occluder": ""
+          },
+          {
+            "sim_time": 4.181983295129612,
+            "target_in_view": true,
+            "physically_occluded": false,
+            "occluder": ""
+          },
+          {
+            "sim_time": 4.2154926948715,
+            "target_in_view": true,
+            "physically_occluded": false,
+            "occluder": ""
+          },
+          {
+            "sim_time": 4.281933793972712,
+            "target_in_view": true,
+            "physically_occluded": false,
+            "occluder": ""
+          },
+          {
+            "sim_time": 4.314788693736773,
+            "target_in_view": true,
+            "physically_occluded": false,
+            "occluder": ""
+          },
+          {
+            "sim_time": 4.349310493271332,
+            "target_in_view": true,
+            "physically_occluded": false,
+            "occluder": ""
+          },
+          {
+            "sim_time": 4.4153750884579495,
+            "target_in_view": true,
+            "physically_occluded": false,
+            "occluder": ""
+          },
+          {
+            "sim_time": 4.448707491217647,
+            "target_in_view": true,
+            "physically_occluded": false,
+            "occluder": ""
+          },
+          {
+            "sim_time": 4.482241191028152,
+            "target_in_view": true,
+            "physically_occluded": false,
+            "occluder": ""
+          },
+          {
+            "sim_time": 4.548680490814149,
+            "target_in_view": true,
+            "physically_occluded": false,
+            "occluder": ""
+          },
+          {
+            "sim_time": 4.582016791217029,
+            "target_in_view": true,
+            "physically_occluded": false,
+            "occluder": ""
+          },
+          {
+            "sim_time": 4.615965790115297,
+            "target_in_view": true,
+            "physically_occluded": false,
+            "occluder": ""
+          },
+          {
+            "sim_time": 4.64921438973397,
+            "target_in_view": true,
+            "physically_occluded": false,
+            "occluder": ""
+          },
+          {
+            "sim_time": 4.681895590387285,
+            "target_in_view": true,
+            "physically_occluded": false,
+            "occluder": ""
+          },
+          {
+            "sim_time": 4.715911989973392,
+            "target_in_view": true,
+            "physically_occluded": false,
+            "occluder": ""
+          },
+          {
+            "sim_time": 4.748867189453449,
+            "target_in_view": true,
+            "physically_occluded": false,
+            "occluder": ""
+          },
+          {
+            "sim_time": 4.78223158774199,
+            "target_in_view": true,
+            "physically_occluded": false,
+            "occluder": ""
+          },
+          {
+            "sim_time": 4.848472985206172,
+            "target_in_view": true,
+            "physically_occluded": false,
+            "occluder": ""
+          },
+          {
+            "sim_time": 4.882068986771628,
+            "target_in_view": true,
+            "physically_occluded": false,
+            "occluder": ""
+          },
+          {
+            "sim_time": 4.915474884794094,
+            "target_in_view": true,
+            "physically_occluded": false,
+            "occluder": ""
+          },
+          {
+            "sim_time": 4.9490113840438426,
+            "target_in_view": true,
+            "physically_occluded": false,
+            "occluder": ""
+          },
+          {
+            "sim_time": 4.98205358395353,
+            "target_in_view": true,
+            "physically_occluded": false,
+            "occluder": ""
+          },
+          {
+            "sim_time": 5.016143484506756,
+            "target_in_view": true,
+            "physically_occluded": false,
+            "occluder": ""
+          },
+          {
+            "sim_time": 5.081964986864477,
+            "target_in_view": true,
+            "physically_occluded": false,
+            "occluder": ""
+          },
+          {
+            "sim_time": 5.115729583892971,
+            "target_in_view": true,
+            "physically_occluded": false,
+            "occluder": ""
+          },
+          {
+            "sim_time": 5.148801984731108,
+            "target_in_view": true,
+            "physically_occluded": false,
+            "occluder": ""
+          },
+          {
+            "sim_time": 5.181902485433966,
+            "target_in_view": true,
+            "physically_occluded": false,
+            "occluder": ""
+          },
+          {
+            "sim_time": 5.21559818595415,
+            "target_in_view": true,
+            "physically_occluded": false,
+            "occluder": ""
+          },
+          {
+            "sim_time": 5.282539583102334,
+            "target_in_view": true,
+            "physically_occluded": false,
+            "occluder": ""
+          },
+          {
+            "sim_time": 5.315468385175336,
+            "target_in_view": true,
+            "physically_occluded": false,
+            "occluder": ""
+          },
+          {
+            "sim_time": 5.34917818318354,
+            "target_in_view": true,
+            "physically_occluded": false,
+            "occluder": ""
+          },
+          {
+            "sim_time": 5.381989184126724,
+            "target_in_view": true,
+            "physically_occluded": false,
+            "occluder": ""
+          },
+          {
+            "sim_time": 5.415195483074058,
+            "target_in_view": true,
+            "physically_occluded": false,
+            "occluder": ""
+          },
+          {
+            "sim_time": 5.481753782543819,
+            "target_in_view": true,
+            "physically_occluded": false,
+            "occluder": ""
+          },
+          {
+            "sim_time": 5.515506182971876,
+            "target_in_view": true,
+            "physically_occluded": false,
+            "occluder": ""
+          },
+          {
+            "sim_time": 5.548941079643555,
+            "target_in_view": true,
+            "physically_occluded": false,
+            "occluder": ""
+          },
+          {
+            "sim_time": 5.582337081548758,
+            "target_in_view": true,
+            "physically_occluded": false,
+            "occluder": ""
+          },
+          {
+            "sim_time": 5.6152576805325225,
+            "target_in_view": true,
+            "physically_occluded": false,
+            "occluder": ""
+          },
+          {
+            "sim_time": 5.649083782103844,
+            "target_in_view": true,
+            "physically_occluded": false,
+            "occluder": ""
+          },
+          {
+            "sim_time": 5.715380379930139,
+            "target_in_view": true,
+            "physically_occluded": false,
+            "occluder": ""
+          },
+          {
+            "sim_time": 5.749071782454848,
+            "target_in_view": true,
+            "physically_occluded": false,
+            "occluder": ""
+          },
+          {
+            "sim_time": 5.782290381321218,
+            "target_in_view": true,
+            "physically_occluded": false,
+            "occluder": ""
+          },
+          {
+            "sim_time": 5.815803480276372,
+            "target_in_view": true,
+            "physically_occluded": false,
+            "occluder": ""
+          },
+          {
+            "sim_time": 5.848910880216863,
+            "target_in_view": true,
+            "physically_occluded": false,
+            "occluder": ""
+          },
+          {
+            "sim_time": 5.881948281952646,
+            "target_in_view": true,
+            "physically_occluded": false,
+            "occluder": ""
+          },
+          {
+            "sim_time": 5.949016578379087,
+            "target_in_view": true,
+            "physically_occluded": false,
+            "occluder": ""
+          },
+          {
+            "sim_time": 5.983096681418829,
+            "target_in_view": true,
+            "physically_occluded": false,
+            "occluder": ""
+          },
+          {
+            "sim_time": 6.01552658417495,
+            "target_in_view": true,
+            "physically_occluded": false,
+            "occluder": ""
+          },
+          {
+            "sim_time": 6.049151283397805,
+            "target_in_view": true,
+            "physically_occluded": false,
+            "occluder": ""
+          },
+          {
+            "sim_time": 6.116425384476315,
+            "target_in_view": true,
+            "physically_occluded": false,
+            "occluder": ""
+          },
+          {
+            "sim_time": 6.149011383356992,
+            "target_in_view": true,
+            "physically_occluded": false,
+            "occluder": ""
+          },
+          {
+            "sim_time": 6.183204582484905,
+            "target_in_view": true,
+            "physically_occluded": false,
+            "occluder": ""
+          },
+          {
+            "sim_time": 6.248694183828775,
+            "target_in_view": true,
+            "physically_occluded": false,
+            "occluder": ""
+          },
+          {
+            "sim_time": 6.2824641825282015,
+            "target_in_view": true,
+            "physically_occluded": false,
+            "occluder": ""
+          },
+          {
+            "sim_time": 6.315796183946077,
+            "target_in_view": true,
+            "physically_occluded": false,
+            "occluder": ""
+          },
+          {
+            "sim_time": 6.348808484675828,
+            "target_in_view": true,
+            "physically_occluded": false,
+            "occluder": ""
+          },
+          {
+            "sim_time": 6.382647483202163,
+            "target_in_view": true,
+            "physically_occluded": false,
+            "occluder": ""
+          },
+          {
+            "sim_time": 6.415516583772842,
+            "target_in_view": true,
+            "physically_occluded": false,
+            "occluder": ""
+          },
+          {
+            "sim_time": 6.482187783869449,
+            "target_in_view": true,
+            "physically_occluded": false,
+            "occluder": ""
+          },
+          {
+            "sim_time": 6.5162608833634295,
+            "target_in_view": true,
+            "physically_occluded": false,
+            "occluder": ""
+          },
+          {
+            "sim_time": 6.548920983972494,
+            "target_in_view": true,
+            "physically_occluded": false,
+            "occluder": ""
+          },
+          {
+            "sim_time": 6.582326183619443,
+            "target_in_view": true,
+            "physically_occluded": false,
+            "occluder": ""
+          },
+          {
+            "sim_time": 6.615283484163228,
+            "target_in_view": true,
+            "physically_occluded": false,
+            "occluder": ""
+          },
+          {
+            "sim_time": 6.6825074828229845,
+            "target_in_view": true,
+            "physically_occluded": false,
+            "occluder": ""
+          },
+          {
+            "sim_time": 6.715036280860659,
+            "target_in_view": true,
+            "physically_occluded": false,
+            "occluder": ""
+          },
+          {
+            "sim_time": 6.7493925806484185,
+            "target_in_view": true,
+            "physically_occluded": false,
+            "occluder": ""
+          },
+          {
+            "sim_time": 6.782124381919857,
+            "target_in_view": true,
+            "physically_occluded": false,
+            "occluder": ""
+          },
+          {
+            "sim_time": 6.849286482145544,
+            "target_in_view": true,
+            "physically_occluded": false,
+            "occluder": ""
+          },
+          {
+            "sim_time": 6.883330181648489,
+            "target_in_view": true,
+            "physically_occluded": false,
+            "occluder": ""
+          },
+          {
+            "sim_time": 6.915587980707642,
+            "target_in_view": true,
+            "physically_occluded": false,
+            "occluder": ""
+          },
+          {
+            "sim_time": 6.948981083347462,
+            "target_in_view": true,
+            "physically_occluded": false,
+            "occluder": ""
+          }
+        ],
+        "rapid_opposite_axis_commands_within_point35_s": 1,
+        "normal_tracking_raw_action_agreement": [
+          0,
+          0
+        ],
+        "executed_action_parameter_mean_absolute_correction_ms": null,
+        "qualification": "Native geometric target center scored over ALL source frames after2s, including occlusion/no-box. GT is post-run scoring only, never policy or reward. One focused scene, not general qualification."
+      },
+      "online": {
+        "folder": "unified_motion_20261101\\control-v3-validation-20261102\\online-fast-turn",
+        "duration_s": 12.016192900016904,
+        "online_updates": 280,
+        "actual_online_output_fps": 23.301889569333238,
+        "source_to_draw_median_ms": 85.13795048929751,
+        "source_to_published_median_ms": 90.05015029106289,
+        "control_decisions": 88,
+        "control_decisions_per_s": 7.323451007504731,
+        "visible_identity_matches": {
+          "car_0": 205
+        },
+        "unmatched_visible": [],
+        "missing_outputs": 75,
+        "turn_9_to_12s_missing_outputs": 0,
+        "maximum_target_generation": 2,
+        "moving_center_distance_median_p95_px": [
+          23.800281263516485,
+          335.4707183071004
+        ],
+        "actual_result_handoff_and_completed_action_gates_verified": true,
+        "strictly_increasing_unique_source_frames": true,
+        "saved_jpeg_hashes_verified": true,
+        "all_pixels_painted_before_live_stopped": true,
+        "all_learning_state_frozen": true,
+        "checkpoint_sha256": "ce5959fd4a0134135825b639eea7a81df817bdd1c71af5332b0fd9341e440a0c",
+        "no_postrun_inference_or_repainting": true,
+        "GT_usage": "Post-run diagnostic scoring only"
+      }
+    },
+    "online-fast-turn-v2-baseline": {
+      "camera": {
+        "folder": "unified_motion_20261101\\control-v3-validation-20261102\\online-fast-turn-v2-baseline",
+        "target": "car_0",
+        "evaluation_only_GT": true,
+        "physical_camera_target_out_of_view_frames": 168,
+        "undefined_projected_target_frames": 0,
+        "camera_segments": {
+          "motion_2_to_end": {
+            "source_frames": 300,
+            "pixel_median_p95": [
+              619.2116696205419,
+              1327.4606258290858
+            ],
+            "angular_deg_median_p95": [
+              24.792850908481594,
+              44.71931702950368
+            ],
+            "image_x_y_std_px": [
+              485.74299978897545,
+              58.1592729742374
+            ],
+            "median_fov_deg": 39.40156173706055,
+            "median_geometric_area_percent": 0.22881105451484415
+          },
+          "turn_9_to_12": {
+            "source_frames": 90,
+            "pixel_median_p95": [
+              1189.2592535681129,
+              1374.2644353503179
+            ],
+            "angular_deg_median_p95": [
+              41.57796831357189,
+              45.711880337654684
+            ],
+            "image_x_y_std_px": [
+              124.12509633343596,
+              17.941376385947763
+            ],
+            "median_fov_deg": 39.40156173706055,
+            "median_geometric_area_percent": 0.2270028057770373
+          },
+          "fast_12_to_end": {
+            "source_frames": 0,
+            "pixel_median_p95": null,
+            "angular_deg_median_p95": null
+          },
+          "parallel_24_to_end": {
+            "source_frames": 0,
+            "pixel_median_p95": null,
+            "angular_deg_median_p95": null
+          }
+        },
+        "no_box_outputs": 177,
+        "no_box_target_still_in_view": 57,
+        "no_box_physically_occluded": 0,
+        "no_box_out_of_view": 120,
+        "no_box_events": [
+          {
+            "sim_time": 4.046966598019935,
+            "target_in_view": true,
+            "physically_occluded": false,
+            "occluder": ""
+          },
+          {
+            "sim_time": 4.080825996235944,
+            "target_in_view": true,
+            "physically_occluded": false,
+            "occluder": ""
+          },
+          {
+            "sim_time": 4.1472930978634395,
+            "target_in_view": true,
+            "physically_occluded": false,
+            "occluder": ""
+          },
+          {
+            "sim_time": 4.1803528960444964,
+            "target_in_view": true,
+            "physically_occluded": false,
+            "occluder": ""
+          },
+          {
+            "sim_time": 4.247069194505457,
+            "target_in_view": true,
+            "physically_occluded": false,
+            "occluder": ""
+          },
+          {
+            "sim_time": 4.31348359544063,
+            "target_in_view": true,
+            "physically_occluded": false,
+            "occluder": ""
+          },
+          {
+            "sim_time": 4.346994995663408,
+            "target_in_view": true,
+            "physically_occluded": false,
+            "occluder": ""
+          },
+          {
+            "sim_time": 4.413710996101145,
+            "target_in_view": true,
+            "physically_occluded": false,
+            "occluder": ""
+          },
+          {
+            "sim_time": 4.447295397112612,
+            "target_in_view": true,
+            "physically_occluded": false,
+            "occluder": ""
+          },
+          {
+            "sim_time": 4.4803797971108,
+            "target_in_view": true,
+            "physically_occluded": false,
+            "occluder": ""
+          },
+          {
+            "sim_time": 4.513775996456388,
+            "target_in_view": true,
+            "physically_occluded": false,
+            "occluder": ""
+          },
+          {
+            "sim_time": 4.547073397377972,
+            "target_in_view": true,
+            "physically_occluded": false,
+            "occluder": ""
+          },
+          {
+            "sim_time": 4.613618895004038,
+            "target_in_view": true,
+            "physically_occluded": false,
+            "occluder": ""
+          },
+          {
+            "sim_time": 4.680706895480398,
+            "target_in_view": true,
+            "physically_occluded": false,
+            "occluder": ""
+          },
+          {
+            "sim_time": 4.714001398126129,
+            "target_in_view": true,
+            "physically_occluded": false,
+            "occluder": ""
+          },
+          {
+            "sim_time": 4.74685979593778,
+            "target_in_view": true,
+            "physically_occluded": false,
+            "occluder": ""
+          },
+          {
+            "sim_time": 4.780721097777132,
+            "target_in_view": true,
+            "physically_occluded": false,
+            "occluder": ""
+          },
+          {
+            "sim_time": 4.813885397801641,
+            "target_in_view": true,
+            "physically_occluded": false,
+            "occluder": ""
+          },
+          {
+            "sim_time": 4.847211997548584,
+            "target_in_view": true,
+            "physically_occluded": false,
+            "occluder": ""
+          },
+          {
+            "sim_time": 4.880589394364506,
+            "target_in_view": true,
+            "physically_occluded": false,
+            "occluder": ""
+          },
+          {
+            "sim_time": 4.947671594563872,
+            "target_in_view": true,
+            "physically_occluded": false,
+            "occluder": ""
+          },
+          {
+            "sim_time": 4.980472197232302,
+            "target_in_view": true,
+            "physically_occluded": false,
+            "occluder": ""
+          },
+          {
+            "sim_time": 5.013919896737207,
+            "target_in_view": true,
+            "physically_occluded": false,
+            "occluder": ""
+          },
+          {
+            "sim_time": 5.047120995179284,
+            "target_in_view": true,
+            "physically_occluded": false,
+            "occluder": ""
+          },
+          {
+            "sim_time": 5.1138385945232585,
+            "target_in_view": true,
+            "physically_occluded": false,
+            "occluder": ""
+          },
+          {
+            "sim_time": 5.146894995006733,
+            "target_in_view": true,
+            "physically_occluded": false,
+            "occluder": ""
+          },
+          {
+            "sim_time": 5.213809193810448,
+            "target_in_view": true,
+            "physically_occluded": false,
+            "occluder": ""
+          },
+          {
+            "sim_time": 5.247375191887841,
+            "target_in_view": true,
+            "physically_occluded": false,
+            "occluder": ""
+          },
+          {
+            "sim_time": 5.280242092558183,
+            "target_in_view": true,
+            "physically_occluded": false,
+            "occluder": ""
+          },
+          {
+            "sim_time": 5.313881992944516,
+            "target_in_view": true,
+            "physically_occluded": false,
+            "occluder": ""
+          },
+          {
+            "sim_time": 5.347067892202176,
+            "target_in_view": true,
+            "physically_occluded": false,
+            "occluder": ""
+          },
+          {
+            "sim_time": 5.3802486915374175,
+            "target_in_view": true,
+            "physically_occluded": false,
+            "occluder": ""
+          },
+          {
+            "sim_time": 5.414003891404718,
+            "target_in_view": true,
+            "physically_occluded": false,
+            "occluder": ""
+          },
+          {
+            "sim_time": 5.4806085913442075,
+            "target_in_view": true,
+            "physically_occluded": false,
+            "occluder": ""
+          },
+          {
+            "sim_time": 5.5137847936712205,
+            "target_in_view": true,
+            "physically_occluded": false,
+            "occluder": ""
+          },
+          {
+            "sim_time": 5.546994292642921,
+            "target_in_view": true,
+            "physically_occluded": false,
+            "occluder": ""
+          },
+          {
+            "sim_time": 5.580453589966055,
+            "target_in_view": true,
+            "physically_occluded": false,
+            "occluder": ""
+          },
+          {
+            "sim_time": 5.613657492562197,
+            "target_in_view": true,
+            "physically_occluded": false,
+            "occluder": ""
+          },
+          {
+            "sim_time": 5.647179792984389,
+            "target_in_view": true,
+            "physically_occluded": false,
+            "occluder": ""
+          },
+          {
+            "sim_time": 5.713676394196227,
+            "target_in_view": true,
+            "physically_occluded": false,
+            "occluder": ""
+          },
+          {
+            "sim_time": 5.747086094750557,
+            "target_in_view": true,
+            "physically_occluded": false,
+            "occluder": ""
+          },
+          {
+            "sim_time": 5.7805484952405095,
+            "target_in_view": true,
+            "physically_occluded": false,
+            "occluder": ""
+          },
+          {
+            "sim_time": 5.813961592502892,
+            "target_in_view": true,
+            "physically_occluded": false,
+            "occluder": ""
+          },
+          {
+            "sim_time": 5.880853292532265,
+            "target_in_view": true,
+            "physically_occluded": false,
+            "occluder": ""
+          },
+          {
+            "sim_time": 5.914409196819179,
+            "target_in_view": true,
+            "physically_occluded": false,
+            "occluder": ""
+          },
+          {
+            "sim_time": 5.947309295530431,
+            "target_in_view": true,
+            "physically_occluded": false,
+            "occluder": ""
+          },
+          {
+            "sim_time": 5.9812558953417465,
+            "target_in_view": true,
+            "physically_occluded": false,
+            "occluder": ""
+          },
+          {
+            "sim_time": 6.047555494762491,
+            "target_in_view": true,
+            "physically_occluded": false,
+            "occluder": ""
+          },
+          {
+            "sim_time": 6.080849893100094,
+            "target_in_view": true,
+            "physically_occluded": false,
+            "occluder": ""
+          },
+          {
+            "sim_time": 6.114338494546246,
+            "target_in_view": true,
+            "physically_occluded": false,
+            "occluder": ""
+          },
+          {
+            "sim_time": 6.147189396084286,
+            "target_in_view": true,
+            "physically_occluded": false,
+            "occluder": ""
+          },
+          {
+            "sim_time": 6.214061693812255,
+            "target_in_view": true,
+            "physically_occluded": false,
+            "occluder": ""
+          },
+          {
+            "sim_time": 6.247363094706088,
+            "target_in_view": true,
+            "physically_occluded": false,
+            "occluder": ""
+          },
+          {
+            "sim_time": 6.281410794181284,
+            "target_in_view": true,
+            "physically_occluded": false,
+            "occluder": ""
+          },
+          {
+            "sim_time": 6.314196995866951,
+            "target_in_view": true,
+            "physically_occluded": false,
+            "occluder": ""
+          },
+          {
+            "sim_time": 6.3472408935194835,
+            "target_in_view": true,
+            "physically_occluded": false,
+            "occluder": ""
+          },
+          {
+            "sim_time": 6.380831191665493,
+            "target_in_view": true,
+            "physically_occluded": false,
+            "occluder": ""
+          },
+          {
+            "sim_time": 6.414679194218479,
+            "target_in_view": false,
+            "physically_occluded": false,
+            "occluder": ""
+          },
+          {
+            "sim_time": 6.480699694133364,
+            "target_in_view": false,
+            "physically_occluded": false,
+            "occluder": ""
+          },
+          {
+            "sim_time": 6.514351294434164,
+            "target_in_view": false,
+            "physically_occluded": false,
+            "occluder": ""
+          },
+          {
+            "sim_time": 6.547497889900114,
+            "target_in_view": false,
+            "physically_occluded": false,
+            "occluder": ""
+          },
+          {
+            "sim_time": 6.614729386579711,
+            "target_in_view": false,
+            "physically_occluded": false,
+            "occluder": ""
+          },
+          {
+            "sim_time": 6.64825029077474,
+            "target_in_view": false,
+            "physically_occluded": false,
+            "occluder": ""
+          },
+          {
+            "sim_time": 6.681242592167109,
+            "target_in_view": false,
+            "physically_occluded": false,
+            "occluder": ""
+          },
+          {
+            "sim_time": 6.748024289845489,
+            "target_in_view": false,
+            "physically_occluded": false,
+            "occluder": ""
+          },
+          {
+            "sim_time": 6.781524792604614,
+            "target_in_view": false,
+            "physically_occluded": false,
+            "occluder": ""
+          },
+          {
+            "sim_time": 6.847738692711573,
+            "target_in_view": false,
+            "physically_occluded": false,
+            "occluder": ""
+          },
+          {
+            "sim_time": 6.881347691814881,
+            "target_in_view": false,
+            "physically_occluded": false,
+            "occluder": ""
+          },
+          {
+            "sim_time": 6.914298591320403,
+            "target_in_view": false,
+            "physically_occluded": false,
+            "occluder": ""
+          },
+          {
+            "sim_time": 6.981507497606799,
+            "target_in_view": false,
+            "physically_occluded": false,
+            "occluder": ""
+          },
+          {
+            "sim_time": 7.014640795765445,
+            "target_in_view": false,
+            "physically_occluded": false,
+            "occluder": ""
+          },
+          {
+            "sim_time": 7.081463000271469,
+            "target_in_view": false,
+            "physically_occluded": false,
+            "occluder": ""
+          },
+          {
+            "sim_time": 7.115053597197402,
+            "target_in_view": false,
+            "physically_occluded": false,
+            "occluder": ""
+          },
+          {
+            "sim_time": 7.148017496976536,
+            "target_in_view": false,
+            "physically_occluded": false,
+            "occluder": ""
+          },
+          {
+            "sim_time": 7.215129297343083,
+            "target_in_view": false,
+            "physically_occluded": false,
+            "occluder": ""
+          },
+          {
+            "sim_time": 7.248302894469816,
+            "target_in_view": false,
+            "physically_occluded": false,
+            "occluder": ""
+          },
+          {
+            "sim_time": 7.314902698388323,
+            "target_in_view": false,
+            "physically_occluded": false,
+            "occluder": ""
+          },
+          {
+            "sim_time": 7.348438497807365,
+            "target_in_view": false,
+            "physically_occluded": false,
+            "occluder": ""
+          },
+          {
+            "sim_time": 7.382015799172223,
+            "target_in_view": false,
+            "physically_occluded": false,
+            "occluder": ""
+          },
+          {
+            "sim_time": 7.4484142973669805,
+            "target_in_view": false,
+            "physically_occluded": false,
+            "occluder": ""
+          },
+          {
+            "sim_time": 7.481927892542444,
+            "target_in_view": false,
+            "physically_occluded": false,
+            "occluder": ""
+          },
+          {
+            "sim_time": 7.548712892807089,
+            "target_in_view": false,
+            "physically_occluded": false,
+            "occluder": ""
+          },
+          {
+            "sim_time": 7.581977893656585,
+            "target_in_view": false,
+            "physically_occluded": false,
+            "occluder": ""
+          },
+          {
+            "sim_time": 7.615646995604038,
+            "target_in_view": false,
+            "physically_occluded": false,
+            "occluder": ""
+          },
+          {
+            "sim_time": 7.682289795600809,
+            "target_in_view": false,
+            "physically_occluded": false,
+            "occluder": ""
+          },
+          {
+            "sim_time": 7.715811796020716,
+            "target_in_view": false,
+            "physically_occluded": false,
+            "occluder": ""
+          },
+          {
+            "sim_time": 7.782397797738668,
+            "target_in_view": false,
+            "physically_occluded": false,
+            "occluder": ""
+          },
+          {
+            "sim_time": 7.815511096559931,
+            "target_in_view": false,
+            "physically_occluded": false,
+            "occluder": ""
+          },
+          {
+            "sim_time": 7.8493154983152635,
+            "target_in_view": false,
+            "physically_occluded": false,
+            "occluder": ""
+          },
+          {
+            "sim_time": 7.915795895503834,
+            "target_in_view": false,
+            "physically_occluded": false,
+            "occluder": ""
+          },
+          {
+            "sim_time": 7.94902519241441,
+            "target_in_view": false,
+            "physically_occluded": false,
+            "occluder": ""
+          },
+          {
+            "sim_time": 8.015810688899364,
+            "target_in_view": false,
+            "physically_occluded": false,
+            "occluder": ""
+          },
+          {
+            "sim_time": 8.049530795542523,
+            "target_in_view": false,
+            "physically_occluded": false,
+            "occluder": ""
+          },
+          {
+            "sim_time": 8.08248449448729,
+            "target_in_view": false,
+            "physically_occluded": false,
+            "occluder": ""
+          },
+          {
+            "sim_time": 8.1491227990482,
+            "target_in_view": false,
+            "physically_occluded": false,
+            "occluder": ""
+          },
+          {
+            "sim_time": 8.182448797801044,
+            "target_in_view": false,
+            "physically_occluded": false,
+            "occluder": ""
+          },
+          {
+            "sim_time": 8.21602069947403,
+            "target_in_view": false,
+            "physically_occluded": false,
+            "occluder": ""
+          },
+          {
+            "sim_time": 8.282932900299784,
+            "target_in_view": false,
+            "physically_occluded": false,
+            "occluder": ""
+          },
+          {
+            "sim_time": 8.316003697284032,
+            "target_in_view": false,
+            "physically_occluded": false,
+            "occluder": ""
+          },
+          {
+            "sim_time": 8.382884496124461,
+            "target_in_view": false,
+            "physically_occluded": false,
+            "occluder": ""
+          },
+          {
+            "sim_time": 8.416677394940052,
+            "target_in_view": false,
+            "physically_occluded": false,
+            "occluder": ""
+          },
+          {
+            "sim_time": 8.449493793596048,
+            "target_in_view": false,
+            "physically_occluded": false,
+            "occluder": ""
+          },
+          {
+            "sim_time": 8.516593397362158,
+            "target_in_view": false,
+            "physically_occluded": false,
+            "occluder": ""
+          },
+          {
+            "sim_time": 8.55012059258297,
+            "target_in_view": false,
+            "physically_occluded": false,
+            "occluder": ""
+          },
+          {
+            "sim_time": 8.61685048713116,
+            "target_in_view": false,
+            "physically_occluded": false,
+            "occluder": ""
+          },
+          {
+            "sim_time": 8.65038538799854,
+            "target_in_view": false,
+            "physically_occluded": false,
+            "occluder": ""
+          },
+          {
+            "sim_time": 8.683549787616357,
+            "target_in_view": false,
+            "physically_occluded": false,
+            "occluder": ""
+          },
+          {
+            "sim_time": 8.749820293509401,
+            "target_in_view": false,
+            "physically_occluded": false,
+            "occluder": ""
+          },
+          {
+            "sim_time": 8.783150297182146,
+            "target_in_view": false,
+            "physically_occluded": false,
+            "occluder": ""
+          },
+          {
+            "sim_time": 8.849883895891253,
+            "target_in_view": false,
+            "physically_occluded": false,
+            "occluder": ""
+          },
+          {
+            "sim_time": 8.883564596413635,
+            "target_in_view": false,
+            "physically_occluded": false,
+            "occluder": ""
+          },
+          {
+            "sim_time": 8.91657870193012,
+            "target_in_view": false,
+            "physically_occluded": false,
+            "occluder": ""
+          },
+          {
+            "sim_time": 8.983902593026869,
+            "target_in_view": false,
+            "physically_occluded": false,
+            "occluder": ""
+          },
+          {
+            "sim_time": 9.017362495593261,
+            "target_in_view": false,
+            "physically_occluded": false,
+            "occluder": ""
+          },
+          {
+            "sim_time": 9.083652994129807,
+            "target_in_view": false,
+            "physically_occluded": false,
+            "occluder": ""
+          },
+          {
+            "sim_time": 9.116820388648193,
+            "target_in_view": false,
+            "physically_occluded": false,
+            "occluder": ""
+          },
+          {
+            "sim_time": 9.150349691626616,
+            "target_in_view": false,
+            "physically_occluded": false,
+            "occluder": ""
+          },
+          {
+            "sim_time": 9.21736459521344,
+            "target_in_view": false,
+            "physically_occluded": false,
+            "occluder": ""
+          },
+          {
+            "sim_time": 9.250470691069495,
+            "target_in_view": false,
+            "physically_occluded": false,
+            "occluder": ""
+          },
+          {
+            "sim_time": 9.31744429236278,
+            "target_in_view": false,
+            "physically_occluded": false,
+            "occluder": ""
+          },
+          {
+            "sim_time": 9.35095509805251,
+            "target_in_view": false,
+            "physically_occluded": false,
+            "occluder": ""
+          },
+          {
+            "sim_time": 9.384327595122159,
+            "target_in_view": false,
+            "physically_occluded": false,
+            "occluder": ""
+          },
+          {
+            "sim_time": 9.450873196823522,
+            "target_in_view": false,
+            "physically_occluded": false,
+            "occluder": ""
+          },
+          {
+            "sim_time": 9.48415119718993,
+            "target_in_view": false,
+            "physically_occluded": false,
+            "occluder": ""
+          },
+          {
+            "sim_time": 9.517822895664722,
+            "target_in_view": false,
+            "physically_occluded": false,
+            "occluder": ""
+          },
+          {
+            "sim_time": 9.58400669816183,
+            "target_in_view": false,
+            "physically_occluded": false,
+            "occluder": ""
+          },
+          {
+            "sim_time": 9.618048202246428,
+            "target_in_view": false,
+            "physically_occluded": false,
+            "occluder": ""
+          },
+          {
+            "sim_time": 9.683950205158908,
+            "target_in_view": false,
+            "physically_occluded": false,
+            "occluder": ""
+          },
+          {
+            "sim_time": 9.717518403660506,
+            "target_in_view": false,
+            "physically_occluded": false,
+            "occluder": ""
+          },
+          {
+            "sim_time": 9.751257001888007,
+            "target_in_view": false,
+            "physically_occluded": false,
+            "occluder": ""
+          },
+          {
+            "sim_time": 9.817919004999567,
+            "target_in_view": false,
+            "physically_occluded": false,
+            "occluder": ""
+          },
+          {
+            "sim_time": 9.851129208807833,
+            "target_in_view": false,
+            "physically_occluded": false,
+            "occluder": ""
+          },
+          {
+            "sim_time": 9.91790200775722,
+            "target_in_view": false,
+            "physically_occluded": false,
+            "occluder": ""
+          },
+          {
+            "sim_time": 9.9513660108787,
+            "target_in_view": false,
+            "physically_occluded": false,
+            "occluder": ""
+          },
+          {
+            "sim_time": 9.984522110549733,
+            "target_in_view": false,
+            "physically_occluded": false,
+            "occluder": ""
+          },
+          {
+            "sim_time": 10.051730511186179,
+            "target_in_view": false,
+            "physically_occluded": false,
+            "occluder": ""
+          },
+          {
+            "sim_time": 10.084919510642067,
+            "target_in_view": false,
+            "physically_occluded": false,
+            "occluder": ""
+          },
+          {
+            "sim_time": 10.15166581061203,
+            "target_in_view": false,
+            "physically_occluded": false,
+            "occluder": ""
+          },
+          {
+            "sim_time": 10.185218014463317,
+            "target_in_view": false,
+            "physically_occluded": false,
+            "occluder": ""
+          },
+          {
+            "sim_time": 10.218590213509742,
+            "target_in_view": false,
+            "physically_occluded": false,
+            "occluder": ""
+          },
+          {
+            "sim_time": 10.28511041245656,
+            "target_in_view": false,
+            "physically_occluded": false,
+            "occluder": ""
+          },
+          {
+            "sim_time": 10.31853021500865,
+            "target_in_view": false,
+            "physically_occluded": false,
+            "occluder": ""
+          },
+          {
+            "sim_time": 10.351797613198869,
+            "target_in_view": false,
+            "physically_occluded": false,
+            "occluder": ""
+          },
+          {
+            "sim_time": 10.418476309336256,
+            "target_in_view": false,
+            "physically_occluded": false,
+            "occluder": ""
+          },
+          {
+            "sim_time": 10.452034508169163,
+            "target_in_view": false,
+            "physically_occluded": false,
+            "occluder": ""
+          },
+          {
+            "sim_time": 10.519273411482573,
+            "target_in_view": false,
+            "physically_occluded": false,
+            "occluder": ""
+          },
+          {
+            "sim_time": 10.552251608693041,
+            "target_in_view": false,
+            "physically_occluded": false,
+            "occluder": ""
+          },
+          {
+            "sim_time": 10.585509908967651,
+            "target_in_view": false,
+            "physically_occluded": false,
+            "occluder": ""
+          },
+          {
+            "sim_time": 10.6526980077615,
+            "target_in_view": false,
+            "physically_occluded": false,
+            "occluder": ""
+          },
+          {
+            "sim_time": 10.685451806872152,
+            "target_in_view": false,
+            "physically_occluded": false,
+            "occluder": ""
+          },
+          {
+            "sim_time": 10.75266060733702,
+            "target_in_view": false,
+            "physically_occluded": false,
+            "occluder": ""
+          },
+          {
+            "sim_time": 10.78575550892856,
+            "target_in_view": false,
+            "physically_occluded": false,
+            "occluder": ""
+          },
+          {
+            "sim_time": 10.819068507640623,
+            "target_in_view": false,
+            "physically_occluded": false,
+            "occluder": ""
+          },
+          {
+            "sim_time": 10.885610707162414,
+            "target_in_view": false,
+            "physically_occluded": false,
+            "occluder": ""
+          },
+          {
+            "sim_time": 10.91899191023549,
+            "target_in_view": false,
+            "physically_occluded": false,
+            "occluder": ""
+          },
+          {
+            "sim_time": 10.986124307499267,
+            "target_in_view": false,
+            "physically_occluded": false,
+            "occluder": ""
+          },
+          {
+            "sim_time": 11.01937640667893,
+            "target_in_view": false,
+            "physically_occluded": false,
+            "occluder": ""
+          },
+          {
+            "sim_time": 11.052719908067957,
+            "target_in_view": false,
+            "physically_occluded": false,
+            "occluder": ""
+          },
+          {
+            "sim_time": 11.119838508835528,
+            "target_in_view": false,
+            "physically_occluded": false,
+            "occluder": ""
+          },
+          {
+            "sim_time": 11.152888507291209,
+            "target_in_view": false,
+            "physically_occluded": false,
+            "occluder": ""
+          },
+          {
+            "sim_time": 11.219718511798419,
+            "target_in_view": false,
+            "physically_occluded": false,
+            "occluder": ""
+          },
+          {
+            "sim_time": 11.252807112701703,
+            "target_in_view": false,
+            "physically_occluded": false,
+            "occluder": ""
+          },
+          {
+            "sim_time": 11.286105713166762,
+            "target_in_view": false,
+            "physically_occluded": false,
+            "occluder": ""
+          },
+          {
+            "sim_time": 11.353144206805155,
+            "target_in_view": false,
+            "physically_occluded": false,
+            "occluder": ""
+          },
+          {
+            "sim_time": 11.386847706104163,
+            "target_in_view": false,
+            "physically_occluded": false,
+            "occluder": ""
+          },
+          {
+            "sim_time": 11.453044503403362,
+            "target_in_view": false,
+            "physically_occluded": false,
+            "occluder": ""
+          },
+          {
+            "sim_time": 11.486668710887898,
+            "target_in_view": false,
+            "physically_occluded": false,
+            "occluder": ""
+          },
+          {
+            "sim_time": 11.520458806538954,
+            "target_in_view": false,
+            "physically_occluded": false,
+            "occluder": ""
+          },
+          {
+            "sim_time": 11.58697470946936,
+            "target_in_view": false,
+            "physically_occluded": false,
+            "occluder": ""
+          },
+          {
+            "sim_time": 11.620174006617162,
+            "target_in_view": false,
+            "physically_occluded": false,
+            "occluder": ""
+          },
+          {
+            "sim_time": 11.65394650871167,
+            "target_in_view": false,
+            "physically_occluded": false,
+            "occluder": ""
+          },
+          {
+            "sim_time": 11.720638508617412,
+            "target_in_view": false,
+            "physically_occluded": false,
+            "occluder": ""
+          },
+          {
+            "sim_time": 11.753693513106555,
+            "target_in_view": false,
+            "physically_occluded": false,
+            "occluder": ""
+          },
+          {
+            "sim_time": 11.820250915770885,
+            "target_in_view": false,
+            "physically_occluded": false,
+            "occluder": ""
+          },
+          {
+            "sim_time": 11.854031613271218,
+            "target_in_view": false,
+            "physically_occluded": false,
+            "occluder": ""
+          },
+          {
+            "sim_time": 11.886942616663873,
+            "target_in_view": false,
+            "physically_occluded": false,
+            "occluder": ""
+          },
+          {
+            "sim_time": 11.954173217061907,
+            "target_in_view": false,
+            "physically_occluded": false,
+            "occluder": ""
+          }
+        ],
+        "rapid_opposite_axis_commands_within_point35_s": 0,
+        "normal_tracking_raw_action_agreement": [
+          5,
+          18
+        ],
+        "executed_action_parameter_mean_absolute_correction_ms": 21.80026295625141,
+        "qualification": "Native geometric target center scored over ALL source frames after2s, including occlusion/no-box. GT is post-run scoring only, never policy or reward. One focused scene, not general qualification."
+      },
+      "online": {
+        "folder": "unified_motion_20261101\\control-v3-validation-20261102\\online-fast-turn-v2-baseline",
+        "duration_s": 11.994459899840876,
+        "online_updates": 275,
+        "actual_online_output_fps": 22.927251605855822,
+        "source_to_draw_median_ms": 80.52865345962346,
+        "source_to_published_median_ms": 84.37635423615575,
+        "control_decisions": 90,
+        "control_decisions_per_s": 7.503464161916451,
+        "visible_identity_matches": {
+          "car_0": 98
+        },
+        "unmatched_visible": [],
+        "missing_outputs": 177,
+        "turn_9_to_12s_missing_outputs": 64,
+        "maximum_target_generation": 1,
+        "moving_center_distance_median_p95_px": [
+          92.56974500957574,
+          150.450191743164
+        ],
+        "actual_result_handoff_and_completed_action_gates_verified": true,
+        "strictly_increasing_unique_source_frames": true,
+        "saved_jpeg_hashes_verified": true,
+        "all_pixels_painted_before_live_stopped": true,
+        "all_learning_state_frozen": true,
+        "checkpoint_sha256": "0712fb025363395ef9b9b2531f997d3e5435adef3bc05dbe5c0411814d1c6d69",
+        "no_postrun_inference_or_repainting": true,
+        "GT_usage": "Post-run diagnostic scoring only"
+      }
+    },
+    "online-viaduct30": {
+      "camera": {
+        "folder": "unified_motion_20261101\\control-v3-validation-20261102\\online-viaduct30",
+        "target": "car_0",
+        "evaluation_only_GT": true,
+        "physical_camera_target_out_of_view_frames": 0,
+        "undefined_projected_target_frames": 0,
+        "camera_segments": {
+          "motion_2_to_end": {
+            "source_frames": 780,
+            "pixel_median_p95": [
+              15.35623440374021,
+              53.47060731803345
+            ],
+            "angular_deg_median_p95": [
+              0.31277885450924775,
+              1.2654771354387495
+            ],
+            "image_x_y_std_px": [
+              15.833602004009839,
+              21.683277048847554
+            ],
+            "median_fov_deg": 22.897748947143555,
+            "median_geometric_area_percent": 0.37838814581685504
+          },
+          "turn_9_to_12": {
+            "source_frames": 90,
+            "pixel_median_p95": [
+              20.739236837420513,
+              51.01739161729615
+            ],
+            "angular_deg_median_p95": [
+              0.4972190867196645,
+              1.233125814597725
+            ],
+            "image_x_y_std_px": [
+              17.265972865365104,
+              15.470074891549002
+            ],
+            "median_fov_deg": 22.897748947143555,
+            "median_geometric_area_percent": 1.5229603602098376
+          },
+          "fast_12_to_end": {
+            "source_frames": 480,
+            "pixel_median_p95": [
+              10.996611525228312,
+              46.897372191045335
+            ],
+            "angular_deg_median_p95": [
+              0.1739014823770721,
+              1.1335692636303605
+            ],
+            "image_x_y_std_px": [
+              7.119379314331112,
+              12.385656233334842
+            ],
+            "median_fov_deg": 22.897748947143555,
+            "median_geometric_area_percent": 0.20047126144793082
+          },
+          "parallel_24_to_end": {
+            "source_frames": 120,
+            "pixel_median_p95": [
+              9.609790182580433,
+              17.66051282091353
+            ],
+            "angular_deg_median_p95": [
+              0.06011612346239788,
+              0.1104790659062044
+            ],
+            "image_x_y_std_px": [
+              1.813757262183996,
+              4.887901483346876
+            ],
+            "median_fov_deg": 6.000000953674316,
+            "median_geometric_area_percent": 0.3077274277687168
+          }
+        },
+        "no_box_outputs": 16,
+        "no_box_target_still_in_view": 16,
+        "no_box_physically_occluded": 9,
+        "no_box_out_of_view": 0,
+        "no_box_events": [
+          {
+            "sim_time": 6.8327924981713295,
+            "target_in_view": true,
+            "physically_occluded": false,
+            "occluder": ""
+          },
+          {
+            "sim_time": 6.865702897310257,
+            "target_in_view": true,
+            "physically_occluded": true,
+            "occluder": "PTZ_Target_truck_foreground_occluder_0"
+          },
+          {
+            "sim_time": 6.93251159787178,
+            "target_in_view": true,
+            "physically_occluded": true,
+            "occluder": "PTZ_Target_truck_foreground_occluder_0"
+          },
+          {
+            "sim_time": 6.999656196683645,
+            "target_in_view": true,
+            "physically_occluded": true,
+            "occluder": "PTZ_Target_truck_foreground_occluder_0"
+          },
+          {
+            "sim_time": 7.032183196395636,
+            "target_in_view": true,
+            "physically_occluded": true,
+            "occluder": "PTZ_Target_truck_foreground_occluder_0"
+          },
+          {
+            "sim_time": 7.065440598875284,
+            "target_in_view": true,
+            "physically_occluded": true,
+            "occluder": "PTZ_Target_truck_foreground_occluder_0"
+          },
+          {
+            "sim_time": 7.132514797151089,
+            "target_in_view": true,
+            "physically_occluded": true,
+            "occluder": "PTZ_Target_truck_foreground_occluder_0"
+          },
+          {
+            "sim_time": 7.1663366965949535,
+            "target_in_view": true,
+            "physically_occluded": true,
+            "occluder": "PTZ_Target_truck_foreground_occluder_0"
+          },
+          {
+            "sim_time": 7.19899769872427,
+            "target_in_view": true,
+            "physically_occluded": true,
+            "occluder": "PTZ_Target_truck_foreground_occluder_0"
+          },
+          {
+            "sim_time": 7.298589799553156,
+            "target_in_view": true,
+            "physically_occluded": true,
+            "occluder": "PTZ_Target_truck_foreground_occluder_0"
+          },
+          {
+            "sim_time": 21.76625009998679,
+            "target_in_view": true,
+            "physically_occluded": false,
+            "occluder": ""
+          },
+          {
+            "sim_time": 21.798921398818493,
+            "target_in_view": true,
+            "physically_occluded": false,
+            "occluder": ""
+          },
+          {
+            "sim_time": 21.866375498473644,
+            "target_in_view": true,
+            "physically_occluded": false,
+            "occluder": ""
+          },
+          {
+            "sim_time": 21.93200869858265,
+            "target_in_view": true,
+            "physically_occluded": false,
+            "occluder": ""
+          },
+          {
+            "sim_time": 21.998999997973442,
+            "target_in_view": true,
+            "physically_occluded": false,
+            "occluder": ""
+          },
+          {
+            "sim_time": 22.33253239840269,
+            "target_in_view": true,
+            "physically_occluded": false,
+            "occluder": ""
+          }
+        ],
+        "rapid_opposite_axis_commands_within_point35_s": 0,
+        "normal_tracking_raw_action_agreement": [
+          65,
+          155
+        ],
+        "executed_action_parameter_mean_absolute_correction_ms": 39.99070694655891,
+        "qualification": "Native geometric target center scored over ALL source frames after2s, including occlusion/no-box. GT is post-run scoring only, never policy or reward. One focused scene, not general qualification."
+      },
+      "online": {
+        "folder": "unified_motion_20261101\\control-v3-validation-20261102\\online-viaduct30",
+        "duration_s": 27.99305079993792,
+        "online_updates": 641,
+        "actual_online_output_fps": 22.89854023347186,
+        "source_to_draw_median_ms": 91.66945028118789,
+        "source_to_published_median_ms": 97.35595039092004,
+        "control_decisions": 212,
+        "control_decisions_per_s": 7.573308158340146,
+        "visible_identity_matches": {
+          "car_0": 625
+        },
+        "unmatched_visible": [],
+        "missing_outputs": 16,
+        "turn_9_to_12s_missing_outputs": 0,
+        "maximum_target_generation": 1,
+        "moving_center_distance_median_p95_px": [
+          17.50862625043073,
+          53.22453990159891
+        ],
+        "actual_result_handoff_and_completed_action_gates_verified": true,
+        "strictly_increasing_unique_source_frames": true,
+        "saved_jpeg_hashes_verified": true,
+        "all_pixels_painted_before_live_stopped": true,
+        "all_learning_state_frozen": true,
+        "checkpoint_sha256": "ce5959fd4a0134135825b639eea7a81df817bdd1c71af5332b0fd9341e440a0c",
+        "no_postrun_inference_or_repainting": true,
+        "GT_usage": "Post-run diagnostic scoring only"
+      }
+    }
+  },
+  "perception_source_unchanged": {
+    "robust_locked_tracker.py": true,
+    "continuous_perception_runtime.py": true,
+    "target_roi_detector.py": true,
+    "verified_visual_bridge.py": true
+  },
+  "camera_control_sources_sha256": {
+    "camera_control_v3.py": "31be73a3e2b462bc543a82b71d47c5dde03ffddfa61db9be0d5ab0c7926fabf4",
+    "stable_locked_control.py": "5baa461f9005fa8b3fd0c158bf459ffd83fd73fc7264e2dd589c4fe025ec82d4",
+    "live_crossroad_robust_tracker.py": "a19c979031597dc1f6eb91d54c7f134838d31497691913956e8c4f0d6cd75123",
+    "precision_policy_v2.py": "97961a5b915fd7055eff31d72724a7d567597bf970552c6283dce39dd4323467"
+  },
+  "selected_as_local_default": true,
+  "stable_weights_preserved": true,
+  "private_repository_modified": false
+}

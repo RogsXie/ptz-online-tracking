@@ -1,0 +1,175 @@
+{
+  "checkpoint": "D:\\EI\\ptz_ue\\pdqn_static_20261101\\speed_revision_20261101\\unified_motion_20261101\\control-v3-turn-training-20261102\\deploy.pt",
+  "checkpoint_sha256": "def9007ca61419e2ebaf1f3bb18f09faded2d468d4be0d35558703b84cbefa0a",
+  "case": {
+    "split": "development",
+    "index": 4,
+    "seed": 53000004,
+    "family": "turns",
+    "quadrant": 0,
+    "layer": 0,
+    "scale_group": 0,
+    "planned_center": [
+      0.44759419997680305,
+      0.4551460798955777
+    ],
+    "fov_deg": 50.93772475351663,
+    "speed_m_s": 28.683881291850962,
+    "initial_fov_deg": 50.93772475351663,
+    "initial_camera_height_cm": 8500.0
+  },
+  "scene": "precision-turn",
+  "detector": {
+    "model": "whole_vehicle",
+    "backend": "ultralytics",
+    "ultralytics": "8.4.193",
+    "checkpoint": "D:\\EI\\ptz_ue\\pdqn_static_20261101\\speed_revision_20261101\\unified_motion_20261101\\whole_vehicle_detector_v1\\whole_vehicle.pt",
+    "sha256": "6aa5225b582861bde9db554a486a8f708e03d24f4aebd1b26090357347bcca34",
+    "weight_source": {
+      "adapted_to_UE": true,
+      "parent": "D:\\EI\\ptz_ue\\pdqn_static_20261101\\speed_revision_20261101\\unified_motion_20261101\\detector_longroad_v2.pt",
+      "sha256": "6aa5225b582861bde9db554a486a8f708e03d24f4aebd1b26090357347bcca34",
+      "supervision": "Whole car/truck boxes in separate supervised RGB detector training only; no control GT.",
+      "dataset": "D:\\EI\\ptz_ue\\pdqn_static_20261101\\speed_revision_20261101\\unified_motion_20261101\\whole_vehicle_detector_v1\\data\\provenance.json",
+      "counts": {
+        "train": 1188,
+        "val": 165
+      },
+      "truck_instances": {
+        "train": 60,
+        "val": 20
+      },
+      "epochs": 5,
+      "utc": 1793553349.145927
+    },
+    "adapted_to_UE": true,
+    "device": "cuda",
+    "python": "C:\\Users\\12879\\.conda\\envs\\50mamba\\python.exe",
+    "torch": "2.8.0.dev20250620+cu128",
+    "cuda_build": "12.8",
+    "target_class_ids": [
+      0,
+      1
+    ],
+    "target_labels": [
+      "car",
+      "truck"
+    ],
+    "threshold": 0.15,
+    "imgsz": 960,
+    "half": false,
+    "inference_inputs": "rendered RGB only; no GT or HSV",
+    "timing_scope": "synchronized CUDA wall time including preprocessing, forward, postprocessing and Detection conversion",
+    "difference_from_paper": "Ultralytics model with UE GPU domain adaptation, not author MMDetection detector",
+    "gpu": "NVIDIA GeForce RTX 5080",
+    "capability": [
+      12,
+      0
+    ],
+    "preprocessing_profile": "single_full_with_multiscale_recovery_v1",
+    "scales": [
+      1.0,
+      0.5
+    ],
+    "selection": "confidence descending cross-scale NMS IoU>.5",
+    "no_gt_or_fov_input": true,
+    "whole_vehicle": true,
+    "truck_box_definition": "Learned full cab+cargo+chassis RGB detection; no GT expansion",
+    "truck_duplicate_rule": "Suppress lower-support truck parts covered>=70% by a >=1.35xarea truck box atconf>=max(.5,.8*partconfidence). Applied to raw fast path and multiscale fusion. Never enlarges or merges coordinates.",
+    "fovea": "RGB/camera predictedROI, coldquadrants, no GT or scenevelocity",
+    "fast_path": "FullRGB each observation; crop recovery when lockedtarget lacks nearby>=.55confidence detection, independent of othervehicleconfidence. RGB/owncamera prediction only.",
+    "target_aware_recovery": true
+  },
+  "reid": {
+    "name": "FastReID_SBS_R50_IBN_VeRi_official_release",
+    "weights": "D:\\EI\\ptz_ue\\paper_reproduction\\hascam\\weights\\veri_sbs_R50-ibn.pth",
+    "weights_sha256": "57fb9c17d88911ea64390bf5427f43511435e7f88f6eed9dbc969d4b611e53cd",
+    "weights_source": "https://github.com/JDAI-CV/fast-reid/releases/download/v0.1.1/veri_sbs_R50-ibn.pth",
+    "pretrained": true,
+    "training_data": "VeRi-776 (FastReID public checkpoint)",
+    "feature_dim_actual": 2048,
+    "feature_dim_paper_prose": 4096,
+    "dimension_conflict": true,
+    "input_size": [
+      256,
+      256
+    ],
+    "input_color": "RGB",
+    "device": "cuda",
+    "unused_training_tensors": [
+      "heads.classifier.weight"
+    ],
+    "compatibility_tensor_remaps": {
+      "heads.bnneck.num_batches_tracked": "heads.bottleneck.0.num_batches_tracked"
+    },
+    "architecture": "ResNet50 + IBN + 5 nonlocal blocks + GeM + BN neck",
+    "inference_load": "strict_all_inference_tensors",
+    "runtime_refresh_period_s": 0.0,
+    "refresh_rule": "Strong consecutive singlecandidate RGBassociation: cachedfeature<=150ms; ambiguous/lowconfidence/lost/new reset forcesrealReID; weights unchanged.",
+    "fresh_batch_every_candidate": true,
+    "feature_cache_enabled": false,
+    "encoding_dtype": "float32",
+    "normalized_feature_dtype": "float32"
+  },
+  "motion": {
+    "scenario": "precision_heldout_fast_turn",
+    "requested_speed_m_s": 28.683881291850962,
+    "usage": "Scene metadata only, never supplied to control."
+  },
+  "architecture": "Freshly trained precision15 P-DQN, explicit RGB engineering mask/duration/scale bounds, continuous single-owner perception.",
+  "target_capture_fps": 30.0,
+  "target_perception_fps": 30.0,
+  "true_online_output_recording": true,
+  "whole_vehicle_detector": true,
+  "target_selection": "locked_identity_timeout_v1",
+  "lost_memory_timeout_s": 3.0,
+  "brief_miss_grace_s": 0.25,
+  "area_constraint_scope": "locked_target_only",
+  "presented_video": "online-output/true-online-output.mp4",
+  "online_overlay": "Exact fresh processedRGBframe+actualonline box, rendered duringrun. No interpolation, boxreplay or postrun inference.",
+  "action_semantics": "Every motorpulse fullycompletes; nextcommand consumes an actual perception result withsource time>=nativeactionend andremaining=0. Perception alsoprocesses midpulse frames.",
+  "threads": {
+    "torch": 4,
+    "opencv": 1,
+    "blas": 1
+  },
+  "all_learning_state_frozen": true,
+  "no_GT_control": true,
+  "startup_scale_target_area": 0.016,
+  "startup_center_tolerance_px": 12.0,
+  "motion_profile": "precision15_fresh_rgb_kalman_duration_v2",
+  "latest_source_frame_only": false,
+  "perception_profile": "Original FP32 full detection each processed frame, fresh FP32 ReID every candidate; multi-frame local turn reassociation with angular ownership and duplicate-fragment protection.",
+  "camera_control_profile": "precision_v4_balanced_centering",
+  "startup_zoom_max_fov_step_deg": 6.0,
+  "startup_scale": "First lock of each target generation: roughly centre, then actively zoom toward1.6% area. Finish at>=1.44%;2% upper guard unchanged. Fresh RGB feedback between exclusive pulses.",
+  "native_stream_metadata": "Dynamic same-frame state only; full immutable configuration saved in initial-native-state.json and scene.json.",
+  "identity_association": "Joint assignment; angular/established ownership; nominal locked ReID>=.70; unique local turn recovery: 2 strong-gallery frames or 3 high-confidence adjacent-crop confirmations; gallery>=.60 plus adjacent-crop ReID>=.90 for view change, tight geometry and age<=.15s for normal short-term links; age<=.35s for turn confirmation; short-term-only/recovery links cannot update appearance bank; merged/duplicate-fragment protection.",
+  "motion_gain": "Declared engineering bound: per-frame RGB/Kalman bearing speed>.8deg/s permits minimum pan/tilt opticsgain.18;>.35 permits.10. Neural15state/per-command history unchanged. Remaining-image-error duration cap still applies.",
+  "search_scale": "Last visible angular size limits widening to keep predicted box area>=.0015; no predicted boxes are drawn.",
+  "zoom_feedback_tolerance_px": 20.0,
+  "centering_governor": "Balance axes; maximum .28s unserved significant-axis wait; bounded half-feedback motion lead; acquire large-error duration floor <=100ms; mechanical/area/exclusive-pulse limits retained.",
+  "observation_contract": [
+    "predicted_x",
+    "predicted_y",
+    "actual_area_percent",
+    "confidence",
+    "last_executed_action_div6",
+    "last_executed_seconds_div_point1",
+    "observed_delta_x",
+    "observed_delta_y",
+    "rgb_kf_yaw_rate_div10",
+    "rgb_kf_pitch_rate_div10",
+    "own_fov_div66",
+    "image_age_div_point1",
+    "own_yaw_delta_div10",
+    "own_pitch_delta_div10",
+    "own_fov_delta_div10"
+  ],
+  "frame_count": 360,
+  "wall_duration_s": 11.965500101447105,
+  "reid_real_calls": 270,
+  "reid_cached_calls": 0,
+  "roi_calls": 1,
+  "native_source_sequence_gaps": 0
+}

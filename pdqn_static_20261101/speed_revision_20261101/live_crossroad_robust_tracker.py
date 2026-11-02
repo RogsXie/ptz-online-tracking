@@ -18,6 +18,13 @@ class Observation(previous.Observation):
 
 def action_filter(env,agent,state,action,duration,params):
     row=env.latest_rgb_observation
+    memory=getattr(env,'v3_last_visible',None)
+    if getattr(agent,'precision_control_v3',False) and not row['visible'] and memory is not None:
+        import numpy as np
+        # Camera search only. Association, observations, boxes and3sidentity
+        # memory are unchanged. Fast targets cannot afford the fixed250ms hold.
+        if max(abs(np.asarray(memory['velocity'])))>=2.:
+            return stable_filter(env,agent,state,action,duration,params)
     if not row['visible'] and env.cfff.info.get('locked_track_id') is not None and env.cfff.info.get('missing_for_s',0.)<.25:
         env.lock_searching=True;env.lock_recovering=False;env.t.zoom_gain_override=None
         env.t.pan_tilt_gain_override=None

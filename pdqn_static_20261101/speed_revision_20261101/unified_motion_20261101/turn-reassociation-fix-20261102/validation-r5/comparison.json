@@ -1,0 +1,1322 @@
+{
+  "selected_validation": "D:\\EI\\ptz_ue\\pdqn_static_20261101\\speed_revision_20261101\\unified_motion_20261101\\turn-reassociation-fix-20261102\\validation-r5",
+  "same_networks": {
+    "original_last_sha256": "ce5959fd4a0134135825b639eea7a81df817bdd1c71af5332b0fd9341e440a0c",
+    "selected_deploy_sha256": "def9007ca61419e2ebaf1f3bb18f09faded2d468d4be0d35558703b84cbefa0a",
+    "all_four_networks_equal": {
+      "actor_net": true,
+      "actor_target": true,
+      "param_net": true,
+      "param_net_target": true
+    }
+  },
+  "source_unchanged_during_validation": true,
+  "baseline": {
+    "online-turn": {
+      "camera": {
+        "folder": "unified_motion_20261101\\control-v3-validation-20261102\\online-fast-turn",
+        "target": "car_0",
+        "evaluation_only_GT": true,
+        "physical_camera_target_out_of_view_frames": 0,
+        "undefined_projected_target_frames": 0,
+        "camera_segments": {
+          "motion_2_to_end": {
+            "source_frames": 300,
+            "pixel_median_p95": [
+              58.74695823275587,
+              397.76047488110845
+            ],
+            "angular_deg_median_p95": [
+              1.8554451424755216,
+              28.28592634212383
+            ],
+            "image_x_y_std_px": [
+              138.69241368394125,
+              64.58759923833412
+            ],
+            "median_fov_deg": 48.0000114440918,
+            "median_geometric_area_percent": 0.07139504736402075
+          },
+          "turn_9_to_12": {
+            "source_frames": 90,
+            "pixel_median_p95": [
+              18.33350518264585,
+              26.85023202143705
+            ],
+            "angular_deg_median_p95": [
+              0.9119301568099276,
+              1.337060319293895
+            ],
+            "image_x_y_std_px": [
+              4.3026989163702964,
+              6.497247892103347
+            ],
+            "median_fov_deg": 48.0000114440918,
+            "median_geometric_area_percent": 0.06403832560681175
+          },
+          "fast_12_to_end": {
+            "source_frames": 0,
+            "pixel_median_p95": null,
+            "angular_deg_median_p95": null
+          },
+          "parallel_24_to_end": {
+            "source_frames": 0,
+            "pixel_median_p95": null,
+            "angular_deg_median_p95": null
+          }
+        },
+        "no_box_outputs": 75,
+        "no_box_target_still_in_view": 75,
+        "no_box_physically_occluded": 0,
+        "no_box_out_of_view": 0,
+        "no_box_events": [
+          {
+            "sim_time": 3.9819068948854692,
+            "target_in_view": true,
+            "physically_occluded": false,
+            "occluder": ""
+          },
+          {
+            "sim_time": 4.015143797092605,
+            "target_in_view": true,
+            "physically_occluded": false,
+            "occluder": ""
+          },
+          {
+            "sim_time": 4.048650395416189,
+            "target_in_view": true,
+            "physically_occluded": false,
+            "occluder": ""
+          },
+          {
+            "sim_time": 4.0818835946847685,
+            "target_in_view": true,
+            "physically_occluded": false,
+            "occluder": ""
+          },
+          {
+            "sim_time": 4.148540795140434,
+            "target_in_view": true,
+            "physically_occluded": false,
+            "occluder": ""
+          },
+          {
+            "sim_time": 4.181983295129612,
+            "target_in_view": true,
+            "physically_occluded": false,
+            "occluder": ""
+          },
+          {
+            "sim_time": 4.2154926948715,
+            "target_in_view": true,
+            "physically_occluded": false,
+            "occluder": ""
+          },
+          {
+            "sim_time": 4.281933793972712,
+            "target_in_view": true,
+            "physically_occluded": false,
+            "occluder": ""
+          },
+          {
+            "sim_time": 4.314788693736773,
+            "target_in_view": true,
+            "physically_occluded": false,
+            "occluder": ""
+          },
+          {
+            "sim_time": 4.349310493271332,
+            "target_in_view": true,
+            "physically_occluded": false,
+            "occluder": ""
+          },
+          {
+            "sim_time": 4.4153750884579495,
+            "target_in_view": true,
+            "physically_occluded": false,
+            "occluder": ""
+          },
+          {
+            "sim_time": 4.448707491217647,
+            "target_in_view": true,
+            "physically_occluded": false,
+            "occluder": ""
+          },
+          {
+            "sim_time": 4.482241191028152,
+            "target_in_view": true,
+            "physically_occluded": false,
+            "occluder": ""
+          },
+          {
+            "sim_time": 4.548680490814149,
+            "target_in_view": true,
+            "physically_occluded": false,
+            "occluder": ""
+          },
+          {
+            "sim_time": 4.582016791217029,
+            "target_in_view": true,
+            "physically_occluded": false,
+            "occluder": ""
+          },
+          {
+            "sim_time": 4.615965790115297,
+            "target_in_view": true,
+            "physically_occluded": false,
+            "occluder": ""
+          },
+          {
+            "sim_time": 4.64921438973397,
+            "target_in_view": true,
+            "physically_occluded": false,
+            "occluder": ""
+          },
+          {
+            "sim_time": 4.681895590387285,
+            "target_in_view": true,
+            "physically_occluded": false,
+            "occluder": ""
+          },
+          {
+            "sim_time": 4.715911989973392,
+            "target_in_view": true,
+            "physically_occluded": false,
+            "occluder": ""
+          },
+          {
+            "sim_time": 4.748867189453449,
+            "target_in_view": true,
+            "physically_occluded": false,
+            "occluder": ""
+          },
+          {
+            "sim_time": 4.78223158774199,
+            "target_in_view": true,
+            "physically_occluded": false,
+            "occluder": ""
+          },
+          {
+            "sim_time": 4.848472985206172,
+            "target_in_view": true,
+            "physically_occluded": false,
+            "occluder": ""
+          },
+          {
+            "sim_time": 4.882068986771628,
+            "target_in_view": true,
+            "physically_occluded": false,
+            "occluder": ""
+          },
+          {
+            "sim_time": 4.915474884794094,
+            "target_in_view": true,
+            "physically_occluded": false,
+            "occluder": ""
+          },
+          {
+            "sim_time": 4.9490113840438426,
+            "target_in_view": true,
+            "physically_occluded": false,
+            "occluder": ""
+          },
+          {
+            "sim_time": 4.98205358395353,
+            "target_in_view": true,
+            "physically_occluded": false,
+            "occluder": ""
+          },
+          {
+            "sim_time": 5.016143484506756,
+            "target_in_view": true,
+            "physically_occluded": false,
+            "occluder": ""
+          },
+          {
+            "sim_time": 5.081964986864477,
+            "target_in_view": true,
+            "physically_occluded": false,
+            "occluder": ""
+          },
+          {
+            "sim_time": 5.115729583892971,
+            "target_in_view": true,
+            "physically_occluded": false,
+            "occluder": ""
+          },
+          {
+            "sim_time": 5.148801984731108,
+            "target_in_view": true,
+            "physically_occluded": false,
+            "occluder": ""
+          },
+          {
+            "sim_time": 5.181902485433966,
+            "target_in_view": true,
+            "physically_occluded": false,
+            "occluder": ""
+          },
+          {
+            "sim_time": 5.21559818595415,
+            "target_in_view": true,
+            "physically_occluded": false,
+            "occluder": ""
+          },
+          {
+            "sim_time": 5.282539583102334,
+            "target_in_view": true,
+            "physically_occluded": false,
+            "occluder": ""
+          },
+          {
+            "sim_time": 5.315468385175336,
+            "target_in_view": true,
+            "physically_occluded": false,
+            "occluder": ""
+          },
+          {
+            "sim_time": 5.34917818318354,
+            "target_in_view": true,
+            "physically_occluded": false,
+            "occluder": ""
+          },
+          {
+            "sim_time": 5.381989184126724,
+            "target_in_view": true,
+            "physically_occluded": false,
+            "occluder": ""
+          },
+          {
+            "sim_time": 5.415195483074058,
+            "target_in_view": true,
+            "physically_occluded": false,
+            "occluder": ""
+          },
+          {
+            "sim_time": 5.481753782543819,
+            "target_in_view": true,
+            "physically_occluded": false,
+            "occluder": ""
+          },
+          {
+            "sim_time": 5.515506182971876,
+            "target_in_view": true,
+            "physically_occluded": false,
+            "occluder": ""
+          },
+          {
+            "sim_time": 5.548941079643555,
+            "target_in_view": true,
+            "physically_occluded": false,
+            "occluder": ""
+          },
+          {
+            "sim_time": 5.582337081548758,
+            "target_in_view": true,
+            "physically_occluded": false,
+            "occluder": ""
+          },
+          {
+            "sim_time": 5.6152576805325225,
+            "target_in_view": true,
+            "physically_occluded": false,
+            "occluder": ""
+          },
+          {
+            "sim_time": 5.649083782103844,
+            "target_in_view": true,
+            "physically_occluded": false,
+            "occluder": ""
+          },
+          {
+            "sim_time": 5.715380379930139,
+            "target_in_view": true,
+            "physically_occluded": false,
+            "occluder": ""
+          },
+          {
+            "sim_time": 5.749071782454848,
+            "target_in_view": true,
+            "physically_occluded": false,
+            "occluder": ""
+          },
+          {
+            "sim_time": 5.782290381321218,
+            "target_in_view": true,
+            "physically_occluded": false,
+            "occluder": ""
+          },
+          {
+            "sim_time": 5.815803480276372,
+            "target_in_view": true,
+            "physically_occluded": false,
+            "occluder": ""
+          },
+          {
+            "sim_time": 5.848910880216863,
+            "target_in_view": true,
+            "physically_occluded": false,
+            "occluder": ""
+          },
+          {
+            "sim_time": 5.881948281952646,
+            "target_in_view": true,
+            "physically_occluded": false,
+            "occluder": ""
+          },
+          {
+            "sim_time": 5.949016578379087,
+            "target_in_view": true,
+            "physically_occluded": false,
+            "occluder": ""
+          },
+          {
+            "sim_time": 5.983096681418829,
+            "target_in_view": true,
+            "physically_occluded": false,
+            "occluder": ""
+          },
+          {
+            "sim_time": 6.01552658417495,
+            "target_in_view": true,
+            "physically_occluded": false,
+            "occluder": ""
+          },
+          {
+            "sim_time": 6.049151283397805,
+            "target_in_view": true,
+            "physically_occluded": false,
+            "occluder": ""
+          },
+          {
+            "sim_time": 6.116425384476315,
+            "target_in_view": true,
+            "physically_occluded": false,
+            "occluder": ""
+          },
+          {
+            "sim_time": 6.149011383356992,
+            "target_in_view": true,
+            "physically_occluded": false,
+            "occluder": ""
+          },
+          {
+            "sim_time": 6.183204582484905,
+            "target_in_view": true,
+            "physically_occluded": false,
+            "occluder": ""
+          },
+          {
+            "sim_time": 6.248694183828775,
+            "target_in_view": true,
+            "physically_occluded": false,
+            "occluder": ""
+          },
+          {
+            "sim_time": 6.2824641825282015,
+            "target_in_view": true,
+            "physically_occluded": false,
+            "occluder": ""
+          },
+          {
+            "sim_time": 6.315796183946077,
+            "target_in_view": true,
+            "physically_occluded": false,
+            "occluder": ""
+          },
+          {
+            "sim_time": 6.348808484675828,
+            "target_in_view": true,
+            "physically_occluded": false,
+            "occluder": ""
+          },
+          {
+            "sim_time": 6.382647483202163,
+            "target_in_view": true,
+            "physically_occluded": false,
+            "occluder": ""
+          },
+          {
+            "sim_time": 6.415516583772842,
+            "target_in_view": true,
+            "physically_occluded": false,
+            "occluder": ""
+          },
+          {
+            "sim_time": 6.482187783869449,
+            "target_in_view": true,
+            "physically_occluded": false,
+            "occluder": ""
+          },
+          {
+            "sim_time": 6.5162608833634295,
+            "target_in_view": true,
+            "physically_occluded": false,
+            "occluder": ""
+          },
+          {
+            "sim_time": 6.548920983972494,
+            "target_in_view": true,
+            "physically_occluded": false,
+            "occluder": ""
+          },
+          {
+            "sim_time": 6.582326183619443,
+            "target_in_view": true,
+            "physically_occluded": false,
+            "occluder": ""
+          },
+          {
+            "sim_time": 6.615283484163228,
+            "target_in_view": true,
+            "physically_occluded": false,
+            "occluder": ""
+          },
+          {
+            "sim_time": 6.6825074828229845,
+            "target_in_view": true,
+            "physically_occluded": false,
+            "occluder": ""
+          },
+          {
+            "sim_time": 6.715036280860659,
+            "target_in_view": true,
+            "physically_occluded": false,
+            "occluder": ""
+          },
+          {
+            "sim_time": 6.7493925806484185,
+            "target_in_view": true,
+            "physically_occluded": false,
+            "occluder": ""
+          },
+          {
+            "sim_time": 6.782124381919857,
+            "target_in_view": true,
+            "physically_occluded": false,
+            "occluder": ""
+          },
+          {
+            "sim_time": 6.849286482145544,
+            "target_in_view": true,
+            "physically_occluded": false,
+            "occluder": ""
+          },
+          {
+            "sim_time": 6.883330181648489,
+            "target_in_view": true,
+            "physically_occluded": false,
+            "occluder": ""
+          },
+          {
+            "sim_time": 6.915587980707642,
+            "target_in_view": true,
+            "physically_occluded": false,
+            "occluder": ""
+          },
+          {
+            "sim_time": 6.948981083347462,
+            "target_in_view": true,
+            "physically_occluded": false,
+            "occluder": ""
+          }
+        ],
+        "rapid_opposite_axis_commands_within_point35_s": 1,
+        "normal_tracking_raw_action_agreement": [
+          0,
+          0
+        ],
+        "executed_action_parameter_mean_absolute_correction_ms": null,
+        "qualification": "Native geometric target center scored over ALL source frames after2s, including occlusion/no-box. GT is post-run scoring only, never policy or reward. One focused scene, not general qualification."
+      },
+      "online": {
+        "folder": "unified_motion_20261101\\control-v3-validation-20261102\\online-fast-turn",
+        "duration_s": 12.016192900016904,
+        "online_updates": 280,
+        "actual_online_output_fps": 23.301889569333238,
+        "source_to_draw_median_ms": 85.13795048929751,
+        "source_to_published_median_ms": 90.05015029106289,
+        "control_decisions": 88,
+        "control_decisions_per_s": 7.323451007504731,
+        "visible_identity_matches": {
+          "car_0": 205
+        },
+        "unmatched_visible": [],
+        "missing_outputs": 75,
+        "turn_9_to_12s_missing_outputs": 0,
+        "maximum_target_generation": 2,
+        "moving_center_distance_median_p95_px": [
+          23.800281263516485,
+          335.4707183071004
+        ],
+        "actual_result_handoff_and_completed_action_gates_verified": true,
+        "strictly_increasing_unique_source_frames": true,
+        "saved_jpeg_hashes_verified": true,
+        "all_pixels_painted_before_live_stopped": true,
+        "all_learning_state_frozen": true,
+        "checkpoint_sha256": "ce5959fd4a0134135825b639eea7a81df817bdd1c71af5332b0fd9341e440a0c",
+        "no_postrun_inference_or_repainting": true,
+        "GT_usage": "Post-run diagnostic scoring only"
+      }
+    },
+    "online-viaduct30": {
+      "camera": {
+        "folder": "unified_motion_20261101\\control-v3-validation-20261102\\online-viaduct30",
+        "target": "car_0",
+        "evaluation_only_GT": true,
+        "physical_camera_target_out_of_view_frames": 0,
+        "undefined_projected_target_frames": 0,
+        "camera_segments": {
+          "motion_2_to_end": {
+            "source_frames": 780,
+            "pixel_median_p95": [
+              15.35623440374021,
+              53.47060731803345
+            ],
+            "angular_deg_median_p95": [
+              0.31277885450924775,
+              1.2654771354387495
+            ],
+            "image_x_y_std_px": [
+              15.833602004009839,
+              21.683277048847554
+            ],
+            "median_fov_deg": 22.897748947143555,
+            "median_geometric_area_percent": 0.37838814581685504
+          },
+          "turn_9_to_12": {
+            "source_frames": 90,
+            "pixel_median_p95": [
+              20.739236837420513,
+              51.01739161729615
+            ],
+            "angular_deg_median_p95": [
+              0.4972190867196645,
+              1.233125814597725
+            ],
+            "image_x_y_std_px": [
+              17.265972865365104,
+              15.470074891549002
+            ],
+            "median_fov_deg": 22.897748947143555,
+            "median_geometric_area_percent": 1.5229603602098376
+          },
+          "fast_12_to_end": {
+            "source_frames": 480,
+            "pixel_median_p95": [
+              10.996611525228312,
+              46.897372191045335
+            ],
+            "angular_deg_median_p95": [
+              0.1739014823770721,
+              1.1335692636303605
+            ],
+            "image_x_y_std_px": [
+              7.119379314331112,
+              12.385656233334842
+            ],
+            "median_fov_deg": 22.897748947143555,
+            "median_geometric_area_percent": 0.20047126144793082
+          },
+          "parallel_24_to_end": {
+            "source_frames": 120,
+            "pixel_median_p95": [
+              9.609790182580433,
+              17.66051282091353
+            ],
+            "angular_deg_median_p95": [
+              0.06011612346239788,
+              0.1104790659062044
+            ],
+            "image_x_y_std_px": [
+              1.813757262183996,
+              4.887901483346876
+            ],
+            "median_fov_deg": 6.000000953674316,
+            "median_geometric_area_percent": 0.3077274277687168
+          }
+        },
+        "no_box_outputs": 16,
+        "no_box_target_still_in_view": 16,
+        "no_box_physically_occluded": 9,
+        "no_box_out_of_view": 0,
+        "no_box_events": [
+          {
+            "sim_time": 6.8327924981713295,
+            "target_in_view": true,
+            "physically_occluded": false,
+            "occluder": ""
+          },
+          {
+            "sim_time": 6.865702897310257,
+            "target_in_view": true,
+            "physically_occluded": true,
+            "occluder": "PTZ_Target_truck_foreground_occluder_0"
+          },
+          {
+            "sim_time": 6.93251159787178,
+            "target_in_view": true,
+            "physically_occluded": true,
+            "occluder": "PTZ_Target_truck_foreground_occluder_0"
+          },
+          {
+            "sim_time": 6.999656196683645,
+            "target_in_view": true,
+            "physically_occluded": true,
+            "occluder": "PTZ_Target_truck_foreground_occluder_0"
+          },
+          {
+            "sim_time": 7.032183196395636,
+            "target_in_view": true,
+            "physically_occluded": true,
+            "occluder": "PTZ_Target_truck_foreground_occluder_0"
+          },
+          {
+            "sim_time": 7.065440598875284,
+            "target_in_view": true,
+            "physically_occluded": true,
+            "occluder": "PTZ_Target_truck_foreground_occluder_0"
+          },
+          {
+            "sim_time": 7.132514797151089,
+            "target_in_view": true,
+            "physically_occluded": true,
+            "occluder": "PTZ_Target_truck_foreground_occluder_0"
+          },
+          {
+            "sim_time": 7.1663366965949535,
+            "target_in_view": true,
+            "physically_occluded": true,
+            "occluder": "PTZ_Target_truck_foreground_occluder_0"
+          },
+          {
+            "sim_time": 7.19899769872427,
+            "target_in_view": true,
+            "physically_occluded": true,
+            "occluder": "PTZ_Target_truck_foreground_occluder_0"
+          },
+          {
+            "sim_time": 7.298589799553156,
+            "target_in_view": true,
+            "physically_occluded": true,
+            "occluder": "PTZ_Target_truck_foreground_occluder_0"
+          },
+          {
+            "sim_time": 21.76625009998679,
+            "target_in_view": true,
+            "physically_occluded": false,
+            "occluder": ""
+          },
+          {
+            "sim_time": 21.798921398818493,
+            "target_in_view": true,
+            "physically_occluded": false,
+            "occluder": ""
+          },
+          {
+            "sim_time": 21.866375498473644,
+            "target_in_view": true,
+            "physically_occluded": false,
+            "occluder": ""
+          },
+          {
+            "sim_time": 21.93200869858265,
+            "target_in_view": true,
+            "physically_occluded": false,
+            "occluder": ""
+          },
+          {
+            "sim_time": 21.998999997973442,
+            "target_in_view": true,
+            "physically_occluded": false,
+            "occluder": ""
+          },
+          {
+            "sim_time": 22.33253239840269,
+            "target_in_view": true,
+            "physically_occluded": false,
+            "occluder": ""
+          }
+        ],
+        "rapid_opposite_axis_commands_within_point35_s": 0,
+        "normal_tracking_raw_action_agreement": [
+          65,
+          155
+        ],
+        "executed_action_parameter_mean_absolute_correction_ms": 39.99070694655891,
+        "qualification": "Native geometric target center scored over ALL source frames after2s, including occlusion/no-box. GT is post-run scoring only, never policy or reward. One focused scene, not general qualification."
+      },
+      "online": {
+        "folder": "unified_motion_20261101\\control-v3-validation-20261102\\online-viaduct30",
+        "duration_s": 27.99305079993792,
+        "online_updates": 641,
+        "actual_online_output_fps": 22.89854023347186,
+        "source_to_draw_median_ms": 91.66945028118789,
+        "source_to_published_median_ms": 97.35595039092004,
+        "control_decisions": 212,
+        "control_decisions_per_s": 7.573308158340146,
+        "visible_identity_matches": {
+          "car_0": 625
+        },
+        "unmatched_visible": [],
+        "missing_outputs": 16,
+        "turn_9_to_12s_missing_outputs": 0,
+        "maximum_target_generation": 1,
+        "moving_center_distance_median_p95_px": [
+          17.50862625043073,
+          53.22453990159891
+        ],
+        "actual_result_handoff_and_completed_action_gates_verified": true,
+        "strictly_increasing_unique_source_frames": true,
+        "saved_jpeg_hashes_verified": true,
+        "all_pixels_painted_before_live_stopped": true,
+        "all_learning_state_frozen": true,
+        "checkpoint_sha256": "ce5959fd4a0134135825b639eea7a81df817bdd1c71af5332b0fd9341e440a0c",
+        "no_postrun_inference_or_repainting": true,
+        "GT_usage": "Post-run diagnostic scoring only"
+      }
+    }
+  },
+  "candidate": {
+    "online-turn": {
+      "online": {
+        "folder": "D:\\EI\\ptz_ue\\pdqn_static_20261101\\speed_revision_20261101\\unified_motion_20261101\\turn-reassociation-fix-20261102\\validation-r5\\online-turn",
+        "duration_s": 12.046365100000003,
+        "online_updates": 268,
+        "actual_online_output_fps": 22.247374853348912,
+        "source_to_draw_median_ms": 80.43595309572993,
+        "source_to_published_median_ms": 86.47960178041103,
+        "control_decisions": 93,
+        "control_decisions_per_s": 7.720171124483017,
+        "visible_identity_matches": {
+          "car_0": 267
+        },
+        "unmatched_visible": [],
+        "missing_outputs": 1,
+        "turn_9_to_12s_missing_outputs": 0,
+        "maximum_target_generation": 1,
+        "moving_center_distance_median_p95_px": [
+          52.03252138745478,
+          97.65905351721624
+        ],
+        "actual_result_handoff_and_completed_action_gates_verified": true,
+        "strictly_increasing_unique_source_frames": true,
+        "saved_jpeg_hashes_verified": true,
+        "all_pixels_painted_before_live_stopped": true,
+        "all_learning_state_frozen": true,
+        "checkpoint_sha256": "def9007ca61419e2ebaf1f3bb18f09faded2d468d4be0d35558703b84cbefa0a",
+        "no_postrun_inference_or_repainting": true,
+        "GT_usage": "Post-run diagnostic scoring only"
+      },
+      "camera": {
+        "folder": "D:\\EI\\ptz_ue\\pdqn_static_20261101\\speed_revision_20261101\\unified_motion_20261101\\turn-reassociation-fix-20261102\\validation-r5\\online-turn",
+        "target": "car_0",
+        "evaluation_only_GT": true,
+        "physical_camera_target_out_of_view_frames": 0,
+        "undefined_projected_target_frames": 0,
+        "camera_segments": {
+          "motion_2_to_end": {
+            "source_frames": 300,
+            "pixel_median_p95": [
+              50.87599278810849,
+              94.9995222174731
+            ],
+            "angular_deg_median_p95": [
+              1.3523008232790894,
+              2.9145856028035833
+            ],
+            "image_x_y_std_px": [
+              36.1391012372621,
+              21.928507837988718
+            ],
+            "median_fov_deg": 28.852645874023438,
+            "median_geometric_area_percent": 0.37234829481260767
+          },
+          "turn_9_to_12": {
+            "source_frames": 90,
+            "pixel_median_p95": [
+              47.24025342960324,
+              76.1853305388306
+            ],
+            "angular_deg_median_p95": [
+              0.9825632007532444,
+              1.468168202778097
+            ],
+            "image_x_y_std_px": [
+              11.162247341655915,
+              18.79538376600757
+            ],
+            "median_fov_deg": 20.16576385498047,
+            "median_geometric_area_percent": 0.4002166038259243
+          },
+          "fast_12_to_end": {
+            "source_frames": 0,
+            "pixel_median_p95": null,
+            "angular_deg_median_p95": null
+          },
+          "parallel_24_to_end": {
+            "source_frames": 0,
+            "pixel_median_p95": null,
+            "angular_deg_median_p95": null
+          }
+        },
+        "no_box_outputs": 1,
+        "no_box_target_still_in_view": 1,
+        "no_box_physically_occluded": 0,
+        "no_box_out_of_view": 0,
+        "no_box_events": [
+          {
+            "sim_time": 4.016705799265765,
+            "target_in_view": true,
+            "physically_occluded": false,
+            "occluder": ""
+          }
+        ],
+        "rapid_opposite_axis_commands_within_point35_s": 0,
+        "normal_tracking_raw_action_agreement": [
+          0,
+          0
+        ],
+        "executed_action_parameter_mean_absolute_correction_ms": null,
+        "qualification": "Native geometric target center scored over ALL source frames after2s, including occlusion/no-box. GT is post-run scoring only, never policy or reward. One focused scene, not general qualification."
+      },
+      "missing_runs": [
+        {
+          "start_s": 4.016705799265765,
+          "recovered_s": 4.049849599017762,
+          "duration_s": 0.033143799751996994
+        }
+      ]
+    },
+    "online-viaduct30": {
+      "online": {
+        "folder": "D:\\EI\\ptz_ue\\pdqn_static_20261101\\speed_revision_20261101\\unified_motion_20261101\\turn-reassociation-fix-20261102\\validation-r5\\online-viaduct30",
+        "duration_s": 28.0522861999998,
+        "online_updates": 393,
+        "actual_online_output_fps": 14.009553346137,
+        "source_to_draw_median_ms": 123.91970141470665,
+        "source_to_published_median_ms": 132.5094013254784,
+        "control_decisions": 157,
+        "control_decisions_per_s": 5.596691794767199,
+        "visible_identity_matches": {
+          "car_0": 372
+        },
+        "unmatched_visible": [],
+        "missing_outputs": 21,
+        "turn_9_to_12s_missing_outputs": 0,
+        "maximum_target_generation": 1,
+        "moving_center_distance_median_p95_px": [
+          23.80269123561665,
+          64.57415786930977
+        ],
+        "actual_result_handoff_and_completed_action_gates_verified": true,
+        "strictly_increasing_unique_source_frames": true,
+        "saved_jpeg_hashes_verified": true,
+        "all_pixels_painted_before_live_stopped": true,
+        "all_learning_state_frozen": true,
+        "checkpoint_sha256": "def9007ca61419e2ebaf1f3bb18f09faded2d468d4be0d35558703b84cbefa0a",
+        "no_postrun_inference_or_repainting": true,
+        "GT_usage": "Post-run diagnostic scoring only"
+      },
+      "camera": {
+        "folder": "D:\\EI\\ptz_ue\\pdqn_static_20261101\\speed_revision_20261101\\unified_motion_20261101\\turn-reassociation-fix-20261102\\validation-r5\\online-viaduct30",
+        "target": "car_0",
+        "evaluation_only_GT": true,
+        "physical_camera_target_out_of_view_frames": 0,
+        "undefined_projected_target_frames": 0,
+        "camera_segments": {
+          "motion_2_to_end": {
+            "source_frames": 782,
+            "pixel_median_p95": [
+              19.006180091626447,
+              66.62902693073983
+            ],
+            "angular_deg_median_p95": [
+              0.4152042414430615,
+              1.630524178372266
+            ],
+            "image_x_y_std_px": [
+              23.616172362988475,
+              23.17999459732604
+            ],
+            "median_fov_deg": 23.117237091064453,
+            "median_geometric_area_percent": 0.3299507327261233
+          },
+          "turn_9_to_12": {
+            "source_frames": 90,
+            "pixel_median_p95": [
+              25.740336166638244,
+              59.965475770376955
+            ],
+            "angular_deg_median_p95": [
+              0.5990745952453298,
+              1.4635905862854637
+            ],
+            "image_x_y_std_px": [
+              24.457040856388872,
+              15.846325264699972
+            ],
+            "median_fov_deg": 23.117237091064453,
+            "median_geometric_area_percent": 1.5370864770736345
+          },
+          "fast_12_to_end": {
+            "source_frames": 482,
+            "pixel_median_p95": [
+              15.244327494166612,
+              64.56942008446362
+            ],
+            "angular_deg_median_p95": [
+              0.26628516195686036,
+              1.5759055700534732
+            ],
+            "image_x_y_std_px": [
+              13.397556148692221,
+              14.00128489117453
+            ],
+            "median_fov_deg": 23.117237091064453,
+            "median_geometric_area_percent": 0.12677051746454118
+          },
+          "parallel_24_to_end": {
+            "source_frames": 122,
+            "pixel_median_p95": [
+              14.005598667916397,
+              30.063547502376426
+            ],
+            "angular_deg_median_p95": [
+              0.09206908808580397,
+              0.19388383510382934
+            ],
+            "image_x_y_std_px": [
+              3.475405765397159,
+              7.18052827229136
+            ],
+            "median_fov_deg": 6.0,
+            "median_geometric_area_percent": 0.29385940352469203
+          }
+        },
+        "no_box_outputs": 21,
+        "no_box_target_still_in_view": 21,
+        "no_box_physically_occluded": 6,
+        "no_box_out_of_view": 0,
+        "no_box_events": [
+          {
+            "sim_time": 6.837924499064684,
+            "target_in_view": true,
+            "physically_occluded": true,
+            "occluder": "PTZ_Target_truck_foreground_occluder_0"
+          },
+          {
+            "sim_time": 6.903811499476433,
+            "target_in_view": true,
+            "physically_occluded": true,
+            "occluder": "PTZ_Target_truck_foreground_occluder_0"
+          },
+          {
+            "sim_time": 7.004441101104021,
+            "target_in_view": true,
+            "physically_occluded": true,
+            "occluder": "PTZ_Target_truck_foreground_occluder_0"
+          },
+          {
+            "sim_time": 7.1040384992957115,
+            "target_in_view": true,
+            "physically_occluded": true,
+            "occluder": "PTZ_Target_truck_foreground_occluder_0"
+          },
+          {
+            "sim_time": 7.171417597681284,
+            "target_in_view": true,
+            "physically_occluded": true,
+            "occluder": "PTZ_Target_truck_foreground_occluder_0"
+          },
+          {
+            "sim_time": 7.270930100232363,
+            "target_in_view": true,
+            "physically_occluded": true,
+            "occluder": "PTZ_Target_truck_foreground_occluder_0"
+          },
+          {
+            "sim_time": 21.77108410000801,
+            "target_in_view": true,
+            "physically_occluded": false,
+            "occluder": ""
+          },
+          {
+            "sim_time": 21.804710298776627,
+            "target_in_view": true,
+            "physically_occluded": false,
+            "occluder": ""
+          },
+          {
+            "sim_time": 21.937526900321245,
+            "target_in_view": true,
+            "physically_occluded": false,
+            "occluder": ""
+          },
+          {
+            "sim_time": 21.97133480012417,
+            "target_in_view": true,
+            "physically_occluded": false,
+            "occluder": ""
+          },
+          {
+            "sim_time": 22.038067299872637,
+            "target_in_view": true,
+            "physically_occluded": false,
+            "occluder": ""
+          },
+          {
+            "sim_time": 22.170847300440073,
+            "target_in_view": true,
+            "physically_occluded": false,
+            "occluder": ""
+          },
+          {
+            "sim_time": 22.237928301095963,
+            "target_in_view": true,
+            "physically_occluded": false,
+            "occluder": ""
+          },
+          {
+            "sim_time": 22.27096899971366,
+            "target_in_view": true,
+            "physically_occluded": false,
+            "occluder": ""
+          },
+          {
+            "sim_time": 22.337496798485518,
+            "target_in_view": true,
+            "physically_occluded": false,
+            "occluder": ""
+          },
+          {
+            "sim_time": 22.404761899262667,
+            "target_in_view": true,
+            "physically_occluded": false,
+            "occluder": ""
+          },
+          {
+            "sim_time": 22.437468700110912,
+            "target_in_view": true,
+            "physically_occluded": false,
+            "occluder": ""
+          },
+          {
+            "sim_time": 22.504426199942827,
+            "target_in_view": true,
+            "physically_occluded": false,
+            "occluder": ""
+          },
+          {
+            "sim_time": 22.804181698709726,
+            "target_in_view": true,
+            "physically_occluded": false,
+            "occluder": ""
+          },
+          {
+            "sim_time": 22.870979398489,
+            "target_in_view": true,
+            "physically_occluded": false,
+            "occluder": ""
+          },
+          {
+            "sim_time": 22.90463750064373,
+            "target_in_view": true,
+            "physically_occluded": false,
+            "occluder": ""
+          }
+        ],
+        "rapid_opposite_axis_commands_within_point35_s": 0,
+        "normal_tracking_raw_action_agreement": [
+          51,
+          104
+        ],
+        "executed_action_parameter_mean_absolute_correction_ms": 38.57217259490122,
+        "qualification": "Native geometric target center scored over ALL source frames after2s, including occlusion/no-box. GT is post-run scoring only, never policy or reward. One focused scene, not general qualification."
+      },
+      "missing_runs": [
+        {
+          "start_s": 6.837924499064684,
+          "recovered_s": 7.404399998486042,
+          "duration_s": 0.5664754994213581
+        },
+        {
+          "start_s": 21.77108410000801,
+          "recovered_s": 21.870897099375725,
+          "duration_s": 0.09981299936771393
+        },
+        {
+          "start_s": 21.937526900321245,
+          "recovered_s": 22.071249797940254,
+          "duration_s": 0.13372289761900902
+        },
+        {
+          "start_s": 22.170847300440073,
+          "recovered_s": 22.537620797753334,
+          "duration_s": 0.36677349731326103
+        },
+        {
+          "start_s": 22.804181698709726,
+          "recovered_s": 22.971060998737812,
+          "duration_s": 0.1668793000280857
+        }
+      ]
+    }
+  },
+  "unseen_by_generation": {
+    "case-04": {
+      "matches_by_generation": {
+        "1": {
+          "car_0": 63
+        }
+      },
+      "within_generation_multiple_identities": {},
+      "unmatched_visible_times": [],
+      "meaning": "New highest-confidence identity after 3s continuous loss is authorized; different actors within one generation are an ID switch."
+    },
+    "case-05": {
+      "matches_by_generation": {
+        "1": {
+          "car_0": 64
+        }
+      },
+      "within_generation_multiple_identities": {},
+      "unmatched_visible_times": [],
+      "meaning": "New highest-confidence identity after 3s continuous loss is authorized; different actors within one generation are an ID switch."
+    },
+    "case-06": {
+      "matches_by_generation": {
+        "1": {
+          "car_same_colour_follower": 12
+        },
+        "2": {
+          "truck_occluder": 3
+        },
+        "3": {
+          "truck_occluder": 19
+        }
+      },
+      "within_generation_multiple_identities": {},
+      "unmatched_visible_times": [],
+      "meaning": "New highest-confidence identity after 3s continuous loss is authorized; different actors within one generation are an ID switch."
+    }
+  },
+  "unseen_summary": {
+    "checkpoint": "D:\\EI\\ptz_ue\\pdqn_static_20261101\\speed_revision_20261101\\unified_motion_20261101\\control-v3-turn-training-20261102\\deploy.pt",
+    "motion_profile": "precision15_fresh_rgb_kalman_duration_v2",
+    "split": "check",
+    "cases": [
+      {
+        "family": "turns",
+        "steps": 64,
+        "visible": 63,
+        "missing": 1,
+        "median_p95_center_px": [
+          46.2210693279508,
+          109.4742180813331
+        ],
+        "within_8px": 0,
+        "area_above_2pct": 0,
+        "override_count": 64,
+        "maximum_target_generation": 1,
+        "postrun_identity": {
+          "initial_selected_identity": "car_0",
+          "visible_matches": {
+            "car_0": 64
+          },
+          "visible_matches_other_identity": 0,
+          "unmatched_visible": 0,
+          "usage": "Post-run diagnostics only; never in policy or action filtering."
+        },
+        "camera_control": {
+          "target": "car_0",
+          "source_frames": 64,
+          "target_out_of_view": 0,
+          "target_center_out_of_view": 0,
+          "undefined_projection": 0,
+          "center_median_p95_px": [
+            46.36760590276784,
+            109.1951999212346
+          ],
+          "scoring": "All completed-command native source images, including no-box/occlusion. GT post-run only."
+        }
+      },
+      {
+        "family": "inclines",
+        "steps": 64,
+        "visible": 64,
+        "missing": 0,
+        "median_p95_center_px": [
+          22.07426334435192,
+          44.71135499521502
+        ],
+        "within_8px": 2,
+        "area_above_2pct": 0,
+        "override_count": 64,
+        "maximum_target_generation": 1,
+        "postrun_identity": {
+          "initial_selected_identity": "car_0",
+          "visible_matches": {
+            "car_0": 65
+          },
+          "visible_matches_other_identity": 0,
+          "unmatched_visible": 0,
+          "usage": "Post-run diagnostics only; never in policy or action filtering."
+        },
+        "camera_control": {
+          "target": "car_0",
+          "source_frames": 64,
+          "target_out_of_view": 0,
+          "target_center_out_of_view": 0,
+          "undefined_projection": 0,
+          "center_median_p95_px": [
+            22.52511298878437,
+            45.48893621913932
+          ],
+          "scoring": "All completed-command native source images, including no-box/occlusion. GT post-run only."
+        }
+      },
+      {
+        "family": "occlusion",
+        "steps": 64,
+        "visible": 34,
+        "missing": 30,
+        "median_p95_center_px": [
+          18.35384476135403,
+          280.9436691290816
+        ],
+        "within_8px": 2,
+        "area_above_2pct": 0,
+        "override_count": 64,
+        "maximum_target_generation": 3,
+        "postrun_identity": {
+          "initial_selected_identity": "car_same_colour_follower",
+          "visible_matches": {
+            "car_same_colour_follower": 13,
+            "truck_occluder": 22
+          },
+          "visible_matches_other_identity": 22,
+          "unmatched_visible": 0,
+          "usage": "Post-run diagnostics only; never in policy or action filtering."
+        },
+        "camera_control": {
+          "target": "car_same_colour_follower",
+          "source_frames": 64,
+          "target_out_of_view": 17,
+          "target_center_out_of_view": 17,
+          "undefined_projection": 0,
+          "center_median_p95_px": [
+            229.56704903573512,
+            916.5812816199048
+          ],
+          "scoring": "All completed-command native source images, including no-box/occlusion. GT post-run only."
+        }
+      }
+    ],
+    "camera_control_profile": "precision_v3_zoom_lookahead_edge_priority",
+    "learning_state_unchanged": true,
+    "scope": "Eight held-out procedural layouts, not broad qualification; fixed-clock data collection is not an online FPS benchmark."
+  },
+  "selected_as_local_default": true,
+  "private_repository_modified": false
+}

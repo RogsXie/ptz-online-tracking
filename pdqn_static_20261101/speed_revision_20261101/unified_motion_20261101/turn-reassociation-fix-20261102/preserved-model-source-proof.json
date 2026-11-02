@@ -1,0 +1,11 @@
+{
+  "original_camera_sources_unchanged": {
+    "camera_control_v3.py": true,
+    "stable_locked_control.py": true,
+    "live_crossroad_robust_tracker.py": true,
+    "precision_policy_v2.py": true
+  },
+  "detector_checkpoint_unchanged": true,
+  "reid_checkpoint_unchanged": true,
+  "default_association_source_verified": true
+}

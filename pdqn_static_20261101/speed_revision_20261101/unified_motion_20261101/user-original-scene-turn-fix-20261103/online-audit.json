@@ -1,0 +1,29 @@
+{
+  "folder": "unified_motion_20261101\\user-original-scene-turn-fix-20261103",
+  "duration_s": 28.023482000000513,
+  "online_updates": 641,
+  "actual_online_output_fps": 22.873674299289014,
+  "source_to_draw_median_ms": 89.6295504335285,
+  "source_to_published_median_ms": 94.9149491289063,
+  "control_decisions": 215,
+  "control_decisions_per_s": 7.672137245471354,
+  "visible_identity_matches": {
+    "car_0": 624
+  },
+  "unmatched_visible": [],
+  "missing_outputs": 17,
+  "turn_9_to_12s_missing_outputs": 0,
+  "maximum_target_generation": 1,
+  "moving_center_distance_median_p95_px": [
+    18.33018109115352,
+    61.10531506491291
+  ],
+  "actual_result_handoff_and_completed_action_gates_verified": true,
+  "strictly_increasing_unique_source_frames": true,
+  "saved_jpeg_hashes_verified": true,
+  "all_pixels_painted_before_live_stopped": true,
+  "all_learning_state_frozen": true,
+  "checkpoint_sha256": "def9007ca61419e2ebaf1f3bb18f09faded2d468d4be0d35558703b84cbefa0a",
+  "no_postrun_inference_or_repainting": true,
+  "GT_usage": "Post-run diagnostic scoring only"
+}

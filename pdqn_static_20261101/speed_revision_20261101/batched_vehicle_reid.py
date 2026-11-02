@@ -4,9 +4,10 @@ import cv2,numpy as np,torch
 from torch.nn import functional as F
 
 class BatchFeatures:
-    def __init__(self,periodic,chunk=8):
+    def __init__(self,periodic,chunk=8,mixed_precision=False):
         self.periodic=periodic;self.extractor=getattr(periodic,'base',periodic);self.chunk=chunk
         self.calls=0;self.features=0;self.total_s=0.
+        self.mixed_precision=bool(mixed_precision)
 
     def __call__(self,rgb,detections):
         if not detections:return []
@@ -22,7 +23,10 @@ class BatchFeatures:
         output=[]
         for i in range(0,len(images),self.chunk):
             tensor=torch.as_tensor(np.stack(images[i:i+self.chunk]),device=self.extractor.device)
-            with torch.inference_mode():features=F.normalize(self.extractor.model(tensor),dim=1).cpu().numpy()
+            with torch.inference_mode(),torch.autocast(device_type='cuda',dtype=torch.float16,enabled=self.mixed_precision):
+                encoded=self.extractor.model(tensor)
+            # Keep association vectors and normalization at the original FP32.
+            with torch.inference_mode():features=F.normalize(encoded.float(),dim=1).cpu().numpy()
             if features.shape[1]!=2048 or not np.isfinite(features).all():raise RuntimeError('Invalid batched ReID')
             output.extend(features)
         if hasattr(self.periodic,'real_calls'):self.periodic.real_calls+=len(output)

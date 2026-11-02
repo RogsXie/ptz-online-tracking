@@ -1,0 +1,16 @@
+{
+  "selected_as_local_default": true,
+  "source_sha256": {
+    "stable_locked_control.py": "fc6bd5b8bcf88dd6813b4781b8f6d878e5473146b67b582226ccb90fe42bd206",
+    "camera_centering_v4.py": "5b8230db31bbdf53866a03386c4ab826c91c5442a84c0de2b0fc7fc4824cf28f",
+    "live_fast_online_results.py": "d75d9a3d58b8de5e33e84bb4d6fe5b29c94b6f624516bf6b39403cc03046caff",
+    "check_balanced_centering.py": "2643cd2c864f8bf626f22f13846b7b88786971efa0078b9a5f0f2215219ee8be",
+    "audit_front_centering.py": "2bca520ffded1bf79dd8ef4b2ea101519e8ce666193d881c6b257ba788fe059d"
+  },
+  "tracker_unchanged": true,
+  "checkpoint_unchanged": true,
+  "private_repository_modified": false,
+  "selected_control_matches_both_live_runs": true,
+  "entry_default_changed_after_explicit_flag_validation": true,
+  "rollback_flag": "--no-centering-v4"
+}

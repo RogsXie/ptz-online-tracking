@@ -1,5 +1,5 @@
 {
-  "version": "v2026.11.02-viaduct30-nonstop",
+  "version": "v2026.11.03-front-centering",
   "entry": "pdqn_static_20261101/speed_revision_20261101/live_fast_online_results.py",
   "arguments": [
     "--scene",
@@ -11,11 +11,20 @@
     "--perception-fps",
     "30"
   ],
-  "example": "pdqn_static_20261101/speed_revision_20261101/unified_motion_20261101/user-nonstop-viaduct30-v1-video",
-  "video": "pdqn_static_20261101/speed_revision_20261101/unified_motion_20261101/user-nonstop-viaduct30-v1-video/online-output/true-online-output.mp4",
-  "tracking_output_fps": 23.5667265887963,
+  "checkpoint": "pdqn_static_20261101/speed_revision_20261101/unified_motion_20261101/control-v3-turn-training-20261102/deploy.pt",
+  "checkpoint_sha256": "def9007ca61419e2ebaf1f3bb18f09faded2d468d4be0d35558703b84cbefa0a",
+  "example": "pdqn_static_20261101/speed_revision_20261101/unified_motion_20261101/front-centering-fix-20261103/final-original-scene",
+  "video": "pdqn_static_20261101/speed_revision_20261101/unified_motion_20261101/front-centering-fix-20261103/final-original-scene/online-output/true-online-output.mp4",
+  "video_sha256": "229dc666bc7aa35462da3fe8d0d8ed4b945a10375b26c59e017ba08d5d4094bb",
+  "tracking_output_fps": 23.615207782864516,
+  "source_to_published_median_ms": 94.63615035383555,
   "lead_and_parallel_speed_m_s": 30.0,
   "nonstop": true,
-  "weights_changed": false,
-  "model_assets_release": "v2026.11.02-startup-zoom"
+  "camera_control_profile": "precision_v4_balanced_centering",
+  "association_profile": "multi-frame local turn recovery and protected identity",
+  "policy_weights_changed_since_previous_release": true,
+  "policy_weights_changed_in_centering_fix": false,
+  "model_assets_release": "v2026.11.02-startup-zoom",
+  "rollback_camera_flag": "--no-centering-v4",
+  "readme_video_attachment": "https://github.com/user-attachments/assets/8d53e993-9220-40ba-84dd-28050ceb2ccc"
 }

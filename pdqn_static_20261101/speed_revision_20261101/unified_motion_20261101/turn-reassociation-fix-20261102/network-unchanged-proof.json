@@ -1,0 +1,10 @@
+{
+  "original_last_sha256": "ce5959fd4a0134135825b639eea7a81df817bdd1c71af5332b0fd9341e440a0c",
+  "selected_deploy_sha256": "def9007ca61419e2ebaf1f3bb18f09faded2d468d4be0d35558703b84cbefa0a",
+  "all_four_networks_equal": {
+    "actor_net": true,
+    "actor_target": true,
+    "param_net": true,
+    "param_net_target": true
+  }
+}

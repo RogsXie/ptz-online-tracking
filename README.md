@@ -2,44 +2,51 @@
 
 ## 在线演示
 
-**当前版本：转弯后不停加速上桥，主车与三车并行巡航均为 30 m/s。** 下方是最新 28 秒真实在线结果，点击即可播放。
+**当前版本：前段双轴居中修复 + 急弯身份接续。** 保留原十字路口、货车遮挡、同色跟车和转弯后不停加速上高架的场景，巡航速度 **30 m/s**。下方为本次接受的完整 28 秒真实在线实录，点击即可播放。
 
-https://github.com/user-attachments/assets/af4d80f7-1cc0-4fc4-9f4e-2e66fa291591
+https://github.com/user-attachments/assets/8d53e993-9220-40ba-84dd-28050ceb2ccc
 
-[下载本版完整 MP4](pdqn_static_20261101/speed_revision_20261101/unified_motion_20261101/user-nonstop-viaduct30-v1-video/online-output/true-online-output.mp4) · [查看本版结果与核对记录](pdqn_static_20261101/speed_revision_20261101/unified_motion_20261101/user-nonstop-viaduct30-v1-video/nonstop-30mps-result.json)
+[下载本版完整 MP4](pdqn_static_20261101/speed_revision_20261101/unified_motion_20261101/front-centering-fix-20261103/final-original-scene/online-output/true-online-output.mp4) · [分段对照结果](pdqn_static_20261101/speed_revision_20261101/unified_motion_20261101/front-centering-fix-20261103/comparison.json) · [修复与回退说明](pdqn_static_20261101/speed_revision_20261101/FRONT_CENTERING_FIX.md)
 
 ## 当前版本
 
-2026-11-02，`v2026.11.02-viaduct30-nonstop`。当前入口为 `pdqn_static_20261101/speed_revision_20261101/live_fast_online_results.py`，运行参数见下文；`current-version.json` 记录当前版本和示例路径。
+2026-11-03，`v2026.11.03-front-centering`。默认入口为 `pdqn_static_20261101/speed_revision_20261101/live_fast_online_results.py`；版本、权重和视频 SHA-256 记录在 `current-version.json`。
 
-- 保留原十字路口、接近段、转弯及蓝车/货车安排；弯后连接段为 **12 米**。
-- 移除桥上和上桥前的停车、等待。主车约 **10.95 秒**完成转弯，在 **1.1 秒**内按 12 → 21 → 30 m/s 提速，然后保持 30 m/s。
-- 三车沿 **80 米上桥坡道**进入高 **8 米**的桥面。桥面长 **420 米**，三条车道各宽 4 米。
-- 后方红车、紫车短时分别约 35.25、42.75 m/s 追齐，约 **24 秒**后与主车并排，统一保持 **30 m/s**。主车不会为了等车减速或停车；录像结束时车辆仍在行驶。
-- 原有启动主动放大、约 1.6% 目标尺度、2% 框面积上限、居中黄框、黄色距离线保留。
-- 初始选择最高置信度目标，后续保持身份。短时丢失清框搜索，连续丢失 3 秒才遗忘并重新选择。采用联合匹配、持续的轨迹归属保护和可信特征更新，避免同色车抢框。
-- 检测、ReID、P-DQN 权重保持冻结；当前控制包含明确的 RGB 运动估计、限幅、搜索缩放等工程规则。
+- 修复水平动作连续占用反馈、纵向偏差长期得不到纠正的问题；优先较大误差轴，相近误差交替服务。
+- 放大前居中容差收紧到 12 px；使用有上限的 RGB 运动与反馈时延补偿，初次捕获脉冲仍限制在 100 ms 内。
+- 保留已修复的局部多帧急弯重关联、轨迹归属保护、重复框假设以及独立更新的几何尺寸历史。
+- 初始选择最高置信度对象；短时丢失保持身份并留空，连续丢失 3 秒后才遗忘并重选。约 1.6% 目标尺度、2% 框面积上限、居中黄框和黄色距离线保留。
+- 场景与上一轮原场景 JSON 完全相同：弯后 12 米连接段、80 米上桥坡道、420 米高架、三车并行，主车转弯后加速至 30 m/s，不停车等车。
+- 相比上次已发布版本，本次采用从头训练后继续急弯训练的 precision15 策略权重；累计 11,008 条真实交互、4,992 次原作者 P-DQN 更新。检测与 ReID 权重未变。**本次居中修复本身只改控制规则，没有再次训练网络。**
 
 ## 本次实录结果
 
 | 项目 | 实测 |
 | --- | --- |
-| 真实在线处理输出 | **23.57 FPS**，28 秒内 660 次实际更新 |
-| 主车巡航 / 并行速度 | **30.00 / 30.00 m/s** |
-| 可见目标框 | 648 个，全部匹配原红车 |
-| 空框结果 | 12 个；转弯 9–12 秒无掉框 |
-| 目标身份 | 始终为首次锁定对象，本段未观察到串车 |
-| 原始采集到在线输出延迟中位数 | 约 **97.3 ms** |
+| 真实在线处理输出 | **23.62 FPS**，662 次实际更新 |
+| 可见目标框 | 651 个，全部对应原红车 |
+| 空框结果 | 11 个；转弯 9–12 秒无空框 |
+| 目标身份 | 保持原 ID，本段未观察到串车或遗忘重选 |
+| 源帧到发布延迟中位数 | **94.64 ms** |
+| 初次连续进入中心 20 px 内 | **0.63 → 0.53 秒** |
+| 前段 0.75–6 秒居中误差中位数 / P95 | **28.7 / 53.6 → 11.1 / 34.6 px** |
+| 4–6 秒居中误差中位数 | **48.0 → 13.4 px** |
 
-这些数据来自这一段实录，并非跨场景可靠性保证。画框在 UE 运行时直接根据对应 RGB 帧的实际在线结果绘制；结束后只压缩已保存像素，不做离线重检测、补帧或重画框。相机目标采集频率 30 FPS 与实际处理输出频率分别记录。
+居中误差由所有原生输入图像事后评分，包含无框和遮挡时刻，不只统计成功检测。初始目标仍从原来的角落开始，未隐藏起始画面或预先居中；前 0.75 秒 P95 仍约 336 px，尚非全程像素级居中。另一次急弯回归保持原 ID，267 次出框、2 次确认留空，未出视野。
 
-本段场景、逐次决策、原生帧诊断、在线绘制图像与源文件快照位于：
+结果来自有限布局，不代表跨场景全面可靠。实际画框在 UE 运行期间直接使用对应 RGB 帧的在线输出；结束后只编码保存的像素，不重跑推理、补框或插帧。相机采集目标频率与实际输出频率分别记录。控制器不读取目标真值、路线或场景 ID，目标真值只用于结束后的诊断。
 
-`pdqn_static_20261101/speed_revision_20261101/unified_motion_20261101/user-nonstop-viaduct30-v1-video/`
+本版录像、逐次决策、原生帧元数据、已绘制图像及录制时源码快照：
 
-进入当前版本目录后，可用 `python audit_nonstop_viaduct30.py` 读取随仓库保存的记录核对速度、并行位置及结果完整性；该脚本不运行模型、不修改录像。运行期间控制器和画框不读取目标真值，原生目标位置仅供事后核对。
+`pdqn_static_20261101/speed_revision_20261101/unified_motion_20261101/front-centering-fix-20261103/final-original-scene/`
 
-大型 ReID/FFmpeg 依赖与模型权重未变，下载脚本继续使用已校验的依赖 Release；本版 Release 另附最新演示视频。旧示例与旧 Release 保留，README 默认展示本版。
+进入版本目录后，可重新核对随仓库保存的原始记录：
+
+```powershell
+python audit_front_centering.py --baseline unified_motion_20261101/user-original-scene-turn-fix-20261103 --candidate unified_motion_20261101/front-centering-fix-20261103/final-original-scene --output centering-comparison-local.json
+```
+
+上一版 Release 和旧策略保留。使用 `--no-centering-v4` 可仅回退到上一轮摄像机控制；要回到上次发布的完整版本，请检出旧标签 `v2026.11.02-viaduct30-nonstop`。大型 ReID/FFmpeg 依赖仍由原有 `release-assets.json` 恢复；新 Release 另附本次 MP4、部署权重和结果清单。
 
 ## 环境与模型
 
@@ -47,7 +54,8 @@ https://github.com/user-attachments/assets/af4d80f7-1cc0-4fc4-9f4e-2e66fa291591
 
 已将当前策略和整车检测权重一并纳入代码快照：
 
-- `pdqn_static_20261101/speed_revision_20261101/unified_motion_20261101/pdqn_training_v1/last.pt`
+- 当前策略：`pdqn_static_20261101/speed_revision_20261101/unified_motion_20261101/control-v3-turn-training-20261102/deploy.pt`
+- 旧策略保留回退：`pdqn_static_20261101/speed_revision_20261101/unified_motion_20261101/pdqn_training_v1/last.pt`
 - `pdqn_static_20261101/speed_revision_20261101/unified_motion_20261101/whole_vehicle_detector_v1/whole_vehicle.pt`
 
 较大的 FastReID 权重和原版 FFmpeg 二进制位于本私人仓库的 Release。使用有仓库读取权限的 GitHub Git 凭据，或者在环境变量 `GH_TOKEN` / `GITHUB_TOKEN` 中提供令牌后运行：
@@ -84,14 +92,15 @@ python live_fast_online_results.py --scene viaduct30 --output unified_motion_202
 
 输出目录必须是新目录。同一时间只运行一个 UE/GPU 实验。`--fps` 是相机采集目标频率，实际处理输出频率以 `online-output/online-recording-audit.json` 为准。
 
-控制器权重保持冻结；该版本包含明确的工程控制规则，不是重新训练后的纯 P-DQN。
+部署时所有网络权重冻结。当前使用新的 precision15 训练权重，并包含明确的 RGB 关联和摄像机控制规则；本次前段居中修复本身没有再次训练网络。
 
 针对新增流程的检查：
 
 ```powershell
-python check_startup_scale.py
+python check_balanced_centering.py
 python check_robust_tracker.py
-python check_continuous_online.py
+python check_turn_reassociation.py
+python check_turn_view_identity.py
 ```
 
 ## 快照与第三方来源
