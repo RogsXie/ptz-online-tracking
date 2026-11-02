@@ -1,0 +1,66 @@
+{
+  "no_scheduled_stops_or_waits": true,
+  "minimum_actual_lead_speed_m_s": 2.9992861546799623,
+  "actual_cruise_speed_median_m_s": 30.0,
+  "actual_parallel_speed_median_m_s": 30.0,
+  "parallel_x_spread_max_cm": 1.4551915228366852e-11,
+  "lead_acceleration": {
+    "turn_exit_sim_s": 10.951119537480668,
+    "acceleration_end_sim_s": 12.051119537480668,
+    "acceleration_speed_steps_m_s": [
+      12.0,
+      21.0,
+      30.0
+    ],
+    "catchup_speed_m_s": 30.0
+  },
+  "follower_catchup_speeds_m_s": {
+    "car_purple_following": 42.75091178065481,
+    "car_red_close_follower": 35.24946057315351
+  },
+  "bridge": {
+    "up_ramp_length_m": 80.0,
+    "deck_length_m": 420.0,
+    "down_ramp_length_m": 80.0,
+    "height_m": 8.0,
+    "road_width_m": 12.0,
+    "up_ramp_grade_percent": 10.0,
+    "ramp_start_x_cm": 8000.0,
+    "deck_start_x_cm": 16000.0,
+    "deck_end_x_cm": 58000.0,
+    "road_end_x_cm": 66000.0,
+    "underpass_x_cm": 30500.0,
+    "driving": "onto bridge, not beneath bridge"
+  },
+  "parallel_alignment_sim_s": 24.0,
+  "quality_and_online_proof": {
+    "folder": "D:\\EI\\ptz_ue\\pdqn_static_20261101\\speed_revision_20261101\\unified_motion_20261101\\user-nonstop-viaduct30-v1-video",
+    "duration_s": 28.005586499813944,
+    "online_updates": 660,
+    "actual_online_output_fps": 23.5667265887963,
+    "source_to_draw_median_ms": 92.16394845861942,
+    "source_to_published_median_ms": 97.31945092789829,
+    "control_decisions": 216,
+    "control_decisions_per_s": 7.712746883606062,
+    "visible_identity_matches": {
+      "car_0": 648
+    },
+    "unmatched_visible": [],
+    "missing_outputs": 12,
+    "turn_9_to_12s_missing_outputs": 0,
+    "maximum_target_generation": 1,
+    "moving_center_distance_median_p95_px": [
+      18.055563815597495,
+      95.20932292506069
+    ],
+    "actual_result_handoff_and_completed_action_gates_verified": true,
+    "strictly_increasing_unique_source_frames": true,
+    "saved_jpeg_hashes_verified": true,
+    "all_pixels_painted_before_live_stopped": true,
+    "all_learning_state_frozen": true,
+    "checkpoint_sha256": "db8043ec93f916c35b7ab31b4ccf298489ceca94a4ec7290075d2e7e6c5b2434",
+    "no_postrun_inference_or_repainting": true,
+    "GT_usage": "Post-run diagnostic scoring only"
+  },
+  "scope": "One28s actual live scene. Native target poses used only after recording for speed/identity diagnostics, never live control or drawing."
+}

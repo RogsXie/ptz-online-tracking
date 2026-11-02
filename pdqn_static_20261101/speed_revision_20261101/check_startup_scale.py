@@ -47,6 +47,16 @@ def main():
     env,agent,state,params=fixture();env.t.diagnostics['fov']=30.
     env.latest_rgb_observation.update(visible=False,area=None,bbox=None)
     assert run(env,agent,state,params)[0]==6
+    # Narrow-FOV fast motion needs enough actuator authority, still bounded by
+    # actual image error and restricted to a direction that reduces that error.
+    env,agent,state,params=fixture(area=.016,x=.08);env.t.diagnostics['fov']=8.
+    env.latest_rgb_observation['image_motion_bearing_rate_deg_s']=[1.,0.]
+    action,duration,info=run(env,agent,state,params)
+    assert action==3 and env.t.pan_tilt_gain_override==.18
+    assert duration<=info['motion_budgets_s']['3']+1e-9
+    env.latest_rgb_observation.update(visible=False,area=None,bbox=None)
+    action,duration,info=run(env,agent,state,params)
+    assert action==6 and 8.<info['search_fov_limit_deg']<30.
     print('PASS: first-lock active zoom, rough centring gate, bounded pulse, per-identity completion, area/FOV and loss guards')
 
 if __name__=='__main__':main()

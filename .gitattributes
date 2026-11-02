@@ -6,6 +6,7 @@
 *.pt binary
 *.pth binary
 *.mp4 binary
+*.jpg binary
 *.uasset binary
 *.umap binary
 paper_reproduction/reference/HAS-CAM/** -text

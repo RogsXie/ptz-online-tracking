@@ -22,19 +22,24 @@ def main():
     p=argparse.ArgumentParser();p.add_argument('--output',type=Path,required=True)
     p.add_argument('--seconds',type=float,default=30.);p.add_argument('--fps',type=float,default=30.)
     p.add_argument('--perception-fps',type=float,default=30.)
+    p.add_argument('--scene',choices=['crossroad','viaduct20','viaduct30'],default='crossroad')
     p.add_argument('--checkpoint',type=Path,default=core.ROOT/'pdqn_training_v1/last.pt');args=p.parse_args()
     exclusive();configure_precision_project();warnings.filterwarnings('ignore')
     torch.set_num_threads(4);cv2.setNumThreads(1)
     root=args.output.resolve();root.mkdir(exist_ok=False);(root/'frames').mkdir();(root/'frozen-sources').mkdir()
-    for n in ['live_fast_online_results.py','continuous_perception_runtime.py','online_result_recorder.py','encode_60fps_vfr.py','gpu_stream_runtime.py','async_frame_runtime.py','control_latency_runtime.py','fast_rgb_perception.py']:
+    for n in ['live_fast_online_results.py','continuous_perception_runtime.py','online_result_recorder.py','encode_60fps_vfr.py','gpu_stream_runtime.py','async_frame_runtime.py','control_latency_runtime.py','fast_rgb_perception.py','stream_arena.py']:
         shutil.copy2(REV/n,root/'frozen-sources'/n)
     for n in ['PTZArena.cpp','PTZArena.h','PTZSim.Build.cs']:shutil.copy2(REV/'UE/PTZSim/Source/PTZSim'/n,root/'frozen-sources'/n)
     frontend=scenario.previous.previous.previous.previous.frontend
     detector,extractor=frontend();detector=Detector(detector.base);extractor=PeriodicReID(extractor)
     agent=demo.create_agent();core.resume(agent,args.checkpoint);frozen=snapshot(agent);agent.epsilon=0.
-    demo.CASE='known9';item=demo.layout('development',7);scene=scenario.materialize(root,item)
+    demo.CASE='known9';item=demo.layout('development',7)
+    materialize=scenario.materialize
+    if args.scene in {'viaduct20','viaduct30'}:
+        from live_viaduct20_scene import materialize
+    scene=materialize(root,item)
     config=dict(checkpoint=str(args.checkpoint),checkpoint_sha256=hashlib.sha256(args.checkpoint.read_bytes()).hexdigest(),
-        case=item,detector=detector.provenance,reid=extractor.metadata(),motion=demo.MOTION,
+        case=item,scene=args.scene,detector=detector.provenance,reid=extractor.metadata(),motion=demo.MOTION,
         architecture='Same frozen P-DQN; continuous single-owner RGBperception independent ofexclusive motorwaiting. Per-command15statehistory retained by cachehandoff.',
         target_capture_fps=args.fps,target_perception_fps=args.perception_fps,
         true_online_output_recording=True,whole_vehicle_detector=True,target_selection='locked_identity_timeout_v1',
@@ -44,7 +49,11 @@ def main():
         action_semantics='Every motorpulse fullycompletes; nextcommand consumes an actual perception result withsource time>=nativeactionend andremaining=0. Perception alsoprocesses midpulse frames.',
         threads=dict(torch=4,opencv=1,blas=1),all_learning_state_frozen=False,no_GT_control=True)
     config.update(startup_scale_target_area=.016,startup_center_tolerance_px=40.,
-        startup_zoom_max_fov_step_deg=6.,startup_scale='First lock of each target generation: roughly centre, then actively zoom toward1.6% area. Finish at>=1.44%;2% upper guard unchanged. Fresh RGB feedback between exclusive pulses.')
+        startup_zoom_max_fov_step_deg=6.,startup_scale='First lock of each target generation: roughly centre, then actively zoom toward1.6% area. Finish at>=1.44%;2% upper guard unchanged. Fresh RGB feedback between exclusive pulses.',
+        native_stream_metadata='Dynamic same-frame state only; full immutable configuration saved in initial-native-state.json and scene.json.',
+        identity_association='Joint assignment; always-on established-track ownership; locked ReID>=.70; trusted-only template updates; ambiguous merged boxes cannot update locked identity.',
+        motion_gain='Declared engineering bound: per-frame RGB/Kalman bearing speed>.8deg/s permits minimum pan/tilt opticsgain.18;>.35 permits.10. Neural15state/per-command history unchanged. Remaining-image-error duration cap still applies.',
+        search_scale='Last visible angular size limits widening to keep predicted box area>=.0015; no predicted boxes are drawn.')
     write(root/'configuration.json',config)
     runtime=worker=recorder=None;ok=False
     try:
@@ -53,6 +62,7 @@ def main():
             try:
                 env=scenario.Observation(transport,detector,extractor);extractor.association=env.cfff;extractor.detector=detector
                 state,initial=env.reset(scene,item['seed']);write(root/'initial-observation.json',dict(state=state.tolist(),**initial))
+                write(root/'initial-native-state.json',transport.diagnostics)
                 from short_motion_features import ShortFeatures
                 before=env.motion_features;env.motion_features=ShortFeatures(.25)
                 env.motion_features.samples=before.samples;env.motion_features.previous=before.previous

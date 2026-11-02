@@ -18,8 +18,9 @@ class Observation(previous.Observation):
 
 def action_filter(env,agent,state,action,duration,params):
     row=env.latest_rgb_observation
-    if not row['visible'] and env.cfff.info.get('missing_for_s',0.)<.25:
+    if not row['visible'] and env.cfff.info.get('locked_track_id') is not None and env.cfff.info.get('missing_for_s',0.)<.25:
         env.lock_searching=True;env.lock_recovering=False;env.t.zoom_gain_override=None
+        env.t.pan_tilt_gain_override=None
         return 0,.025,dict(reason='brief_miss_recheck_before_zoom',phase='recheck',input_area=None,
             selected_input_area=None,input_fov_deg=env.t.diagnostics['fov'],executed_action=0,executed_duration_s=.025,
             missing_for_s=env.cfff.info.get('missing_for_s',0.),zoom_gain_override=None)

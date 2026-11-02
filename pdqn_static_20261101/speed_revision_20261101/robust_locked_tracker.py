@@ -6,7 +6,7 @@ from scipy.optimize import linear_sum_assignment
 from hascam.cfff import cosine,unit
 from locked_target_selector import Selector as PreviousSelector
 from verified_visual_bridge import VisualBridge
-from unified_perception import bearing
+from unified_perception import bearing,project
 
 class Selector(PreviousSelector):
     def reset(self):
@@ -30,7 +30,38 @@ class Selector(PreviousSelector):
                 track['fragment']=True
 
     def protected_other(self,track):return track.get('hits',0)>=3 and not track.get('fragment',False)
-    def allow_gallery_update(self,d):return d is not self.flow_candidate
+    def allow_gallery_update(self,d):
+        return d is not self.flow_candidate and id(d) in getattr(self,'trusted_gallery_candidates',set())
+
+    def filter_costs(self,cost,ids,candidates,details,now,tangent):
+        self.trusted_gallery_candidates=set();self.merge_rejections=[]
+        if self.locked_id not in ids:
+            self.trusted_gallery_candidates={id(d) for d in candidates};return
+        active=self.tracks[self.locked_id];r=ids.index(self.locked_id)
+        for j,d in enumerate(candidates):
+            ranked=sorted((cost[k,j],k) for k in range(len(ids)) if cost[k,j]<1e6)
+            if ranked and details[ranked[0][1],j][1]>=.85 and (len(ranked)==1 or ranked[1][0]>ranked[0][0]+.15):
+                self.trusted_gallery_candidates.add(id(d))
+        for j,d in enumerate(candidates):
+            if cost[r,j]>=1e6:continue
+            # A detector box covering multiple established tracks cannot be
+            # treated as one trusted identity or used to refresh its template.
+            ratio=d.area*tangent/max(1e-12,active['angular_area'])
+            covered=[]
+            if ratio>1.65:
+                for tid in ids:
+                    t=self.tracks[tid]
+                    if t['class_id']!=d.class_id or now-t['last_seen']>.35:continue
+                    if tid!=self.locked_id and not self.protected_other(t):continue
+                    mean,_=self.predict(t,now);x,y=project(mean[:2],self.t.diagnostics)
+                    if d.bbox[0]<=x<=d.bbox[2] and d.bbox[1]<=y<=d.bbox[3]:covered.append(tid)
+            if self.locked_id in covered and len(covered)>1:
+                self.merge_rejections.append(dict(bbox=list(d.bbox),covered_track_ids=covered,area_ratio=ratio))
+                self.trusted_gallery_candidates.discard(id(d))
+                cost[r,j]=1e6;continue
+            others=[cost[k,j] for k,tid in enumerate(ids) if tid!=self.locked_id and self.protected_other(self.tracks[tid])]
+            if details[r,j][1]>=.85 and (not others or min(others)>cost[r,j]+.15):
+                self.trusted_gallery_candidates.add(id(d))
 
     def pair_cost(self,track,d,angle,feature,now,tangent):
         mean,P=self.predict(track,now);delta=angle-mean[:2];delta[0]=(delta[0]+180)%360-180
@@ -42,7 +73,7 @@ class Selector(PreviousSelector):
         ratio=d.area*tangent/max(1e-12,track['angular_area'])
         similarity=max(cosine(feature,f) for f in [*track['gallery'],track['recent_feature']])
         flow=d is self.flow_candidate
-        threshold=max(self.base.threshold,.60 if flow or d.confidence<.35 else self.base.threshold)
+        threshold=max(self.base.threshold,.70 if track is self.tracks.get(self.locked_id) else .60 if flow or d.confidence<.35 else self.base.threshold)
         valid=distance<=gate and mahal<=(5.99 if d.confidence<.35 else 13.8) and .3<=ratio<=3.3 and similarity>=threshold
         if track is self.tracks.get(self.locked_id):
             self.active_debug.append(dict(bbox=list(d.bbox),confidence=d.confidence,distance_deg=distance,mahalanobis2=mahal,similarity=similarity,area_ratio=ratio,accepted_gate=bool(valid),source='flow' if flow else 'detector'))
@@ -56,12 +87,8 @@ class Selector(PreviousSelector):
         for high in [True,False]:
             cols=[j for j in remaining_cols if (candidates[j].confidence>=.5)==high]
             if not cols or not remaining_rows:continue
-            ids=list(self.tracks)
-            if self.locked_id in ids and ids.index(self.locked_id) in remaining_rows:
-                r=ids.index(self.locked_id);j=min(cols,key=lambda j:cost[r,j])
-                if cost[r,j]<1e6:
-                    result.append((r,j));remaining_rows.remove(r);remaining_cols.remove(j);cols.remove(j)
-            if not cols or not remaining_rows:continue
+            # Solve all trajectories jointly; a locked ID has no right to
+            # preempt another visible vehicle's better-supported measurement.
             rr,cc=linear_sum_assignment(cost[np.ix_(remaining_rows,cols)])
             pairs=[(remaining_rows[r],cols[c]) for r,c in zip(rr,cc) if cost[remaining_rows[r],cols[c]]<1e6]
             result.extend(pairs);used_r={r for r,c in pairs};used_c={c for r,c in pairs}
@@ -76,7 +103,7 @@ class Selector(PreviousSelector):
         mean+=K@innovation;mean[2:]=np.clip(mean[2:],-30,30)
         H=np.zeros((2,4));H[:2,:2]=np.eye(2);I=np.eye(4)-K@H
         track['kf_mean']=mean;track['kf_cov']=I@P@I.T+K@(np.eye(2)*sigma*sigma)@K.T;track['kf_time']=now;track['hits']+=1
-        if d is not self.flow_candidate and d.confidence>=.35:
+        if self.allow_gallery_update(d) and d.confidence>=.35:
             track['recent_feature']=unit(.8*track['recent_feature']+.2*feature)
             track['sizes'].append(track['angular_area'])
         if track['sizes']:track['angular_area']=float(np.median(track['sizes']))
@@ -114,7 +141,9 @@ class Selector(PreviousSelector):
             self.detector.track.update(angular_area=track['angular_area'],class_id=chosen.class_id,
                 box_aspect=w*960/max(1e-9,h*540),bbox=list(chosen.bbox),fov=self.t.diagnostics['fov'])
         self.info.update(observation_source=source,visual_bridge_reason=self.bridge.reason,
+            locked_bearing_velocity_deg_s=self.velocity(self.tracks[self.locked_id]).tolist() if chosen is not None else None,
             visual_bridge_quality=self.bridge.proposal['quality'] if self.bridge.proposal else None,
             active_candidate_debug=self.active_debug,
-            tracker_revision='AngularKalman+high/lowconfidenceassociation+fragment-safe recovery+verifiedLK<=.35s')
+            merged_candidate_rejections=getattr(self,'merge_rejections',[]),
+            tracker_revision='Joint high/low assignment+always-on trajectory ownership+lockedReID>=.70+trusted-only gallery+merged-box rejection')
         return chosen

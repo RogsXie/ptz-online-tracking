@@ -50,7 +50,7 @@ public:
     FString SetAsyncCaptureRate(float Rate);
     FString CaptureAsyncSharedFrame();
     FString GetRealtimeTiming() const;
-    FString GetState() const;
+    FString GetState(bool bIncludeConfiguration = true) const;
     bool LoadScenario(const FString& Filename, FString& Error);
     void SetDemo(bool bEnabled);
     void SetPreview(bool bEnabled);

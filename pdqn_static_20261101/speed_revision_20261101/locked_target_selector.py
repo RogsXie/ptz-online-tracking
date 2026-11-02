@@ -62,18 +62,21 @@ class Selector:
                 if d.class_id!=track['class_id']:continue
                 pair=self.pair_cost(track,d,angles[j],features[j],now,tangent)
                 if pair is not None:cost[r,j],details[r,j]=pair
+        validate=getattr(self,'filter_costs',None)
+        if validate is not None:validate(cost,ids,candidates,details,now,tangent)
         # A visible distractor's established trajectory must not be stolen by a
         # missing locked target, even when both cars have identical appearance.
+        ownership_rejections=[]
         if self.locked_id in ids:
             r=ids.index(self.locked_id)
-            age=now-self.tracks[self.locked_id]['last_seen']
-            if age>.2:
-                for j in range(len(candidates)):
-                    if cost[r,j]>=1e6:continue
-                    for other,tid in enumerate(ids):
-                        if tid==self.locked_id or now-self.tracks[tid]['last_seen']>.25 or not self.protected_other(self.tracks[tid]):continue
-                        if cost[other,j]<.65 and cost[other,j]<=cost[r,j]+.25:
-                            cost[r,j]=1e6;break
+            for j in range(len(candidates)):
+                if cost[r,j]>=1e6:continue
+                for other,tid in enumerate(ids):
+                    if tid==self.locked_id or now-self.tracks[tid]['last_seen']>.35 or not self.protected_other(self.tracks[tid]):continue
+                    if cost[other,j]<.65 and cost[other,j]+.12<cost[r,j]:
+                        ownership_rejections.append(dict(bbox=list(candidates[j].bbox),protected_track_id=tid,
+                            locked_cost=float(cost[r,j]),owner_cost=float(cost[other,j])))
+                        cost[r,j]=1e6;break
         assignment={};similarities={}
         if cost.size:
             for r,j in self.assignments(cost,candidates):
@@ -120,5 +123,6 @@ class Selector:
             selected_label=chosen.label if chosen else None,selected_class_id=chosen.class_id if chosen else None,
             reid_similarity=similarities.get(selected_index),highest_candidate_confidence=candidates[0].confidence if candidates else None,
             candidate_tracks=[dict(track_id=assignment[j],label=d.label,confidence=d.confidence,bbox=list(d.bbox)) for j,d in enumerate(candidates)],
+            ownership_rejections=ownership_rejections,
             scope='RGB detections+fresh ReID+own-camera compensated multi-object trajectories; one locked identity, no other box until3scontinuousmissing. No GT/colorfilter/scene IDs.')
         return chosen

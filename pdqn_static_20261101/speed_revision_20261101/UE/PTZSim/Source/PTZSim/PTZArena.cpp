@@ -5,6 +5,7 @@
 #include "Camera/CameraComponent.h"
 #include "Components/SceneComponent.h"
 #include "Components/StaticMeshComponent.h"
+#include "Components/InstancedStaticMeshComponent.h"
 #include "Components/DirectionalLightComponent.h"
 #include "Components/SkyLightComponent.h"
 #include "Components/ExponentialHeightFogComponent.h"
@@ -379,15 +380,56 @@ void APTZArena::BuildScenario(FRandomStream& Random)
     if (ScenarioConfig->TryGetArrayField(TEXT("occluders"), JsonOccluders))
     {
         Index = 0;
+        TMap<FString, UInstancedStaticMeshComponent*> GeometryBatches;
+        AActor* BatchedGeometry = nullptr;
         for (const auto& V : *JsonOccluders)
         {
             auto O = V->AsObject();
             const FString Kind = String(O, TEXT("kind"), TEXT("wall"));
-            AActor* A = SpawnSceneActor(FString::Printf(TEXT("PTZ_Occluder_%d"), Index++));
             const FVector Size = Vector(O, TEXT("size_cm"), FVector(100, 500, 600));
             const FVector R = Vector(O, TEXT("rotation_deg"), FVector::ZeroVector);
-            A->SetActorLocationAndRotation(Vector(O, TEXT("location_cm"), FVector(0, 0, 300)), FRotator(R.X, R.Y, R.Z));
             const FLinearColor C = Color(O, TEXT("color_rgb"), FLinearColor(0.4f, 0.42f, 0.44f));
+            bool bInstanceGeometry = false;
+            O->TryGetBoolField(TEXT("instance_geometry"), bInstanceGeometry);
+            if (bInstanceGeometry && Kind != TEXT("tree"))
+            {
+                // Opt-in bridge scenery shares mesh/material draw calls while
+                // retaining every original transform and collision instance.
+                if (!BatchedGeometry)
+                {
+                    BatchedGeometry = SpawnSceneActor(TEXT("PTZ_BatchedScenery"));
+                }
+                const bool bSphere = Kind == TEXT("pillar");
+                bool bCastShadow = true;
+                O->TryGetBoolField(TEXT("cast_shadow"), bCastShadow);
+                const FString Key = FString::Printf(TEXT("%d_%d_%.6f_%.6f_%.6f"), int(bSphere), int(bCastShadow), C.R, C.G, C.B);
+                UInstancedStaticMeshComponent* Batch = GeometryBatches.FindRef(Key);
+                if (!Batch)
+                {
+                    Batch = NewObject<UInstancedStaticMeshComponent>(BatchedGeometry);
+                    BatchedGeometry->AddInstanceComponent(Batch);
+                    Batch->SetupAttachment(BatchedGeometry->GetRootComponent());
+                    Batch->SetMobility(EComponentMobility::Movable);
+                    Batch->SetStaticMesh(bSphere ? SphereMesh.Get() : CubeMesh.Get());
+                    Batch->SetCollisionEnabled(ECollisionEnabled::QueryOnly);
+                    Batch->SetCollisionResponseToAllChannels(ECR_Block);
+                    Batch->SetCastShadow(bCastShadow);
+                    Batch->SetAffectDistanceFieldLighting(bCastShadow);
+                    if (ShapeMaterial)
+                    {
+                        auto* M = UMaterialInstanceDynamic::Create(ShapeMaterial, Batch);
+                        M->SetVectorParameterValue(TEXT("Color"), C);
+                        Batch->SetMaterial(0, M);
+                    }
+                    Batch->RegisterComponent();
+                    GeometryBatches.Add(Key, Batch);
+                }
+                Batch->AddInstance(FTransform(FRotator(R.X, R.Y, R.Z),
+                    Vector(O, TEXT("location_cm"), FVector(0, 0, 300)), Size / 100));
+                continue;
+            }
+            AActor* A = SpawnSceneActor(FString::Printf(TEXT("PTZ_Occluder_%d"), Index++));
+            A->SetActorLocationAndRotation(Vector(O, TEXT("location_cm"), FVector(0, 0, 300)), FRotator(R.X, R.Y, R.Z));
             if (Kind == TEXT("tree"))
             {
                 AddPart(A, TEXT("Trunk"), CubeMesh, FVector(0, 0, -Size.Z * 0.25), FVector(Size.X * 0.003, Size.Y * 0.003, Size.Z * 0.005), FLinearColor(0.15f, 0.08f, 0.03f));
@@ -479,11 +521,22 @@ void APTZArena::MoveVehicles(float VisualDeltaSeconds)
         FRotator R = Direction.SizeSquared() > 0.001 ? Direction.Rotation() : T.Actor->GetActorRotation();
         if (bRealtimeControl)
         {
-            // The arena is a flat z=0 ground. Wheel center=36, radius=32.5 cm.
-            // This visual-only mode grounds the tires; synchronous science is unchanged.
-            P.Z = -3.5 * T.Actor->GetActorScale3D().Z;
             if (VisualDeltaSeconds > 0)
                 R = FMath::RInterpConstantTo(T.Actor->GetActorRotation(), R, VisualDeltaSeconds, 120.f);
+            bool bFollowElevation = false;
+            T.Path->TryGetBoolField(TEXT("follow_elevation"), bFollowElevation);
+            if (bFollowElevation)
+            {
+                // Opt-in 3D road: waypoints describe the road surface plus the
+                // declared reference offset. Wheel contact follows its normal.
+                P.Z -= Number(T.Path, TEXT("surface_z_offset_cm"), 8.0);
+                P -= R.RotateVector(FVector(0, 0, 3.5 * T.Actor->GetActorScale3D().Z));
+            }
+            else
+            {
+                // Existing flat-road scenes retain their original grounding.
+                P.Z = -3.5 * T.Actor->GetActorScale3D().Z;
+            }
             if (T.bVisualPositionValid)
             {
                 const double Distance = FVector::Dist2D(P, T.LastVisualPosition);
@@ -776,7 +829,10 @@ void APTZArena::PumpAsyncFrames()
     if (Now - AsyncNextCapture > 1. / AsyncRate) AsyncNextCapture = Now + 1. / AsyncRate;
     auto Frame = AsyncFree.Num() ? AsyncFree.Pop() : MakeShared<FPTZPendingGPUFrame, ESPMode::ThreadSafe>();
     Frame->Sequence = ++AsyncIssuedSequence; Frame->CaptureTime = Now;
-    FJsonSerializer::Deserialize(TJsonReaderFactory<>::Create(GetState()), Frame->Metadata);
+    // Configuration is immutable during a stream and is saved at reset. Do
+    // not serialize/parse both full copies for every RGB frame. Camera, action
+    // completion and all per-frame diagnostics remain same-frame metadata.
+    FJsonSerializer::Deserialize(TJsonReaderFactory<>::Create(GetState(false)), Frame->Metadata);
     auto* Lit = AsyncLitSensor.Get();
     Frame->Format = Lit->TextureTarget->GetFormat();
     if (!Frame->Readback) Frame->Readback = MakeUnique<FRHIGPUTextureReadback>(TEXT("PTZ_async_RGB"));
@@ -906,6 +962,8 @@ TSharedRef<FJsonObject> APTZArena::TargetState(const FPTZTargetRuntime& T) const
     const FVector P = T.Actor->GetActorLocation();
     S->SetStringField(TEXT("actor_name"), T.Actor->GetName());
     S->SetArrayField(TEXT("location_cm"), Numbers({P.X, P.Y, P.Z}));
+    const FRotator VehicleRotation = T.Actor->GetActorRotation();
+    S->SetArrayField(TEXT("rotation_deg"), Numbers({VehicleRotation.Pitch, VehicleRotation.Yaw, VehicleRotation.Roll}));
     FVector Origin, Extent;
     T.Actor->GetActorBounds(false, Origin, Extent);
     const double W = Sensor()->GetFilmWidth(), H = Sensor()->GetFilmHeight();
@@ -939,7 +997,7 @@ TSharedRef<FJsonObject> APTZArena::TargetState(const FPTZTargetRuntime& T) const
     return S;
 }
 
-FString APTZArena::GetState() const
+FString APTZArena::GetState(bool bIncludeConfiguration) const
 {
     auto S = MakeShared<FJsonObject>();
     S->SetStringField(TEXT("scene"), TEXT("PTZ_Arena_v1"));
@@ -948,8 +1006,8 @@ FString APTZArena::GetState() const
     for (TActorIterator<APTZArena> It(GetWorld()); It; ++It) ++ArenaCount;
     S->SetNumberField(TEXT("active_arena_count"), ArenaCount);
     S->SetStringField(TEXT("scenario_name"), String(ScenarioConfig, TEXT("name"), TEXT("unknown")));
-    if (ScenarioConfig) S->SetObjectField(TEXT("scenario_config"), ScenarioConfig);
-    if (ResolvedConfig) S->SetObjectField(TEXT("resolved_config"), ResolvedConfig);
+    if (bIncludeConfiguration && ScenarioConfig) S->SetObjectField(TEXT("scenario_config"), ScenarioConfig);
+    if (bIncludeConfiguration && ResolvedConfig) S->SetObjectField(TEXT("resolved_config"), ResolvedConfig);
     S->SetNumberField(TEXT("seed"), EpisodeSeed); S->SetNumberField(TEXT("sim_time"), SimTime);
     S->SetBoolField(TEXT("demo_geometry_follow"), bDemo); S->SetBoolField(TEXT("free_preview"), bFreePreview);
     S->SetBoolField(TEXT("realtime_control"), bRealtimeControl);

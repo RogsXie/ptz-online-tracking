@@ -35,6 +35,20 @@ def main():
     t.diagnostics['sim_time']=.1
     assert s.choose(None,[detection(.7,.99),detection(.3,.3)]) is not None
     assert s.locked_id==locked
+    # Two identical nearby cars at narrow FOV: the current locked trajectory
+    # must not steal the other's box even on the FIRST missing frame (<.2s).
+    t,s=make();t.diagnostics['fov']=6.
+    small=lambda x,c:Detection((x,.45,x+.04,.55),c,0,'car')
+    a,b=small(.46,.95),small(.50,.90)
+    s.choose(None,[a,b]);locked=s.locked_id
+    for now in [.04,.08,.12,.16,.20]:
+        t.diagnostics['sim_time']=now;assert s.choose(None,[a,b]) is a
+    gallery=[f.copy() for f in s.tracks[locked]['gallery']]
+    t.diagnostics['sim_time']=.24
+    assert s.choose(None,[b]) is None and s.tracks[locked]['last_seen']==.20
+    assert len(gallery)==len(s.tracks[locked]['gallery'])
+    t.diagnostics['sim_time']=.28
+    assert s.choose(None,[a,b]) is a and s.locked_id==locked
     rng=np.random.default_rng(1);image=np.full((240,320,3),90,np.uint8)
     image[80:140,110:190]=rng.integers(20,240,(60,80,3),dtype=np.uint8)
     diag=dict(sim_time=0.,fov=40.,rotation=[-42.,0.,0.]);bridge=VisualBridge()

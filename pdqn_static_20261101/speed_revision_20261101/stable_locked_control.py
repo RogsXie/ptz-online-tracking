@@ -18,6 +18,7 @@ def filter_action(env,agent,state,action,duration,params):
     low,high=float(limits['fov_min_deg']),float(limits['fov_max_deg'])
     zoom_rate=float(limits['zoom_fov_deg_s']);now=float(row['sim_time'])
     env.t.zoom_gain_override=None
+    env.t.pan_tilt_gain_override=None
     info=dict(pdqn_action=int(action),pdqn_duration_s=float(duration),input_area=row['area'],
         selected_input_area=row['area'],input_fov_deg=fov,input_label=row.get('target_label'),
         observation_sim_time=now,area_limit=AREA_LIMIT,zoom_gain_override=None)
@@ -30,15 +31,19 @@ def filter_action(env,agent,state,action,duration,params):
         startup_scale_pending=env.startup_scale_pending)
     def finish(a,d,reason,**fields):
         info.update(reason=reason,executed_action=int(a),executed_duration_s=float(d),
-            zoom_gain_override=env.t.zoom_gain_override,**fields)
+            zoom_gain_override=env.t.zoom_gain_override,pan_tilt_gain_override=env.t.pan_tilt_gain_override,**fields)
         return int(a),float(d),info
     if not row['visible']:
         env.lock_searching=True
         env.lock_recovering=False
-        if fov<high-1e-4:
+        # Widen enough to search, but preserve a detectable image size for a
+        # far target. The estimate uses only its last visible angular area.
+        angular_area=getattr(env,'last_visible_angular_area',None)
+        search_max=min(high,max(fov,math.degrees(2*math.atan(math.sqrt(angular_area/.0015))))) if angular_area else high
+        if fov<search_max-1e-4:
             env.t.zoom_gain_override=1.
-            step=min(SEARCH_STEP,high-fov)
-            return finish(6,max(.001,step/zoom_rate),'locked_missing_progressive_zoom',phase='search',desired_fov_deg=fov+step)
+            step=min(SEARCH_STEP,search_max-fov)
+            return finish(6,max(.001,step/zoom_rate),'locked_missing_progressive_zoom',phase='search',desired_fov_deg=fov+step,search_fov_limit_deg=search_max)
         return finish(0,.025,'locked_missing_hold_camera',phase='search')
     recovered=bool(getattr(env,'lock_searching',False))
     if recovered:
@@ -46,6 +51,7 @@ def filter_action(env,agent,state,action,duration,params):
     info['just_recovered']=recovered
     phase='recover' if getattr(env,'lock_recovering',False) else 'track'
     area=float(row['area'])
+    env.last_visible_angular_area=area*math.tan(math.radians(fov/2))**2
     if area>=STARTUP_AREA*.9 or fov<=low+1e-4:
         env.startup_scale_pending=False
     if phase=='track' and env.startup_scale_pending:phase='acquire'
@@ -58,7 +64,11 @@ def filter_action(env,agent,state,action,duration,params):
     error=np.asarray(state[:2],dtype=float)*[480.,270.]
     center=(np.asarray(state[:2],dtype=float)+1)/2
     angles=bearing(center,diag)
-    angular_velocity=np.asarray(row.get('image_motion_bearing_rate_deg_s',[0.,0.]))
+    # Per-command history can contain fewer than3samples at low command rates.
+    # Use the actual RGB tracker's per-frame motion estimate for the motor
+    # governor; keep the neural15state/per-command history unchanged.
+    tracked_velocity=env.cfff.info.get('locked_bearing_velocity_deg_s')
+    angular_velocity=np.asarray(tracked_velocity if tracked_velocity is not None else row.get('image_motion_bearing_rate_deg_s',[0.,0.]))
     future=np.asarray(project(angles+angular_velocity*.01,diag))
     target_pixel_velocity=(future-center)*[960.,540.]/.01
     jac=[]
@@ -67,6 +77,10 @@ def filter_action(env,agent,state,action,duration,params):
         perturbed['rotation'][rotation_index]+=.01
         jac.append((project(angles,perturbed)[image_axis]-center[image_axis])*[960.,540.][image_axis]/.01)
     gain,_=core.gain(fov)
+    motion_speed=float(np.max(np.abs(angular_velocity)))
+    motion_floor=.18 if motion_speed>.8 else .10 if motion_speed>.35 else 0.
+    if motion_floor>gain:
+        gain=motion_floor;env.t.pan_tilt_gain_override=gain
     speeds=[float(limits['pan_deg_s'])*gain,float(limits['tilt_deg_s'])*gain]
     valid=core.valid_actions(diag,limits)
     budgets={}
@@ -88,6 +102,11 @@ def filter_action(env,agent,state,action,duration,params):
     urgent=bool(np.max(np.abs(error))>center_tolerance and any(valid[a] for a in [1,2,3,4]))
     if urgent:
         valid[[0,5,6]]=False
+        # Avoid repeatedly spending feedback cycles on an almost-correct axis
+        # while a fast target is escaping along the other one.
+        major=int(np.argmax(np.abs(error)));minor=1-major
+        if abs(error[major])>max(20.,3.*abs(error[minor])) and any(valid[a] for a in ([3,4] if major==0 else [1,2])):
+            valid[[1,2] if minor==1 else [3,4]]=False
     # First acquisition actively restores a useful target scale. A moderate
     # centre tolerance prevents moving targets from starving zoom indefinitely;
     # each exclusive pulse is bounded and followed by fresh RGB feedback.

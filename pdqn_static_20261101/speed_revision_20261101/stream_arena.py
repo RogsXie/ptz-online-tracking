@@ -1,6 +1,6 @@
 """Same isolated UE process, local writable DDC fallback for this launch only."""
 import speed_bootstrap
-import subprocess,sys
+import subprocess,sys,time
 from integration import runtime
 
 class StreamArena(runtime.StandaloneArena):
@@ -13,6 +13,15 @@ class StreamArena(runtime.StandaloneArena):
             '-NoVSync','-ExecCmds=r.VSync 0,r.OneFrameThreadLag 1,t.MaxFPS 0']
         startup=subprocess.STARTUPINFO();startup.dwFlags|=subprocess.STARTF_USESHOWWINDOW;startup.wShowWindow=0
         self.process=subprocess.Popen(command,cwd=str(project.parent),startupinfo=startup,stdin=subprocess.DEVNULL,stdout=subprocess.DEVNULL,stderr=subprocess.DEVNULL)
-        try:runtime.wait_for_arena(self.process,self.port)
+        try:
+            # A listening UnrealCV socket can precede renderer readiness. A
+            # short individual RPC timeout is not an arena startup failure.
+            deadline=time.monotonic()+90.
+            while True:
+                try:
+                    runtime.wait_for_arena(self.process,self.port,timeout=min(15.,max(1.,deadline-time.monotonic())))
+                    break
+                except TimeoutError:
+                    if self.process.poll() is not None or time.monotonic()>=deadline:raise
         except BaseException:self.__exit__(*sys.exc_info());raise
         return self

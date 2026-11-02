@@ -102,6 +102,7 @@ class SnapshotTransport:
     def rpc(self,command):
         if command.startswith('vset /ptz/play '):
             p,t,z,d=map(float,command.split()[2:]);g,zg=gain(float(self.diagnostics['fov']))
+            if getattr(self,'pan_tilt_gain_override',None) is not None:g=float(self.pan_tilt_gain_override)
             if getattr(self,'zoom_gain_override',None) is not None:zg=float(self.zoom_gain_override)
             command=f'vset /ptz/play {p*g:.12f} {t*g:.12f} {z*zg:.12f} {d:.12f}'
         return self.runtime.request(command) if self.runtime else self.raw.rpc(command)

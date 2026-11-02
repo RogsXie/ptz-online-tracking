@@ -1,0 +1,21 @@
+{
+  "version": "v2026.11.02-viaduct30-nonstop",
+  "entry": "pdqn_static_20261101/speed_revision_20261101/live_fast_online_results.py",
+  "arguments": [
+    "--scene",
+    "viaduct30",
+    "--seconds",
+    "28",
+    "--fps",
+    "30",
+    "--perception-fps",
+    "30"
+  ],
+  "example": "pdqn_static_20261101/speed_revision_20261101/unified_motion_20261101/user-nonstop-viaduct30-v1-video",
+  "video": "pdqn_static_20261101/speed_revision_20261101/unified_motion_20261101/user-nonstop-viaduct30-v1-video/online-output/true-online-output.mp4",
+  "tracking_output_fps": 23.5667265887963,
+  "lead_and_parallel_speed_m_s": 30.0,
+  "nonstop": true,
+  "weights_changed": false,
+  "model_assets_release": "v2026.11.02-startup-zoom"
+}

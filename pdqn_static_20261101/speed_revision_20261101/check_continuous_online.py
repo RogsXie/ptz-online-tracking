@@ -15,6 +15,15 @@ from online_result_recorder import Recorder
 def main():
     d=Detection((.4,.4,.6,.6),.9,0,'car');rgb=np.zeros((540,960,3),np.uint8)
     diag=dict(sim_time=.01,fov=40.,rotation=[-42.,0.,0.],action_remaining_seconds=.04)
+    # The explicit motion governor must reach the actual inherited transport,
+    # without changing the command duration or exclusive action components.
+    from async_frame_runtime import SnapshotTransport
+    raw=SimpleNamespace(rpc=lambda command:command)
+    actual=SnapshotTransport.__new__(SnapshotTransport)
+    actual.raw=raw;actual.runtime=None;actual.diagnostics={'fov':8.}
+    actual.pan_tilt_gain_override=.18;actual.zoom_gain_override=None
+    wire=actual.rpc('vset /ptz/play 1 0 0 .01').split()
+    assert abs(float(wire[2])-.18)<1e-12 and list(map(float,wire[3:]))==[0.,0.,.01]
     frame=Frame(0,.01,time.perf_counter(),rgb,diag)
     class Detector:
         def __call__(self,rgb):return [d]
