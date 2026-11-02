@@ -1,5 +1,13 @@
 # PTZ 在线单目标跟踪
 
+## 在线演示
+
+最新 30 秒真实在线结果：启动主动放大、同色跟车干扰、货车遮挡和十字路口转弯。点击下方播放器即可观看。
+
+https://github.com/user-attachments/assets/b443865c-2bb1-4efa-ae56-3f9cd909b1a8
+
+[下载完整 MP4](pdqn_static_20261101/speed_revision_20261101/unified_motion_20261101/user-startup-active-zoom-v1-video/online-output/true-online-output.mp4)
+
 2026-11-02 当前版本的源码快照，包含 UE 5.7 场景、RGB 整车检测、FastReID、身份保持、冻结的 P-DQN 控制器、真实在线画框与录像。
 
 当前入口：`pdqn_static_20261101/speed_revision_20261101/live_fast_online_results.py`。
